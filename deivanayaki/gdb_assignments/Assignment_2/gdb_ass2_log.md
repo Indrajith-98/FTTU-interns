@@ -1,15 +1,15 @@
-#### 1. COMPILE AND OBSERVE THE OUTPUT OF THE ACTUAL SOURCE CODE.
+### 1. COMPILE AND OBSERVE THE OUTPUT OF THE ACTUAL SOURCE CODE.
 
 PS D:\gdb_assignment_gets2025\Assignment_2> g++ -g Assignment_2 -o ass2  
 PS D:\gdb_assignment_gets2025\Assignment_2> ./ass2
 
-###### gdebgginu
+##### gdebgginu
 
-#### 2. DEBUG THE CODE.
+### 2. DEBUG THE CODE.
 
 PS D:\gdb_assignment_gets2025\Assignment_2> gdb ass2
 
-##### a. Set breakpoints and start the execution
+#### a. Set breakpoints and start the execution
 
 (gdb) b 11  
 Breakpoint 1 at 0x140001470: file Assignment_2.cpp, line 11.  
@@ -31,7 +31,7 @@ warning: Source file is more recent than executable.
 (gdb) c  
 Continuing.  
   
-##### b. Watch the variable i, string s1 to know more about the swapping process.
+#### b. Watch the variable i, string s1 to know more about the swapping process.
   
 Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:15  
 15              std::swap(s1[i], s1[n-1]);  
@@ -119,21 +119,21 @@ $14 = (__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type &) @0x5
 (gdb) c  
 Continuing.  
   
-###### Inference : Based on the above log details, i gets incremented by 1 and the i<sup>th</sup> index character always get swapped with the last index character of the string.  
+##### Inference : Based on the above log details, i gets incremented by 1 and the i<sup>th</sup> index character always get swapped with the last index character of the string.  
   
-###### gdebgginu  
+##### gdebgginu  
   
 Watchpoint 3 deleted because the program has left the block in  
 which its expression is valid.  
 (gdb) q  
   
-##### c. Changes to be needed.
+#### c. Changes to be needed.
 
-###### i<sup>th</sup> character should be replaced by (n-i-1)<sup>th</sup> character of the string.
+##### i<sup>th</sup> character should be replaced by (n-i-1)<sup>th</sup> character of the string.
 
-###### Line 15 : std::swap(s1[i], s1[n-i-1]);
+##### Line 15 : std::swap(s1[i], s1[n-i-1]);
 
-##### d. Log details of the modified code.
+#### d. Log details of the modified code.
 
 Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:15  
 15              std::swap(s1[i], s1[n-i-1]);  
@@ -180,7 +180,7 @@ $12 = "gniuggbed"
 Continuing.  
 gniggubed  
 
-#### 3. FINAL OUTPUT.
+### 3. FINAL OUTPUT.
   
 IP : s1="debugging"  
 OP :   
