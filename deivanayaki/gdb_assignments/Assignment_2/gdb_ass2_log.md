@@ -1,13 +1,13 @@
 ### 1. COMPILE AND OBSERVE THE OUTPUT OF THE ACTUAL SOURCE CODE.
 
-PS D:\gdb_assignment_gets2025\Assignment_2> g++ -g Assignment_2 -o ass2  
-PS D:\gdb_assignment_gets2025\Assignment_2> ./ass2
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_2> g++ -g Assignment_2 -o ass2  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_2> ./ass2
 
 ##### gdebgginu
 
 ### 2. DEBUG THE CODE.
 
-PS D:\gdb_assignment_gets2025\Assignment_2> gdb ass2
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_2> gdb ass2
 
 #### a. Set breakpoints and start the execution
 
@@ -20,7 +20,7 @@ Num     Type           Disp Enb Address            What
 1       breakpoint     keep y   0x0000000140001470 in main() at Assignment_2.cpp:11  
 2       breakpoint     keep y   0x00000001400014b9 in main() at Assignment_2.cpp:15  
 (gdb) r  
-Starting program: D:\gdb_assignment_gets2025\Assignment_2\ass2.exe  
+Starting program: PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_2> 
 [New Thread 30684.0x544]  
 [New Thread 30684.0x1b78]  
 [New Thread 30684.0xa00]  
@@ -184,11 +184,11 @@ gniggubed
   
 IP : s1="debugging"  
 OP :   
-PS D:\gdb_assignment_gets2025\Assignment_2> ./ass2  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_2> ./ass2  
 gniggubed  
 
 
 IP : s1 = "developer"  
 OP :  
-PS D:\gdb_assignment_gets2025\Assignment_2> ./ass2  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_2> ./ass2  
 repoleved  

@@ -1,7 +1,7 @@
 ### 1. COMPILE AND OBSERVE THE OUTPUT OF THE ACTUAL SOURCE CODE.
   
-PS D:\gdb_assignment_gets2025\Assignment_2> g++ -g Assignment_1 -o ass1  
-PS D:\gdb_assignment_gets2025\Assignment_2> ./ass1  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_1> g++ -g Assignment_1 -o ass1  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_1> ./ass1  
   
 6 2    
 5 3  
@@ -10,7 +10,7 @@ PS D:\gdb_assignment_gets2025\Assignment_2> ./ass1
   
 ### 2. DEBUG THE CODE.  
   
-PS D:\gdb_assignment_gets2025\Assignment_1> gdb ass1    
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_1> gdb ass1    
   
 #### a. Set breakpoints and start the execution  
   
@@ -27,7 +27,7 @@ Breakpoint 5 at 0x14000167e: file Assignment_1.cpp, line 44.
 (gdb) b 52  
 Breakpoint 6 at 0x140001761: file Assignment_1.cpp, line 52.  
 (gdb) r  
-Starting program: D:\gdb_assignment_gets2025\Assignment_1\ass1.exe  
+Starting program: C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_1\ass1.exe  
 [New Thread 25928.0x1524]  
 [New Thread 25928.0x4ac]  
 [New Thread 25928.0x3938]  
@@ -246,7 +246,7 @@ Continuing.
 [Inferior 1 (process 12464) exited normally]  
 (gdb) q  
   
-### 3. EXPECTED OUTPUT
+### 3. FINAL OUTPUT
   
 IP : long a[] = {6,5,7,5,5,6};  
 OP :  
@@ -257,7 +257,7 @@ PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_1
   
 IP : long a[] = {6,8,8,5,7,8,5,6,8,7};  
 OP :  
-PS D:\gdb_assignment_gets2025\Assignment_1> ./ass1  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_1> ./ass1  
 8 4  
 5 2  
 6 2  

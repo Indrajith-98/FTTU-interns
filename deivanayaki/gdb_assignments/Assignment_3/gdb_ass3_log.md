@@ -1,7 +1,7 @@
 ### 1. COMPILE AND OBSERVE THE OUTPUT OF THE ACTUAL SOURCE CODE.  
     
-PS D:\gdb_assignment_gets2025\Assignment_3> g++ -g Assignment_3.cpp -o ass3  
-PS D:\gdb_assignment_gets2025\Assignment_3> ./ass3  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_3> g++ -g Assignment_3.cpp -o ass3  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_3> ./ass3  
 Enter the rows:  
 8  
 Enter the cols:  
@@ -37,7 +37,7 @@ Max area of Island: -2
   
 ### 2. DEBUG THE CODE.  
   
-PS D:\gdb_assignment_gets2025\Assignment_3> gdb ass3  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_3> gdb ass3  
   
 #### a. Set breakpoints and start the execution  
 
@@ -56,7 +56,7 @@ Num     Type           Disp Enb Address            What
 3       breakpoint     keep y   0x0000000140001668 in maxAreaOfIsland  
 4       breakpoint     keep y   0x0000000140001567 in dfs(int, int,   
 (gdb) r  
-Starting program: D:\gdb_assignment_gets2025\Assignment_3\ass3.exe  
+Starting program: C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_3\ass3.exe  
 [New Thread 24464.0x82f8]  
 [New Thread 24464.0x8138]  
 [New Thread 24464.0x3420]  
@@ -218,7 +218,7 @@ Thread 1 hit Breakpoint 4, dfs (i=2, j=1, grid=std::vector of length 8, capacity
 
 IP :  
   
-PS D:\gdb_assignment_gets2025\Assignment_3> ./ass3  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_3> ./ass3  
 Enter the rows:  
 8  
 Enter the cols:  
@@ -256,7 +256,7 @@ Max area of Island: 6
   
 IP :   
   
-PS D:\gdb_assignment_gets2025\Assignment_3> ./ass3  
+PS C:\Users\DELL\Documents\FTTU-interns\deivanayaki\gdb_assignments\Assignment_3> ./ass3  
 Enter the rows:  
 8  
 Enter the cols:  
