@@ -1,0 +1,33 @@
+# Ignore Python cache directories
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Ignore VSCode settings
+**/.vscode/
+
+# Ignore any files ending with "identifier"
+**/*identifier*
+
+# Ignore other common Python-related files and directories
+.env
+*.env
+*.log
+*.sqlite3
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore archive and package files
+*.zip
+*.tar.gz
+*.egg-info/
+dist/
+build/
+
+# Ignore virtual environments
+venv/
+.env/
+
