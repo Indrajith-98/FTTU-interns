@@ -8,11 +8,13 @@ gniggubed
 #include <iostream>
 #include <string>
 
-int main() {
+int main()
+{
     std::string s1 = "debugging";
     int n = s1.length();
-    for (int i = 0; i < n/2; i++) {
-        std::swap(s1[i], s1[n-1]);
+    for (int i = 0; i < n / 2; i++)
+    {
+        std::swap(s1[i], s1[n - 1]);
     }
     std::cout << s1 << std::endl;
     return 0;
