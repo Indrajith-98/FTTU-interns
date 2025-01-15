@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.a": "MIPS Assembly",
-        "*.java": "java",
-        "*.html": "html",
-        "*.js": "javascript",
-        "iostream": "cpp"
-    }
-}
