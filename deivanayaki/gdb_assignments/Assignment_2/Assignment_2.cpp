@@ -9,10 +9,10 @@ gniggubed
 #include <string>
 
 int main() {
-    std::string s1 = "debugging";
+    std::string s1 = "developer";
     int n = s1.length();
     for (int i = 0; i < n/2; i++) {
-        std::swap(s1[i], s1[n-1]);
+        std::swap(s1[i], s1[n-i-1]);  // UPDATED LINE TO PRODUCE THE DESIRED RESULT
     }
     std::cout << s1 << std::endl;
     return 0;
