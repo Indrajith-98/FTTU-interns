@@ -1,0 +1,35 @@
+Breakpoint 1 at 0x15bc: file Assignment_1.cpp, line 56.
+No symbol "v1" in current context.
+The program is not being run.
+No symbol "v1" in current context.
+Starting program: /home/rohithk/mcw/FTTU-interns/rohith_krishnan/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at Assignment_1.cpp:56
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+Continuing.
+[Inferior 1 (process 2905) exited normally]
+No symbol "v2" in current context.
+Breakpoint 2 at 0x5555555556c7: file Assignment_1.cpp, line 61.
+Starting program: /home/rohithk/mcw/FTTU-interns/rohith_krishnan/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at Assignment_1.cpp:56
+$2 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+$3 = std::vector of length -8585744, capacity -8796093021340 = {{first = 140737488346112, second = 140737349572578}, {first = 6, second = 5}, {first = 7, second = 5}, {first = 5, second = 6}, {first = 140737488346272, second = -1366841476162479872}, {first = 140737353820752, second = 140737488346440}, {first = 140737488346304, second = 140737349034442}, {first = 8, second = 140737488346440}, {first = 8452558760, second = 93824992236849}, {first = 140737488346440, second = 7097576779448903377}, {first = 1, second = 0}, {first = 93824992271688, second = 140737354125312}, {first = 7097576779446806225, second = 7097594818756273873}, {first = 140733193388032, second = 0}, {first = 0, second = 1}, {first = 140737488346432, second = -1366841476162479872}, {first = 140737488346400, second = 140737349034635}, {first = 140737488346456, second = 93824992271688}, {first = 140737488346456, second = 93824992236849}, {first = 0, second = 0}, {first = 93824992235936, second = 140737488346432}, {first = 0, second = 0}, {first = 0, second = 93824992235973}, {first = 140737488346424, second = 56}, {first = 1, second = 140737488347258}, {first = 0, second = 140737488347355}, {first = 140737488347379, second = 140737488347398}, {first = 140737488347452, second = 140737488347472}, {first = 140737488347515, second = 140737488347522}, {first = 140737488347610, second = 140737488347673}, {first = 140737488347700, second = 140737488347740}, {first = 140737488347804, second = 140737488347851}, {first = 140737488347891, second = 140737488347907}, {first = 140737488347930, second = 140737488347940}, {first = 140737488347956, second = 140737488348021}, {first = 140737488348055, second = 140737488348092}, {first = 140737488348123, second = 140737488348176}, {first = 140737488348214, second = 140737488348264}, {first = 140737488348284, second = 140737488348372}, {first = 140737488348404, second = 140737488348415}, {first = 140737488348438, second = 140737488348555}, {first = 140737488348611, second = 140737488348641}, {first = 140737488348654, second = 140737488348708}, {first = 140737488348722, second = 140737488348767}, {first = 140737488348786, second = 140737488348806}, {first = 140737488348817, second = 140737488348836}, {first = 140737488348848, second = 140737488348857}, {first = 140737488348871, second = 140737488348897}, {first = 140737488348917, second = 140737488349051}, {first = 140737488349059, second = 140737488349087}, {first = 140737488350980, second = 140737488350993}, {first = 140737488351096, second = 0}, {first = 33, second = 140737353887744}, {first = 51, second = 1776}, {first = 16, second = 395049983}, {first = 6, second = 4096}, {first = 17, second = 100}, {first = 3, second = 93824992231488}, {first = 4, second = 56}, {first = 5, second = 13}, {first = 7, second = 140737353895936}, {first = 8, second = 0}, {first = 9, second = 93824992235936}, {first = 11, second = 1000}, {first = 12, second = 1000}, {first = 13, second = 1000}, {first = 14, second = 1000}, {first = 23, second = 0}, {first = 25, second = 140737488347225}, {first = 26, second = 2}, {first = 31, second = 140737488351127}, {first = 15, second = 140737488347241}, {first = 0, second = 0}, {first = 0, second = 576719502886664192}, {first = 7552184919336963821, second = 14696481348417651}, {first = 0, second = 3415256217687097344}, {first = 3416939591484600178, second = 6148632051688366957}, {first = 8317711341870541101, second = 6874872827253584431}, {first = 7953759811804951147, second = 8319099998983972655}, {first = 6Quit
+Starting program: /home/rohithk/mcw/FTTU-interns/rohith_krishnan/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at Assignment_1.cpp:56
+$4 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+$5 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+$6 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+$7 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+$8 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+$9 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+Continuing.
+
+Breakpoint 2, main () at Assignment_1.cpp:61
