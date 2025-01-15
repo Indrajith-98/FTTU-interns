@@ -30,7 +30,7 @@ int validate(int i, int j, vector<vector<int>>& grid) {
 int dfs(int i, int j, vector<vector<int>>& grid) {
     if (!validate(i,j,grid)) return 0;
     grid[i][j] = 0;
-    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid); // Include down checking by modified to i+1,j
 }
 
 int maxAreaOfIsland(vector<vector<int>>& grid) {
@@ -42,7 +42,7 @@ int maxAreaOfIsland(vector<vector<int>>& grid) {
         for (int j = 0; j < cols; j++) {
             if (grid[i][j] == 1) {
                 int val  = dfs(i,j,grid);
-                max_number = (max_number + 2 < val) ? val : max_number-5;
+                max_number = (max_number < val) ? val : max_number; // Remove unnecessary calculations
             }
         }
     }    
