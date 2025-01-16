@@ -1,0 +1,42 @@
+Breakpoint 1 at 0x401563: file .\Assignment_2.cpp, line 12.
+Starting program: F:\MCW\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_2\Assignment.exe 
+[New Thread 25736.0x41fc]
+[New Thread 25736.0x2a08]
+[New Thread 25736.0x563c]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_2.cpp:12
+12	    std::string s1 = "debugging";
+13	    int n = s1.length();
+$1 = "debugging"
+14	    for (int i = 0; i < n/2; i++) {
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$2 = "gebuggind"
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$3 = "gdbuggine"
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$4 = "gdeugginb"
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$5 = "gdebgginu"
+17	    std::cout << s1 << std::endl;
+18	    return 0;
+
+
+================================================================================================================
+Inference:
+
+Breakpoint:
+        line 12
+
+Error in the code:
+        std::swap(s1[i], s1[n-1]) always swaps the character at index i with the last character (s1[n-1]).
+The index for the second character being swapped does not change, so the loop is incorrect and does not
+reverse the string properly.
+
+Changes to be made in code:
+        To reverse the string, the correct index to swap with is n - i - 1.     // at line 15
+================================================================================================================
+
