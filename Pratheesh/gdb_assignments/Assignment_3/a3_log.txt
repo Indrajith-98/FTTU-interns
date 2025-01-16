@@ -1,0 +1,152 @@
+Breakpoint 1 at 0x401a6d: file .\Assignment_3.cpp, line 86.
+Breakpoint 2 at 0x4016df: file .\Assignment_3.cpp, line 37.
+Breakpoint 3 at 0x401612: file .\Assignment_3.cpp, line 31.
+Breakpoint 4 at 0x401568: file .\Assignment_3.cpp, line 22.
+Starting program: F:\MCW\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_3\Assignment_3.exe < input.txt
+[New Thread 31420.0x5410]
+[New Thread 31420.0x4bc4]
+[New Thread 31420.0x7804]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_3.cpp:86
+warning: Source file is more recent than executable.
+86	    int max_area = maxAreaOfIsland(grid);
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:37
+37	    int rows = grid.size();
+38	    int cols = grid[0].size();
+39	    int max_number = 0;
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 3, dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 4, validate (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+Continuing.
+
+Thread 1 hit Breakpoint 3, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+Continuing.
+
+Thread 1 hit Breakpoint 4, validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:22
+22	    int rows = grid.size();
+Continuing.
+
+Thread 1 hit Breakpoint 3, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+Continuing.
+
+Thread 1 hit Breakpoint 4, validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:22
+22	    int rows = grid.size();
+Continuing.
+
+Thread 1 hit Breakpoint 3, dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+Breakpoint 5 at 0x401757: file .\Assignment_3.cpp, line 44.
+Breakpoint 6 at 0x401a7c: file .\Assignment_3.cpp, line 88.
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000401a6d in main() at .\Assignment_3.cpp:86
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00000000004016df in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:37
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x0000000000401612 in dfs(int, int, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:31
+	breakpoint already hit 4 times
+4       breakpoint     keep y   0x0000000000401568 in validate(int, int, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:22
+	breakpoint already hit 3 times
+5       breakpoint     keep y   0x0000000000401757 in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:44
+6       breakpoint     keep y   0x0000000000401a7c in main() at .\Assignment_3.cpp:88
+34	}
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:33
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+[New Thread 31420.0x241c]
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+$1 = 1
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+$2 = -4
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$3 = 2
+$4 = -4
+42	        for (int j = 0; j < cols; j++) {
+$5 = 2
+43	            if (grid[i][j] == 1) {
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+Continuing.
+
+Thread 1 hit Breakpoint 6, main () at .\Assignment_3.cpp:88
+88	    std::cout << "Max area of Island: " << max_area << std::endl;
+89	    return 0;
+63	    vector<vector<int>> grid;
+90	}
+0x00000000004013c7 in __tmainCRTStartup ()
+
+
+================================================================================================================
+Inference:
+
+Breakpoints at:
+		line 86
+		line 37
+		line 31
+		line 22
+		line 44
+		line 88
+
+Errors in the code:
+		In the dfs function dfs(i-1, j, grid) is called twice, which results in unnecessary redundant 
+computation and will incorrectly calculate the area.
+
+		In the maxAreaOfIsland function the logic to find the max_number 
+			max_number = (max_number + 2 < val) ? val : max_number-5;
+is completely wrong.
+
+Changes to be made in code:
+		Ensuring all four directions (up, down, left, right) are correctly visited without duplication
+			return 1 + dfs(i-1, j, grid) + dfs(i+1, j, grid) + dfs(i, j+1, grid) + dfs(i, j-1, grid);   // at line 33
+
+		updating the logic for max_number:
+			max_number = (max_number  < val) ? val : max_number;  // at line 45
+================================================================================================================
+
+
+		
