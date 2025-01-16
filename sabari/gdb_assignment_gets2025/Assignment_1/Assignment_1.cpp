@@ -6,6 +6,7 @@ Expected output:
 6 2
 7 1
 */
+
 #include <iostream>
 #include <vector>
 #include <utility>
