@@ -1,0 +1,32 @@
+Breakpoint 1 at 0x140001470: file Assignment_2.cpp, line 11.
+Starting program: C:\Users\sneha\Downloads\gdb_assignment_gets2025\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 47360.0xef3c]
+[New Thread 47360.0xe428]
+[New Thread 47360.0x4e88]
+
+Thread 1 hit Breakpoint 1, 0x00007ff7205e1470 in main () at Assignment_2.cpp:11
+$1 = "debugging"
+$2 = "gebuggind"
+$3 = "gdbuggine"
+$4 = "gdeugginb"
+"Explanation : The swapping of two characters with 2 pointer concept is not implemented properly with proper indices. So as a result only the last character is again and again getting swapped with the front half characters running in a loop"__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
+Breakpoint 1 at 0x140001470: file Assignment_2.cpp, line 11.
+Starting program: C:\Users\sneha\Downloads\gdb_assignment_gets2025\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 56752.0xdbe8]
+[New Thread 56752.0xee10]
+[New Thread 56752.0xd7d0]
+
+
+Breakpoint 1 at 0x140001470: file Assignment_2.cpp, line 11.
+Starting program: C:\Users\sneha\Downloads\gdb_assignment_gets2025\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 56420.0x8eec]
+[New Thread 56420.0x2af4]
+[New Thread 56420.0x7c3c]
+
+Thread 1 hit Breakpoint 1, 0x00007ff616011470 in main () at Assignment_2.cpp:11
+Breakpoint 2 at 0x7ff616011506: file Assignment_2.cpp, line 17.
+Continuing.
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:17
+$1 = "gniggubed"
+"THUS DESIRED OUTPUT IS ACHIEVED AFTER DEBUGGING"__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
