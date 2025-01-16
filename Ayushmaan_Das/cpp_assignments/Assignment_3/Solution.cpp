@@ -1,17 +1,10 @@
-/*
-Find the max area of the island
-Input:
-[
-[0,0,1,0,0,0,0,1,0,0,0,0,0],
-[0,0,0,0,0,0,0,1,1,1,0,0,0],
-[0,1,1,0,1,0,0,0,0,0,0,0,0],
-[0,1,0,0,1,1,0,0,1,0,1,0,0],
-[0,1,0,0,1,1,0,0,1,1,1,0,0],
-[0,0,0,0,0,0,0,0,0,0,1,0,0],
-[0,0,0,0,0,0,0,1,1,1,0,0,0],
-[0,0,0,0,0,0,0,1,1,0,0,0,0]
-]
-Output: 6 (Max area is 6)
+/*ISSUES SPOTTED IN THE CODE:
+- Line 32 dfs(): dfs(i-1, j, grid) is repated and called twice, one should be dfs(i+1, j, grid)
+- Line 50: Maximum calculation is completely wrong. (max_number + 2 < val) ? val : max_number - 5 is unnecessary.
+  Instead simply we can use max_number = max(max_number, val).
+
+SOLUTION:
+Modified the lines as per the above mentioned logics.
 */
 
 #include <iostream>
@@ -34,7 +27,9 @@ int dfs(int i, int j, vector<vector<int>> &grid)
     if (!validate(i, j, grid))
         return 0;
     grid[i][j] = 0;
-    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+
+    // CORRECTION MADE HERE
+    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
 }
 
 int maxAreaOfIsland(vector<vector<int>> &grid)
@@ -50,7 +45,9 @@ int maxAreaOfIsland(vector<vector<int>> &grid)
             if (grid[i][j] == 1)
             {
                 int val = dfs(i, j, grid);
-                max_number = (max_number + 2 < val) ? val : max_number - 5;
+
+                // CORRECTION MADE HERE
+                max_number = max(max_number, val);
             }
         }
     }
@@ -72,27 +69,6 @@ void printIsland(vector<vector<int>> &grid)
 
 int main()
 {
-    // vector<vector<int>> grid;
-    // int rows, cols;
-    // // Get inputs
-    // cout << "Enter the rows:" << endl;
-    // cin >> rows;
-    // cout << "Enter the cols:" << endl;
-    // cin >> cols;
-    // cout << "Enter content" << endl;
-    // for (int i = 0; i < rows; i++)
-    // {
-    //     cout << "Enter " << i + 1 << " row:" << endl;
-    //     vector<int> row;
-    //     for (int j = 0; j < cols; j++)
-    //     {
-    //         int val;
-    //         cin >> val;
-    //         row.push_back(val);
-    //     }
-    //     grid.push_back(row);
-    // }
-
     // TESTING DATA (given) PASSED DIRECTLY (to avoid user input)
     vector<vector<int>> grid = {
         {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
@@ -104,10 +80,8 @@ int main()
         {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
 
-    // Print the input
     printIsland(grid);
 
-    // Get the max area
     int max_area = maxAreaOfIsland(grid);
 
     std::cout << "Max area of Island: " << max_area << std::endl;
