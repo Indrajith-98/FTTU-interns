@@ -145,7 +145,7 @@ Changes to be made in code:
 			return 1 + dfs(i-1, j, grid) + dfs(i+1, j, grid) + dfs(i, j+1, grid) + dfs(i, j-1, grid);   // at line 33
 
 		updating the logic for max_number:
-			max_number = max(max_number, val);  // at line 45
+			max_number = (max_number  < val) ? val : max_number;  // at line 45
 ================================================================================================================
 
 

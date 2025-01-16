@@ -42,7 +42,7 @@ int maxAreaOfIsland(vector<vector<int>>& grid) {
         for (int j = 0; j < cols; j++) {
             if (grid[i][j] == 1) {
                 int val  = dfs(i,j,grid);
-                max_number = max(max_number, val);
+                max_number = (max_number  < val) ? val : max_number;
             }
         }
     }    
