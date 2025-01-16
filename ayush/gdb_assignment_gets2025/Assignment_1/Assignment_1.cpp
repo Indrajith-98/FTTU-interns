@@ -26,16 +26,16 @@ vector<pair<long, long>> sortWithFrequency(vector<long> v1) {
         p.first = v1[i];
         p.second = count(v1.begin(), v1.end(), v1[i]); // here Counted occurrences of the current number
         v2.push_back(p);
-        i += p.second; // here Skipped all occurrences of the same number
+        i += p.second; //here Skipped all occurrences of the same number
     }
 
-    sort(v2.begin(), v2.end(), comparecount); // here Sorted by frequency in descending order
+    sort(v2.begin(), v2.end(), comparecount); // Here Sorted by frequency in descending order
     return v2;
 }
 
 int main() {
     long a[] = {6, 5, 7, 5, 5, 6};
-    vector<long> v1{1,2, 3, 4, 5, 6};
+    vector<long> v1(a, a + 6);
     vector<pair<long, long>> v2 = sortWithFrequency(v1);
 
     for (size_t i = 0; i < v2.size(); ++i) {
