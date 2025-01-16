@@ -1,0 +1,142 @@
+/*
+
+Issues found:
+1. The dfs call for finding all the 1's that are nearer the current element is wrong as it finds dfs(i-1,j) two times, instead of it calculating dfs(i-1,j) and dfs(i+1,j).
+2. The condition for checking the max number is incorrect -> max_number = (max_number + 2 < val) ? val : max_number-5, instead the max_number = max(max_number, val) works fine.
+*/
+
+
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_3/Assignment_3 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 6759) exited normally]
+Breakpoint 1 at 0x5555555558db: file Assignment_3.cpp, line 90.
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_3/Assignment_3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at Assignment_3.cpp:90
+$1 = -2
+Please answer y or n.
+Breakpoint 2 at 0x555555555522: file Assignment_3.cpp, line 47.
+Please answer y or n.
+Please answer y or n.
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_3/Assignment_3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:47
+$2 = 0
+$3 = 2
+$4 = 0
+$5 = 1
+Continuing.
+
+Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:47
+$6 = 0
+$7 = 7
+$8 = 0
+$9 = 1
+$10 = -5
+$11 = 1
+Continuing.
+
+Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:47
+$12 = 3
+$13 = 1
+$14 = -4
+$15 = "this means the statement / line of code updating the max_number is not set properly, because here after the statements gets updated the value should have been 3 but its four because we want to find the"...
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_3/Assignment_3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:47
+Note: breakpoint 2 also set at pc 0x555555555522.
+Breakpoint 3 at 0x555555555522: file Assignment_3.cpp, line 47.
+Deleted breakpoints 2 3 
+Breakpoint 4 at 0x555555555522: file Assignment_3.cpp, line 47.
+Deleted breakpoint 4 
+Breakpoint 5 at 0x555555555557: file Assignment_3.cpp, line 51.
+Please answer y or n.
+Breakpoint 6 at 0x555555555522: file Assignment_3.cpp, line 47.
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_3/Assignment_3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 6, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:47
+$16 = 0
+$17 = 2
+$18 = 0
+$19 = 1
+$20 = "in this case the dfs function is calculating the area correctly"
+$21 = -5
+$22 = "but the max_number updating line of code is wrong"
+Continuing.
+
+Breakpoint 6, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:47
+$23 = 0
+$24 = 7
+$25 = 0
+$26 = 1
+$27 = "here is the area value that the function calculated should have been 4 but its 3 so that means the dfs function that is calculating the area is wrong"
+Breakpoint 7 at 0x5555555553c9: file Assignment_3.cpp, line 31.
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_3/Assignment_3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 7, dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+#0  dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+#1  0x000055555555551f in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:46
+#2  0x00005555555558d8 in main () at Assignment_3.cpp:88
+Continuing.
+
+Breakpoint 7, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+#0  dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+#1  0x0000555555555433 in dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+#2  0x000055555555551f in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:46
+#3  0x00005555555558d8 in main () at Assignment_3.cpp:88
+Cannot access memory at address 0x8
+$28 = 0
+$29 = -1
+$30 = 2
+Continuing.
+
+Breakpoint 7, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+$31 = -1
+$32 = 2
+#0  dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+#1  0x000055555555544c in dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+#2  0x000055555555551f in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:46
+#3  0x00005555555558d8 in main () at Assignment_3.cpp:88
+Continuing.
+
+Breakpoint 7, dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+#0  dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+#1  0x0000555555555464 in dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+#2  0x000055555555551f in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:46
+#3  0x00005555555558d8 in main () at Assignment_3.cpp:88
+$33 = 0
+$34 = 3
+$35 = 0
+$36 = 0
+Continuing.
+
+Breakpoint 7, dfs (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+Continuing.
+
+Breakpoint 7, dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+Continuing.
+
+Breakpoint 7, dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+Continuing.
+
+Breakpoint 7, dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+$37 = "here its calculating the same bfs again "
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

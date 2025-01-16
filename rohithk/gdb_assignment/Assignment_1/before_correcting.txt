@@ -1,0 +1,43 @@
+/*
+
+Issues found
+
+1. The issue was that the frequency counting code works by counting adjacent elements of the vector and then calculating its frequency.
+If it differs from the next adjacent element, in that case the frequency would be reset and again started from the adjacent element.
+But this function , ie the frequency counting lines of code expects the array to be sorted , but in our case although we are the sorting the array we are sorting it from 
+index 1 not from index 0 so first element position wont change even if there are other similar elements in the array 
+because after sorting all the similar elements will be together except the first one. So that is the bug which was preventing the code to display the expected output.
+ie, instead of this    sort(v1.begin() + 1, v1.end()) it should be   sort(v1.begin(), v1.end())
+
+2. after the frequency counting code is executed , it is then stored in a 2D vector with element and its count as  a
+pair , then we are sorting them based on frequency but in this case also we are starting from index 1 instead of zero. So that also we have to change.ie  instead of this 
+sort(v2.begin()+1, v2.end(),  comparecount) it should be     sort(v2.begin(), v2.end(),  comparecount)'
+
+*/
+
+Breakpoint 1 at 0x15e6: file Assignment_1.cpp, line 50.
+No line 423 in the current file.
+Please answer y or [n].
+Please answer y or [n].
+Please answer y or [n].
+Breakpoint 2 at 0x12f9: file Assignment_1.cpp, line 24.
+Breakpoint 3 at 0x1334: file Assignment_1.cpp, line 26.
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at Assignment_1.cpp:50
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+Continuing.
+
+Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:24
+$2 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+
+Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:26
+$3 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+Breakpoint 4 at 0x5555555554be: file Assignment_1.cpp, line 43.
+Continuing.
+
+Breakpoint 4, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:43
+$4 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+$5 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}

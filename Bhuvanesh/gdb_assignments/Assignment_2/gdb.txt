@@ -1,0 +1,41 @@
+Breakpoint 1 at 0x1400014d3: file Assignment_2.cpp, line 17.
+No symbol "sq" in current context.
+No symbol "s1" in current context.
+Starting program: D:\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 34840.0x63c8]
+[New Thread 34840.0x3fc8]
+[New Thread 34840.0x2540]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:17
+$1 = "gdebgginu"
+Breakpoint 2 at 0x7ff73d051489: file Assignment_2.cpp, line 15.
+Starting program: D:\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 36476.0x805c]
+[New Thread 36476.0x7c4]
+[New Thread 36476.0x502c]
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:15
+$2 = "debugging"
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:15
+$3 = "gebuggind"
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:15
+$4 = "gdbuggine"
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:15
+$5 = "gdeugginb"
+
+'_____________From the above output for each iteration we come to know that the swaping was done between the changing i characters and the last character only so we need to change the indexing______________'
+
+Breakpoint 1 at 0x1400014d6: file Assignment_2.cpp, line 17.
+No symbol "s1" in current context.
+Starting program: D:\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 29440.0x8070]
+[New Thread 29440.0x8120]
+[New Thread 29440.0x8cd8]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:17
+$1 = "gniggubed"
+
+'______________Hence the expected output and the output here are same nothing need to be debugged_______________'
