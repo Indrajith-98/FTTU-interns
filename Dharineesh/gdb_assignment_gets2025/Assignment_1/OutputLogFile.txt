@@ -1,0 +1,480 @@
+LogFile which contains line by line execution of every function.
+
+
+
+Breakpoint 1 at 0x14000171c: file Assignment_1.cpp, line 50.
+Starting program: O:\gdb_assignment_gets2025\Assignment_1\Assignment_1.exe 
+[New Thread 26356.0x7f0c]
+[New Thread 26356.0x3d10]
+[New Thread 26356.0x2528]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:50
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:603
+std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator (this=0x5ffe50) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:306
+__gnu_cxx::__alloc_traits<std::allocator<long>, long>::_S_select_on_copy (__a=...) at C:/msys64/ucrt64/include/c++/14.2.0/ext/alloc_traits.h:98
+std::allocator_traits<std::allocator<long> >::select_on_container_copy_construction (__rhs=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:584
+std::allocator<long>::allocator (this=0x5ffd9f, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:166
+std::__new_allocator<long>::__new_allocator (this=0x5ffd9f) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:92
+std::allocator<long>::allocator (this=0x5ffd9f, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:166
+std::allocator_traits<std::allocator<long> >::select_on_container_copy_construction (__rhs=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:584
+__gnu_cxx::__alloc_traits<std::allocator<long>, long>::_S_select_on_copy (__a=...) at C:/msys64/ucrt64/include/c++/14.2.0/ext/alloc_traits.h:98
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:603
+std::vector<long, std::allocator<long> >::size (this=0x5ffe50) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+std::_Vector_base<long, std::allocator<long> >::_Vector_base (this=0x5ffe90, __n=6, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:333
+std::_Vector_base<long, std::allocator<long> >::_Vector_impl::_Vector_impl (this=0x5ffe90, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:146
+std::allocator<long>::allocator (this=0x5ffe90, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:166
+std::__new_allocator<long>::__new_allocator (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:92
+std::allocator<long>::allocator (this=0x5ffe90, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:166
+std::_Vector_base<long, std::allocator<long> >::_Vector_impl::_Vector_impl (this=0x5ffe90, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:146
+std::_Vector_base<long, std::allocator<long> >::_Vector_impl_data::_Vector_impl_data (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:99
+std::_Vector_base<long, std::allocator<long> >::_Vector_impl::_Vector_impl (this=0x5ffe90, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:147
+std::_Vector_base<long, std::allocator<long> >::_Vector_base (this=0x5ffe90, __n=6, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:334
+std::_Vector_base<long, std::allocator<long> >::_M_create_storage (this=0x5ffe90, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:398
+std::_Vector_base<long, std::allocator<long> >::_M_allocate (this=0x5ffe90, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:380
+std::allocator_traits<std::allocator<long> >::allocate (__a=..., __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:478
+std::__new_allocator<long>::allocate (this=0x5ffe90, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:134
+std::__new_allocator<long>::_M_max_size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:233
+std::__new_allocator<long>::allocate (this=0x5ffe90, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:134
+std::allocator_traits<std::allocator<long> >::allocate (__a=..., __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:478
+std::_Vector_base<long, std::allocator<long> >::_M_allocate (this=0x5ffe90, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:381
+std::_Vector_base<long, std::allocator<long> >::_M_create_storage (this=0x5ffe90, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:399
+std::_Vector_base<long, std::allocator<long> >::_Vector_base (this=0x5ffe90, __n=6, __a=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:334
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:603
+std::allocator<long>::~allocator (this=<optimized out>, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:182
+std::__new_allocator<long>::~__new_allocator (this=0x5ffd9f, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:104
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:608
+std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:301
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:606
+std::vector<long, std::allocator<long> >::end (this=0x5ffe50) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:904
+__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >::__normal_iterator (this=0x5ffd58, __i=@0x5ffe58: 0x6fbfa8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+std::vector<long, std::allocator<long> >::begin (this=0x5ffe50) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:884
+__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >::__normal_iterator (this=0x5ffd58, __i=@0x5ffe50: 0x6fbf90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*, long> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h:373
+std::uninitialized_copy<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h:174
+std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h:147
+std::copy<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:651
+std::__miter_base<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > > > (__it=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h:608
+std::__miter_base<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > > > (__it=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h:608
+std::__copy_move_a<false, __gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:555
+std::__niter_base<long*> (__it=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:318
+std::__niter_base<long const*, std::vector<long, std::allocator<long> > > (__it=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1350
+__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc50) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__niter_base<long const*, std::vector<long, std::allocator<long> > > (__it=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1350
+__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc50) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__copy_move_a1<false, long const*, long*> (__first=0x6fbf90, __last=0x6fbfa8, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:548
+std::__copy_move_a2<false, long const*, long*> (__first=0x6fbf90, __last=0x6fbfa8, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:521
+std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<long const, long> (__first=0x6fbf90, __last=0x6fbfa8, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:450
+std::__copy_move_a2<false, long const*, long*> (__first=0x6fbf90, __last=0x6fbfa8, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:522
+std::__copy_move_a1<false, long const*, long*> (__first=0x6fbf90, __last=0x6fbfa8, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:548
+std::__niter_wrap<long*> (__res=0x701608) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:354
+std::__copy_move_a<false, __gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:559
+std::copy<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:652
+std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h:147
+std::uninitialized_copy<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h:186
+std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<long const*, std::vector<long, std::allocator<long> > >, long*, long> (__first=6, __last=-1414812757, __result=0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h:374
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:605
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > >::vector (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:531
+std::_Vector_base<std::pair<long, long>, std::allocator<std::pair<long, long> > >::_Vector_base (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:314
+std::_Vector_base<std::pair<long, long>, std::allocator<std::pair<long, long> > >::_Vector_impl::_Vector_impl (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:141
+std::allocator<std::pair<long, long> >::allocator (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:161
+std::__new_allocator<std::pair<long, long> >::__new_allocator (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:88
+std::allocator<std::pair<long, long> >::allocator (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:161
+std::_Vector_base<std::pair<long, long>, std::allocator<std::pair<long, long> > >::_Vector_impl::_Vector_impl (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:141
+std::_Vector_base<std::pair<long, long>, std::allocator<std::pair<long, long> > >::_Vector_impl_data::_Vector_impl_data (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:99
+std::_Vector_base<std::pair<long, long>, std::allocator<std::pair<long, long> > >::_Vector_impl::_Vector_impl (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:142
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:22
+$1 = std::vector of length 0, capacity 0
+Hardware watchpoint 2: v1
+std::vector<long, std::allocator<long> >::end (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:894
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator (this=0x5ffd88, __i=@0x5ffe98: 0x701608) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+std::vector<long, std::allocator<long> >::begin (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:874
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator (this=0x5ffd88, __i=@0x5ffe90: 0x7015f0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator+ (this=0x5ffdc8, __n=1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1139
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator (this=0x5ffd80, __i=@0x5ffd88: 0x7015f4) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+std::sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (__first=5, __last=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:4771
+__gnu_cxx::__ops::__iter_less_iter () at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:51
+std::__sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1903
+__gnu_cxx::operator!=<long*, std::vector<long, std::allocator<long> > > (__lhs=5, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd60) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd68) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+Watchpoint 2 deleted because the program has left the block
+in which its expression is valid.
+std::__sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1906
+__gnu_cxx::operator-<long*, std::vector<long, std::allocator<long> > > (__lhs=-1414812757, __rhs=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1328
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd68) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd60) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__lg<long long> (__n=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:1547
+std::__bit_width<unsigned long long> (__x=5) at C:/msys64/ucrt64/include/c++/14.2.0/bit:373
+std::__countl_zero<unsigned long long> (__x=5) at C:/msys64/ucrt64/include/c++/14.2.0/bit:204
+std::__bit_width<unsigned long long> (__x=5) at C:/msys64/ucrt64/include/c++/14.2.0/bit:375
+std::__lg<long long> (__n=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:1557
+std::__sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1905
+std::__introsort_loop<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long long, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __depth_limit=4, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1880
+__gnu_cxx::operator-<long*, std::vector<long, std::allocator<long> > > (__lhs=-1414812757, __rhs=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1328
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd28) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd20) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__introsort_loop<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, long long, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __depth_limit=4, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1893
+std::__sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1908
+std::__final_insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1815
+__gnu_cxx::operator-<long*, std::vector<long, std::allocator<long> > > (__lhs=-1414812757, __rhs=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1328
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd28) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffd20) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__final_insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1822
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1773
+__gnu_cxx::operator==<long*, std::vector<long, std::allocator<long> > > (__lhs=5, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1219
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator+ (this=0x5ffcd0, __n=1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1139
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::__normal_iterator (this=0x5ffc50, __i=@0x5ffc58: 0x7015f8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+__gnu_cxx::operator!=<long*, std::vector<long, std::allocator<long> > > (__lhs=7, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1777
+__gnu_cxx::__ops::_Iter_less_iter::operator()<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffce0, __it1=7, __it2=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:45
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc78) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1786
+__gnu_cxx::__ops::__val_comp_iter () at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:109
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1785
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1754
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<long&> (__t=@0x7015f8: 7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1755
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-- (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_less_iter::operator()<long, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffc78, __val=@0x5ffc4c: 7, __it=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:98
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1763
+std::move<long&> (__t=@0x5ffc4c: 7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1764
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator++ (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1102
+__gnu_cxx::operator!=<long*, std::vector<long, std::allocator<long> > > (__lhs=5, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1777
+__gnu_cxx::__ops::_Iter_less_iter::operator()<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffce0, __it1=5, __it2=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:45
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc78) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1786
+__gnu_cxx::__ops::__val_comp_iter () at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:109
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1785
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1754
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<long&> (__t=@0x7015fc: 5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1755
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-- (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_less_iter::operator()<long, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffc78, __val=@0x5ffc4c: 5, __it=7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:98
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1759
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<long&> (__t=@0x7015f8: 7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1760
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-- (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_less_iter::operator()<long, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffc78, __val=@0x5ffc4c: 5, __it=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:98
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1763
+std::move<long&> (__t=@0x5ffc4c: 5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1764
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator++ (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1102
+__gnu_cxx::operator!=<long*, std::vector<long, std::allocator<long> > > (__lhs=5, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1777
+__gnu_cxx::__ops::_Iter_less_iter::operator()<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffce0, __it1=5, __it2=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:45
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc78) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1786
+__gnu_cxx::__ops::__val_comp_iter () at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:109
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1785
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1754
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<long&> (__t=@0x701600: 5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1755
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-- (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_less_iter::operator()<long, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffc78, __val=@0x5ffc4c: 5, __it=7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:98
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1759
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<long&> (__t=@0x7015fc: 7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1760
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-- (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_less_iter::operator()<long, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffc78, __val=@0x5ffc4c: 5, __it=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:98
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=7, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1763
+std::move<long&> (__t=@0x5ffc4c: 5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=5, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1764
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator++ (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1102
+__gnu_cxx::operator!=<long*, std::vector<long, std::allocator<long> > > (__lhs=6, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1777
+__gnu_cxx::__ops::_Iter_less_iter::operator()<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffce0, __it1=6, __it2=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:45
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc78) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1786
+__gnu_cxx::__ops::__val_comp_iter () at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:109
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1785
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=6, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1754
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<long&> (__t=@0x701604: 6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=6, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1755
+$2 = 7
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator-- (this=0x5ffc40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=6, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_less_iter::operator()<long, __gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (this=0x5ffc78, __val=@0x5ffc4c: 6, __it=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:98
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=6, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1763
+std::move<long&> (__t=@0x5ffc4c: 6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator* (this=0x5ffc70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Val_less_iter> (__last=6, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1764
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::operator++ (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1102
+__gnu_cxx::operator!=<long*, std::vector<long, std::allocator<long> > > (__lhs=-1414812757, __rhs=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffc98) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >::base (this=0x5ffcd8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1788
+std::__final_insertion_sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1823
+std::__sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > >, __gnu_cxx::__ops::_Iter_less_iter> (__first=5, __last=-1414812757, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1910
+std::sort<__gnu_cxx::__normal_iterator<long*, std::vector<long, std::allocator<long> > > > (__first=5, __last=-1414812757) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:4772
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:26
+$3 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 7, 6}
+Breakpoint 3 at 0x7ff795de163c: file Assignment_1.cpp, line 43.
+Continuing.
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:43
+std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > >::end (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:894
+$4 = (std::_Vector_base<std::pair<long, long>, std::allocator<std::pair<long, long> > >::pointer) 0x6fc160
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::__normal_iterator (this=0x5ffd88, __i=@0x5ffe38: 0x6fc160) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > >::begin (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:874
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::__normal_iterator (this=0x5ffd88, __i=@0x5ffe30: 0x6fc140) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator+ (this=0x5ffdd0, __n=1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1139
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::__normal_iterator (this=0x5ffd80, __i=@0x5ffd88: 0x6fc148) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+std::sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, bool (*)(std::pair<long, long>, std::pair<long, long>)> (__first={...}, __last={...}, __comp=0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:4804
+__gnu_cxx::__ops::__iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> (__comp=0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:165
+std::move<bool (*&)(std::pair<long, long>, std::pair<long, long>)> (__t=@0x5ffd70: 0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::_Iter_comp_iter (this=0x5ffd58, __comp=0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:151
+std::move<bool (*&)(std::pair<long, long>, std::pair<long, long>)> (__t=@0x5ffd38: 0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::_Iter_comp_iter (this=0x5ffd58, __comp=0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:152
+std::__sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1903
+__gnu_cxx::operator!=<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd78) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1906
+__gnu_cxx::operator-<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1328
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd78) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd70) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__lg<long long> (__n=3) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:1547
+std::__bit_width<unsigned long long> (__x=3) at C:/msys64/ucrt64/include/c++/14.2.0/bit:373
+std::__countl_zero<unsigned long long> (__x=3) at C:/msys64/ucrt64/include/c++/14.2.0/bit:204
+std::__bit_width<unsigned long long> (__x=3) at C:/msys64/ucrt64/include/c++/14.2.0/bit:375
+std::__lg<long long> (__n=3) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algobase.h:1557
+std::__sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1905
+std::__introsort_loop<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, long long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __depth_limit=2, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1880
+__gnu_cxx::operator-<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1328
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd48) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__introsort_loop<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, long long, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __depth_limit=2, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1893
+std::__sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1908
+std::__final_insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1815
+__gnu_cxx::operator-<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1328
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd48) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd40) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__final_insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1822
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1773
+__gnu_cxx::operator==<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1219
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd10) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd18) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+[New Thread 26356.0x1470]
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator+ (this=0x5ffd10, __n=1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1139
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::__normal_iterator (this=0x5ffca0, __i=@0x5ffca8: 0x6fc150) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+__gnu_cxx::operator!=<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffce8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd18) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1777
+__gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::operator()<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > > (this=0x5ffd20, __it1={...}, __it2={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:158
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcd0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+comparecount (a={...}, b={...}) at Assignment_1.cpp:16
+$5 = 1
+$6 = 3
+No symbol "v2" in current context.
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1785
+__gnu_cxx::__ops::__val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> (__comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:253
+std::move<__gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>&> (__t=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::_Val_comp_iter (this=0x5ffca8, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:232
+std::move<bool (*&)(std::pair<long, long>, std::pair<long, long>)> (__t=@0x5ffcc0: 0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::_Val_comp_iter (this=0x5ffca8, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:233
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1754
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<std::pair<long, long>&> (__t={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1755
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator-- (this=0x5ffc90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::operator()<std::pair<long, long>, __gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > > (this=0x5ffcc8, __val={...}, __it={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:240
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+comparecount (a={...}, b={...}) at Assignment_1.cpp:16
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1763
+std::move<std::pair<long, long>&> (__t={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::pair<long, long>::operator= (this=0x6fc150, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:937
+std::forward<long> (__t=@0x5ffc98: 7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:71
+std::pair<long, long>::operator= (this=0x6fc150, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:938
+std::forward<long> (__t=@0x5ffc9c: 1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:71
+std::pair<long, long>::operator= (this=0x6fc150, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:939
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1764
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator++ (this=0x5ffce8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1102
+__gnu_cxx::operator!=<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffce8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd18) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1777
+__gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::operator()<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > > (this=0x5ffd20, __it1={...}, __it2={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:158
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcd0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+comparecount (a={...}, b={...}) at Assignment_1.cpp:16
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1785
+__gnu_cxx::__ops::__val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> (__comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:253
+std::move<__gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>&> (__t=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::_Val_comp_iter (this=0x5ffca8, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:232
+std::move<bool (*&)(std::pair<long, long>, std::pair<long, long>)> (__t=@0x5ffcc0: 0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::_Val_comp_iter (this=0x5ffca8, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:233
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1754
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<std::pair<long, long>&> (__t={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1755
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator-- (this=0x5ffc90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::operator()<std::pair<long, long>, __gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > > (this=0x5ffcc8, __val={...}, __it={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:240
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+comparecount (a={...}, b={...}) at Assignment_1.cpp:16
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1759
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffc90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::move<std::pair<long, long>&> (__t={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::pair<long, long>::operator= (this=0x6fc158, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:937
+std::forward<long> (__t=@0x6fc150: 7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:71
+std::pair<long, long>::operator= (this=0x6fc158, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:938
+std::forward<long> (__t=@0x6fc154: 1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:71
+std::pair<long, long>::operator= (this=0x6fc158, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:939
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1760
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator-- (this=0x5ffc90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1116
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1757
+__gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)>::operator()<std::pair<long, long>, __gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > > (this=0x5ffcc8, __val={...}, __it={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/predefined_ops.h:240
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffc80) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+comparecount (a={...}, b={...}) at Assignment_1.cpp:16
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1763
+std::move<std::pair<long, long>&> (__t={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator* (this=0x5ffcc0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1091
+std::pair<long, long>::operator= (this=0x6fc150, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:937
+std::forward<long> (__t=@0x5ffc98: 6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:71
+std::pair<long, long>::operator= (this=0x6fc150, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:938
+std::forward<long> (__t=@0x5ffc9c: 2) at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:71
+std::pair<long, long>::operator= (this=0x6fc150, __p=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_pair.h:939
+std::__unguarded_linear_insert<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Val_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1764
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1775
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::operator++ (this=0x5ffce8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1102
+__gnu_cxx::operator!=<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > > (__lhs={...}, __rhs={...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1235
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffce8) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::base (this=0x5ffd18) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1154
+std::__insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1788
+std::__final_insertion_sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1823
+std::__sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(std::pair<long, long>, std::pair<long, long>)> > (__first={...}, __last={...}, __comp=...) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:1910
+std::sort<__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >, bool (*)(std::pair<long, long>, std::pair<long, long>)> (__first={...}, __last={...}, __comp=0x7ff795de1460 <comparecount(std::pair<long, long>, std::pair<long, long>)>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h:4805
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:44
+std::vector<long, std::allocator<long> >::~vector (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:736
+std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:301
+std::vector<long, std::allocator<long> >::~vector (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:735
+std::_Destroy<long*, long> (__first=0x7015f0, __last=0x701608) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:944
+std::_Destroy<long*> (__first=0x7015f0, __last=0x701608) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h:196
+std::_Destroy_aux<true>::__destroy<long*> () at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h:172
+std::_Destroy<long*> (__first=0x7015f0, __last=0x701608) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_construct.h:197
+std::_Destroy<long*, long> (__first=0x7015f0, __last=0x701608) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:945
+std::vector<long, std::allocator<long> >::~vector (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:738
+std::_Vector_base<long, std::allocator<long> >::~_Vector_base (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:369
+std::_Vector_base<long, std::allocator<long> >::_M_deallocate (this=0x5ffe90, __p=0x7015f0, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:388
+std::allocator_traits<std::allocator<long> >::deallocate (__a=..., __p=0x7015f0, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:513
+std::__new_allocator<long>::deallocate (this=0x5ffe90, __p=0x7015f0, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:172
+std::allocator_traits<std::allocator<long> >::deallocate (__a=..., __p=0x7015f0, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/alloc_traits.h:513
+std::_Vector_base<long, std::allocator<long> >::_M_deallocate (this=0x5ffe90, __p=0x7015f0, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:390
+std::_Vector_base<long, std::allocator<long> >::~_Vector_base (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:370
+std::_Vector_base<long, std::allocator<long> >::_Vector_impl::~_Vector_impl (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:132
+std::allocator<long>::~allocator (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/allocator.h:182
+std::__new_allocator<long>::~__new_allocator (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h:104
+std::_Vector_base<long, std::allocator<long> >::_Vector_impl::~_Vector_impl (this=0x5ffe90, __in_chrg=<optimized out>) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:132
+main () at Assignment_1.cpp:51
+std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > >::begin (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:874
+__gnu_cxx::__normal_iterator<std::pair<long, long>*, std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > > >::__normal_iterator (this=0x5ffde8, __i=@0x5ffe30: 0x6fc140) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_iterator.h:1068
+main () at Assignment_1.cpp:52
+std::vector<std::pair<long, long>, std::allocator<std::pair<long, long> > >::size (this=0x5ffe30) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+main () at Assignment_1.cpp:53
+Hardware watchpoint 4: v2
+Watchpoint 4 deleted because the program has left the block
+in which its expression is valid.
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+#########################################################################################
+After Changes
+#########################################################################################
+
+
+
+Breakpoint 1 at 0x1400016f2: file Assignment_1.cpp, line 50.
+Starting program: O:\gdb_assignment_gets2025\Assignment_1\Output1.exe 
+[New Thread 29120.0x6eb4]
+[New Thread 29120.0x4878]
+[New Thread 29120.0x221c]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:50
+Breakpoint 2 at 0x7ff7dd58148d: file Assignment_1.cpp, line 21.
+std::vector<long, std::allocator<long> >::vector (this=0x5ffe90, __x=std::vector of length 6, capacity 6 = {...}) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:603
+Continuing.
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+$1 = std::vector of length 6, capacity 6 = {5, 5, 5, 6, 6, 7}
+Breakpoint 3 at 0x7ff7dd581627: file Assignment_1.cpp, line 43.
+Continuing.
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:43
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00007ff7dd5816f2 in main() at Assignment_1.cpp:50
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00007ff7dd58148d in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:21
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x00007ff7dd581627 in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:43
+	breakpoint already hit 1 time
+$2 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+Breakpoint 4 at 0x7ff7dd581737: file Assignment_1.cpp, line 52.
+Continuing.
+
+Thread 1 hit Breakpoint 4, main () at Assignment_1.cpp:52
+$3 = {first = 5, second = 3}
+$4 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+$5 = 3
+$6 = 3
+$7 = 5
+$8 = 3
+$9 = 6
+$10 = 2
+$11 = 7
+$12 = 1
+$13 = 1
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
