@@ -1,0 +1,71 @@
+Breakpoint 1 at 0x140001d29: file .\Assignment_3.cpp, line 86.
+Breakpoint 2 at 0x14000194f: file .\Assignment_3.cpp, line 37.
+Breakpoint 3 at 0x1400019c1: file .\Assignment_3.cpp, line 44.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_3\Assignment_3.exe < input.txt
+[New Thread 4116.0x2e20]
+[New Thread 4116.0x3ba4]
+[New Thread 4116.0x488]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_3.cpp:86
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:37
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+$1 = 1
+Continuing.
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+Breakpoint 1 at 0x140001d29: file .\Assignment_3.cpp, line 86.
+Breakpoint 2 at 0x1400019c1: file .\Assignment_3.cpp, line 44.
+Breakpoint 3 at 0x14000194f: file .\Assignment_3.cpp, line 37.
+Breakpoint 4 at 0x140001888: file .\Assignment_3.cpp, line 31.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_3\Assignment_3.exe < input.txt
+[New Thread 18344.0x3578]
+[New Thread 18344.0x210c]
+[New Thread 18344.0x4310]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_3.cpp:86
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:37
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+
+Thread 1 hit Breakpoint 4, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31  // During the recursion call, we check the element to the left of the current element (i) i.e (i-1)
+
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:33
+
+Thread 1 hit Breakpoint 4, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31  // Next we must check the element to the right of the current element (i) i.e (i+1), but the (i) value is same as the index of left element (i-1) -> Logical Error
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:33
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:33
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:33
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:45
+$1 = 1 // Printing 'val'
+$2 = 0 // Printing 'max_value'
+$3 = -5 // Printing 'max_value' after updation -> The max_value should be updated to the max of 'val' & 'max_value', but we get some other value -> Logical Error
+
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00007ff7388e1d29 in main() at .\Assignment_3.cpp:86
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00007ff7388e19c1 in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:44
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x00007ff7388e194f in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:37
+	breakpoint already hit 1 time
+4       breakpoint     keep y   0x00007ff7388e1888 in dfs(int, int, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at .\Assignment_3.cpp:31
+	breakpoint already hit 5 times
+Continuing.
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+$4 = 1
+$5 = -5
+$6 = 1
+Continuing.
+[Thread 18344.0x210c exited with code 0]
+[Thread 18344.0x3578 exited with code 0]
+[Thread 18344.0x4310 exited with code 0]
+[Inferior 1 (process 18344) exited normally]
