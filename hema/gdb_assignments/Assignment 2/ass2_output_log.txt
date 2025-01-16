@@ -1,0 +1,167 @@
+1. Running the program
+
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_2.exe
+Reading symbols from ./assignment_2.exe...
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_2.exe 
+[New Thread 36188.0x32b8]
+gdebgginu
+[Thread 36188.0x32b8 exited with code 0]
+[Inferior 1 (process 36188) exited normally]
+(gdb) q
+
+expected output,
+gniggubed
+
+
+2. Checking the variable s1 how it is changing in the loop and setting some breakpoints in the program
+
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_2.exe 
+[New Thread 30556.0x27fc]
+
+Thread 1 hit Breakpoint 1, main () at assignment_2.cpp:14
+14          for (int i = 0; i < n/2; i++) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[n-1]);
+(gdb) p s1
+$1 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x5ffe50 "debugging"}, _M_string_length = 9, {_M_local_buf = "debugging\000┬╗\000\000\000\000",
+    _M_allocated_capacity = 7956003910775367012}}
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$2 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x5ffe50 "gebuggind"}, _M_string_length = 9, {_M_local_buf = "gebuggind\000┬╗\000\000\000\000", 
+    _M_allocated_capacity = 7956003910775367015}}
+(gdb) n
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[n-1]);
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$3 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x5ffe50 "gdbuggine"}, _M_string_length = 9, {_M_local_buf = "gdbuggine\000┬╗\000\000\000\000",
+    _M_allocated_capacity = 7956003910775366759}}
+(gdb) n
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[n-1]);
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$4 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>},
+    _M_p = 0x5ffe50 "gdeugginb"}, _M_string_length = 9, {_M_local_buf = "gdeugginb\000┬╗\000\000\000\000", 
+    _M_allocated_capacity = 7956003910775563367}}
+(gdb) n
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[n-1]);
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$5 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>},
+    _M_p = 0x5ffe50 "gdebgginu"}, _M_string_length = 9, {_M_local_buf = "gdebgginu\000┬╗\000\000\000\000", 
+    _M_allocated_capacity = 7956003910456796263}}
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at assignment_2.cpp:18
+18          std::cout << s1 << std::endl;
+(gdb) n
+gdebgginu0x00007ff7a321d7b0 in std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&)) ()
+(gdb) n
+Single stepping until exit from function _ZNSolsEPFRSoS_E,
+which has no line number information.
+0x00007ff7a32433f0 in std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) ()
+(gdb) q
+
+3. seems, the variable s1 is always swapping its position with the last character, so change that and see the output
+
+PS D:\Documents_personal\Multicoreware\training\day 1> g++ -g -o assignment_2 assignment_2.cpp
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_2.exe
+Reading symbols from ./assignment_2.exe...
+(gdb) break assignment_2.cpp:14
+Breakpoint 1 at 0x1400013b0: file assignment_2.cpp, line 14.
+(gdb) break assignment_2.cpp:15
+Breakpoint 2 at 0x1400013c2: file assignment_2.cpp, line 15.
+(gdb) break assignment_2.cpp:17
+Breakpoint 3 at 0x14000140d: file assignment_2.cpp, line 17.
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_2.exe
+[New Thread 26332.0x1260]
+
+Thread 1 hit Breakpoint 1, main () at assignment_2.cpp:14
+14          for (int i = 0,j=n-1; i < n/2; i++,j--) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0,j=n-1; i < n/2; i++,j--) {
+(gdb) p s1
+$1 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x5ffe50 "gebuggind"}, _M_string_length = 9, {_M_local_buf = "gebuggind\000├ü\000\000\000\000",
+    _M_allocated_capacity = 7956003910775367015}}
+(gdb) n
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0,j=n-1; i < n/2; i++,j--) {
+(gdb) p s1
+$2 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x5ffe50 "gnbuggied"}, _M_string_length = 9, {_M_local_buf = "gnbuggied\000├ü\000\000\000\000",
+    _M_allocated_capacity = 7307485564434017895}}
+(gdb) n
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0,j=n-1; i < n/2; i++,j--) {
+(gdb) p s1
+$3 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x5ffe50 "gniuggbed"}, _M_string_length = 9, {_M_local_buf = "gniuggbed\000├ü\000\000\000\000",
+    _M_allocated_capacity = 7305515239597502055}}
+(gdb) n
+
+Thread 1 hit Breakpoint 2, main () at assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0,j=n-1; i < n/2; i++,j--) {
+(gdb) p s1
+$4 = {_M_dataplus = {<std::allocator<char>> = {<std::__new_allocator<char>> = {<No data fields>}, <No data fields>},
+    _M_p = 0x5ffe50 "gniggubed"}, _M_string_length = 9, {_M_local_buf = "gniggubed\000├ü\000\000\000\000",
+    _M_allocated_capacity = 7305530632525409895}}
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at assignment_2.cpp:17
+17          std::cout << s1 << std::endl;
+(gdb) n
+gniggubed0x00007ff728d7d7c0 in std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&)) ()
+(gdb) c
+Continuing.
+
+[Thread 26332.0x1260 exited with code 0]
+[Inferior 1 (process 26332) exited normally]
+(gdb) q
+
+4. Checking if this program runs fine for other input -> it is running fine for other input too
+
+input: "even"
+
+PS D:\Documents_personal\Multicoreware\training\day 1> g++ -g -o assignment_2 assignment_2.cpp
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_2.exe
+Reading symbols from ./assignment_2.exe...
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_2.exe
+[New Thread 9184.0x248]
+neve
+[Thread 9184.0x248 exited with code 0]
+[Inferior 1 (process 9184) exited normally]
+(gdb) q
+
+"The program is running fine for other inputs too.."
