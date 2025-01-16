@@ -1,0 +1,201 @@
+Breakpoint 1 at 0x1400016c0: file Assignment_1.cpp, line 49.
+Breakpoint 2 at 0x14000145d: file Assignment_1.cpp, line 21.
+Starting program: E:\gdb_assignment_gets2025\Assignment_1\Assignment_1.exe 
+[New Thread 27296.0x9e0]
+[New Thread 27296.0x4bb4]
+[New Thread 27296.0x40ec]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:49
+$1 = {6, 5, 7, 5, 5, 6}
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+$2 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+$3 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+Hardware watchpoint 3: i
+Hardware watchpoint 4: i
+Arguments must be numbers or '$' variables.
+Undefined info command: "watchlist".  Try "help info".
+Undefined info command: "watchlist ".  Try "help info".
+Num     Type           Disp Enb Address            What
+3       hw watchpoint  keep y                      i
+4       hw watchpoint  keep y                      i
+$4 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+$5 = std::vector of length 0, capacity 0
+
+Thread 1 hit Hardware watchpoint 3: i
+
+Old value = 0
+New value = 1
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:33
+$6 = std::vector of length 1, capacity 1 = {{first = 6, second = 2}}
+
+Thread 1 hit Hardware watchpoint 3: i
+
+Old value = 1
+New value = 2
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:39
+$7 = std::vector of length 2, capacity 2 = {{first = 6, second = 2}, {first = 5, second = 3}}
+
+Thread 1 hit Hardware watchpoint 3: i
+
+Old value = 2
+New value = 3
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:26
+$8 = std::vector of length 2, capacity 2 = {{first = 6, second = 2}, {first = 5, second = 3}}
+
+Thread 1 hit Hardware watchpoint 3: i
+
+Old value = 3
+New value = 4
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:26
+$9 = std::vector of length 2, capacity 2 = {{first = 6, second = 2}, {first = 5, second = 3}}
+
+Thread 1 hit Hardware watchpoint 3: i
+
+Old value = 4
+New value = 5
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:39
+$10 = std::vector of length 3, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}}
+
+Thread 1 hit Hardware watchpoint 3: i
+
+Old value = 5
+New value = 6
+sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:39
+[New Thread 27296.0x3d84]
+$11 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+$12 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+Watchpoint 3 deleted because the program has left the block
+in which its expression is valid.
+main () at Assignment_1.cpp:51
+Note: breakpoint 1 also set at pc 0x1400016c0.
+Breakpoint 2 at 0x1400016c0: file Assignment_1.cpp, line 49.
+Breakpoint 3 at 0x14000145d: file Assignment_1.cpp, line 21.
+Starting program: E:\gdb_assignment_gets2025\Assignment_1\Assignment_1.exe 
+[New Thread 10816.0xf70]
+[New Thread 10816.0x3d80]
+[New Thread 10816.0x4198]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:49
+49	    vector<long> v1(a,a+6);
+50	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21	    vector<pair<long, long>> v2;
+22	    int i = 0;
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+$2 = std::vector of length 0, capacity 0
+24	    sort(v1.begin()+1, v1.end());
+$3 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+29	            p.first = v1[i];
+30	            p.second = count(v1.begin(), v1.end(), v1[i]);
+31	            v2.push_back(p);
+32	            i++;
+33	            continue;
+$4 = std::vector of length 1, capacity 1 = {{first = 6, second = 2}}
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+35	            p.first = v1[i];
+36	            p.second = count(v1.begin(), v1.end(), v1[i]);
+37	            v2.push_back(p);
+38	            i++;
+39	            continue;
+$5 = std::vector of length 2, capacity 2 = {{first = 6, second = 2}, {first = 5, second = 3}}
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+41	        i++;
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+41	        i++;
+$6 = std::vector of length 2, capacity 2 = {{first = 6, second = 2}, {first = 5, second = 3}}
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+35	            p.first = v1[i];
+36	            p.second = count(v1.begin(), v1.end(), v1[i]);
+37	            v2.push_back(p);
+38	            i++;
+39	            continue;
+$7 = std::vector of length 3, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}}
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+35	            p.first = v1[i];
+36	            p.second = count(v1.begin(), v1.end(), v1[i]);
+37	            v2.push_back(p);
+38	            i++;
+39	            continue;
+$8 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+26	    while (i < v1.size()) {
+43	    sort(v2.begin()+1, v2.end(),  comparecount);
+44	    return v2;
+$9 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+main () at Assignment_1.cpp:51
+51	    vector<pair<long, long>>::iterator it = v2.begin();
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+55	    return 0;
+56	}
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:261
+warning: 261	C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c: No such file or directory
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+
+
+
+#########################################################################################################################################################
+
+>> Inference :
+
+    Breakpoint 1 at line 49 in the main function.                     // breakpoint
+
+    Breakpoint 2 at line 21 in the sortWithFrequency function.
+
+    Old and new values of i are displayed as it increments.            // watchpoint                     
+   
+    Changes in v2 are shown after each iteration, reflecting updates in frequency counts for elements.
+
+    The vector v1 is being sorted (though the sorting appears to be starting from the second element).
+
+    The program builds a vector of pairs v2 which holds unique elements of v1 along with their frequencies.
+
+    The function returns to main and prints each element and its frequency from v2.
+
+        
+#########################################################################################################################################################
+
+
+
+Modified :
+
+
+    line 24 :
+
+         actual   :   sort(v1.begin()+1, v1.end());
+
+         modified :   sort(v1.begin(), v1.end());
+
+    line 43 :
+        
+         actual   :  sort(v2.begin()+1, v2.end(),  comparecount);
+
+         modified :  sort(v2.begin(), v2.end(),  comparecount);
