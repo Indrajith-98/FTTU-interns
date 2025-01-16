@@ -18,7 +18,8 @@ jobs:
       - name: Determine Build Script
         id: determine_script
         run: |
-          LABELS=$(echo '${{ toJSON(github.event.pull_request.labels) }}' | jq -r '.[].name')
+          LABELS=$(jq -r '.pull_request.labels[].name' < $GITHUB_EVENT_PATH)
+          
           if echo "$LABELS" | grep -q "build-script-1"; then
             echo "BUILD_SCRIPT_PATH=./user-1/build.sh" >> $GITHUB_ENV
           elif echo "$LABELS" | grep -q "build-script-2"; then
