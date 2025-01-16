@@ -18,6 +18,8 @@ jobs:
       - name: Determine Build Script
         id: determine_script
         run: |
+          cat $GITHUB_EVENT_PATH
+
           LABELS=$(jq -r '.pull_request.labels[].name' < $GITHUB_EVENT_PATH)
           
           if echo "$LABELS" | grep -q "build-script-1"; then
