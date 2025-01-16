@@ -1,0 +1,23 @@
+Breakpoint 1 at 0x140001a56: file .\Assignment_1.cpp, line 49.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_1\Assignment_1.exe 
+[New Thread 21148.0x51e8]
+[New Thread 21148.0x6e80]
+[New Thread 21148.0x45f0]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_1.cpp:49
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}  // Printing v1 vector before sorting
+Breakpoint 2 at 0x7ff7300717fd: file .\Assignment_1.cpp, line 21.
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at .\Assignment_1.cpp:21
+$2 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}  // Printing v1 vector after sorting -> Not sorted correctly -> Probably Some Logical Error
+Breakpoint 3 at 0x7ff7300719ac: file .\Assignment_1.cpp, line 43.
+Continuing.
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at .\Assignment_1.cpp:43
+$3 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}} // Printing v2 -> Because of incorrect sorting the frequency of 6 has been recorded twice in the vector
+$4 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}} // Printing v2 after sorting based on frequency -> Again Incorrect Sorting -> Some Logical Error
+Continuing.
+[Thread 21148.0x6e80 exited with code 0]
+[Thread 21148.0x45f0 exited with code 0]
+[Thread 21148.0x51e8 exited with code 0]
+[Inferior 1 (process 21148) exited normally]

@@ -1,0 +1,17 @@
+Breakpoint 1 at 0x140001812: file .\Assignment_2.cpp, line 13.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 8012.0xbc0]
+[New Thread 8012.0x6bd4]
+[New Thread 8012.0x5dc4]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_2.cpp:13
+$1 = "debugging"
+$2 = "gebuggind"
+$3 = "gdbuggine"  // Printing the string s1 after every iteration -> We can see that the left index is incrementing correctly after every iteration, but the right index is not decrementing. Hence, only the element at the last index is getting swapped with the left index after every iteraion
+$4 = "gdeugginb"
+$5 = "gdebgginu"
+Continuing.
+[Thread 8012.0x5dc4 exited with code 0]
+[Thread 8012.0x6bd4 exited with code 0]
+[Thread 8012.0xbc0 exited with code 0]
+[Inferior 1 (process 8012) exited normally]

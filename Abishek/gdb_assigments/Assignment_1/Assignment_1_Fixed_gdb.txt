@@ -1,0 +1,23 @@
+Breakpoint 1 at 0x140001a2c: file .\Assignment_1_Fixed.cpp, line 49.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_1\Assignment_1_fixed.exe 
+[New Thread 29564.0x24c4]
+[New Thread 29564.0x4b88]
+[New Thread 29564.0x6520]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_1_Fixed.cpp:49
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+Breakpoint 2 at 0x7ff6fe4c17fd: file .\Assignment_1_Fixed.cpp, line 21.
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at .\Assignment_1_Fixed.cpp:21
+$2 = std::vector of length 6, capacity 6 = {5, 5, 5, 6, 6, 7}
+Breakpoint 3 at 0x7ff6fe4c1997: file .\Assignment_1_Fixed.cpp, line 43.
+Continuing.
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at .\Assignment_1_Fixed.cpp:43
+$3 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+$4 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+Continuing.
+[Thread 29564.0x24c4 exited with code 0]
+[Thread 29564.0x6520 exited with code 0]
+[Thread 29564.0x4b88 exited with code 0]
+[Inferior 1 (process 29564) exited normally]
