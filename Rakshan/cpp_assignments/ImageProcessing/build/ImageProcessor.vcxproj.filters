@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\MCW\Assignment-3 CPP\ImageProcessing\ImageProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\MCW\Assignment-3 CPP\ImageProcessing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F0BF0AB3-6281-3DF9-A3A7-1BC29BFB8DA3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
