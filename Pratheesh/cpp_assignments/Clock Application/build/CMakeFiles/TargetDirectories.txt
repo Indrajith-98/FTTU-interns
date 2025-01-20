@@ -1,0 +1,3 @@
+F:/MCW/CPP_assignments/Clock Application/build/CMakeFiles/ClockApplication.dir
+F:/MCW/CPP_assignments/Clock Application/build/CMakeFiles/ALL_BUILD.dir
+F:/MCW/CPP_assignments/Clock Application/build/CMakeFiles/ZERO_CHECK.dir
