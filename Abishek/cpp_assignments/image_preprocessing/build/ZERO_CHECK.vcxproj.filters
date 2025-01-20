@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\MultiCoreWare\Submissions\FTTU-interns\Abishek\cpp_assignments\image_preprocessing\build\CMakeFiles\de063efe9be4cc610cb4c4e3570ce26e\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C65008CC-A049-3195-A1F5-E9FFF9274400}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
