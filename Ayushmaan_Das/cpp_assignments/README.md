@@ -1,6 +1,19 @@
-### C++ Assignments
+# C++ Assignments
 
 - **_Ayushmaan Das (I000452)_**
+
+### Contents
+
+| Assignment Name   | Assignment Type              | Visit Code / Documentation              |
+| ----------------- | ---------------------------- | --------------------------------------- |
+| Assignment 1      | GDB                          | [view code](Assignment_1\Solution.cpp)  |
+| Assignment 2      | GDB                          | [view code](Assignment_2\Solution.cpp)  |
+| Assignment 3      | GDB                          | [view code](Assignment_3\Solution.cpp)  |
+| Clock Application | Application, Threading, Time | [view docs](Clock_Assignment\README.md) |
+
+<hr>
+
+### GDB Assignments Docs
 
 - Every Assignment has the following folder structure:
 
