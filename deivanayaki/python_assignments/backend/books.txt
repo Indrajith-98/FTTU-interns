@@ -1,0 +1,12 @@
+Name,Author,Genre,Total Pages,Book Topics
+Harry Potter and the Sorcerer's Stone,J.K. Rowling,FANTASY,309,"{'The Arrival at Hogwarts': [1, 80], 'The Sorting Hat Ceremony': [81, 100], ""The Mystery of the Sorcerer's Stone"": [101, 150], 'The Forbidden Forest Encounter': [151, 230], 'The Final Showdown': [231, 309]}"
+The Hobbit,J.R.R. Tolkien,ADVENTURE,310,"{""Bilbo's Unexpected Adventure Begins"": [1, 45], 'The Journey through the Misty Mountains': [46, 120], 'The Meeting with Smaug the Dragon': [121, 190], 'The Battle of Five Armies': [191, 270], 'Bilbo Returns Home': [271, 310]}"
+The Great Gatsby,F. Scott Fitzgerald,FICTION,218,"{'The Arrival of Gatsby': [1, 40], ""Gatsby's Mansion Parties"": [41, 100], ""Gatsby and Daisy's Reunion"": [101, 150], 'The Tragic Love Story': [151, 200], 'The Death of Gatsby': [201, 218]}"
+1984,George Orwell,FICTION,328,"{'Winston’s First Thoughts of Rebellion': [1, 80], 'Winston’s Love Affair with Julia': [81, 140], ""The Betrayal by O'Brien"": [141, 230], 'Winston’s Imprisonment in the Ministry of Love': [231, 290], 'The Final Acceptance of Big Brother': [291, 328]}"
+The Silent Patient,Alex Michaelides,MYSTERY,325,"{""Introduction to Alicia's World"": [1, 50], 'The Investigation Begins': [51, 100], 'Secrets Unfold': [101, 200], 'Twists and Turns': [201, 300], 'Revelation': [301, 325]}"
+The Shining,Stephen King,HORROR,447,"{'The Overlook Hotel': [1, 100], ""Jack's Struggles"": [101, 200], ""Danny's Visions"": [201, 300], 'The Horror Unleashed': [301, 400], 'The Final Confrontation': [401, 447]}"
+The Hunger Games,Suzanne Collins,ADVENTURE,374,"{'Introduction to Panem': [1, 50], 'The Reaping': [51, 100], 'The Arena': [101, 250], 'The Games': [251, 350], 'The Aftermath': [351, 374]}"
+And Then There Were None,Agatha Christie,THRILLER,264,"{'The Invitation': [1, 40], 'The Island': [41, 100], 'The Murders Begin': [101, 180], 'Suspicions': [181, 240], 'The Truth Revealed': [241, 264]}"
+Mastering the Art of French Cooking,Julia Child,COOKBOOKS,684,"{'Basic Techniques': [1, 100], 'Appetizers': [101, 200], 'Main Courses': [201, 400], 'Desserts': [401, 600], 'Tips and Tricks': [601, 684]}"
+A Game of Thrones,George R.R. Martin,FANTASY,694,"{'The Starks': [1, 100], ""King's Landing"": [101, 300], 'The Wall': [301, 500], 'War and Betrayal': [501, 650], 'Aftermath': [651, 694]}"
+The Road,Cormac McCarthy,FICTION,287,"{'The Journey Begins': [1, 50], 'Survival': [51, 100], 'Danger and Loss': [101, 200], 'Hope and Despair': [201, 250], 'The End of the Road': [251, 287]}"
