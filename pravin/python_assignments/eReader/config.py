@@ -1,2 +1,2 @@
 # Configuration file for storing constants like DB_PATH
-DB_PATH = "data/app.db"
+DB_PATH = "data/bookinfo.db"
