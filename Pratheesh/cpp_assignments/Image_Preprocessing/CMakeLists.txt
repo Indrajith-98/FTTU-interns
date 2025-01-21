@@ -19,7 +19,6 @@ set(SOURCES
     src/Brightness.cpp
     src/Normalization.cpp
     src/GaussianBlur.cpp
-    src/ImageIO.cpp
     main.cpp
 )
 
