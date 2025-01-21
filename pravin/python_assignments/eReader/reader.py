@@ -1,65 +1,80 @@
-from Operators.manage_users import init_db, register_user, authenticate_user, update_last_read, get_last_read
-from Operators.handle_files import load_text_file
-from Operators.utils import paginate
+import os
+from Operators.manage_users import UserManager
+from Operators.handle_files import Book
+from PyPDF2 import PdfReader
 
+
+def list_books_in_folder(folder_path):
+    """List all PDF files in the folder with their page count."""
+    books = []
+    for file in os.listdir(folder_path):
+        if file.endswith(".pdf"):
+            file_path = os.path.join(folder_path, file)
+            try:
+                reader = PdfReader(file_path)
+                page_count = len(reader.pages)
+                books.append((file, page_count))
+            except Exception as e:
+                print(f"Error reading {file}: {e}")
+    return books
 
 def main():
-    init_db()  # Ensure database and tables are initialized
+    # Initialize the database
+    UserManager.init_db()
 
-    print("Welcome to the eBook Reader!")
-    user_id = None
+    print("Welcome to the E-Book Reader!")
+    choice = input("Do you have an account? [y/n]: ").strip().lower()
 
-    while not user_id:
-        print("[1] Register")
-        print("[2] Login")
-        choice = input("Choose an option: ").strip()
-
-        if choice == "1":
-            username = input("Enter a new username: ").strip()
-            password = input("Enter a password: ").strip()
-            register_user(username, password)
-            print("Registration successful! Please log in.")
-            continue  # Redirect to login after registration
-        elif choice == "2":
-            username = input("Enter your username: ").strip()
-            password = input("Enter your password: ").strip()
-            user_id = authenticate_user(username, password)
-            if not user_id:
-                print("Login failed. Please try again.")
-        else:
-            print("Invalid choice.")
-
-    # User authenticated, proceed with the reader
-    file_path = "/Users/pravinpb/pycode/MCW/Assignments/submissions/FTTU-interns/pravin/python_assignments/eReader/BookRepo/summa.txt"
-    content = load_text_file(file_path)
-    if not content:
+    if choice == 'n':
+        username = input("Enter your username: ").strip()
+        password = input("Enter your password: ").strip()
+        UserManager.register_user(username, password)
+    elif choice == 'y':
+        username = input("Enter your username: ").strip()
+        password = input("Enter your password: ").strip()
+        user_id = UserManager.authenticate_user(username, password)
+        if not user_id:
+            return
+    else:
+        print("Invalid choice.")
         return
 
-    lines_per_page = 20
-    pages = list(paginate(content, lines_per_page))
-    current_page = get_last_read(user_id, file_path)
-    print(f"Resuming from page {current_page}")
+    folder_path = "/Users/pravinpb/pycode/MCW/Assignments/submissions/FTTU-interns/pravin/python_assignments/eReader/BookRepo"
+    books = list_books_in_folder(folder_path)
+    if not books:
+        print("No books found in the folder.")
+        return
+
+    print("\nAvailable Books:")
+    for i, (book, pages) in enumerate(books, start=1):
+        print(f"[{i}] {book}")
+
+    try:
+        choice = int(input("\nSelect a book by entering its number: ").strip())
+        if choice < 1 or choice > len(books):
+            print("Invalid selection. Exiting.")
+            return
+    except ValueError:
+        print("Invalid input. Exiting.")
+        return
+
+    selected_book, page_count = books[choice - 1]
+    book = Book(selected_book, page_count)
+    book.load_book(username)
 
     while True:
-        print(current_page)
-        print("\n".join(pages[current_page]))
-        print(f"\nPage {current_page + 1}/{len(pages)}")
-        command = input("\nCommands: [n] next, [p] previous, [q] quit: ").strip().lower()
-
-        if command == 'n' and current_page < len(pages) - 1:
-            current_page += 1
-        elif command == 'p' and current_page > 0:
-            current_page -= 1
+        book.display_progress()
+        command = input("\nCommands: [n] Next Page, [p] Previous Page, [q] Quit: ").strip().lower()
+        if command == 'n' and book.current_page < book.page_count:
+            book.current_page += 1
+        elif command == 'p' and book.current_page > 1:
+            book.current_page -= 1
         elif command == 'q':
-            print("Last Current Page:", current_page)
-            print("userid:", user_id)
-            
-            update_last_read(user_id, file_path, current_page)
-            print("Progress saved. Exiting reader. Goodbye!")
+            book.update_progress()
+            print("Progress saved. Goodbye!")
             break
         else:
             print("Invalid command. Try again.")
-
 
 if __name__ == "__main__":
     main()
