@@ -16,9 +16,6 @@
     <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\GaussianBlur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\ImageIO.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

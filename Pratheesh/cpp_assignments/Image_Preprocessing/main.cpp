@@ -2,6 +2,36 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <filesystem>
+#include <vector>
+
+// Utility function to convert OpenCV Mat to 3D vector
+std::vector<std::vector<std::vector<uint8_t>>> matToVector(const cv::Mat& mat) {
+    std::vector<std::vector<std::vector<uint8_t>>> vec(mat.rows, std::vector<std::vector<uint8_t>>(mat.cols, std::vector<uint8_t>(3)));
+
+    for (int i = 0; i < mat.rows; ++i) {
+        for (int j = 0; j < mat.cols; ++j) {
+            cv::Vec3b pixel = mat.at<cv::Vec3b>(i, j);
+            vec[i][j][0] = pixel[0];
+            vec[i][j][1] = pixel[1];
+            vec[i][j][2] = pixel[2];
+        }
+    }
+    return vec;
+}
+
+// Utility function to convert 3D vector to OpenCV Mat
+cv::Mat vectorToMat(const std::vector<std::vector<std::vector<uint8_t>>>& vec) {
+    int rows = vec.size();
+    int cols = vec[0].size();
+    cv::Mat mat(rows, cols, CV_8UC3);
+
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            mat.at<cv::Vec3b>(i, j) = cv::Vec3b(vec[i][j][0], vec[i][j][1], vec[i][j][2]);
+        }
+    }
+    return mat;
+}
 
 int main() {
     // Input image path
@@ -17,36 +47,37 @@ int main() {
 
     // Read the image using OpenCV
     cv::Mat image = cv::imread(inputPath);
-
-    // Check if the image is loaded successfully
     if (image.empty()) {
         std::cerr << "Error: Could not load the image at " << inputPath << "\n";
         return -1;
     }
 
-    // Apply grayscale and save
-    cv::Mat grayImage;
-    cv::cvtColor(image, grayImage, cv::COLOR_BGR2GRAY);
+    // Convert image to 3D vector
+    auto imageVector = matToVector(image);
+
+    // Apply custom grayscale
+    auto grayVector = ImageProcessor::grayscale(imageVector);
+    cv::Mat grayImage = vectorToMat(grayVector);
     cv::imwrite(outputDir + "/gray_image.jpg", grayImage);
 
-    // Apply inversion and save
-    cv::Mat invertedImage = 255 - image; // Invert the image
+    // Apply custom inversion
+    auto invertedVector = ImageProcessor::invert(imageVector);
+    cv::Mat invertedImage = vectorToMat(invertedVector);
     cv::imwrite(outputDir + "/inverted_image.jpg", invertedImage);
 
-    // Adjust brightness and save
-    cv::Mat brightImage;
-    int brightnessOffset = 50; // Brightness adjustment value
-    image.convertTo(brightImage, -1, 1, brightnessOffset); // Adjust brightness
+    // Apply custom brightness adjustment
+    auto brightVector = ImageProcessor::adjustBrightness(imageVector, 50);
+    cv::Mat brightImage = vectorToMat(brightVector);
     cv::imwrite(outputDir + "/bright_image.jpg", brightImage);
 
-    // Apply normalization and save
-    cv::Mat normalizedImage;
-    cv::normalize(image, normalizedImage, 0, 255, cv::NORM_MINMAX);
+    // Apply custom normalization
+    auto normalizedVector = ImageProcessor::normalize(imageVector);
+    cv::Mat normalizedImage = vectorToMat(normalizedVector);
     cv::imwrite(outputDir + "/normalized_image.jpg", normalizedImage);
 
-    // Apply Gaussian blur and save
-    cv::Mat blurredImage;
-    cv::GaussianBlur(image, blurredImage, cv::Size(7, 7), 1.5);
+    // Apply custom Gaussian blur
+    auto blurredVector = ImageProcessor::gaussianBlur(imageVector);
+    cv::Mat blurredImage = vectorToMat(blurredVector);
     cv::imwrite(outputDir + "/blurred_image.jpg", blurredImage);
 
     std::cout << "Processing complete. Check the output images in: " << outputDir << "\n";
