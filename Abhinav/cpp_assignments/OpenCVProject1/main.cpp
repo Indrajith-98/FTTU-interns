@@ -8,6 +8,7 @@ using namespace cv;
 class ImageProcessor {
 public:
     // Convert the image to grayscale
+    //convert
     Mat convertToGrayscale(const Mat& image) {
         Mat grayImage = image.clone();
         for (int i = 0; i < image.rows; i++) {
