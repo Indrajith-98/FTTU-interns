@@ -64,10 +64,10 @@ void ImageProcessor::verticalFlipImage(Mat image) {
 
 // Function to adjust the contrast of an image
 void ImageProcessor::contrastHandler(Mat inputImage) {
-  // Alpha controls contrast (e.g., >1 increases contrast, <1 decreases it)
+  // Alpha controls contrast
   double alpha = 1.5;
 
-  // Beta adjusts brightness (e.g., positive brightens, negative darkens)
+  // Beta adjusts brightness
   double beta = 0.0;
 
   // Create an output image with the same size and type as the input
