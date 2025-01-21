@@ -13,6 +13,7 @@ int main(int argc, char **argv) {
   cout << "4. To Grayscale" << endl;
   cout << "5. Rotate Image 90" << endl;
   cout << "6. Rotate Image -90" << endl;
+  cout << "7. Change contrast" << endl;
   cout << "Enter your choice: ";
   cin >> choice;
   while (choice != 0) {
@@ -34,6 +35,9 @@ int main(int argc, char **argv) {
       break;
     case 6:
       image_augmentor.anRotateImage90(image);
+      break;
+    case 7:
+      image_augmentor.contrastHandler(image);
       break;
     default:
       break;
