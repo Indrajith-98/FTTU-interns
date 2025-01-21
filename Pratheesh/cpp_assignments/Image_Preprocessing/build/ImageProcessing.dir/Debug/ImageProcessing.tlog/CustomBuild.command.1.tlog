@@ -1,6 +1,6 @@
-^F:\MCW\CPP_ASSIGNMENTS\IMAGE_PREPROCESSING\CMAKELISTS.TXT
+^F:\MCW\TRAINING ASSIGNMENTS\CPP_ASSIGNMENTS\IMAGE_PREPROCESSING\CMAKELISTS.TXT
 setlocal
-F:\cmake\bin\cmake.exe -SF:/MCW/CPP_assignments/Image_Preprocessing -BF:/MCW/CPP_assignments/Image_Preprocessing/build --check-stamp-file F:/MCW/CPP_assignments/Image_Preprocessing/build/CMakeFiles/generate.stamp
+F:\cmake\bin\cmake.exe "-SF:/MCW/training assignments/CPP_assignments/Image_Preprocessing" "-BF:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build" --check-stamp-file "F:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
