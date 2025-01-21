@@ -1,0 +1,186 @@
+-> Compilation:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2>g++ -g -o assignment2 Assignment_2.cpp
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2>assignment2
+gdebgginu
+
+-----------------------------------------------------------------------------------------------------------------
+
+-> GDB:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2>gdb assignment2
+GNU gdb (GDB) 14.1
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assignment2...
+(gdb) break 12
+Breakpoint 1 at 0x14000146a: file Assignment_2.cpp, line 12.
+(gdb) break 14
+Breakpoint 2 at 0x1400014a0: file Assignment_2.cpp, line 14.
+(gdb) break 17
+Breakpoint 3 at 0x1400014f3: file Assignment_2.cpp, line 17.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2\assignment2.exe
+[New Thread 9620.0x4a2c]
+[New Thread 9620.0x422c]
+[New Thread 9620.0x984]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:12
+12          std::string s1 = "debugging";
+(gdb) p s1
+$1 = <error: Cannot access memory at address 0x2>
+(gdb) n
+13          int n = s1.length();
+(gdb) p s1
+$2 = "debugging"
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:14
+14          for (int i = 0; i < n/2; i++) {
+(gdb) n
+15              std::swap(s1[i], s1[n-1]);
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$3 = "gebuggind"
+(gdb) n
+15              std::swap(s1[i], s1[n-1]);
+(gdb) p s1
+$4 = "gebuggind"
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$5 = "gdbuggine"
+(gdb) n
+15              std::swap(s1[i], s1[n-1]);
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$6 = "gdeugginb"
+(gdb) n
+15              std::swap(s1[i], s1[n-1]);
+(gdb) n
+14          for (int i = 0; i < n/2; i++) {
+(gdb) p s1
+$7 = "gdebgginu"
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at Assignment_2.cpp:17
+17          std::cout << s1 << std::endl;
+(gdb) n
+gdebgginu
+18          return 0;
+
+-----------------------------------------------------------------------------------------------------------------
+
+The error is occurring because the code logic inside the for loop is incorrect, specifically with swapping s1[i]
+with s1[n-1] in every iteration, which results in the same last character being swapped repeatedly. 
+After modification:
+
+-----------------------------------------------------------------------------------------------------------------
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2>gdb assignment2
+GNU gdb (GDB) 14.1
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assignment2...
+(gdb) break 13
+Breakpoint 1 at 0x140001491: file Assignment_2.cpp, line 13.
+(gdb) break 14
+Breakpoint 2 at 0x1400014a0: file Assignment_2.cpp, line 14.
+(gdb) break 15
+Breakpoint 3 at 0x1400014b2: file Assignment_2.cpp, line 15.
+(gdb) break 21
+Breakpoint 4 at 0x140001554: file Assignment_2.cpp, line 22.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2\assignment2.exe
+[New Thread 23784.0x4514]
+[New Thread 23784.0x46c0]
+[New Thread 23784.0x4920]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:13
+13          int n = s1.length();
+(gdb) p s1
+$1 = "debugging"
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, main () at Assignment_2.cpp:14
+14          for (int i = 0, j = n - 1; i < n / 2; i++, j--) {
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at Assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0, j = n - 1; i < n / 2; i++, j--) {
+(gdb) p s1
+$2 = "gebuggind"
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at Assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0, j = n - 1; i < n / 2; i++, j--) {
+(gdb) p s1
+$3 = "gnbuggied"
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at Assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0, j = n - 1; i < n / 2; i++, j--) {
+(gdb) p s1
+$4 = "gniuggbed"
+(gdb) n
+
+Thread 1 hit Breakpoint 3, main () at Assignment_2.cpp:15
+15              std::swap(s1[i], s1[j]);
+(gdb) n
+14          for (int i = 0, j = n - 1; i < n / 2; i++, j--) {
+(gdb) p s1
+$5 = "gniggubed"
+(gdb) n
+17          for (int i = 0; i < n; i++) {
+(gdb) n
+18              std::cout << s1[i];
+(gdb) c
+Continuing.
+gniggubed
+
+Thread 1 hit Breakpoint 4, main () at Assignment_2.cpp:22
+22          return 0;
+(gdb) p s1
+$6 = "gniggubed"
+
+-----------------------------------------------------------------------------------------------------------------
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2>g++ -g -o assignment2 Assignment_2.cpp
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_2>assignment2
+gniggubed

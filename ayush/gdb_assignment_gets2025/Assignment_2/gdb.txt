@@ -1,0 +1,28 @@
+Breakpoint 1 at 0x401477: file Assignment_2.cpp, line 12.
+Function "std::swap" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) Note: breakpoint 1 also set at pc 0x401477.
+Breakpoint 2 at 0x401477: file Assignment_2.cpp, line 10.
+No symbol "s1" in current context.
+Note: breakpoints 1 and 2 also set at pc 0x401477.
+Breakpoint 3 at 0x401477: file Assignment_2.cpp, line 7.
+Starting program: C:\Users\sendm\Desktop\OneDriveBackupFiles\Documents\asssignments\fall sem aug-oct 23\CV in Deep L\multicoreware assgnment\FTTU-interns\ayush\gdb_assignment_gets2025\Assignment_2/./Assignment_2.exe 
+[New Thread 94920.0x172cc]
+[New Thread 94920.0x172d0]
+[New Thread 94920.0x172d4]
+[New Thread 94920.0x172d8]
+
+Breakpoint 1, main () at Assignment_2.cpp:12
+12	    std::string s1 = "debugging";
+$1 = {static npos = 4294967295, _M_dataplus = {<std::allocator<char>> = {<__gnu_cxx::new_allocator<char>> = {<No data fields>}, <No data fields>}, 
+    _M_p = 0x61ffcc "äÿa"}, _M_string_length = 1990650432, {_M_local_buf = "®Toyþÿÿÿ\bÿa\000\035Œ¦v", _M_allocated_capacity = 2037339310}}
+13	    int n = s1.length();
+16	    for (int i = 0; i < n / 2; i++) {
+17	        std::swap(s1[i], s1[n - i - 1]);  // Swapped characters symmetrically
+16	    for (int i = 0; i < n / 2; i++) {
+17	        std::swap(s1[i], s1[n - i - 1]);  // Swapped characters symmetrically
+16	    for (int i = 0; i < n / 2; i++) {
+17	        std::swap(s1[i], s1[n - i - 1]);  // Swapped characters symmetrically
+16	    for (int i = 0; i < n / 2; i++) {
+17	        std::swap(s1[i], s1[n - i - 1]);  // Swapped characters symmetrically
+Continuing.
+[Inferior 1 (process 94920) exited normally]

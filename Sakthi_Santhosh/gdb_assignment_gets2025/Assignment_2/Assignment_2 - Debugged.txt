@@ -1,0 +1,331 @@
+Breakpoint 1 at 0x1400014a0: file Assignment_2.cpp, line 14.
+Starting program: D:\McW\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 20272.0x1334]
+[New Thread 20272.0xcdc]
+[New Thread 20272.0x4244]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+Hardware watchpoint 2: s1
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggind"
+New value = "gdbuggind"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggine"
+New value = "gdbuggine"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeuggine"
+New value = "gdeuggine"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeugginb"
+New value = "gdeugginb"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginb"
+New value = "gdebgginb"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginu"
+New value = "gdebgginu"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+Watchpoint 2 deleted because the program has left the block
+in which its expression is valid.
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:268
+[Thread 20272.0x1334 exited with code 0]
+[Thread 20272.0xcdc exited with code 0]
+[Thread 20272.0x4244 exited with code 0]
+[Inferior 1 (process 20272) exited normally]
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+Breakpoint 1 at 0x1400014a0: file Assignment_2.cpp, line 14.
+Starting program: D:\McW\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 18424.0x43c8]
+[New Thread 18424.0x34d4]
+[New Thread 18424.0x3e88]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+Hardware watchpoint 2: s1
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggind"
+New value = "gdbuggind"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggine"
+New value = "gdbuggine"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeuggine"
+New value = "gdeuggine"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeugginb"
+New value = "gdeugginb"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginb"
+New value = "gdebgginb"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginu"
+New value = "gdebgginu"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+Watchpoint 2 deleted because the program has left the block
+in which its expression is valid.
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:268
+[Thread 18424.0x3e88 exited with code 0]
+[Thread 18424.0x43c8 exited with code 0]
+[Thread 18424.0x34d4 exited with code 0]
+[Inferior 1 (process 18424) exited normally]
+Breakpoint 1 at 0x1400014a0: file Assignment_2.cpp, line 14.
+No symbol "s1" in current context.
+The program is not being run.
+Starting program: D:\McW\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 6128.0x4eb8]
+[New Thread 6128.0x16f4]
+[New Thread 6128.0x4af8]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+Hardware watchpoint 2: s1
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggind"
+New value = "gnbuggind"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggied"
+New value = "gnbuggied"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggied"
+New value = "gniuggied"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggbed"
+New value = "gniuggbed"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnigggbed"
+New value = "gnigggbed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniggubed"
+New value = "gniggubed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+Breakpoint 1 at 0x1400014a0: file Assignment_2.cpp, line 14.
+Starting program: D:\McW\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 2448.0x190c]
+[New Thread 2448.0x217c]
+[New Thread 2448.0x1fb4]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+Hardware watchpoint 2: s1
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggind"
+New value = "gnbuggind"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggied"
+New value = "gnbuggied"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggied"
+New value = "gniuggied"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggbed"
+New value = "gniuggbed"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnigggbed"
+New value = "gnigggbed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniggubed"
+New value = "gniggubed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+No symbol "enabled" in current context.
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+Breakpoint 1 at 0x1400014a0: file Assignment_2.cpp, line 14.
+Starting program: D:\McW\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 7584.0x45f4]
+[New Thread 7584.0x2ecc]
+[New Thread 7584.0x46ac]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+Hardware watchpoint 2: s1
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggind"
+New value = "gnbuggind"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggied"
+New value = "gnbuggied"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggied"
+New value = "gniuggied"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggbed"
+New value = "gniuggbed"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnigggbed"
+New value = "gnigggbed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniggubed"
+New value = "gniggubed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

@@ -1,0 +1,89 @@
+Breakpoint 1 at 0x14000153f: file Assignment_3.cpp, line 32.
+Breakpoint 2 at 0x140001651: file Assignment_3.cpp, line 44.
+Starting program: D:\MCW\Assignment-2\gdb_assignment_gets2025\Assignment_3\output.exe 
+[New Thread 10720.0x44e4]
+[New Thread 10720.0x17a4]
+[New Thread 10720.0x4780]
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:44
+warning: Source file is more recent than executable.
+44	                int val  = dfs(i,j,grid);
+$1 = 0
+
+Thread 1 hit Breakpoint 1, dfs (i=0, j=0, grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 1, dfs (i=0, j=1, grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+$2 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 1, 0}, std::vector of length 3, capacity 3 = {1, 1, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+34	}
+$3 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {1, 1, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+34	}
+maxAreaOfIsland (grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+$4 = -5
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+$5 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {1, 1, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+$6 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {1, 1, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+
+Thread 1 hit Breakpoint 1, dfs (i=1, j=0, grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 1, dfs (i=1, j=1, grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+$7 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {0, 1, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+No symbol "max_number" in current context.
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+34	}
+No symbol "max_number" in current context.
+$8 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+34	}
+maxAreaOfIsland (grid=std::vector of length 3, capacity 4 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number < val) ? val : max_number;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+49	    return max_number;
+50	}
+$9 = std::vector of length 3, capacity 4 = {std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}, std::vector of length 3, capacity 3 = {0, 0, 0}}
+$10 = 2
+main () at Assignment_3.cpp:88
+88	    std::cout << "Max area of Island: " << max_area << std::endl;
+89	    return 0;
+90	}
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+________________________________________________________________________________________________________________________________
+
+Inference:
+    A test was conducted using a dummy input of [[1, 1, 0], [1, 1, 0], [0, 0, 0]]. During debugging, it was identified that 
+    the logic for determining the maximum value was incorrect. This issue was resolved by correcting the comparison between 
+    max_number and val. Additionally, it was observed that the DFS function was being invoked twice in the same direction. 
+    To address this, the call dfs(i-1, j, grid) was replaced with dfs(i+1, j, grid) to ensure the correct traversal logic in 
+    the depth-first search (DFS). After these modifications, the code produced the expected output as intended.
+________________________________________________________________________________________________________________________________

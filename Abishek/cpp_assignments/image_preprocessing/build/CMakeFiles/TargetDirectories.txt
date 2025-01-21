@@ -1,0 +1,3 @@
+F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/image_preprocessing/build/CMakeFiles/ImagePreprocessor.dir
+F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/image_preprocessing/build/CMakeFiles/ALL_BUILD.dir
+F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/image_preprocessing/build/CMakeFiles/ZERO_CHECK.dir

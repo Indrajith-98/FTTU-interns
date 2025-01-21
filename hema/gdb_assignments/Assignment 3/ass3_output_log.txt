@@ -1,0 +1,986 @@
+1. Running the program
+
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_3.exe
+Reading symbols from ./assignment_3.exe...
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_3.exe 
+[New Thread 26584.0x8c88]
+Enter the rows:
+13
+Enter the cols:
+8
+Enter content
+Enter 1 row:
+0 0 0 0 0 0 0 0
+Enter 2 row:
+[Thread 26584.0x8c88 exited with code 0]
+0 0 1 1 1 0 0 0
+Enter 3 row:
+1 0 1 0 0 0 0 0
+Enter 4 row:
+0 0 0 0 0 0 0 0
+Enter 5 row:
+0 0 1 1 1 0 0 0
+Enter 6 row:
+0 0 0 1 1 0 0 0
+Enter 7 row:
+0 0 0 0 0 0 0 0
+Enter 8 row:
+1 1 0 0 0 0 1 1
+Enter 9 row:
+0 1 0 1 1 0 1 1
+Enter 10 row:
+0 1 0 0 1 0 1 0
+Enter 11 row:
+0 0 0 1 1 1 0 0
+Enter 12 row:
+0 0 0 0 0 0 0 0
+Enter 13 row:
+0 0 0 0 0 0 0 0
+
+Print the group
+0 0 0 0 0 0 0 0
+0 0 1 1 1 0 0 0
+1 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 1 1 1 0 0 0
+0 0 0 1 1 0 0 0
+0 0 0 0 0 0 0 0
+1 1 0 0 0 0 1 1
+0 1 0 1 1 0 1 1
+0 1 0 0 1 0 1 0
+0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0
+Max area of Island: -4
+[Inferior 1 (process 26584) exited normally]
+(gdb) q
+
+expected output: 6
+
+2. Set some break points and printing some of the values, found that the dfs function is having redundancy and it should be changed to check all 4 cells around that cells
+
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_3.exe
+Reading symbols from ./assignment_3.exe...
+(gdb) break 24
+Breakpoint 1 at 0x14000139d: file assignment_3.cpp, line 24.
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_3.exe 
+[New Thread 15952.0x6a24]
+
+Print the group
+0 0 0 0 0 0 0 0 
+0 0 1 1 1 0 0 0 
+1 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 1 1 1 0 0 0 
+0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 1 1
+0 1 0 1 1 0 1 1
+0 1 0 0 1 0 1 0
+0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+27          return 1;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=1, j=2, grid=...) at assignment_3.cpp:32
+32          grid[i][j] = 0;
+(gdb) n
+33          return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=0, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=0, j=2, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=0, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=0, j=2, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+27          return 1;
+(gdb) n
+28      }
+(gdb) n
+[New Thread 15952.0x6e14]
+dfs (i=1, j=3, grid=...) at assignment_3.cpp:32
+32          grid[i][j] = 0;
+(gdb) n
+33          return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+(gdb) print i
+$1 = 1
+(gdb) print j
+$2 = 3
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=0, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=0, j=3, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=0, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=0, j=3, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+27          return 1;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=1, j=4, grid=...) at assignment_3.cpp:32
+32          grid[i][j] = 0;
+(gdb) n
+33          return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=0, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=0, j=4, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=0, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=0, j=4, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=1, j=5, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=1, j=3, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=1, j=2, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+34      }
+(gdb) n
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) n
+25              return 0;
+(gdb) n
+28      }
+(gdb) n
+dfs (i=1, j=1, grid=...) at assignment_3.cpp:34
+34      }
+(gdb) n
+34      }
+(gdb) n
+maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) print val
+$3 = 3
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=2, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=2, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=2, j=-1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=2, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=1, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=2, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=2, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=3, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=3, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=3, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=3, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=3, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=3, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=5, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=5, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=4, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=5, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=5, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=5, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=-1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=6, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=8, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=7, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=8, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=1, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=0, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=8, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=7, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=9, j=5, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=6, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=4, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=3, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, validate (i=10, j=2, grid=...) at assignment_3.cpp:24
+24          if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+(gdb) c
+Continuing.
+Max area of Island: -4
+[Thread 15952.0x6a24 exited with code 0]
+[Thread 15952.0x6e14 exited with code 0]
+[Inferior 1 (process 15952) exited normally]
+(gdb) c
+The program is not being run.
+(gdb) q
+
+3. so, code changed from dfs(i-1,j,grid) -> dfs(i+1,j,grid) and checking the code, the output is still not as expected output.
+
+PS D:\Documents_personal\Multicoreware\training\day 1> g++ -g -o assignment_3 assignment_3.cpp
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_3.exe
+Reading symbols from ./assignment_3.exe...
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_3.exe 
+[New Thread 35288.0x98dc]
+
+Print the group
+0 0 0 0 0 0 0 0
+0 0 1 1 1 0 0 0
+1 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 1 1 1 0 0 0
+0 0 0 1 1 0 0 0
+0 0 0 0 0 0 0 0
+1 1 0 0 0 0 1 1
+0 1 0 1 1 0 1 1
+0 1 0 0 1 0 1 0
+0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+Max area of Island: 0
+[Thread 35288.0x98dc exited with code 0]
+[Inferior 1 (process 35288) exited normally]
+(gdb) q
+
+
+4. Lets check if the maxAreaOfIsland function is right, using the break points and printing the values
+
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_3.exe
+Reading symbols from ./assignment_3.exe...
+(gdb) break 44
+Breakpoint 1 at 0x140001551: file assignment_3.cpp, line 44.
+(gdb) break 45
+Breakpoint 2 at 0x140001568: file assignment_3.cpp, line 45.
+(gdb) run   
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_3.exe 
+[New Thread 29796.0x7e44]
+
+Print the group
+0 0 0 0 0 0 0 0 
+0 0 1 1 1 0 0 0 
+1 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 1 1 1 0 0 0 
+0 0 0 1 1 0 0 0
+0 0 0 0 0 0 0 0
+1 1 0 0 0 0 1 1 
+0 1 0 1 1 0 1 1
+0 1 0 0 1 0 1 0
+0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=...) at assignment_3.cpp:44
+44                      int val  = dfs(i,j,grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) print val
+$1 = 4
+(gdb) print max_number
+$2 = 0
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) print max_number
+$3 = 4
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=...) at assignment_3.cpp:44
+44                      int val  = dfs(i,j,grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) val
+Undefined command: "val".  Try "help".
+(gdb) print val
+$4 = 1
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) print max_number
+$5 = -1
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=...) at assignment_3.cpp:44
+44                      int val  = dfs(i,j,grid);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) print val
+$6 = 5
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) print max_number
+$7 = 5
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=...) at assignment_3.cpp:44
+44                      int val  = dfs(i,j,grid);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) print val
+$8 = 4
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) print max_number
+$9 = 0
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=...) at assignment_3.cpp:44
+44                      int val  = dfs(i,j,grid);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) print val
+$10 = 5
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) print max_number
+$11 = 5
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=...) at assignment_3.cpp:44
+44                      int val  = dfs(i,j,grid);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=...) at assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) print val
+$12 = 6
+(gdb) n
+[New Thread 29796.0x13c4]
+42              for (int j = 0; j < cols; j++) {
+(gdb) print max_number
+$13 = 0
+(gdb) c
+Continuing.
+Max area of Island: 0
+[Thread 29796.0x7e44 exited with code 0]
+[Thread 29796.0x13c4 exited with code 0]
+[Inferior 1 (process 29796) exited normally]
+(gdb) q
+
+
+5. Seems from the above log the max_number is not updating properly, so change that statement from max_number = (max_number + 2 < val) ? val : max_number-5; to max_number = (max_number < val)? val : max_number;
+
+PS D:\Documents_personal\Multicoreware\training\day 1> g++ -g -o assignment_3 assignment_3.cpp
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_3.exe
+Reading symbols from ./assignment_3.exe...
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_3.exe 
+[New Thread 28436.0x8f4c]
+
+Print the group
+0 0 0 0 0 0 0 0 
+0 0 1 1 1 0 0 0 
+1 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 1 1 1 0 0 0 
+0 0 0 1 1 0 0 0 
+0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 1 1 
+0 1 0 1 1 0 1 1
+0 1 0 0 1 0 1 0
+0 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 
+Max area of Island: 6
+[Thread 28436.0x8f4c exited with code 0]
+[Inferior 1 (process 28436) exited normally]
+(gdb) q 
+
+6. Checking if the program runs fine for other inputs
+
+Input :
+    grid = {
+    {1, 1, 0, 0, 0},
+    {1, 1, 0, 0, 0},
+    {0, 0, 0, 1, 1},
+    {0, 0, 0, 1, 1},
+    {0, 0, 0, 0, 0}
+}
+
+Expected output : 4
+
+PS D:\Documents_personal\Multicoreware\training\day 1> g++ -g -o assignment_3 assignment_3.cpp
+PS D:\Documents_personal\Multicoreware\training\day 1> gdb ./assignment_3.exe
+Reading symbols from ./assignment_3.exe...
+(gdb) run
+Starting program: D:\Documents_personal\Multicoreware\training\day 1\assignment_3.exe 
+[New Thread 36204.0x6d18]
+
+Print the group
+1 1 0 0 0
+1 1 0 0 0
+0 0 0 1 1
+0 0 0 1 1
+0 0 0 0 0
+Max area of Island: 4
+[Thread 36204.0x4d24 exited with code 0]
+[Inferior 1 (process 36204) exited normally]
+(gdb) q
+
+"The program is running fine for other inputs too.."

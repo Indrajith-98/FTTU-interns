@@ -1,0 +1,400 @@
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_3/Assignment_3.exe 
+[New Thread 42908.0x27c0]
+[New Thread 42908.0x633c]
+[New Thread 42908.0x8cec]
+[New Thread 42908.0x9f4c]
+[Inferior 1 (process 42908) exited normally]
+Breakpoint 1 at 0x4015d9: file Assignment_3.cpp, line 42.
+Undefined command: "reak".  Try "help".
+Breakpoint 2 at 0x4014ff: file Assignment_3.cpp, line 34.
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_3/Assignment_3.exe 
+[New Thread 34096.0x9d8]
+[New Thread 34096.0x4170]
+[New Thread 34096.0x3224]
+[New Thread 34096.0x3c30]
+
+Breakpoint 1, maxAreaOfIsland (grid=...) at Assignment_3.cpp:42
+42	    int rows = grid.size();
+43	    int cols = grid[0].size();
+$1 = (std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > &) @0x62fe84: {<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {
+    _M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}, <No data fields>}, _M_start = 0x1041960, _M_finish = 0x10419c0, _M_end_of_storage = 0x10419c0}}, <No data fields>}
+44	    int max_number = 0;
+46	    for (int i = 0; i < rows; i++)
+48	        for (int j = 0; j < cols; j++)
+50	            if (grid[i][j] == 1)
+Note: breakpoint 2 also set at pc 0x4014ff.
+Breakpoint 3 at 0x4014ff: file Assignment_3.cpp, line 34.
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=2, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+36	    grid[i][j] = 0;
+$2 = 0
+$3 = 2
+$4 = 1
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+
+Breakpoint 2, dfs (i=-1, j=2, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=-1, j=2, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=3, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=1, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+$5 = 0
+$6 = 7
+Continuing.
+
+Breakpoint 2, dfs (i=-1, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+$7 = -1
+$8 = 7
+Continuing.
+
+Breakpoint 2, dfs (i=-1, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=8, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=8, grid=...) at Assignment_3.cpp:34
+0x004015ad in dfs (i=0, j=7, grid=...) at Assignment_3.cpp:37
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $9 = 0
+
+Breakpoint 2, dfs (i=0, j=6, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+35	        return 0;
+38	}
+38	}
+maxAreaOfIsland (grid=...) at Assignment_3.cpp:53
+53	                max_number = (max_number + 2 < val) ? val : max_number - 5;
+$10 = -5
+$11 = 1
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=1, j=7, grid=...) at Assignment_3.cpp:34
+
+Breakpoint 2, dfs (i=0, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+35	        return 0;
+38	}
+
+Breakpoint 2, dfs (i=0, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+35	        return 0;
+38	}
+
+Breakpoint 2, dfs (i=1, j=8, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+36	    grid[i][j] = 0;
+[New Thread 34096.0x8228]
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+
+Breakpoint 2, dfs (i=0, j=8, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+35	        return 0;
+38	}
+
+Breakpoint 2, dfs (i=0, j=8, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=8, grid=...) at Assignment_3.cpp:34
+0x0040158f in dfs (i=1, j=8, grid=...) at Assignment_3.cpp:37
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $12 = 0
+
+Breakpoint 2, dfs (i=1, j=9, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+36	    grid[i][j] = 0;
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+
+Breakpoint 2, dfs (i=0, j=9, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=9, grid=...) at Assignment_3.cpp:34
+0x00401570 in dfs (i=1, j=9, grid=...) at Assignment_3.cpp:37
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $13 = 0
+Run till exit from #0  0x00401570 in dfs (i=1, j=9, grid=...) at Assignment_3.cpp:37
+
+Breakpoint 2, dfs (i=0, j=9, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=9, grid=...) at Assignment_3.cpp:34
+0x0040158f in dfs (i=1, j=9, grid=...) at Assignment_3.cpp:37
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $14 = 0
+Run till exit from #0  0x0040158f in dfs (i=1, j=9, grid=...) at Assignment_3.cpp:37
+
+Breakpoint 2, dfs (i=1, j=10, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=8, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=1, j=8, grid=...) at Assignment_3.cpp:34
+0x004015cb in dfs (i=1, j=9, grid=...) at Assignment_3.cpp:37
+37	    return 1 + dfs(i - 1, j, grid) + dfs(i - 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $15 = 0
+Ambiguous command "nex": next, nexti.
+38	}
+
+Breakpoint 2, dfs (i=1, j=7, grid=...) at Assignment_3.cpp:34
+34	    if (!validate(i, j, grid))
+A debugging session is active.
+
+	Inferior 1 [process 34096] will be killed.
+
+Quit anyway? (y or n) error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+
+
+
+Breakpoint 1 at 0x4015d9: file Solution.cpp, line 37.
+Breakpoint 2 at 0x4014ff: file Solution.cpp, line 27.
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_3/Solution.exe 
+[New Thread 12972.0x71b8]
+[New Thread 12972.0xa850]
+[New Thread 12972.0x1eb8]
+[New Thread 12972.0x4658]
+
+Breakpoint 1, maxAreaOfIsland (grid=...) at Solution.cpp:37
+37	    int rows = grid.size();
+38	    int cols = grid[0].size();
+$1 = 8
+$2 = 17963972
+$3 = (std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > &) @0x62fe84: {<std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >> = {
+    _M_impl = {<std::allocator<std::vector<int, std::allocator<int> > >> = {<__gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >> = {<No data fields>}, <No data fields>}, _M_start = 0x1121960, _M_finish = 0x11219c0, _M_end_of_storage = 0x11219c0}}, <No data fields>}
+39	    int max_number = 0;
+Note: breakpoint 2 also set at pc 0x4014ff.
+Breakpoint 3 at 0x4014ff: file Solution.cpp, line 27.
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+29	    grid[i][j] = 0;
+$4 = 0
+$5 = 2
+$6 = 1
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+
+Breakpoint 2, dfs (i=-1, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+Run till exit from #0  dfs (i=-1, j=2, grid=...) at Solution.cpp:28
+0x00401570 in dfs (i=0, j=2, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $7 = 0
+No symbol "max_number" in current context.
+
+Breakpoint 2, dfs (i=1, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+
+Breakpoint 2, dfs (i=0, j=3, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+Run till exit from #0  dfs (i=0, j=3, grid=...) at Solution.cpp:33
+0x004015ad in dfs (i=0, j=2, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $8 = 0
+Run till exit from #0  0x004015ad in dfs (i=0, j=2, grid=...) at Solution.cpp:32
+
+Breakpoint 2, dfs (i=0, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=1, grid=...) at Solution.cpp:27
+0x004015cb in dfs (i=0, j=2, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $9 = 0
+33	}
+maxAreaOfIsland (grid=...) at Solution.cpp:50
+50	                max_number = max(max_number, val);
+$10 = 0
+$11 = 1
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=7, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=7, grid=...) at Solution.cpp:27
+
+Breakpoint 2, dfs (i=-1, j=7, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=-1, j=7, grid=...) at Solution.cpp:27
+0x00401570 in dfs (i=0, j=7, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $12 = 0
+Run till exit from #0  0x00401570 in dfs (i=0, j=7, grid=...) at Solution.cpp:32
+
+Breakpoint 2, dfs (i=1, j=7, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=1, j=7, grid=...) at Solution.cpp:27
+
+Breakpoint 2, dfs (i=0, j=7, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+
+Breakpoint 2, dfs (i=2, j=7, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=2, j=7, grid=...) at Solution.cpp:27
+0x0040158f in dfs (i=1, j=7, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $13 = 0
+[New Thread 12972.0x4c28]
+
+Breakpoint 2, dfs (i=1, j=8, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=1, j=8, grid=...) at Solution.cpp:27
+
+Breakpoint 2, dfs (i=0, j=8, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+Run till exit from #0  dfs (i=0, j=8, grid=...) at Solution.cpp:33
+0x00401570 in dfs (i=1, j=8, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $14 = 0
+Continuing.
+
+Breakpoint 2, dfs (i=2, j=8, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=9, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=9, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=0, j=9, grid=...) at Solution.cpp:27
+0x00401570 in dfs (i=1, j=9, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $15 = 0
+Continuing.
+
+Breakpoint 2, dfs (i=2, j=9, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=10, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=8, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=1, j=8, grid=...) at Solution.cpp:27
+0x004015cb in dfs (i=1, j=9, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $16 = 0
+Run till exit from #0  0x004015cb in dfs (i=1, j=9, grid=...) at Solution.cpp:32
+0x004015ad in dfs (i=1, j=8, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $17 = 1
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=7, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=1, j=7, grid=...) at Solution.cpp:27
+0x004015cb in dfs (i=1, j=8, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $18 = 0
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=6, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=8, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=0, j=6, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=2, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=1, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=3, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=2, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=4, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=3, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=5, j=1, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Run till exit from #0  dfs (i=5, j=1, grid=...) at Solution.cpp:27
+0x0040158f in dfs (i=4, j=1, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $19 = 0
+
+Breakpoint 2, dfs (i=4, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+
+Breakpoint 2, dfs (i=4, j=0, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+33	}
+
+Breakpoint 2, dfs (i=3, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=3, j=0, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+Continuing.
+
+Breakpoint 2, dfs (i=2, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+29	    grid[i][j] = 0;
+$20 = 2
+$21 = 2
+$22 = 2
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Run till exit from #0  dfs (i=2, j=2, grid=...) at Solution.cpp:32
+
+Breakpoint 2, dfs (i=1, j=2, grid=...) at Solution.cpp:27
+27	    if (!validate(i, j, grid))
+28	        return 0;
+33	}
+Run till exit from #0  dfs (i=1, j=2, grid=...) at Solution.cpp:33
+0x00401570 in dfs (i=2, j=2, grid=...) at Solution.cpp:32
+32	    return 1 + dfs(i - 1, j, grid) + dfs(i + 1, j, grid) + dfs(i, j + 1, grid) + dfs(i, j - 1, grid);
+Value returned is $23 = 0
+A debugging session is active.
+
+	Inferior 1 [process 12972] will be killed.
+
+Quit anyway? (y or n) error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5

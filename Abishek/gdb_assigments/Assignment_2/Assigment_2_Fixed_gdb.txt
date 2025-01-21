@@ -1,0 +1,19 @@
+Breakpoint 1 at 0x140001812: file .\Assignment_2_Fixed.cpp, line 13.
+The program is not being run.
+No symbol "s1" in current context.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_2\Assignment_2_Fixed.exe 
+[New Thread 12864.0x2044]
+[New Thread 12864.0x4fc0]
+[New Thread 12864.0x263c]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_2_Fixed.cpp:13
+$1 = "debugging"
+$2 = "gebuggind"
+$3 = "gnbuggied"  // Updated the decrement logic
+$4 = "gniuggbed"
+$5 = "gniggubed"
+Continuing.
+[Thread 12864.0x2044 exited with code 0]
+[Thread 12864.0x263c exited with code 0]
+[Thread 12864.0x4fc0 exited with code 0]
+[Inferior 1 (process 12864) exited normally]

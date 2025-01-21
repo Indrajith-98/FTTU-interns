@@ -1,0 +1,24 @@
+Breakpoints:
+Line 30: function dfs.
+Line 36: function maxAreaOfIsland
+Line 63: Start of main function
+
+Watchpoint Variables:
+val, Max_number, i , j
+
+Issues:
+
+In the dfs function dfs(i-1, j, grid) is called twice, which creates retundency and computes the area wrong
+ 
+In the maxAreaOfIsland function the logic to find the max_number 
+max_number = (max_number + 2 < val) ? val : max_number-5;
+is completely wrong.
+ 
+
+Fixeses:
+
+Ensuring all four directions (up, down, left, right) are correctly visited without duplication
+return 1 + dfs(i-1, j, grid) + dfs(i+1, j, grid) + dfs(i, j+1, grid) + dfs(i, j-1, grid); 
+ 
+updating the logic for max_number:
+max_number = (max_number  < val) ? val : max_number;  // at line 45
