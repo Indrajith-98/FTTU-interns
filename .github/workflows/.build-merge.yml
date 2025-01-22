@@ -2,34 +2,34 @@ name: Merge PR on Build Success
 
 on:
   pull_request:
-    types:
-      - opened
-    branches:
-      - main
+    types: [opened, edited, labeled]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Check out the repository
+      uses: actions/checkout@v2
 
-      - name: Determine Build Script
-        id: determine_script
-        run: |
-          if [[ "${{ toJSON(github.event.pull_request.labels) }}" == *"build-script-1"* ]]; then
-            echo "BUILD_SCRIPT_PATH=./user-1/build.sh" >> $GITHUB_ENV
-          elif [[ "${{ toJSON(github.event.pull_request.labels) }}" == *"build-script-2"* ]]; then
-            echo "BUILD_SCRIPT_PATH=./user-2/build.sh" >> $GITHUB_ENV
-          elif [[ "${{ toJSON(github.event.pull_request.labels) }}" == *"build-script-3"* ]]; then
-            echo "BUILD_SCRIPT_PATH=./user-3/build.sh" >> $GITHUB_ENV
-          else
-            echo "No matching label found. Exiting."
-            exit 1
-          fi
+    - name: Get labels
+      id: get_labels
+      run: |
+        echo "::set-output name=labels::$(jq -r '.pull_request.labels | map(.name) | join(",")' "$GITHUB_EVENT_PATH")"
 
-      - name: Prepare and Run Build
+    - name: Check for specific label
+      run: |
+        if [[ "${{ steps.get_labels.outputs.labels }}" == *"build-script-1"* ]]; then
+          echo "BUILD_SCRIPT_PATH=./user-1/build.sh" >> $GITHUB_ENV
+        elif [[ "${{ steps.get_labels.outputs.labels }}" == *"build-script-2"* ]]; then
+          echo "BUILD_SCRIPT_PATH=./user-2/build.sh" >> $GITHUB_ENV
+        elif [[ "${{ steps.get_labels.outputs.labels }}" == *"build-script-3"* ]]; then
+          echo "BUILD_SCRIPT_PATH=./user-3/build.sh" >> $GITHUB_ENV
+        else
+          echo "No matching label found. Exiting."
+          exit 1
+        fi
+        name: Prepare and Run Build
         run: |
           chmod +x $BUILD_SCRIPT_PATH
           echo "Building the project using the script at $BUILD_SCRIPT_PATH..."
