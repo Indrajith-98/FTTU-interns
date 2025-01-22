@@ -1,3 +1,0 @@
-O:/Training Assignments/Clock/build/CMakeFiles/ClockApp.dir
-O:/Training Assignments/Clock/build/CMakeFiles/ALL_BUILD.dir
-O:/Training Assignments/Clock/build/CMakeFiles/ZERO_CHECK.dir
