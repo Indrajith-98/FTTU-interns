@@ -4,12 +4,13 @@
 
 ### Contents
 
-| Assignment Name   | Assignment Type              | Visit Code / Documentation              |
-| ----------------- | ---------------------------- | --------------------------------------- |
-| Assignment 1      | GDB                          | [view code](Assignment_1\Solution.cpp)  |
-| Assignment 2      | GDB                          | [view code](Assignment_2\Solution.cpp)  |
-| Assignment 3      | GDB                          | [view code](Assignment_3\Solution.cpp)  |
-| Clock Application | Application, Threading, Time | [view docs](Clock_Assignment\README.md) |
+| Assignment Name   | Assignment Type                   | Visit Code / Documentation                            |
+| ----------------- | --------------------------------- | ----------------------------------------------------- |
+| Assignment 1      | GDB                               | [view code](Assignment_1/Solution.cpp)                |
+| Assignment 2      | GDB                               | [view code](Assignment_2/Solution.cpp)                |
+| Assignment 3      | GDB                               | [view code](Assignment_3/Solution.cpp)                |
+| Clock Application | Application, Threading, Time      | [view docs](Clock_Assignment/README.md)               |
+| Image Processing  | Images, Pre-Processing Techniques | [view docs](Image_Preprocessing_Assignment/README.md) |
 
 <hr>
 
