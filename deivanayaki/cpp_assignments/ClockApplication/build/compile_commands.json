@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/ClockApplication/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\app.dir\\src\\main.cpp.obj -c D:\\ClockApplication\\src\\main.cpp",
+  "file": "D:/ClockApplication/src/main.cpp",
+  "output": "CMakeFiles/app.dir/src/main.cpp.obj"
+}
+]
