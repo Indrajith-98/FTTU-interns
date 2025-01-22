@@ -1,0 +1,3 @@
+D:/Documents_personal/Multicoreware/training/Image_processing/build/CMakeFiles/ImageProcessingApp.dir
+D:/Documents_personal/Multicoreware/training/Image_processing/build/CMakeFiles/ALL_BUILD.dir
+D:/Documents_personal/Multicoreware/training/Image_processing/build/CMakeFiles/ZERO_CHECK.dir

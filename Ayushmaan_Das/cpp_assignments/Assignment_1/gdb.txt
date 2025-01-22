@@ -1,0 +1,76 @@
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_1/Assignment_1.exe 
+[New Thread 42172.0xadb8]
+[New Thread 42172.0x5d94]
+[New Thread 42172.0x21d8]
+[New Thread 42172.0x38ec]
+[Inferior 1 (process 42172) exited normally]
+Breakpoint 1 at 0x401478: file Assignment_1.cpp, line 23.
+Breakpoint 2 at 0x40168e: file Assignment_1.cpp, line 55.
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_1/Assignment_1.exe 
+[New Thread 10284.0x32a0]
+[New Thread 10284.0x7dac]
+[New Thread 10284.0x8ed8]
+[New Thread 10284.0x872c]
+
+Breakpoint 2, main () at Assignment_1.cpp:55
+55	    int a[] = {6, 5, 7, 5, 5, 6};
+$1 = {6553296, 6553352, 6553548, 1965678960, -948562066, -2}
+56	    vector<int> v1(a, a + 6);
+$2 = {<std::_Vector_base<int, std::allocator<int> >> = {
+    _M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}, <No data fields>}, _M_start = 0x4012e0 <mainCRTStartup>, 
+      _M_finish = 0x0, _M_end_of_storage = 0x401db0 <__do_global_dtors>}}, <No data fields>}
+$3 = 4113879
+Continuing.
+
+Breakpoint 1, sortWithFrequency (v1=...) at Assignment_1.cpp:23
+23	    vector<pair<int, int>> v2;
+24	    int i = 0;
+$4 = 3022848
+26	    sort(v1.begin() + 1, v1.end());
+$5 = {<std::_Vector_base<int, std::allocator<int> >> = {
+    _M_impl = {<std::allocator<int>> = {<__gnu_cxx::new_allocator<int>> = {<No data fields>}, <No data fields>}, _M_start = 0xfb1bc0, 
+      _M_finish = 0xfb1bd8, _M_end_of_storage = 0xfb1bd8}}, <No data fields>}
+28	    while (i < v1.size())
+30	        pair<int, int> p;
+31	        if (v2.size() == 0)
+33	            p.first = v1[i];
+$6 = {first = 0, second = 0}
+34	            p.second = count(v1.begin(), v1.end(), v1[i]);
+$7 = {first = 6, second = 0}
+35	            v2.push_back(p);
+$8 = {first = 6, second = 2}
+$9 = {<std::_Vector_base<std::pair<int, int>, std::allocator<std::pair<int, int> > >> = {
+    _M_impl = {<std::allocator<std::pair<int, int> >> = {<__gnu_cxx::new_allocator<std::pair<int, int> >> = {<No data fields>}, <No data fields>}, 
+      _M_start = 0x0, _M_finish = 0x0, _M_end_of_storage = 0x0}}, <No data fields>}
+36	            i++;
+37	            continue;
+28	    while (i < v1.size())
+$10 = 1
+$11 = 2
+30	        pair<int, int> p;
+31	        if (v2.size() == 0)
+$12 = 3
+39	        else if (v2[v2.size() - 1].first != v1[i])
+41	            p.first = v1[i];
+$13 = 3
+$14 = {first = 0, second = 0}
+42	            p.second = count(v1.begin(), v1.end(), v1[i]);
+Undefined command: "bext".  Try "help".
+43	            v2.push_back(p);
+$15 = {first = 5, second = 3}
+$16 = {<std::_Vector_base<std::pair<int, int>, std::allocator<std::pair<int, int> > >> = {
+    _M_impl = {<std::allocator<std::pair<int, int> >> = {<__gnu_cxx::new_allocator<std::pair<int, int> >> = {<No data fields>}, <No data fields>}, 
+      _M_start = 0xfb1bf0, _M_finish = 0xfb1bf8, _M_end_of_storage = 0xfb1bf8}}, <No data fields>}
+A syntax error in expression, near `'.
+$17 = (__gnu_cxx::__alloc_traits<std::allocator<std::pair<int, int> > >::value_type &) @0x41b1238: <error reading variable>
+44	            i++;
+45	            continue;
+28	    while (i < v1.size())
+30	        pair<int, int> p;
+$18 = {first = 5, second = 3}
+31	        if (v2.size() == 0)
+39	        else if (v2[v2.size() - 1].first != v1[i])
+$19 = 2
+47	        i++;
+Continuing.
+[Inferior 1 (process 10284) exited normally]

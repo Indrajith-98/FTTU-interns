@@ -1,0 +1,10 @@
+^F:\MCW\CPP_ASSIGNMENTS\CLOCK APPLICATION\CMAKELISTS.TXT
+setlocal
+F:\cmake\bin\cmake.exe "-SF:/MCW/CPP_assignments/Clock Application" "-BF:/MCW/CPP_assignments/Clock Application/build" --check-stamp-file "F:/MCW/CPP_assignments/Clock Application/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,388 @@
+-> Compilation:
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>g++ -g -o assignment3 Assignment_3.cpp
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>assignment3
+
+Print the group
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+Max area of Island: -2
+
+------------------------------------------------------------------------------------------------------------------------
+
+-> GDB:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>gdb assignment3
+GNU gdb (GDB) 14.1
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assignment3...
+(gdb) break 43
+Breakpoint 1 at 0x140001613: file Assignment_3.cpp, line 43.
+(gdb) break 33
+Breakpoint 2 at 0x140001557: file Assignment_3.cpp, line 33.
+(gdb) break 79
+Breakpoint 3 at 0x140001da6: file Assignment_3.cpp, line 79.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3\assignment3.exe
+[New Thread 22756.0x4ed4]
+[New Thread 22756.0x5838]
+[New Thread 22756.0x585c]
+
+Print the group
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+
+Thread 1 hit Breakpoint 3, main () at Assignment_3.cpp:79
+79          int max_area = maxAreaOfIsland(grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) p val
+No symbol "val" in current context.
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+44                      int val  = dfs(i,j,grid);
+(gdb) p val
+$1 = 6290352
+
+------------------------------------------------------------------------------------------------------------------------
+
+Incorrect value of dfs function because the logic is not correct.The issue is that calling dfs(i-1, j, grid) twice, 
+which is incorrect and causes redundant calculations. Instead call dfs(i-1, j, grid) once.
+
+------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>gdb assignment3
+GNU gdb (GDB) 14.1
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assignment3...
+(gdb) break 43
+Breakpoint 1 at 0x140001613: file Assignment_3.cpp, line 43.
+(gdb) break 33
+Breakpoint 2 at 0x140001557: file Assignment_3.cpp, line 33.
+(gdb) break 79
+Breakpoint 3 at 0x140001da6: file Assignment_3.cpp, line 79.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3\assignment3.exe
+[New Thread 8876.0x4d30]
+[New Thread 8876.0x2d1c]
+[New Thread 8876.0x280]
+
+Print the group
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+
+Thread 1 hit Breakpoint 3, main () at Assignment_3.cpp:79
+79          int max_area = maxAreaOfIsland(grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+44                      int val  = dfs(i,j,grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=2,
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:33
+33          return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+(gdb) n
+34      }
+(gdb) n
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number + 2 < val) ? val : max_number-5;
+(gdb) p val
+$2 = 1
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) p max_number
+$3 = -5
+(gdb)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Adjusting max_number by subtracting 5 when it's not updated, which doesn't make logical sense. 
+To track the maximum area, we should update max_number when a larger value is found else no.
+
+------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>gdb assignment3
+GNU gdb (GDB) 14.1
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assignment3...
+(gdb) break 43
+Breakpoint 1 at 0x140001613: file Assignment_3.cpp, line 43.
+(gdb) break 33
+Breakpoint 2 at 0x140001557: file Assignment_3.cpp, line 33.
+(gdb) break 79
+Breakpoint 3 at 0x140001da0: file Assignment_3.cpp, line 79.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3\assignment3.exe
+[New Thread 21120.0x2690]
+[New Thread 21120.0x5164]
+[New Thread 21120.0x26a0]
+
+Print the group
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+
+Thread 1 hit Breakpoint 3, main () at Assignment_3.cpp:79
+79          int max_area = maxAreaOfIsland(grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:43
+43                  if (grid[i][j] == 1) {
+(gdb) n
+44                      int val  = dfs(i,j,grid);
+(gdb) n
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=2,
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:33
+33          return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+(gdb) n
+34      }
+(gdb) n
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) p val
+$1 = 1
+(gdb) p max_number
+$2 = 0
+(gdb) c
+Continuing.
+
+------------------------------------------------------------------------------------------------------------------------
+
+After modifying:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>gdb assignment3
+GNU gdb (GDB) 14.1
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-w64-mingw32".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assignment3...
+(gdb) break 45
+Breakpoint 1 at 0x140001658: file Assignment_3.cpp, line 45.
+(gdb) break 79
+Breakpoint 2 at 0x140001da0: file Assignment_3.cpp, line 79.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3\assignment3.exe
+[New Thread 16688.0x5078]
+[New Thread 16688.0x2d1c]
+[New Thread 16688.0x2148]
+
+Print the group
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+
+Thread 1 hit Breakpoint 2, main () at Assignment_3.cpp:79
+79          int max_area = maxAreaOfIsland(grid);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) n
+42              for (int j = 0; j < cols; j++) {
+(gdb) p max_number
+$1 = 1
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (
+    grid=std::vector of length 8, capacity 8 = {...})
+    at Assignment_3.cpp:45
+45                      max_number = (max_number < val) ? val : max_number;
+(gdb) c
+Continuing.
+Max area of Island: 6
+[Thread 16688.0x2148 exited with code 0]
+[Thread 16688.0x5078 exited with code 0]
+[Thread 16688.0x2d1c exited with code 0]
+[Inferior 1 (process 16688) exited normally]
+
+------------------------------------------------------------------------------------------------------------------------
+
+Final value:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>g++ -g -o assignment3 Assignment_3.cpp
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_3>assignment3
+
+Print the group
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+Max area of Island: 6
+
+

@@ -1,0 +1,17 @@
+Microsoft Windows [Version 10.0.22631.4602]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Image_Preprocessing_Assignment\Output\Debug>"D:/MulticoreWare/FTTU-interns/Ayushmaan_Das/cpp_assignments/Image_Preprocessing_Assignment/Output/Debug/Image_Preprocessing_Assignment.exe"
+Image dimensions - Height: 226 Width: 223
+
+Inverted colors successfully and saved as inverted_color.png.
+
+Converted to grayscale successfully and saved as grayscale.png.
+
+Rotated image successfully and saved as rotated.png.
+
+Scaled image successfully and saved as scaled.png.
+
+Applied Threshold successfully and saved as thresholded.png.
+
+D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Image_Preprocessing_Assignment\Output\Debug>  
