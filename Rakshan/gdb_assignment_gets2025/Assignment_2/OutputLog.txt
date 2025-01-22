@@ -1,0 +1,39 @@
+Breakpoint 1 at 0x14000147a: file Assignment_2.cpp, line 12.
+Starting program: D:\MCW\Assignment-2\gdb_assignment_gets2025\Assignment_2\output.exe 
+[New Thread 7480.0x2a14]
+[New Thread 7480.0x30f8]
+[New Thread 7480.0x3f64]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:12
+12	    std::string s1 = "debugging";
+$1 = "H��(H�\005�\031\000\000H�\000H�"
+13	    int n = s1.length();
+$2 = "debugging"
+14	    for (int i = 0; i < n/2; i++) {
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$3 = "gebuggind"
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$4 = "gdbuggine"
+[New Thread 7480.0x3898]
+15	        std::swap(s1[i], s1[n-1]);
+14	    for (int i = 0; i < n/2; i++) {
+$5 = "gdeugginb"
+15	        std::swap(s1[i], s1[n-1]);
+$6 = 3
+14	    for (int i = 0; i < n/2; i++) {
+17	    std::cout << s1 << std::endl;
+18	    return 0;
+19	}
+$7 = "gdebgginu"
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
+warning: 267	C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c: No such file or directory
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+----------------------------------------------------------------------------------------------------------------------------------
+Inference:
+    In this code, we are swapping only the i-th element with the (n-1)-th element. Instead, we should swap the i-th element 
+    with the (n-1-i)-th element. Once this is updated, the code runs successfully, satisfying the expected output.
+----------------------------------------------------------------------------------------------------------------------------------

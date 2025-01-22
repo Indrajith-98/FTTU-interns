@@ -1,0 +1,59 @@
+Breakpoint 1 at 0x4014cb: file Assignment_2.cpp, line 17.
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_2/Assignment_2.exe 
+[New Thread 34156.0x20d0]
+[New Thread 34156.0x9ea8]
+[New Thread 34156.0xae4c]
+[New Thread 34156.0x3f80]
+
+Breakpoint 1, main () at Assignment_2.cpp:17
+17	        std::swap(s1[i], s1[n - 1]);
+$1 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "debugging"
+Continuing.
+
+Breakpoint 1, main () at Assignment_2.cpp:17
+17	        std::swap(s1[i], s1[n - 1]);
+$2 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "gebuggind"
+Continuing.
+
+Breakpoint 1, main () at Assignment_2.cpp:17
+17	        std::swap(s1[i], s1[n - 1]);
+$3 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "gdbuggine"
+Continuing.
+
+Breakpoint 1, main () at Assignment_2.cpp:17
+17	        std::swap(s1[i], s1[n - 1]);
+$4 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "gdeugginb"
+Continuing.
+[Inferior 1 (process 34156) exited normally]
+No symbol "s1" in current context.
+
+
+Breakpoint 1 at 0x4014cb: file Solution.cpp, line 19.
+Starting program: D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Assignment_2/Solution.exe 
+[New Thread 20216.0x1dac]
+[New Thread 20216.0x73e4]
+[New Thread 20216.0x3f24]
+[New Thread 20216.0x6fa0]
+
+Breakpoint 1, main () at Solution.cpp:19
+warning: Source file is more recent than executable.
+19	        std::swap(s1[i], s1[n - 1 - i]);
+$1 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "debugging"
+Continuing.
+
+Breakpoint 1, main () at Solution.cpp:19
+19	        std::swap(s1[i], s1[n - 1 - i]);
+$2 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "gebuggind"
+Continuing.
+
+Breakpoint 1, main () at Solution.cpp:19
+19	        std::swap(s1[i], s1[n - 1 - i]);
+$3 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "gnbuggied"
+Continuing.
+
+Breakpoint 1, main () at Solution.cpp:19
+19	        std::swap(s1[i], s1[n - 1 - i]);
+$4 = (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::pointer) 0x61fef4 "gniuggbed"
+Continuing.
+[Inferior 1 (process 20216) exited normally]
+No symbol "s1" in current context.

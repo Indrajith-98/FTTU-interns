@@ -1,0 +1,386 @@
+Breakpoint 1 at 0x1400015e1: file Assignment_3.cpp, line 41.
+No symbol "i" in current context.
+Starting program: E:\gdb_assignment_gets2025\Assignment_3\Assignment_3.exe < input.txt
+[New Thread 9936.0x64ac]
+[New Thread 9936.0x3b20]
+[New Thread 9936.0x4878]
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+Hardware watchpoint 2: i
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 8
+New value = 0
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$1 = 0
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$2 = -5
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 0
+New value = 1
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$3 = 1
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 1
+New value = 2
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$4 = -4
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$5 = 2
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 2
+New value = 3
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$6 = -3
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$7 = 1
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$8 = -4
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$9 = 1
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 3
+New value = 4
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$10 = -4
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$11 = -4
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 4
+New value = 5
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$12 = 3
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 5
+New value = 6
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+[New Thread 9936.0x2f0c]
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$13 = -2
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 6
+New value = 7
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+$14 = 3
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+
+Thread 1 hit Hardware watchpoint 2: i
+
+Old value = 7
+New value = 8
+0x00007ff6e4ca1661 in maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:41
+41	    for (int i = 0; i < rows; i++) {
+49	    return max_number;
+$15 = 2
+main () at Assignment_3.cpp:88
+88	    std::cout << "Max area of Island: " << max_area << std::endl;
+89	    return 0;
+90	}
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+
+
+
+
+#########################################################################################################################################################
+
+>> Inference :
+
+  A breakpoint is set at line 41 of Assignment_3.cpp, within the function maxAreaOfIsland
+
+  The breakpoint at line 41 is hit by Thread 1 multiple times, indicating that the execution pauses whenever it reaches the for loop in maxAreaOfIsland
+
+  The log shows that the watchpoint is hit whenever i is updated, displaying the old and new values of i as the loop progresses through different iterations.
+
+  Each time the condition grid[i][j] == 1 is evaluated, it steps through lines 42 and 43 of the code, which suggests that this condition is crucial in determining the island's area.
+
+        
+#########################################################################################################################################################
+
+
+
+Modified :
+
+
+    line 33 :
+
+         actual   :    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+         modified :   return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+    line 45 :
+        
+         actual   :  max_number = (max_number + 2 < val) ? val : max_number-5;
+
+         modified :  max_number = (max_number < val) ? val : max_number;

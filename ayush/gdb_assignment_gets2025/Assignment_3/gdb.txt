@@ -1,0 +1,16 @@
+Breakpoint 1 at 0x4017f8: file Assignment_3.cpp, line 63.
+No source file named Assignment_3.ccp.
+Make breakpoint pending on future shared library load? (y or [n]) Breakpoint 2 at 0x401467: file Assignment_3.cpp, line 10.
+Starting program: C:\Users\sendm\Desktop\OneDriveBackupFiles\Documents\asssignments\fall sem aug-oct 23\CV in Deep L\multicoreware assgnment\FTTU-interns\ayush\gdb_assignment_gets2025\Assignment_3/./Assignment_3.exe 
+[New Thread 30644.0x19970]
+[New Thread 30644.0x18c2c]
+[New Thread 30644.0x1947c]
+[New Thread 30644.0x19d14]
+
+Breakpoint 1, main () at Assignment_3.cpp:63
+63	    vector<vector<int>> grid;
+66	    cout << "Enter the rows:" << endl;
+67	    cin >> rows;
+68	    cout << "Enter the cols:" << endl;
+No symbol "s1" in current context.
+$1 = 0

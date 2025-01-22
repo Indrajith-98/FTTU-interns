@@ -1,0 +1,38 @@
+{
+    "Rakshan": {
+        "1": {
+            "topic": "chapter 1",
+            "total_pages": 100,
+            "current_page": 22
+        },
+        "7": {
+            "topic": "chapter 5",
+            "total_pages": 256,
+            "current_page": 1
+        }
+    },
+    "Jagan": {
+        "1": {
+            "topic": "chapter 2",
+            "total_pages": 100,
+            "current_page": 1
+        }
+    },
+    "Ram": {
+        "3": {
+            "topic": "chapter 3",
+            "total_pages": 233,
+            "current_page": 1
+        },
+        "4": {
+            "topic": "chapter 4",
+            "total_pages": 1222,
+            "current_page": 1
+        },
+        "1": {
+            "topic": "chapter 2",
+            "total_pages": 100,
+            "current_page": 1
+        }
+    }
+}

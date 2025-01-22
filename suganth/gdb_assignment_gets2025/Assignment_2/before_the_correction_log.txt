@@ -1,0 +1,64 @@
+Breakpoint 1 at 0x1400014a1: file Assignment_2.cpp, line 13.
+Starting program: F:\MULTICOREWARE- FTU INTERN\DEBUGGING_ASSESSMENT\gdb_assignment_gets2025_1\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 15468.0x39d0]
+[New Thread 15468.0x1744]
+[New Thread 15468.0x1514]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:13
+Hardware watchpoint 2: s1
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggind"
+New value = "gdbuggind"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 100 'd') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggine"
+New value = "gdbuggine"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 101 'e') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeuggine"
+New value = "gdeuggine"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 101 'e') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeugginb"
+New value = "gdeugginb"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 98 'b') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginb"
+New value = "gdebgginb"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 98 'b') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:223
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginu"
+New value = "gdebgginu"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 117 'u') at C:/msys64/mingw64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+$1 = "gdebgginu"
+Watchpoint 2 deleted because the program has left the block
+in which its expression is valid.
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267

@@ -1,0 +1,10 @@
+^F:\MCW\TRAINING ASSIGNMENTS\CPP_ASSIGNMENTS\IMAGE_PREPROCESSING\BUILD\CMAKEFILES\A972D577E5FEBA609B444558E150616A\GENERATE.STAMP.RULE
+setlocal
+F:\cmake\bin\cmake.exe "-SF:/MCW/training assignments/CPP_assignments/Image_Preprocessing" "-BF:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "F:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build/ImageProcessing.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
