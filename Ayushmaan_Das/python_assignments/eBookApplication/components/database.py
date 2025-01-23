@@ -1,64 +1,167 @@
 import sqlite3
 from components.book import Book
+from components.user import User
+
 
 class DatabaseManager:
     def __init__(self, database_name="books.db"):
-        self.database_name = database_name
-        self.conn = sqlite3.connect(self.database_name)
-        self.create_table()
+        self.conn = sqlite3.connect(database_name)
+        self.create_tables()
 
-    def create_table(self):
-        """Create the books table if it doesn't exist."""
-        query = """
-        CREATE TABLE IF NOT EXISTS books (
+    def create_tables(self):
+        """Create the users and books tables if they don't exist."""
+        user_table = """
+        CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT NOT NULL UNIQUE,
-            topic TEXT NOT NULL,
-            total_pages INTEGER NOT NULL,
-            current_page INTEGER NOT NULL
+            username TEXT NOT NULL UNIQUE
         );
         """
-        self.conn.execute(query)
-        self.conn.commit()
 
-    def add_or_update_book(self, book):
-        """Add a new book or update the record for an existing user."""
-        query = """
-        INSERT INTO books (username, topic, total_pages, current_page)
-        VALUES (?, ?, ?, ?)
-        ON CONFLICT(username) DO UPDATE SET
-            topic=excluded.topic,
-            total_pages=excluded.total_pages,
-            current_page=excluded.current_page;
+        book_table = """
+        CREATE TABLE IF NOT EXISTS books (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            total_pages INTEGER NOT NULL,
+            current_page INTEGER DEFAULT 0,
+            user_id INTEGER NOT NULL,
+            FOREIGN KEY (user_id) REFERENCES users (id)
+        );
         """
-        self.conn.execute(query, (book.username, book.topic, book.total_pages, book.current_page))
+
+        self.conn.execute(user_table)
+        self.conn.execute(book_table)
         self.conn.commit()
 
-    def get_book(self, username):
-        """Retrieve a book record by username."""
-        query = "SELECT username, topic, total_pages, current_page FROM books WHERE username = ?;"
+    def add_user(self, username):
+        """Add a new user."""
+        query = "INSERT INTO users (username) VALUES (?);"
+        cursor = self.conn.cursor()
+        try:
+            cursor.execute(query, (username,))
+            self.conn.commit()
+            return cursor.lastrowid
+        except sqlite3.IntegrityError:
+            raise ValueError("Username already exists.")
+
+    def get_user(self, username):
+        """Retrieve a user by username."""
+        query = "SELECT id, username FROM users WHERE username = ?;"
         cursor = self.conn.cursor()
         cursor.execute(query, (username,))
         result = cursor.fetchone()
-
         if result:
-            return Book(username=result[0], topic=result[1], total_pages=result[2], current_page=result[3])
+            return User(user_id=result[0], username=result[1])
         return None
 
-    def delete_book(self, username):
-        """Delete a book record by username."""
-        query = "DELETE FROM books WHERE username = ?;"
-        self.conn.execute(query, (username,))
+    def add_book(self, user_id, title, total_pages):
+        """Add a new book for a user."""
+        query = """
+        INSERT INTO books (title, total_pages, user_id) 
+        VALUES (?, ?, ?);
+        """
+        cursor = self.conn.cursor()
+        cursor.execute(query, (title, total_pages, user_id))
         self.conn.commit()
+        return cursor.lastrowid
+
+    def get_books_by_user(self, user_id):
+        """Retrieve all books for a user."""
+        query = """
+        SELECT id, title, total_pages, current_page FROM books 
+        WHERE user_id = ?;
+        """
+        cursor = self.conn.cursor()
+        cursor.execute(query, (user_id,))
+        rows = cursor.fetchall()
+        return [
+            Book(book_id=row[0], title=row[1], total_pages=row[2], current_page=row[3])
+            for row in rows
+        ]
+
+    def get_book_details(self, book_id):
+        """Retrieve details of a specific book."""
+        query = """
+        SELECT id, title, total_pages, current_page FROM books 
+        WHERE id = ?;
+        """
+        cursor = self.conn.cursor()
+        cursor.execute(query, (book_id,))
+        row = cursor.fetchone()
+        if row:
+            return Book(book_id=row[0], title=row[1], total_pages=row[2], current_page=row[3])
+        raise ValueError("Book not found.")
 
     def list_all_books(self):
-        """Retrieve all book records."""
-        query = "SELECT username, topic, total_pages, current_page FROM books;"
+        """Retrieve all books in the system."""
+        query = """
+        SELECT books.id, books.title, books.total_pages, books.current_page, users.username 
+        FROM books
+        JOIN users ON books.user_id = users.id;
+        """
+        cursor = self.conn.cursor()
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        return [
+            {
+                "book_id": row[0],
+                "title": row[1],
+                "total_pages": row[2],
+                "current_page": row[3],
+                "username": row[4],
+            }
+            for row in rows
+        ]
+
+    def list_all_users_with_books(self):
+        """Retrieve all users along with their books."""
+        query = """
+        SELECT users.id, users.username, books.id, books.title, books.current_page, books.total_pages 
+        FROM users
+        LEFT JOIN books ON users.id = books.user_id
+        ORDER BY users.id;
+        """
         cursor = self.conn.cursor()
         cursor.execute(query)
         rows = cursor.fetchall()
 
-        return [Book(username=row[0], topic=row[1], total_pages=row[2], current_page=row[3]) for row in rows]
+        users = {}
+        for row in rows:
+            user_id = row[0]
+            username = row[1]
+            if user_id not in users:
+                users[user_id] = {"username": username, "books": []}
+            if row[2] is not None:  # If the user has books
+                users[user_id]["books"].append(
+                    {
+                        "book_id": row[2],
+                        "title": row[3],
+                        "current_page": row[4],
+                        "total_pages": row[5],
+                    }
+                )
+
+        return users
+
+    def update_book_progress(self, book_id, pages_read):
+        """Update the progress of a book."""
+        cursor = self.conn.cursor()
+
+        query = "SELECT current_page, total_pages FROM books WHERE id = ?;"
+        cursor.execute(query, (book_id,))
+        result = cursor.fetchone()
+        if not result:
+            raise ValueError("Book not found.")
+
+        current_page, total_pages = result
+        new_page = current_page + pages_read
+        if new_page > total_pages:
+            raise ValueError("Pages read cannot exceed total pages.")
+
+        update_query = """
+        UPDATE books SET current_page = ? WHERE id = ?;
+        """
+        cursor.execute(update_query, (new_page, book_id))
+        self.conn.commit()
 
     def __del__(self):
         self.conn.close()

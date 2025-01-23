@@ -1,15 +1,15 @@
 class Book:
-    def __init__(self, username, topic, total_pages, current_page):
-        self.username = username
-        self.topic = topic
+    def __init__(self, book_id, title, total_pages, current_page=0):
+        self.book_id = book_id
+        self.title = title
         self.total_pages = total_pages
         self.current_page = current_page
 
-    def update_progress(self, new_page):
+    def update_progress(self, pages_read):
         """Update the current page number."""
-        if new_page > self.total_pages:
-            raise ValueError("Current page cannot exceed total pages.")
-        self.current_page = new_page
+        if self.current_page + pages_read > self.total_pages:
+            raise ValueError("Pages read cannot exceed total pages.")
+        self.current_page += pages_read
 
     def __repr__(self):
-        return f"Book(username={self.username}, topic={self.topic}, total_pages={self.total_pages}, current_page={self.current_page})"
+        return f"Book(id={self.book_id}, title={self.title}, total_pages={self.total_pages}, current_page={self.current_page})"
