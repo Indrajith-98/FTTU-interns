@@ -1,0 +1,23 @@
+
+# Set the minimum required version of CMake
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(ClockApp)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+
+# Include the directories
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+# Collect all source files
+file(GLOB_RECURSE SOURCE_FILES
+    ${PROJECT_SOURCE_DIR}/src/*.c
+    ${PROJECT_SOURCE_DIR}/src/*.cpp
+)
+
+# Create an executable
+add_executable(clockApp ${SOURCE_FILES})
+
+

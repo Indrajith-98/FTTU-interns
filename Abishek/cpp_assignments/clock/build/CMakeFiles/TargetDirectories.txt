@@ -1,0 +1,3 @@
+F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/clock/build/CMakeFiles/ClockApp.dir
+F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/clock/build/CMakeFiles/ALL_BUILD.dir
+F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/clock/build/CMakeFiles/ZERO_CHECK.dir

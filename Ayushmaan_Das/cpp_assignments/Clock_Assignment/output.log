@@ -1,0 +1,63 @@
+Microsoft Windows [Version 10.0.22631.4602]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\MulticoreWare\FTTU-interns\Ayushmaan_Das>cd "d:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Alarm_Clock_Assignment\" && g++ main.cpp -o main && "d:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Alarm_Clock_Assignment\"main
+
+|| CLOCK APPLICATION ||
+Current Time: 17:43:52
+1. ALARM
+2. STOPWATCH
+3. TIMER
+0. Exit
+Enter your choice: 1
+
+
+Please enter the Alarm time (HH MM seperated by blank-space): 17 45
+Alarm set for 17:45
+
+|| CLOCK APPLICATION ||
+Current Time: 17:43:59
+1. ALARM
+2. STOPWATCH
+3. TIMER
+0. Exit
+Enter your choice: 3
+
+Please enter the timer duration in seconds: 5
+Timer set for 5 seconds.
+<< Timer started for 5 seconds. >>
+Time remaining: 5 seconds.
+Time remaining: 4 seconds.
+Time remaining: 3 seconds.
+Time remaining: 2 seconds.
+Time remaining: 1 seconds.
+<< Time's up! >>
+
+|| CLOCK APPLICATION ||
+Current Time: 17:44:9
+1. ALARM
+2. STOPWATCH
+3. TIMER
+0. Exit
+Enter your choice: 2
+
+<< Stopwatch has been started >>
+Press 'q' to stop.......
+q
+<< Stopwatch stopped >>
+Elapsed time: 21.5596 secs.
+
+|| CLOCK APPLICATION ||
+Current Time: 17:44:36
+1. ALARM
+2. STOPWATCH
+3. TIMER
+0. Exit
+Enter your choice:
+<< Alarm is ringing! >>
+Time: 17:45
+0
+
+--------------- Thank You ---------------
+
+d:\MulticoreWare\FTTU-interns\Ayushmaan_Das\cpp_assignments\Alarm_Clock_Assignment>

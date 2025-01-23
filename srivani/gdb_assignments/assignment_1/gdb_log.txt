@@ -1,0 +1,144 @@
+-> Compiling the code:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_1>g++ -g -o assignment1 Assignment_1.cpp
+
+--------------------------------------------------------------------------------------------------------------------
+
+-> GDB:
+
+(gdb) break main
+Breakpoint 1 at 0x1400016ac: file Assignment_1.cpp, line 48.
+(gdb) break sortWithFrequency
+Breakpoint 2 at 0x14000147d: file Assignment_1.cpp, line 21.
+(gdb) break 24
+Breakpoint 3 at 0x140001490: file Assignment_1.cpp, line 24.
+(gdb) break 32
+Breakpoint 4 at 0x140001556: file Assignment_1.cpp, line 32.
+(gdb) break 38
+Breakpoint 5 at 0x140001602: file Assignment_1.cpp, line 38.
+(gdb) break 43
+Breakpoint 6 at 0x14000162c: file Assignment_1.cpp, line 43.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_1\assignment1.exe
+[New Thread 5780.0x5108]
+[New Thread 5780.0x241c]
+[New Thread 5780.0x4c18]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:48
+48          long a[] = {6,5,7,5,5,6};
+(gdb) n
+49          vector<long> v1(a,a+6);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21          vector<pair<long, long>> v2;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:24
+24          sort(v1.begin()+1, v1.end());
+(gdb) p v1
+$2 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+--------------------------------------------------------------------------------------------------------------------
+
+->Vector v1 is not sorted properly because it leaves first element. After modifications:
+
+--------------------------------------------------------------------------------------------------------------------
+
+(gdb)  break main
+Breakpoint 1 at 0x140001697: file Assignment_1.cpp, line 48.
+(gdb) break sortWithFrequency
+Breakpoint 2 at 0x14000147d: file Assignment_1.cpp, line 21.
+(gdb)  break 24
+Breakpoint 3 at 0x140001490: file Assignment_1.cpp, line 24.
+(gdb)  break 32
+Breakpoint 4 at 0x140001541: file Assignment_1.cpp, line 32.
+(gdb)  break 38
+Breakpoint 5 at 0x1400015ed: file Assignment_1.cpp, line 38.
+(gdb)  break 43
+Breakpoint 6 at 0x140001617: file Assignment_1.cpp, line 43.
+(gdb) run
+Starting program: C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_1\assignment1.exe
+[New Thread 3928.0x4d34]
+[New Thread 3928.0x21b8]
+[New Thread 3928.0x47ec]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:48
+48          long a[] = {6,5,7,5,5,6};
+(gdb) n
+49          vector<long> v1(a,a+6);
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21          vector<pair<long, long>> v2;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:24
+24          sort(v1.begin(), v1.end());
+(gdb) p v1
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+(gdb) n
+26          while (i < v1.size()) {
+(gdb) p v1
+$2 = std::vector of length 6, capacity 6 = {5, 5, 5, 6, 6, 7}
+(gdb) n
+[New Thread 3928.0x32d0]
+27              pair<long,long> p;
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 4, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:32
+32                  i++;
+(gdb) p v2
+$3 = std::vector of length 1, capacity 1 = {{first = 5, second = 3}}
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 5, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:38
+38                  i++;
+(gdb) p v2
+$4 = std::vector of length 2, capacity 2 = {{first = 5, second = 3}, {first = 6, second = 2}}
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 5, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:38
+38                  i++;
+(gdb) p v2
+$5 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+(gdb) c
+Continuing.
+
+Thread 1 hit Breakpoint 6, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:43
+43          sort(v2.begin()+1, v2.end(),  comparecount);
+(gdb) p v2
+$6 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+(gdb) n
+44          return v2;
+(gdb) p v2
+$7 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+(gdb) c
+Continuing.
+5 3
+6 2
+7 1
+[Thread 3928.0x32d0 exited with code 0]
+[Thread 3928.0x21b8 exited with code 0]
+[Thread 3928.0x4d34 exited with code 0]
+[Thread 3928.0x47ec exited with code 0]
+[Inferior 1 (process 3928) exited normally]
+(gdb) exit
+
+--------------------------------------------------------------------------------------------------------------------
+-> Final compilation:
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_1>g++ -g -o assignment1 Assignment_1.cpp
+
+C:\Users\7501\FTTU-interns\srivani\gdb_assignments\assignment_1>assignment1
+5 3
+6 2
+7 1
+
+

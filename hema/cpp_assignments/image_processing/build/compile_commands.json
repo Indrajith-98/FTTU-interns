@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Documents_personal/Multicoreware/training/Image_processing/build",
+  "command": "D:/w64devkit/bin/g++.exe  @CMakeFiles/ImageProcessingApp.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles/ImageProcessingApp.dir/image_processing.cpp.obj -c D:/Documents_personal/Multicoreware/training/Image_processing/image_processing.cpp",
+  "file": "D:/Documents_personal/Multicoreware/training/Image_processing/image_processing.cpp",
+  "output": "CMakeFiles/ImageProcessingApp.dir/image_processing.cpp.obj"
+}
+]

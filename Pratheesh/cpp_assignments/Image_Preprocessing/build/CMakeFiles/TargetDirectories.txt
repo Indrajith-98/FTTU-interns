@@ -1,0 +1,3 @@
+F:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build/CMakeFiles/ImageProcessing.dir
+F:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build/CMakeFiles/ALL_BUILD.dir
+F:/MCW/training assignments/CPP_assignments/Image_Preprocessing/build/CMakeFiles/ZERO_CHECK.dir

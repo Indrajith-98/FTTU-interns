@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.10)
+project(ImageProcessor)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Specify directories
+set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
+set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
+set(CMAKE_PREFIX_PATH "C:/Users/dhari/Downloads/opencv/build")
+
+# Find OpenCV package
+find_package(OpenCV REQUIRED)
+
+# Include directories
+include_directories(${INCLUDE_DIR} ${OpenCV_INCLUDE_DIRS})
+
+# Add source files
+file(GLOB SOURCES ${SRC_DIR}/*.cpp)
+
+# Define the executable
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Link OpenCV libraries
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})

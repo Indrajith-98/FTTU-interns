@@ -1,0 +1,70 @@
+Breakpoint 1 at 0x14000171b: file Assignment_1.cpp, line 51.
+Starting program: D:\gdb_assignment_gets2025\Assignment_1\output.exe 
+[New Thread 34252.0x85c8]
+[New Thread 34252.0x5c38]
+[New Thread 34252.0x1084]
+Breakpoint 1 at 0x14000171b: file Assignment_1.cpp, line 51.
+Starting program: D:\gdb_assignment_gets2025\Assignment_1\output.exe 
+[New Thread 25628.0x9224]
+[New Thread 25628.0x7fc8]
+[New Thread 25628.0x4d4]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:51
+$1 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+
+-----------------'From here we can infer that the vector v2 was not sorted correctly so let us set the breakpoint in to the functions'----------------------
+
+No breakpoint number 51.----------------------
+
+Breakpoint 2 at 0x7ff6fe1914ab: file Assignment_1.cpp, line 26.
+
+Starting program: D:\gdb_assignment_gets2025\Assignment_1\output.exe 
+[New Thread 8308.0x788c]
+[New Thread 8308.0x5d84]
+[New Thread 8308.0x3c08]
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:26
+
+$2 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+
+------------------'From here we can infer that the vector v1 is not properly sorted the reason is that we have given the range to sort from 1 to end'------------------------
+
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00007ff6fe19171b in main() at Assignment_1.cpp:51
+2       breakpoint     keep y   0x00007ff6fe1914ab in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:26
+	breakpoint already hit 1 time
+
+No breakpoint number 51.
+
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00007ff6fe19171b in main() at Assignment_1.cpp:51
+2       breakpoint     keep y   0x00007ff6fe1914ab in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:26
+	breakpoint already hit 1 time
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x00007ff6fe1914ab in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:26
+	breakpoint already hit 1 time
+Breakpoint 3 at 0x7ff6fe19164e: file Assignment_1.cpp, line 44.
+Num     Type           Disp Enb Address            What
+3       breakpoint     keep y   0x00007ff6fe19164e in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:44
+Starting program: D:\gdb_assignment_gets2025\Assignment_1\output.exe 
+[New Thread 31600.0x7ef0]
+[New Thread 31600.0x6e30]
+[New Thread 31600.0x65c8]
+
+Thread 1 hit Breakpoint 3, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:44
+$3 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+
+-----------------------'From here we can infer the sorting range was incorrect .Function "info" not defined.--------------------------
+
+Num     Type           Disp Enb Address            What
+3       breakpoint     keep y   0x00007ff6fe19164e in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:44
+	breakpoint already hit 1 time
+Breakpoint 1 at 0x1400016f1: file Assignment_1.cpp, line 51.
+Starting program: D:\gdb_assignment_gets2025\Assignment_1\output.exe 
+[New Thread 25328.0x90d8]
+[New Thread 25328.0x9298]
+[New Thread 25328.0x7f08]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:51
+$1 = std::vector of length 3, capacity 4 = {{first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+------------------------------'Hence the output is equivalent to the expected output nothing more to debug'-----------------------
