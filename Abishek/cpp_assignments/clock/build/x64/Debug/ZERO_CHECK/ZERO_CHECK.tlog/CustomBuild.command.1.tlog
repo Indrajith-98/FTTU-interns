@@ -1,0 +1,10 @@
+^F:\MULTICOREWARE\SUBMISSIONS\FTTU-INTERNS\ABISHEK\CPP_ASSIGNMENTS\CLOCK\BUILD\CMAKEFILES\C71AB1DDA669981C08FA93F6D75FE64C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/clock -BF:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/clock/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/clock/build/ClockApp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

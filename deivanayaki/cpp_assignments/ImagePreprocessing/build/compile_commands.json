@@ -1,8 +1,0 @@
-[
-{
-  "directory": "D:/ImagePreprocessing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/ImagePreprocessing.dir/includes_CXX.rsp -g -o CMakeFiles\\ImagePreprocessing.dir\\main.cpp.obj -c D:\\ImagePreprocessing\\main.cpp",
-  "file": "D:/ImagePreprocessing/main.cpp",
-  "output": "CMakeFiles/ImagePreprocessing.dir/main.cpp.obj"
-}
-]

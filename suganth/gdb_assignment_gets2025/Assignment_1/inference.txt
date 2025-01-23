@@ -1,0 +1,18 @@
+Line 24,
+
+""sort(v1.begin()+1, v1.end());""
+Skipping the first element in the sorting range (v1.begin() + 1) may cause incorrect ordering of elements. 
+In cases where full sorting is required for frequency-based calculations, starting from an offset position 
+leads to incomplete or incorrect processing.
+
+The corrected form is:
+""sort(v1.begin(), v1.end());""
+
+Line 43,
+
+""sort(v2.begin()+1, v2.end(), comparecount);""
+Using v2.begin() + 1 skips sorting the first element of v2. This causes incomplete ordering, leading to 
+incorrect output for a descending frequency sort.
+
+The corrected form is:
+sort(v2.begin(), v2.end(), comparecount);

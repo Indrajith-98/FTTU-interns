@@ -1,0 +1,1197 @@
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000039b94d8 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: breakpoint added}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = no) => break_id = 1: file = '/Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp', line = 13, exact_match = 0
+
+
+ Added location (skipped prologue: no): 1.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:13:16
+  address = a.out[0x0000000100002cc4]
+  resolved = false
+  hardware = false
+  hit count = 0   
+ 
+
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000039aed18 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: breakpoint added}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = no) => break_id = 2: file = '/Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp', line = 15, exact_match = 0
+
+
+ Added location (skipped prologue: no): 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:22
+  address = a.out[0x0000000100002cf8]
+  resolved = false
+  hardware = false
+  hit count = 0   
+ 
+
+ have platform=true, platform_sp->IsHost()=true, default_to_use_pty=true
+ at least one of stdin/stdout/stderr was not set, evaluating default handling
+ target stdin='(empty)', target stdout='(empty)', stderr='(empty)'
+ Generating a pty to use for stdin/out/err
+ Host::StartMonitoringChildProcess(callback, pid=9280) source = 0x6000002be980
+
+ ::waitpid (pid = 9280, &status, 0) => pid = 9280, status = 0x00000000 (EXITED), signal = 0, exit_status = 0
+ Host::StartMonitoringChildProcess(callback, pid=9281) source = 0x6000002ad580
+
+ (plugin = gdb-remote, state = attaching, restarted = 0)
+ Host::StartMonitoringChildProcess(callback, pid=9282) source = 0x6000002a1180
+
+ Process::AttachCompletionHandler::AttachCompletionHandler process=0x13215be00, exec_count=0
+ Process::ControlPrivateStateThread (signal = 4)
+ Sending control event of type: 4.
+ Process::RunPrivateStateThread (arg = 0x13215be00, pid = 9281) thread starting...
+ timeout = <infinite>, event_sp)...
+ Process::RunPrivateStateThread (arg = 0x13215be00, pid = 9281) got a control event: 4
+ timeout = <infinite>, event_sp)...
+ timeout = <infinite>
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 1
+ Process::AttachCompletionHandler::PerformAction called with state stopped (5)
+ Process::AttachCompletionHandler::PerformAction state stopped: no more execs expected to start, continuing with attach
+ Process::CompleteAttach()
+ Setting Process code address mask to 0xffff800000000000
+ Setting Process data address mask to 0xffff800000000000
+ Process::CompleteAttach replacing process architecture with DidAttach() architecture: "arm64-apple-macosx-"
+ Breakpoint::ModulesChanged: num_modules: 45 load: 0 delete_locations: 0
+
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600003992858 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 45 load: 0 delete_locations: 0
+
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600003992898 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cc4
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600003995698 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf8
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600003995698 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = yes) => break_id = -1: name = 'lldb_image_notifier', module = dyld
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x10004d3a0
+ after DynamicLoader::DidAttach(), target executable is /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out (using macos-dyld plugin)
+ after SystemRuntime::DidAttach(), target executable is /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out (using systemruntime-macosx plugin)
+ Ran next event action, result was 0.
+ Process::ShouldBroadcastEvent (0x6000022cbb70) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to hijacked
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ timeout = <infinite>, event_sp) => stopped
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 1, public state: stopped private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022d46f0) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process thinks the process has resumed.
+ Process::HandlePrivateEvent updated m_iohandler_sync to 1
+ waited from m_iohandler_sync to change from 0. New value is 1.
+ (plugin = gdb-remote, state = running, restarted = 0)
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 2
+ Target::RemoveBreakpointByID (break_id = -1, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -1, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x10004d3a0
+ Breakpoint::ModulesChanged: num_modules: 1 load: 0 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cc4
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000039bb758 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 1 load: 0 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cf8
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000039b09d8 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = yes) => break_id = -2: address = 0x000000019f9d73a0
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Hit breakpoint location: -1.1: 
+  module = /usr/lib/dyld
+  symbol = lldb_image_notifier
+  address = dyld[0x00000001801073a0]
+  resolved = false
+  hardware = false
+  hit count = 1   
+, continuing.
+
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: 0.
+ Process::ShouldBroadcastEvent (0x6000022d46f0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 2, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d46f0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d5050) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 3
+ Target::RemoveBreakpointByID (break_id = -2, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -2, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x19f9d73a0
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cc4
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600003997458 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf8
+ 0x00000001317af4d8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600003997458 Event: broadcaster = 0x132162e00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = yes) => break_id = -3: name = 'lldb_image_notifier', module = dyld
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Hit breakpoint location: -2.1: 
+  address = 0x000000019f9d73a0
+  resolved = false
+  hardware = false
+  hit count = 1   
+, continuing.
+
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: 0.
+ Process::ShouldBroadcastEvent (0x6000022b0fc0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 3, public state: running private state: stopped
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x19f9d73a0
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022b0fc0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d62e0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 4
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d62e0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 4, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d62e0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022cb3c0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 5
+ Breakpoint::ModulesChanged: num_modules: 43 load: 1 delete_locations: 0
+
+ Breakpoint::ModulesChanged: num_modules: 43 load: 1 delete_locations: 0
+
+ Breakpoint::ModulesChanged: num_modules: 43 load: 1 delete_locations: 0
+
+ Target::AddBreakpoint (internal = yes) => break_id = -4: address = libsystem_sanitizers.dylib[0x0000000260d6a3a4]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x28063a3a4
+ Hit breakpoint location: -3.1: 
+  module = /usr/lib/dyld
+  symbol = lldb_image_notifier
+  address = 0x000000019f9d73a0
+  resolved = true
+  hardware = false
+  hit count = 1   
+, continuing.
+
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: 0.
+ Process::ShouldBroadcastEvent (0x6000022d62b0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 5, public state: running private state: stopped
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x19f9d73a0
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d62b0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 6
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d5e90) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 6, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d5e90) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 7
+ Hit breakpoint location: 1.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:13:16
+  address = 0x0000000100002cc4
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ Process::PerformAction returning from action with m_should_stop: 1.
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 7, public state: stopped private state: stopped
+ Target::AddBreakpoint (internal = yes) => break_id = -5: names = {'start_wqthread', '_pthread_wqthread', '_pthread_start'}, modules(2) = libsystem_c.dylib, libSystem.B.dylib
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cc4
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022b0ba0) => new state: running, last broadcast state: running - YES
+ Process thinks the process has resumed.
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 2
+ waited from m_iohandler_sync to change from 1. New value is 2.
+ (plugin = gdb-remote, state = running, restarted = 0)
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 8
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cc4
+ Target::AddBreakpoint (internal = yes) => break_id = -6: address = a.out[0x0000000100002cc8]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cc8
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7990) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 8, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 9
+ Hit breakpoint location: -6.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:13:9
+  address = 0x0000000100002cc8
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -6, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -6, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cc8
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7960) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 9, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 10
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7990) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 10, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 11
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 11, public state: stopped private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022dde90) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 3
+ waited from m_iohandler_sync to change from 2. New value is 3.
+ (plugin = gdb-remote, state = running, restarted = 0)
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 12
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c6640) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 12, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c6640) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022df210) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 13
+ Target::AddBreakpoint (internal = yes) => break_id = -7: address = a.out[0x0000000100002cf0]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf0
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c7930) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 13, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c7930) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022b0e70) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 14
+ Hit breakpoint location: -7.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:14:5
+  address = 0x0000000100002cf0
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -7, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -7, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cf0
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9a70) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 14, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9a70) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9ad0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 15
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7960) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 15, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 16
+ Hit breakpoint location: 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:22
+  address = 0x0000000100002cf8
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ Process::PerformAction returning from action with m_should_stop: 1.
+ Target::AddBreakpoint (internal = yes) => break_id = -8: address = a.out[0x0000000100002d04]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d04
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 16, public state: stopped private state: stopped
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cf8
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022dde90) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 4
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = running, restarted = 0)
+ Process thinks the process has resumed.
+ waited from m_iohandler_sync to change from 3. New value is 4.
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 17
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf8
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c7930) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 17, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c7930) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c6640) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 18
+ Hit breakpoint location: -8.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:19
+  address = 0x0000000100002d04
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -8, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -8, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d04
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022dde90) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 18, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022dde90) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022de760) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 19
+ Target::AddBreakpoint (internal = yes) => break_id = -9: address = a.out[0x0000000100002d24]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d24
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7990) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 19, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 20
+ Hit breakpoint location: -9.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:26
+  address = 0x0000000100002d24
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -9, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -9, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d24
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7960) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 20, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7990) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 21
+ Target::AddBreakpoint (internal = yes) => break_id = -10: address = a.out[0x0000000100002d30]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d30
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9f20) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 21, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 22
+ Hit breakpoint location: -10.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:9
+  address = 0x0000000100002d30
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -10, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -10, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d30
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7960) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 22, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7960) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 23
+ Target::AddBreakpoint (internal = yes) => break_id = -11: address = a.out[0x0000000100002d34]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d34
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9f20) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 23, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7ae0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 24
+ Hit breakpoint location: -11.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:9
+  address = 0x0000000100002d34
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -11, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -11, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d34
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7ae0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 24, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7ae0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9f20) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 25
+ Process::ShouldBroadcastEvent (0x6000022d7ab0) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 25, public state: stopped private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022cda10) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 5
+ Process thinks the process has resumed.
+ waited from m_iohandler_sync to change from 4. New value is 5.
+ (plugin = gdb-remote, state = running, restarted = 0)
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 26
+ Process::ShouldBroadcastEvent (0x6000022cda10) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 26, public state: stopped private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022cf7b0) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 6
+ Process thinks the process has resumed.
+ waited from m_iohandler_sync to change from 5. New value is 6.
+ (plugin = gdb-remote, state = running, restarted = 0)
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 27
+ Hit breakpoint location: 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:22
+  address = 0x0000000100002cf8
+  resolved = true
+  hardware = false
+  hit count = 2   
+, stopping.
+
+ Process::ShouldBroadcastEvent (0x6000022e7f90) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ Process::PerformAction returning from action with m_should_stop: 1.
+ Target::AddBreakpoint (internal = yes) => break_id = -12: address = a.out[0x0000000100002d04]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d04
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 27, public state: stopped private state: stopped
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cf8
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022c6b50) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 7
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = running, restarted = 0)
+ Process thinks the process has resumed.
+ waited from m_iohandler_sync to change from 6. New value is 7.
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 28
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf8
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022e7ea0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 28, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022e7ea0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022e7f90) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 29
+ Hit breakpoint location: -12.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:19
+  address = 0x0000000100002d04
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -12, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -12, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d04
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c6b50) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 29, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c6b50) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c7930) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 30
+ Target::AddBreakpoint (internal = yes) => break_id = -13: address = a.out[0x0000000100002d24]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d24
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9da0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 30, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9da0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c97d0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 31
+ Hit breakpoint location: -13.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:26
+  address = 0x0000000100002d24
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -13, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -13, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d24
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c97d0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 31, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c97d0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9da0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 32
+ Target::AddBreakpoint (internal = yes) => break_id = -14: address = a.out[0x0000000100002d30]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d30
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022b0e70) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 32, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022b0e70) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c97d0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 33
+ Hit breakpoint location: -14.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:9
+  address = 0x0000000100002d30
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -14, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -14, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d30
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7ab0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 33, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7ab0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c97d0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 34
+ Target::AddBreakpoint (internal = yes) => break_id = -15: address = a.out[0x0000000100002d34]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d34
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7a20) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 34, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7a20) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c97d0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 35
+ Hit breakpoint location: -15.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:9
+  address = 0x0000000100002d34
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -15, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -15, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d34
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c97d0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 35, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c97d0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9d10) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 36
+ Process::ShouldBroadcastEvent (0x6000022d7a20) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 36, public state: stopped private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022cf7b0) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process thinks the process has resumed.
+ Process::HandlePrivateEvent updated m_iohandler_sync to 8
+ waited from m_iohandler_sync to change from 7. New value is 8.
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = running, restarted = 0)
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 37
+ Hit breakpoint location: 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:22
+  address = 0x0000000100002cf8
+  resolved = true
+  hardware = false
+  hit count = 3   
+, stopping.
+
+ Process::ShouldBroadcastEvent (0x6000022c5d70) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ Process::PerformAction returning from action with m_should_stop: 1.
+ Target::AddBreakpoint (internal = yes) => break_id = -16: address = a.out[0x0000000100002d04]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d04
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 37, public state: stopped private state: stopped
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cf8
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c5f20) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 9
+ waited from m_iohandler_sync to change from 8. New value is 9.
+ (plugin = gdb-remote, state = running, restarted = 0)
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 38
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf8
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022ce7c0) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 38, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022ce7c0) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022cd8f0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 39
+ Hit breakpoint location: -16.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:19
+  address = 0x0000000100002d04
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -16, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -16, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d04
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9b30) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 39, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9b30) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022b1230) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 40
+ Target::AddBreakpoint (internal = yes) => break_id = -17: address = a.out[0x0000000100002d24]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d24
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022ee850) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 40, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022ee850) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7a20) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 41
+ Hit breakpoint location: -17.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:26
+  address = 0x0000000100002d24
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -17, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -17, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d24
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9b30) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 41, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9b30) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9a70) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 42
+ Target::AddBreakpoint (internal = yes) => break_id = -18: address = a.out[0x0000000100002d30]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d30
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9a70) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 42, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9a70) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9b30) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 43
+ Hit breakpoint location: -18.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:9
+  address = 0x0000000100002d30
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -18, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -18, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d30
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022c9b30) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 43, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022c9b30) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9a70) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 44
+ Target::AddBreakpoint (internal = yes) => break_id = -19: address = a.out[0x0000000100002d34]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002d34
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7a20) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 44, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7a20) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022d7b70) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 45
+ Hit breakpoint location: -19.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:9
+  address = 0x0000000100002d34
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -19, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -19, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002d34
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022d7b70) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 45, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022d7b70) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022c9b30) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 46
+ Process::ShouldBroadcastEvent (0x6000022d7a20) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 46, public state: stopped private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022de760) => new state: running, last broadcast state: running - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process thinks the process has resumed.
+ waited from m_iohandler_sync to change from 9. New value is 10.
+ Process::HandlePrivateEvent updated m_iohandler_sync to 10
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = running, restarted = 0)
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 47
+ Hit breakpoint location: 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/a.out
+  compile unit = Assignment_2.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_2/Assignment_2.cpp:15:22
+  address = 0x0000000100002cf8
+  resolved = true
+  hardware = false
+  hit count = 4   
+, stopping.
+
+ Process::ShouldBroadcastEvent (0x6000022cf7b0) => new state: stopped, last broadcast state: stopped - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state stopped (old state stopped) to public
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = stopped, restarted = 0)
+ (plugin = gdb-remote, state = stopped) -- unlocking run lock
+ Process::PerformAction returning from action with m_should_stop: 1.
+ (plugin = gdb-remote) -- locking run lock
+ Process::PrivateResume() m_stop_id = 47, public state: stopped private state: stopped
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002cf8
+ (plugin = gdb-remote, state = running)
+ Process::ShouldBroadcastEvent (0x6000022de760) => new state: running, last broadcast state: running - YES
+ Process thinks the process has resumed.
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state running (old state running) to public
+ Process::PushProcessIOHandler pushing IO handler
+ Process::HandlePrivateEvent updated m_iohandler_sync to 11
+ timeout = <infinite>, event_sp)...
+ (plugin = gdb-remote, state = running, restarted = 0)
+ waited from m_iohandler_sync to change from 10. New value is 11.
+ (plugin = gdb-remote, state = stopped)
+ (plugin = gdb-remote, state = stopped, stop_id = 48
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002cf8
+ Process::ShouldBroadcastEvent: should_resume: 1 state: stopped was_restarted: 0 report_stop_vote: -1.
+ Process::ShouldBroadcastEvent (0x6000022de760) Restarting process from state: stopped
+ Process::PrivateResume() m_stop_id = 48, public state: running private state: stopped
+ (plugin = gdb-remote, state = running)
+ Process thinks the process has resumed.
+ Process::ShouldBroadcastEvent (0x6000022de760) => new state: stopped, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state stopped (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::ShouldBroadcastEvent (0x6000022dced0) => new state: running, last broadcast state: running - NO
+ Process::HandlePrivateEvent (pid = 9281) suppressing state running (old state running): should_broadcast == false
+ timeout = <infinite>, event_sp)...
+ Process::GetSTDOUT (buf = 0x16c1ea8a0, size = 1024)
+ ::waitpid (pid = 9281, &status, 0) => pid = 9281, status = 0x00000000 (EXITED), signal = 0, exit_status = 0
+ pid = 9281, signal = 0, status = 0
+ (plugin = gdb-remote status=0 (0x00000000), description="")
+ (plugin = gdb-remote, state = exited)
+ (plugin = gdb-remote, state = exited, stop_id = 49
+ Process::ShouldBroadcastEvent (0x6000022e7fc0) => new state: exited, last broadcast state: exited - YES
+ Process::HandlePrivateEvent (pid = 9281) broadcasting new state exited (old state exited) to public
+ Process::RunPrivateStateThread (arg = 0x13215be00, pid = 9281) about to exit with internal state exited...
+ Process::RunPrivateStateThread (arg = 0x13215be00, pid = 9281) thread exiting...
+ (plugin = gdb-remote, state = exited, restarted = 0)
+ (plugin = gdb-remote, state = exited) -- unlocking run lock
+ ::waitpid (pid = 9282, &status, 0) => pid = 9282, status = 0x00000000 (EXITED), signal = 0, exit_status = 0
