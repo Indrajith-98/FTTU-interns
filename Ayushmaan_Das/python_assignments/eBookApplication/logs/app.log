@@ -1,0 +1,190 @@
+
+(.venv) D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\python_assignments\eBookApplication>python app.py
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 1
+
+--------------------------------------------------
+                   ADD NEW USER
+--------------------------------------------------
+👤 Enter Username: ayushmaanFCB
+✅ User 'ayushmaanFCB' added successfully! (User ID: 1)
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 2
+
+--------------------------------------------------
+                   ADD NEW BOOK
+--------------------------------------------------
+📘 Enter Book Title: RAG Chatbots
+📄 Enter Total Pages: 50
+✅ Book 'RAG Chatbots' added successfully! (Book ID: 1)
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 3
+
+--------------------------------------------------
+               START READING A BOOK
+--------------------------------------------------
+👤 Enter Username: ayushmaanFCB
+📘 Enter Book Title: RAG Chatbots
+✅ User 'ayushmaanFCB' started reading 'RAG Chatbots'.
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 4
+
+--------------------------------------------------
+             UPDATE READING PROGRESS
+--------------------------------------------------
+👤 Enter Username: ayushmaanFCB
+📘 Enter Book Title: RAG Chatbots
+✏️ Enter Number of Pages Read: 15
+✅ Progress updated for 'RAG Chatbots' by 'ayushmaanFCB'.
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 1
+
+--------------------------------------------------
+                   ADD NEW USER
+--------------------------------------------------
+👤 Enter Username: bruceWayne
+✅ User 'bruceWayne' added successfully! (User ID: 2)
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 3
+
+--------------------------------------------------
+               START READING A BOOK
+--------------------------------------------------
+👤 Enter Username: bruceWayne  
+📘 Enter Book Title: RAG Chatbots
+✅ User 'bruceWayne' started reading 'RAG Chatbots'.
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 6
+
+--------------------------------------------------
+                  LIST ALL BOOKS
+--------------------------------------------------
+
+📋 All Books in the System:
+  📘 'RAG Chatbots' - 50 pages (Book ID: 1)
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 7
+
+--------------------------------------------------
+          LIST ALL USERS AND THEIR BOOKS
+--------------------------------------------------
+
+👤 User: ayushmaanFCB
+  📘 'RAG Chatbots' - 15/50 pages read
+
+👤 User: bruceWayne
+  📘 'RAG Chatbots' - 0/50 pages read
+
+==================================================
+              📚 BOOK TRACKING SYSTEM
+==================================================
+1. ➕ Add User
+2. 📘 Add Book
+3. 📖 Start Reading a Book
+4. ✏️ Update Reading Progress
+5. 🔍 View Book Status (By User)
+6. 📋 List All Books
+7. 👥 List All Users and Their Books
+0. ❌ Exit
+
+Enter your choice (1-7): 0
+
+❌ Exiting the program. Have a great day! 📚
+
+(.venv) D:\MulticoreWare\FTTU-interns\Ayushmaan_Das\python_assignments\eBookApplication>

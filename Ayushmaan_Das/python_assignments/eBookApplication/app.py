@@ -1,5 +1,5 @@
 from components.database import DatabaseManager
-from utils import print_header, print_subheader
+from utils.headers import print_header, print_subheader
 
 
 def main():

@@ -1,7 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from components.database import DatabaseManager
+import logging
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename='logs/gui.log', filemode='a')
 
 class BookManagementApp:
     def __init__(self, root):
@@ -10,6 +12,8 @@ class BookManagementApp:
         self.root.title("eBOOK MANAGEMENT APPLICATION")
         self.root.geometry("800x600")
 
+        logging.info("Application started.")
+        
         header = tk.Label(root, text="📚 Book Management System", font=("Arial", 20, "bold"), fg="blue")
         header.pack(pady=10)
 
@@ -37,12 +41,10 @@ class BookManagementApp:
         self.show_welcome_message()
 
     def clear_content(self):
-        """Clears the content frame."""
         for widget in self.content_frame.winfo_children():
             widget.destroy()
 
     def show_welcome_message(self):
-        """Displays a welcome message in the content area."""
         welcome_label = tk.Label(
             self.content_frame,
             text="Welcome to the Book Management System!\nCheck sidebar to explore functionalities.",
@@ -69,8 +71,10 @@ class BookManagementApp:
                 user_id = self.db.add_user(username)
                 messagebox.showinfo("Success", f"User '{username}' added successfully! (User ID: {user_id})")
                 username_entry.delete(0, tk.END)
+                logging.info(f"User '{username}' added with User ID: {user_id}")
             except ValueError as e:
                 messagebox.showerror("Error", str(e))
+                logging.error(f"Error adding user '{username}': {e}")
 
         submit_btn = tk.Button(self.content_frame, text="Add User", font=("Arial", 12), command=add_user_action, bg="green", fg="white")
         submit_btn.pack(pady=10)
@@ -98,6 +102,7 @@ class BookManagementApp:
             messagebox.showinfo("Success", f"Book '{title}' added successfully!")
             title_entry.delete(0, tk.END)
             pages_entry.delete(0, tk.END)
+            logging.info(f"Book '{title}' added with {total_pages} pages.")
 
         submit_btn = tk.Button(self.content_frame, text="Add Book", font=("Arial", 12), command=add_book_action, bg="green", fg="white")
         submit_btn.pack(pady=10)
@@ -130,8 +135,10 @@ class BookManagementApp:
             try:
                 self.db.add_user_book(user[0], book[0])
                 messagebox.showinfo("Success", f"User '{username}' started reading '{book_title}'.")
+                logging.info(f"User '{username}' started reading '{book_title}'.")
             except ValueError as e:
                 messagebox.showerror("Error", str(e))
+                logging.error(f"Error starting reading for user '{username}': {e}")
 
         submit_btn = tk.Button(self.content_frame, text="Start Reading", font=("Arial", 12), command=start_reading_action, bg="green", fg="white")
         submit_btn.pack(pady=10)
@@ -166,6 +173,7 @@ class BookManagementApp:
                 messagebox.showinfo("Reading Status", f"User: {username}\nBook: {book_title}\nPages Read: {reading_status[1]}/{reading_status[2]}")
             else:
                 messagebox.showinfo("Reading Status", f"User '{username}' has not started reading '{book_title}'.")
+            logging.info(f"Viewing status for user '{username}' in book '{book_title}'.")
 
         submit_btn = tk.Button(self.content_frame, text="View Status", font=("Arial", 12), command=view_status_action, bg="blue", fg="white")
         submit_btn.pack(pady=10)
@@ -177,6 +185,7 @@ class BookManagementApp:
         books = self.db.list_all_books()
         if not books:
             tk.Label(self.content_frame, text="No books found!", font=("Arial", 12)).pack(pady=10)
+            logging.info("No books found.")
             return
 
         for book in books:
@@ -190,6 +199,7 @@ class BookManagementApp:
 
         if not user_books:
             tk.Label(self.content_frame, text="No users or books found!", font=("Arial", 12)).pack(pady=10)
+            logging.info("No users or books found.")
             return
 
         for user, books in user_books.items():
@@ -205,7 +215,6 @@ class BookManagementApp:
                     total_pages = book["total_pages"]
                     book_info = f"   📘 {book_title} - Page {current_page} of {total_pages}"
                     tk.Label(self.content_frame, text=book_info, font=("Arial", 12)).pack(anchor="w", padx=40)
-
 
     def show_update_progress(self):
         self.clear_content()
@@ -244,8 +253,10 @@ class BookManagementApp:
             try:
                 self.db.update_progress(user[0], book[0], pages_read)
                 messagebox.showinfo("Success", f"Updated reading progress for '{username}' in '{book_title}'.")
+                logging.info(f"Updated reading progress for '{username}' in '{book_title}'.")
             except ValueError as e:
                 messagebox.showerror("Error", str(e))
+                logging.error(f"Error updating progress for '{username}' in '{book_title}': {e}")
         
         submit_btn = tk.Button(self.content_frame, text="Update Progress", font=("Arial", 12), command=update_progress_action, bg="blue", fg="white")
         submit_btn.pack(pady=10)
