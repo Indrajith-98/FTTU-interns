@@ -7,7 +7,6 @@ class DatabaseManager:
         self.create_tables()
 
     def create_tables(self):
-        """Create the tables if they don't exist."""
         users_table = """
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -40,9 +39,7 @@ class DatabaseManager:
         self.conn.execute(user_books_table)
         self.conn.commit()
 
-    # ---- User Methods ----
     def add_user(self, username):
-        """Add a new user."""
         query = "INSERT INTO users (username) VALUES (?);"
         cursor = self.conn.cursor()
         try:
@@ -53,16 +50,13 @@ class DatabaseManager:
             raise ValueError("Username already exists.")
 
     def get_user(self, username):
-        """Retrieve a user by username."""
         query = "SELECT id, username FROM users WHERE username = ?;"
         cursor = self.conn.cursor()
         cursor.execute(query, (username,))
         result = cursor.fetchone()
         return result if result else None
 
-    # ---- Book Methods ----
     def add_book(self, title, total_pages):
-        """Add a new book."""
         query = "INSERT INTO books (title, total_pages) VALUES (?, ?);"
         cursor = self.conn.cursor()
         cursor.execute(query, (title, total_pages))
@@ -70,16 +64,13 @@ class DatabaseManager:
         return cursor.lastrowid
 
     def get_book(self, title):
-        """Retrieve a book by title."""
         query = "SELECT id, title, total_pages FROM books WHERE title = ?;"
         cursor = self.conn.cursor()
         cursor.execute(query, (title,))
         result = cursor.fetchone()
         return result if result else None
 
-    # ---- User-Book Methods ----
     def add_user_book(self, user_id, book_id):
-        """Associate a user with a book and start tracking progress."""
         query = "INSERT INTO user_books (user_id, book_id) VALUES (?, ?);"
         cursor = self.conn.cursor()
         try:
@@ -90,7 +81,6 @@ class DatabaseManager:
             raise ValueError("User is already reading this book.")
 
     def update_progress(self, user_id, book_id, pages_read):
-        """Update the progress for a user on a specific book."""
         query = """
         SELECT current_page, total_pages
         FROM user_books
@@ -106,7 +96,7 @@ class DatabaseManager:
 
         current_page, total_pages = result
         new_page = current_page + pages_read
-
+        
         if new_page > total_pages:
             raise ValueError("Pages read cannot exceed total pages.")
 
@@ -115,7 +105,6 @@ class DatabaseManager:
         self.conn.commit()
 
     def get_user_book_status(self, user_id, book_id):
-        """Get the current status of a book being read by a user."""
         query = """
         SELECT books.title, books.total_pages, user_books.current_page
         FROM user_books
@@ -134,14 +123,18 @@ class DatabaseManager:
         }
 
     def list_all_books(self):
-        """Retrieve all books in the system."""
         query = "SELECT id, title, total_pages FROM books;"
+        cursor = self.conn.cursor()
+        cursor.execute(query)
+        return cursor.fetchall()
+    
+    def list_all_users(self):
+        query = "SELECT id, username FROM users;"
         cursor = self.conn.cursor()
         cursor.execute(query)
         return cursor.fetchall()
 
     def list_all_users_with_books(self):
-        """Retrieve all users along with their books and progress."""
         query = """
         SELECT users.username, books.title, user_books.current_page, books.total_pages
         FROM user_books
@@ -162,6 +155,18 @@ class DatabaseManager:
                 "current_page": current_page,
                 "total_pages": total_pages,
             })
+        return result
+
+    def get_reading_status(self, user_id, book_id):
+        query = """
+            SELECT b.title, ub.current_page, b.total_pages
+            FROM user_books ub
+            JOIN books b ON ub.book_id = b.id
+            WHERE ub.user_id = ? AND ub.book_id = ?
+        """
+        cursor = self.conn.cursor()
+        cursor.execute(query, (user_id, book_id))
+        result = cursor.fetchone()
         return result
 
     def __del__(self):
