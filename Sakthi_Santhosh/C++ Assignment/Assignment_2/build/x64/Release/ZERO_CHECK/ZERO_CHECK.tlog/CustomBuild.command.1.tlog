@@ -1,0 +1,10 @@
+^D:\SANTHOSH@MCW\C++ ASSIGNMENT\ASSIGNMENT_2\BUILD\CMAKEFILES\4E9FC8FAA3D8A1558934544BCE6C53E2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Santhosh@McW/C++ Assignment/Assignment_2" "-BD:/Santhosh@McW/C++ Assignment/Assignment_2/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Santhosh@McW/C++ Assignment/Assignment_2/build/OpenCVExample.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
