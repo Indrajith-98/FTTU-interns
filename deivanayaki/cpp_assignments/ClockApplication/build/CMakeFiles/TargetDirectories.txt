@@ -1,0 +1,3 @@
+D:/ClockApplication/build/CMakeFiles/app.dir
+D:/ClockApplication/build/CMakeFiles/edit_cache.dir
+D:/ClockApplication/build/CMakeFiles/rebuild_cache.dir
