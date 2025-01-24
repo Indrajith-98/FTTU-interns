@@ -1,9 +1,11 @@
 #include "my_math.h"
 #include <cmath>
+#include <iostream>
 
 int MyMath::factorial(int n) {
   if (n < 0) {
-    throw std::invalid_argument("Factorial is not defined for negative numbers.");
+    throw std::invalid_argument(
+        "Factorial is not defined for negative numbers.");
   }
   if (n == 0) {
     return 1;
@@ -14,7 +16,8 @@ int MyMath::factorial(int n) {
 
 int MyMath::fibonacci(int n) {
   if (n < 0) {
-    throw std::invalid_argument("Fibonacci is not defined for negative numbers.");
+    throw std::invalid_argument(
+        "Fibonacci is not defined for negative numbers.");
   }
   if (n <= 1) {
     return n;
@@ -47,7 +50,8 @@ int MyMath::lcm(int a, int b) {
 
 std::vector<int> MyMath::prime_factors(int n) {
   if (n <= 1) {
-    throw std::invalid_argument("Prime factorization is not defined for numbers less than or equal to 1.");
+    throw std::invalid_argument("Prime factorization is not defined for "
+                                "numbers less than or equal to 1.");
   }
   std::vector<int> factors;
   for (int i = 2; i * i <= n; ++i) {
@@ -59,8 +63,7 @@ std::vector<int> MyMath::prime_factors(int n) {
   if (n > 1) {
     factors.push_back(n);
   }
-  return factors;
-}
+  return factors;}
 
 double MyMath::calculate_pi(int num_iterations) {
   if (num_iterations <= 0) {
@@ -71,19 +74,15 @@ double MyMath::calculate_pi(int num_iterations) {
     double term = pow(-1, i) / (2 * i + 1);
     sum += term;
   }
-  return 4 * sum; 
+  return 4 * sum;
 }
 
-double MyMath::sigmoid(double x) {
-  return 1.0 / (1.0 + exp(-x));
-}
+double MyMath::sigmoid(double x) { return 1.0 / (1.0 + exp(-x)); }
 
-double MyMath::relu(double x) {
-  return std::max(0.0, x);
-}
+double MyMath::relu(double x) { return std::max(0.0, x); }
 
-double MyMath::mean_squared_error(const std::vector<double>& y_true,
-                                  const std::vector<double>& y_pred) {
+double MyMath::mean_squared_error(const std::vector<double> &y_true,
+                                  const std::vector<double> &y_pred) {
   if (y_true.size() != y_pred.size()) {
     throw std::invalid_argument("y_true and y_pred must have the same size.");
   }
