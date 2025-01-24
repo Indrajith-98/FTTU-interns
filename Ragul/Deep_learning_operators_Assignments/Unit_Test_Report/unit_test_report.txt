@@ -1,0 +1,19 @@
+conv1 Test Passed: All values match within tolerance (0.001).
+batch_norm1 Test Passed: All values match within tolerance (0.001).
+max_pool1 Test Passed: All values match within tolerance (0.001).
+conv2 Test Passed: All values match within tolerance (0.001).
+batch_norm2 Test Passed: All values match within tolerance (0.001).
+max_pool2 Test Passed: All values match within tolerance (0.001).
+conv3 Test Passed: All values match within tolerance (0.001).
+batch_norm3 Test Passed: All values match within tolerance (0.001).
+max_pool3 Test Passed: All values match within tolerance (0.001).
+
+
+
+
+c++ output:
+          Max value: 1 at index 1
+           Predicted Class: automobile
+
+python_output:
+           Predicted class: automobile
