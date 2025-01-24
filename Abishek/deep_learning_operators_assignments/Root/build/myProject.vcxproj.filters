@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\batch_norm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\conv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\dense.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\maxpool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\Test_Operators\src\compare_outputs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\Test_Operators\src\test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MultiCoreWare\C++ Application\Project_Root\utilities\src\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\MultiCoreWare\C++ Application\Project_Root\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A3AAE7DF-9FEF-38E5-97BD-9C4C6E14DDF5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
