@@ -1,0 +1,10 @@
+^D:\DOCUMENTS_PERSONAL\MULTICOREWARE\TRAINING\IMAGE_PROCESSING\CMAKELISTS.TXT
+setlocal
+D:\CMake\bin\cmake.exe -SD:/Documents_personal/Multicoreware/training/Image_processing -BD:/Documents_personal/Multicoreware/training/Image_processing/build --check-stamp-file D:/Documents_personal/Multicoreware/training/Image_processing/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

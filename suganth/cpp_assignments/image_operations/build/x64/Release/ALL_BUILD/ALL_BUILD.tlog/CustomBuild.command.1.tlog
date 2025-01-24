@@ -1,0 +1,10 @@
+^F:\MULTICOREWARE_FTU_INTERN\CPP_ASSIGNMENTS\IMAGE_OPERATIONS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/MULTICOREWARE_FTU_INTERN/CPP_ASSIGNMENTS/IMAGE_OPERATIONS -BF:/MULTICOREWARE_FTU_INTERN/CPP_ASSIGNMENTS/IMAGE_OPERATIONS/build --check-stamp-file F:/MULTICOREWARE_FTU_INTERN/CPP_ASSIGNMENTS/IMAGE_OPERATIONS/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,9 @@
+E:\image processing\src\adjustBrightness.cpp;E:\image processing\build\ImageProcessing.dir\Debug\adjustBrightness.obj
+E:\image processing\src\adjustContrast.cpp;E:\image processing\build\ImageProcessing.dir\Debug\adjustContrast.obj
+E:\image processing\src\blur.cpp;E:\image processing\build\ImageProcessing.dir\Debug\blur.obj
+E:\image processing\src\invertColors.cpp;E:\image processing\build\ImageProcessing.dir\Debug\invertColors.obj
+E:\image processing\src\main.cpp;E:\image processing\build\ImageProcessing.dir\Debug\main.obj
+E:\image processing\src\readImage.cpp;E:\image processing\build\ImageProcessing.dir\Debug\readImage.obj
+E:\image processing\src\saveImage.cpp;E:\image processing\build\ImageProcessing.dir\Debug\saveImage.obj
+E:\image processing\src\showImage.cpp;E:\image processing\build\ImageProcessing.dir\Debug\showImage.obj
+E:\image processing\src\toGrayscale.cpp;E:\image processing\build\ImageProcessing.dir\Debug\toGrayscale.obj

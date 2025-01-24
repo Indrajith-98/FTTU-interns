@@ -1,0 +1,44 @@
+Clock Application
+1. Set Alarm
+2. Start Stopwatch
+3. Start Timer
+4. Exit
+Enter your choice: 1
+Set Alarm (24-hour format):
+Enter hour: 15 
+Enter minute: 11
+Alarm set for 15:11
+
+Clock Application
+1. Set Alarm
+2. Start Stopwatch
+3. Start Timer
+4. Exit
+Enter your choice: 2
+Press enter to start the stopwatch
+
+Stopwatch started. Press Enter to stop.
+
+Stopwatch stopped. Duration: 3 seconds.
+
+Clock Application
+1. Set Alarm
+2. Start Stopwatch
+3. Start Timer
+4. Exit
+Enter your choice:
+Time reached! The alarm is ringing!
+3
+Enter the number of seconds:
+10
+Timer started for 10 seconds.
+Time remaining: 1 seconds..
+Time's up!
+
+Clock Application
+1. Set Alarm
+2. Start Stopwatch
+3. Start Timer
+4. Exit
+Enter your choice: 4
+Exit

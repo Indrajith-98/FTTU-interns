@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Project name and version
+project(ImageProcessingApp)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Include directories
+include_directories(include)
+
+# Find OpenCV package
+find_package(OpenCV REQUIRED)
+
+# # Include OpenCV headers
+include_directories(${OpenCV_INCLUDE_DIRS})
+# Add source files
+file(GLOB SOURCES
+    src/*.cpp
+)
+
+# Add the executable target
+add_executable(ImageProcessingApp ${SOURCES})
+
+# Link OpenCV libraries to the executable
+target_link_libraries(ImageProcessingApp ${OpenCV_LIBS})

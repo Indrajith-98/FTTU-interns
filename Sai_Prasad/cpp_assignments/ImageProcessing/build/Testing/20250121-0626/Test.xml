@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-mingw32-make"
+	BuildStamp="20250121-0626-Experimental"
+	Name="LAPTOP-TIAH9Q2N"
+	Generator="ctest-3.31.4"
+	CompilerName="C:/msys64/ucrt64/bin/g++.exe"
+	CompilerVersion="14.2.0"
+	OSName="Windows"
+	Hostname="LAPTOP-TIAH9Q2N"
+	OSRelease=" Personal"
+	OSVersion=" (Build 22631)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ModelName=""
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="24341"
+	TotalPhysicalMemory="16149"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2419"
+	>
+	<Testing>
+		<StartDateTime>Jan 21 16:48 India Standard Time</StartDateTime>
+		<StartTestTime>1737458299</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jan 21 16:48 India Standard Time</EndDateTime>
+		<EndTestTime>1737458299</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
