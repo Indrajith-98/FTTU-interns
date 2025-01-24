@@ -1,0 +1,36 @@
+Unit Testing Begins
+==================================================
+Validating the output of "conv2d_3" with python output
+Validation Successful
+==================================================
+Validating the output of "batch_normalization_3" with python output
+Validation Successful
+==================================================
+Validating the output of "max_pooling2d_3" with python output
+Validation Successful
+==================================================
+Validating the output of "conv2d_4" with python output
+Validation Successful
+==================================================
+Validating the output of "batch_normalization_4" with python output
+Validation Successful
+==================================================
+Validating the output of "max_pooling2d_4" with python output
+Validation Successful
+==================================================
+Validating the output of "conv2d_5" with python output
+Validation Successful
+==================================================
+Validating the output of "batch_normalization_5" with python output
+Validation Successful
+==================================================
+Validating the output of "max_pooling2d_5" with python output
+Validation Successful
+==================================================
+Validating the output of "dense_2" with python output
+Validation Successful
+==================================================
+Validating the output of "dense_3" with python output
+Validation Successful
+==================================================
+Unit Testing Ends
