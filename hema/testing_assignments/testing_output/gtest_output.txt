@@ -1,0 +1,26 @@
+[==========] Running 9 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 9 tests from MyMathTest
+[ RUN      ] MyMathTest.Factorial
+[       OK ] MyMathTest.Factorial (0 ms)
+[ RUN      ] MyMathTest.Fibonacci
+[       OK ] MyMathTest.Fibonacci (0 ms)
+[ RUN      ] MyMathTest.GCD
+[       OK ] MyMathTest.GCD (0 ms)
+[ RUN      ] MyMathTest.LCM
+[       OK ] MyMathTest.LCM (0 ms)
+[ RUN      ] MyMathTest.PrimeFactors
+[       OK ] MyMathTest.PrimeFactors (0 ms)
+[ RUN      ] MyMathTest.CalculatePi
+[       OK ] MyMathTest.CalculatePi (0 ms)
+[ RUN      ] MyMathTest.Sigmoid
+[       OK ] MyMathTest.Sigmoid (0 ms)
+[ RUN      ] MyMathTest.ReLU
+[       OK ] MyMathTest.ReLU (0 ms)
+[ RUN      ] MyMathTest.MeanSquaredError
+[       OK ] MyMathTest.MeanSquaredError (0 ms)
+[----------] 9 tests from MyMathTest (21 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test suite ran. (28 ms total)
+[  PASSED  ] 9 tests.
