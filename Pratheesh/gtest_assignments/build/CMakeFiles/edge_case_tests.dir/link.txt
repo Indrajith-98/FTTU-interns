@@ -1,3 +1,0 @@
-F:\cmake\bin\cmake.exe -E rm -f CMakeFiles\edge_case_tests.dir/objects.a
-"F:\code blocks\CodeBlocks\MinGW\bin\ar.exe" qc CMakeFiles\edge_case_tests.dir/objects.a @CMakeFiles\edge_case_tests.dir\objects1.rsp
-"F:\code blocks\CodeBlocks\MinGW\bin\c++.exe"  -fprofile-arcs -ftest-coverage  -fprofile-arcs -ftest-coverage -Wl,--whole-archive CMakeFiles\edge_case_tests.dir/objects.a -Wl,--no-whole-archive -o edge_case_tests.exe -Wl,--out-implib,libedge_case_tests.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\edge_case_tests.dir\linkLibs.rsp

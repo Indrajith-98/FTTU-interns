@@ -40,9 +40,16 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 # Coverage report (optional)
+# add_custom_target(coverage
+#     COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
+#     COMMAND lcov --capture --directory . --output-file coverage.info
+#     COMMAND genhtml coverage.info --output-directory ${CMAKE_BINARY_DIR}/reports/coverage_report
+#     COMMENT "Generating coverage report"
+# )
+
 add_custom_target(coverage
     COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
-    COMMAND lcov --capture --directory . --output-file coverage.info
-    COMMAND genhtml coverage.info --output-directory ${CMAKE_BINARY_DIR}/reports/coverage_report
+    COMMAND gcov -r . -o build math_lib_test.cpp
+    COMMAND genhtml *.gcov --output-directory ${CMAKE_BINARY_DIR}/reports/coverage_report
     COMMENT "Generating coverage report"
 )
