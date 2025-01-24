@@ -1,0 +1,3 @@
+C:/Users/sendm/Downloads/FTTU-interns/ayush/cpp_assignments/I_P_A/build/CMakeFiles/I_P_A.dir
+C:/Users/sendm/Downloads/FTTU-interns/ayush/cpp_assignments/I_P_A/build/CMakeFiles/edit_cache.dir
+C:/Users/sendm/Downloads/FTTU-interns/ayush/cpp_assignments/I_P_A/build/CMakeFiles/rebuild_cache.dir
