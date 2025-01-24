@@ -1,0 +1,10 @@
+^E:\G-TEST\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKELISTS.TXT
+setlocal
+C:\Users\ragul\cmake-3.31.3-windows-x86_64\bin\cmake.exe -SE:/G-TEST/build/_deps/googletest-subbuild -BE:/G-TEST/build/_deps/googletest-subbuild --check-stamp-file E:/G-TEST/build/_deps/googletest-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
