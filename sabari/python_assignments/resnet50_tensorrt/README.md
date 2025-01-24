@@ -40,9 +40,17 @@ This project showcases the implementation of a ResNet50 v2 model for image class
 
 ## Performance
 
+The Tensorflow's engine delivers the following performance metrics on a I7-12th gen CPU
+
+- **Average time per sample:** 8.675 ms
+- **Throughput:** 115.27 samples/sec
+
 The TensorRT engine delivers the following performance metrics on an RTX 2050 Mobile:
 
 - **Average Inference Time:** 2.07 ms
 - **Throughput:** 480.49 images/second
 
-These results highlight the substantial performance improvements achieved with TensorRT optimization for inference.
+The key observation here is that
+
+- While comparing with batch processing with a batch size of 32 both the model performed significantly better with Tensorflow scoring 0.9 ms and tensorrt scoring 0.4 ms
+- The inference time of tensorrt varies slightly from one inference to other with approximately 0.2 ms
