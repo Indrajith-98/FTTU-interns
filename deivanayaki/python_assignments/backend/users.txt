@@ -1,0 +1,3 @@
+Name,Email,Password,Favorite_Genre
+Deivanayaki,dev@gmail.com,Deiva@2003,FANTASY
+Srivani,Srivani@gmail.com,Srivani1@,FANTASY

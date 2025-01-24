@@ -13,6 +13,7 @@ public:
   void toGrayscale(Mat image);
   void rotateImage90(Mat image);
   void anRotateImage90(Mat image);
+  void contrastHandler(Mat image);
 
 private:
   bool saveImageToDisk(const cv::Mat &image, const std::string &filename);

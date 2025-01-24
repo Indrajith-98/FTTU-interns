@@ -1,0 +1,4 @@
+C:/Users/prasa/Downloads/opencv_pro/build/CMakeFiles/OpenCVProject.dir
+C:/Users/prasa/Downloads/opencv_pro/build/CMakeFiles/PACKAGE.dir
+C:/Users/prasa/Downloads/opencv_pro/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/prasa/Downloads/opencv_pro/build/CMakeFiles/ZERO_CHECK.dir
