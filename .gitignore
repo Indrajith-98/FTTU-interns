@@ -8,3 +8,4 @@
 **/.pth
 **/data/
 **/*.pth
+**/*.DS_Store
