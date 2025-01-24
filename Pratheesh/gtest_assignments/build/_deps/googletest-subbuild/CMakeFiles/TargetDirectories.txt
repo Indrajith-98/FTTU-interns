@@ -1,0 +1,3 @@
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

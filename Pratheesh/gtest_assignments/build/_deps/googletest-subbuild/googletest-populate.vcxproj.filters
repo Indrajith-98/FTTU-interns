@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\a25846ed6bbe239530973426948d6d4f\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\4b2012fd9477f34ea9fb4cb41ed447a7\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\dfe751386f78fc6818b93bfe8619823c\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2492697B-0FE9-3339-9BAD-5F38B46A5F7C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+^F:\MCW\SUBMISSIONS\FTTU-INTERNS\PRATHEESH\GTEST_ASSIGNMENTS\GOOGLETEST\GOOGLEMOCK\CMAKELISTS.TXT
+setlocal
+F:\cmake\bin\cmake.exe -SF:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments -BF:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/build --check-stamp-file F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/build/googletest/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

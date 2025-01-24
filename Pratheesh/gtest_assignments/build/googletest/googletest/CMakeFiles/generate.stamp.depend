@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googletest/CMakeLists.txt
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googletest/cmake/Config.cmake.in
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googletest/cmake/gtest.pc.in
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googletest/cmake/gtest_main.pc.in
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googletest/cmake/internal_utils.cmake
+F:/cmake/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+F:/cmake/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+F:/cmake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+F:/cmake/share/cmake-3.31/Modules/CheckIncludeFile.cmake
+F:/cmake/share/cmake-3.31/Modules/CheckLibraryExists.cmake
+F:/cmake/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+F:/cmake/share/cmake-3.31/Modules/FindPackageMessage.cmake
+F:/cmake/share/cmake-3.31/Modules/FindThreads.cmake
+F:/cmake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake
+F:/cmake/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake

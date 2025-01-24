@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\googletest\googletest\src\gtest-all.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\googletest\googlemock\src\gmock-all.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\MCW\Submissions\FTTU-interns\Pratheesh\gtest_assignments\googletest\googlemock\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E1467CA3-9BED-3A1C-B59C-0863E71114E6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

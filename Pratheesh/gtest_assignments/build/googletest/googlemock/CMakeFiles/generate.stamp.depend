@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googlemock/CMakeLists.txt
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googlemock/cmake/gmock.pc.in
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/googlemock/cmake/gmock_main.pc.in
+F:/cmake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+F:/cmake/share/cmake-3.31/Modules/CheckIncludeFile.cmake
+F:/cmake/share/cmake-3.31/Modules/CheckLibraryExists.cmake
+F:/cmake/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+F:/cmake/share/cmake-3.31/Modules/FindPackageMessage.cmake
+F:/cmake/share/cmake-3.31/Modules/FindThreads.cmake

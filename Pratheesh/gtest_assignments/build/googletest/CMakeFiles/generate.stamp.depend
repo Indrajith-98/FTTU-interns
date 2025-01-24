@@ -1,0 +1,17 @@
+# CMake generation dependency list for this directory.
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/build/CMakeFiles/3.31.3/CMakeCCompiler.cmake
+F:/MCW/Submissions/FTTU-interns/Pratheesh/gtest_assignments/googletest/CMakeLists.txt
+F:/cmake/share/cmake-3.31/Modules/CMakeCInformation.cmake
+F:/cmake/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake
+F:/cmake/share/cmake-3.31/Modules/CMakeDependentOption.cmake
+F:/cmake/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake
+F:/cmake/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+F:/cmake/share/cmake-3.31/Modules/Compiler/MSVC-C.cmake
+F:/cmake/share/cmake-3.31/Modules/Compiler/MSVC.cmake
+F:/cmake/share/cmake-3.31/Modules/GNUInstallDirs.cmake
+F:/cmake/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake
+F:/cmake/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake
+F:/cmake/share/cmake-3.31/Modules/Platform/Linker/Windows-MSVC-C.cmake
+F:/cmake/share/cmake-3.31/Modules/Platform/Linker/Windows-MSVC.cmake
+F:/cmake/share/cmake-3.31/Modules/Platform/Windows-MSVC-C.cmake
+F:/cmake/share/cmake-3.31/Modules/Platform/Windows-MSVC.cmake
