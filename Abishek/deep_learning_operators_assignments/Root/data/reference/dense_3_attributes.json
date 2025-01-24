@@ -1,0 +1,13 @@
+{
+    "layer_name": "dense_3",
+    "type": "Dense",
+    "input_shape": [
+        null,
+        384
+    ],
+    "output_shape": [
+        null,
+        10
+    ],
+    "activation": "softmax"
+}

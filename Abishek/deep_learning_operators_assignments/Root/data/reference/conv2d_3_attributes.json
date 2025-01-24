@@ -1,0 +1,26 @@
+{
+    "layer_name": "conv2d_3",
+    "type": "Conv2D",
+    "input_shape": [
+        null,
+        32,
+        32,
+        3
+    ],
+    "output_shape": [
+        null,
+        32,
+        32,
+        128
+    ],
+    "kernel_size": [
+        3,
+        3
+    ],
+    "strides": [
+        1,
+        1
+    ],
+    "padding": "same",
+    "activation": "relu"
+}

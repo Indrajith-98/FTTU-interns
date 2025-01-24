@@ -1,0 +1,14 @@
+{
+    "layer_name": "flatten_1",
+    "type": "Flatten",
+    "input_shape": [
+        null,
+        4,
+        4,
+        256
+    ],
+    "output_shape": [
+        null,
+        4096
+    ]
+}
