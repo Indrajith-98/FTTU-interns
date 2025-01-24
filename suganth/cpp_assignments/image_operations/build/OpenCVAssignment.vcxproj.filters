@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\MULTICOREWARE_FTU_INTERN\CPP_ASSIGNMENTS\IMAGE_OPERATIONS\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MULTICOREWARE_FTU_INTERN\CPP_ASSIGNMENTS\IMAGE_OPERATIONS\ImageProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\MULTICOREWARE_FTU_INTERN\CPP_ASSIGNMENTS\IMAGE_OPERATIONS\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B1A5EEFC-8585-3DA2-92D6-3E9942EE43D5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+^C:\USERS\PRASA\DOWNLOADS\OPENCV_PRO\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/prasa/Downloads/opencv_pro -BC:/Users/prasa/Downloads/opencv_pro/build --check-stamp-file C:/Users/prasa/Downloads/opencv_pro/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

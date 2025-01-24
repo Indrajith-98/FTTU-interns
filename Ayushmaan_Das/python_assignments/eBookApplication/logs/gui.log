@@ -1,0 +1,6 @@
+2025-01-23 15:43:01,343 - INFO - Application started.
+2025-01-23 15:43:51,818 - INFO - User 'lamineYamal' added with User ID: 3
+2025-01-23 15:44:13,929 - INFO - Book 'Footballing Skills' added with 100 pages.
+2025-01-23 15:44:32,479 - INFO - User 'lamineYamal' started reading 'Footballing Skills'.
+2025-01-23 15:44:48,688 - INFO - Updated reading progress for 'lamineYamal' in 'Footballing Skills'.
+2025-01-23 15:45:05,243 - INFO - Viewing status for user 'lamineYamal' in book 'Footballing Skills'.
