@@ -6,6 +6,12 @@ A test suite for each function in src/my_math.cpp was written using Google Test 
 
 ### Run the Program
 
+##### Clone the GTEST  repo
+
+```
+git clone https://github.com/google/googletest.git
+```
+
 ##### Create build directory
 
 ```
