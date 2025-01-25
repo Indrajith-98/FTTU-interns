@@ -10,7 +10,9 @@ project(ImagePreprocessing)
 find_package(OpenCV REQUIRED)
 
 # Specify the source files
-set(SOURCE_FILES src/main.cpp)
+
+set(SOURCE_FILES main.cpp)
+
 
 # Add an executable to the project
 add_executable(ImagePreprocessing ${SOURCE_FILES})
