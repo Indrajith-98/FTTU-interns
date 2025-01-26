@@ -1,0 +1,18 @@
+Input Reading Execution Time: 0.008734 seconds
+Conv1 Forward Pass Execution Time: 0.02341 seconds
+ReLU1 Activation Execution Time: 0.002048 seconds
+MaxPool1 Forward Pass Execution Time: 0.000952 seconds
+Conv2 Forward Pass Execution Time: 0.202407 seconds
+ReLU2 Activation Execution Time: 0.000339 seconds
+MaxPool2 Forward Pass Execution Time: 0.000325 seconds
+Conv3 Forward Pass Execution Time: 0.014028 seconds
+ReLU3 Activation Execution Time: 0.000162 seconds
+Flattening Execution Time: 0.000109 seconds
+Dense1 Forward Pass Execution Time: 0.000854 seconds
+ReLU FC1 Activation Execution Time: 4e-06 seconds
+Dense2 Forward Pass Execution Time: 5e-06 seconds
+Softmax Activation Execution Time: 3e-06 seconds
+Total Program Execution Time: 1.59647 seconds
+Testing the model
+Total Testing Time: 0.736383 seconds
+Total Program Execution Time (Model + Testing): 2.39856 seconds
