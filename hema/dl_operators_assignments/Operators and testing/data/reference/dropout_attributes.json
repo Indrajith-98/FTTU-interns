@@ -1,6 +1,0 @@
-{
-    "layer_name": "dropout",
-    "type": "Dropout",
-    "input_shape": "Unknown",
-    "output_shape": "Unknown"
-}
