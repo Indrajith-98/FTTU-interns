@@ -79,7 +79,6 @@ cd DL_Operators_Layers
 Create Build Directory
 ```
 mkdir build
-cmake --build .
 cd build
 ```
 Run CMake and executable
