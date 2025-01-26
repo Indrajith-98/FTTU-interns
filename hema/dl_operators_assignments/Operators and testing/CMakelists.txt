@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Model)
+set(CMAKE_CXX_STANDARD 17)
+include_directories(operators/include) 
+include_directories(utilities/include) 
+include_directories(test_operators/include) 
+
+set(SOURCES
+    main.cpp 
+    operators/src/conv2d.cpp
+    operators/src/dense.cpp
+    operators/src/flatten.cpp
+    operators/src/max_pooling.cpp
+    operators/src/softmax.cpp
+    operators/src/relu.cpp
+    utilities/src/utils.cpp
+    test_operators/src/testing.cpp
+)
+
+include_directories("D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp/vcpkg/installed/x64-windows/include")
+
+# Add the executable
+add_executable(Model ${SOURCES})
