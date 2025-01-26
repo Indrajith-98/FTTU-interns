@@ -314,29 +314,6 @@
         "output_shape": null
     },
     {
-        "layer_name": "dropout",
-        "layer_type": "Dropout",
-        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/dropout_input.txt",
-        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/dropout_output.txt",
-        "config": {
-            "name": "dropout",
-            "trainable": true,
-            "dtype": {
-                "module": "keras",
-                "class_name": "DTypePolicy",
-                "config": {
-                    "name": "float32"
-                },
-                "registered_name": null
-            },
-            "rate": 0.2,
-            "seed": null,
-            "noise_shape": null
-        },
-        "input_shape": null,
-        "output_shape": null
-    },
-    {
         "layer_name": "dense_1",
         "layer_type": "Dense",
         "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/dense_1_input.txt",
