@@ -84,6 +84,7 @@ cd build
 Run CMake and executable
 ```
 cmake ..
+cmake --build .
 ./dlopl.exe
 ```
 
