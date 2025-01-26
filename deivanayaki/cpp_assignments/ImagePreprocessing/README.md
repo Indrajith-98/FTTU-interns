@@ -35,6 +35,8 @@ cmake --build .
 ```
 Enter the angle (in degrees) to rotate the image: 60  
 
+```
+
 ![Original Image](image_preprocessing_results/org.png "Original Image")
 ![Grayscale converted Image](image_preprocessing_results/gs.png "Grayscale converted Image")
 ![Rotated by angle Image](image_preprocessing_results/ra.png "Rotated by angle Image")
