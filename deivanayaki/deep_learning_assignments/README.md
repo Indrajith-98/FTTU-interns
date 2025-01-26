@@ -40,6 +40,7 @@ ResNet 9 model structure is applied for cifar 10 image classification.
 ### Time Inference
 
 | Runtime Env | Time taken to process single image |
+|-|-|
 | CPU | 0.155948 s |
 | GPU | 0.099288 s |
 | TensorRT | 0.000419 s |
