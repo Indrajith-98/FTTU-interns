@@ -44,7 +44,12 @@
     <tr style="background-color: #C8E6C9;">
       <td><strong>eBook Application</strong></td>
       <td><strong>Python</strong></td>
-      <td><a href="./python_assignments/eBookApplication\README.md">Check Docs</a></td>
+      <td><a href="./python_assignments/eBookApplication/README.md">Check Docs</a></td>
+    </tr>
+    <tr style="background-color: #C8E6C9;">
+      <td><strong>ResNet Model and Optimization using TensorRT</strong></td>
+      <td><strong>Python (Deep Learning)</strong></td>
+      <td><a href="./python_assignments/Deep_Learning_TensorRT/README.md">Check Docs</a></td>
     </tr>
     </tr>
   </tbody>
