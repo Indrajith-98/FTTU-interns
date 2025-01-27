@@ -1,0 +1,1 @@
+-I"E:/G-TEST/include" -isystem "E:/G-TEST/build/_deps/gtest-src/googletest/include" -isystem "E:/G-TEST/build/_deps/gtest-src/googletest"

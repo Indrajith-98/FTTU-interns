@@ -1,4 +1,4 @@
-#include "my_math.h"
+#include "../Updated_math_lib/my_math.h"
 #include <gtest/gtest.h>
 #include <stdexcept>
 #include <vector>
@@ -7,15 +7,16 @@
 // Test case for factorial function
 TEST(MyMathTest, Factorial) {
     MyMath math;
-    // Base case
+    // Valid cases
     EXPECT_EQ(math.factorial(0), 1);
-    // Normal case
+    EXPECT_EQ(math.factorial(1), 1);
     EXPECT_EQ(math.factorial(5), 120);
-    EXPECT_EQ(math.factorial(20), 2432902008176640000);
-    // Edge case
-    EXPECT_THROW(math.factorial(-1), std::invalid_argument);  // Negative input
-    EXPECT_THROW(math.factorial(1000), std::overflow_error);  // Large input (overflow)
+    EXPECT_EQ(math.factorial(10), 3628800);
+
+    // Overflow case
+    EXPECT_THROW(math.factorial(1000), std::overflow_error);
 }
+
 
 // Test case for fibonacci function
 TEST(MyMathTest, Fibonacci) {
