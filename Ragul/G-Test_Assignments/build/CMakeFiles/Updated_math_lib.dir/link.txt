@@ -1,0 +1,2 @@
+C:\Users\ragul\msys2\ucrt64\bin\ar.exe qc libUpdated_math_lib.a CMakeFiles/Updated_math_lib.dir/Updated_math_lib/updated_math_lib.cpp.obj
+C:\Users\ragul\msys2\ucrt64\bin\ranlib.exe libUpdated_math_lib.a
