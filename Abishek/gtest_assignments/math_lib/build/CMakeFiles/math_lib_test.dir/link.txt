@@ -1,3 +1,3 @@
 "C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\math_lib_test.dir/objects.a
 F:\C++\mingw64\bin\ar.exe qc CMakeFiles\math_lib_test.dir/objects.a @CMakeFiles\math_lib_test.dir\objects1.rsp
-F:\C++\mingw64\bin\g++.exe --coverage -Wl,--whole-archive CMakeFiles\math_lib_test.dir/objects.a -Wl,--no-whole-archive -o math_lib_test.exe -Wl,--out-implib,libmath_lib_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\math_lib_test.dir\linkLibs.rsp
+F:\C++\mingw64\bin\g++.exe -g --coverage -Wl,--whole-archive CMakeFiles\math_lib_test.dir/objects.a -Wl,--no-whole-archive -o math_lib_test.exe -Wl,--out-implib,libmath_lib_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\math_lib_test.dir\linkLibs.rsp

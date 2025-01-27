@@ -67,7 +67,7 @@ include CMakeFiles/coverage.dir/progress.make
 
 CMakeFiles/coverage:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=F:\MultiCoreWare\Submissions\FTTU-interns\Abishek\gtest_assignments\math_lib\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating code coverage report with gcovr..."
-	F:\MultiCoreWare\Environments\tvm\Scripts\gcovr.exe -r F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/gtest_assignments/math_lib --html --html-details -o coverage.html
+	F:\MultiCoreWare\Environments\tvm\Scripts\gcovr.exe -r F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/gtest_assignments/math_lib --html --html-details -o F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/gtest_assignments/math_lib/dummy_reports/coverage.html
 
 CMakeFiles/coverage.dir/codegen:
 .PHONY : CMakeFiles/coverage.dir/codegen

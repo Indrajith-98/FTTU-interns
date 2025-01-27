@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/math_lib_test.dir/includes_CXX.rsp
 
-CXX_FLAGS = -std=gnu++17 -g -O0 --coverage -fprofile-arcs -ftest-coverage
+CXX_FLAGS = -g -std=gnu++17 -g -O0 --coverage -fprofile-arcs -ftest-coverage
 
