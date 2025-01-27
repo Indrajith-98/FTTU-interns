@@ -65,8 +65,14 @@ if(NOT GCOVR_PATH)
     message(FATAL_ERROR "gcovr executable not found in the virtual environment. Please activate your venv.")
 endif()
 
+set(COVERAGE_OUTPUT_DIR F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/gtest_assignments/math_lib/reports)
+
+file(MAKE_DIRECTORY ${COVERAGE_OUTPUT_DIR})
+
+
+
 add_custom_target(coverage
-    COMMAND ${GCOVR_PATH} -r ${CMAKE_CURRENT_SOURCE_DIR} --html --html-details -o coverage.html
+COMMAND ${GCOVR_PATH} -r ${CMAKE_CURRENT_SOURCE_DIR} --html --html-details -o ${COVERAGE_OUTPUT_DIR}/coverage.html
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     COMMENT "Generating code coverage report with gcovr..."
 )
