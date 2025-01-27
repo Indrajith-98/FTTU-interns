@@ -1,0 +1,58 @@
+# Ignore build directories
+/build/
+/bin/
+/obj/
+
+# Ignore CMake build files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+Makefile.in
+CMakeLists.txt.user
+
+# Ignore compiled object files and executable binaries
+*.o
+*.a
+*.so
+*.out
+*.exe
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore test output files
+*.gcda
+*.gcno
+*.dSYM/
+
+# Ignore dependencies
+*.d
+
+# Ignore package manager files (e.g., for Conan or other package managers)
+conan.lock
+conanfile.py
+conanfile.txt
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore build output directory
+/out/
+
+# Ignore the model files
+model_color_export/
+model_color_new_export/
+
+dataset/
