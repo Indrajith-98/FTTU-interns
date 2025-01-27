@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-01-24 15:55:29</td>
+            <td class="headerValue">2025-01-27 13:25:05</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -1173,12 +1173,12 @@
 <span id="L1111"><span class="lineNum">    1111</span>              :   template &lt;typename _Tp, typename _Up&gt;</span>
 <span id="L1112"><span class="lineNum">    1112</span>              :     _GLIBCXX20_CONSTEXPR</span>
 <span id="L1113"><span class="lineNum">    1113</span>              :     inline __enable_if_t&lt;std::__is_bitwise_relocatable&lt;_Tp&gt;::value, _Tp*&gt;</span>
-<span id="L1114"><span class="lineNum">    1114</span> <span class="tlaGNC tlaBgGNC">         200 :     __relocate_a_1(_Tp* __first, _Tp* __last,</span></span>
+<span id="L1114"><span class="lineNum">    1114</span> <span class="tlaGNC tlaBgGNC">         204 :     __relocate_a_1(_Tp* __first, _Tp* __last,</span></span>
 <span id="L1115"><span class="lineNum">    1115</span>              :                    _Tp* __result,</span>
 <span id="L1116"><span class="lineNum">    1116</span>              :                    [[__maybe_unused__]] allocator&lt;_Up&gt;&amp; __alloc) noexcept</span>
 <span id="L1117"><span class="lineNum">    1117</span>              :     {</span>
-<span id="L1118"><span class="lineNum">    1118</span> <span class="tlaGNC">         200 :       ptrdiff_t __count = __last - __first;</span></span>
-<span id="L1119"><span class="lineNum">    1119</span> <span class="tlaGNC">         200 :       if (__count &gt; 0)</span></span>
+<span id="L1118"><span class="lineNum">    1118</span> <span class="tlaGNC">         204 :       ptrdiff_t __count = __last - __first;</span></span>
+<span id="L1119"><span class="lineNum">    1119</span> <span class="tlaGNC">         204 :       if (__count &gt; 0)</span></span>
 <span id="L1120"><span class="lineNum">    1120</span>              :         {</span>
 <span id="L1121"><span class="lineNum">    1121</span>              : #ifdef __cpp_lib_is_constant_evaluated</span>
 <span id="L1122"><span class="lineNum">    1122</span>              :           if (std::is_constant_evaluated())</span>
@@ -1192,7 +1192,7 @@
 <span id="L1130"><span class="lineNum">    1130</span>              : #endif</span>
 <span id="L1131"><span class="lineNum">    1131</span> <span class="tlaGNC">          16 :           __builtin_memmove(__result, __first, __count * sizeof(_Tp));</span></span>
 <span id="L1132"><span class="lineNum">    1132</span>              :         }</span>
-<span id="L1133"><span class="lineNum">    1133</span> <span class="tlaGNC">         200 :       return __result + __count;</span></span>
+<span id="L1133"><span class="lineNum">    1133</span> <span class="tlaGNC">         204 :       return __result + __count;</span></span>
 <span id="L1134"><span class="lineNum">    1134</span>              :     }</span>
 <span id="L1135"><span class="lineNum">    1135</span>              : #endif</span>
 <span id="L1136"><span class="lineNum">    1136</span>              : </span>
@@ -1200,15 +1200,15 @@
 <span id="L1138"><span class="lineNum">    1138</span>              :             typename _Allocator&gt;</span>
 <span id="L1139"><span class="lineNum">    1139</span>              :     _GLIBCXX20_CONSTEXPR</span>
 <span id="L1140"><span class="lineNum">    1140</span>              :     inline _ForwardIterator</span>
-<span id="L1141"><span class="lineNum">    1141</span> <span class="tlaGNC">         200 :     __relocate_a(_InputIterator __first, _InputIterator __last,</span></span>
+<span id="L1141"><span class="lineNum">    1141</span> <span class="tlaGNC">         204 :     __relocate_a(_InputIterator __first, _InputIterator __last,</span></span>
 <span id="L1142"><span class="lineNum">    1142</span>              :                  _ForwardIterator __result, _Allocator&amp; __alloc)</span>
 <span id="L1143"><span class="lineNum">    1143</span>              :     noexcept(noexcept(__relocate_a_1(std::__niter_base(__first),</span>
 <span id="L1144"><span class="lineNum">    1144</span>              :                                      std::__niter_base(__last),</span>
 <span id="L1145"><span class="lineNum">    1145</span>              :                                      std::__niter_base(__result), __alloc)))</span>
 <span id="L1146"><span class="lineNum">    1146</span>              :     {</span>
-<span id="L1147"><span class="lineNum">    1147</span> <span class="tlaGNC">         200 :       return std::__relocate_a_1(std::__niter_base(__first),</span></span>
+<span id="L1147"><span class="lineNum">    1147</span> <span class="tlaGNC">         204 :       return std::__relocate_a_1(std::__niter_base(__first),</span></span>
 <span id="L1148"><span class="lineNum">    1148</span>              :                                  std::__niter_base(__last),</span>
-<span id="L1149"><span class="lineNum">    1149</span> <span class="tlaGNC">         200 :                                  std::__niter_base(__result), __alloc);</span></span>
+<span id="L1149"><span class="lineNum">    1149</span> <span class="tlaGNC">         204 :                                  std::__niter_base(__result), __alloc);</span></span>
 <span id="L1150"><span class="lineNum">    1150</span>              :     }</span>
 <span id="L1151"><span class="lineNum">    1151</span>              : </span>
 <span id="L1152"><span class="lineNum">    1152</span>              :   /// @endcond</span>

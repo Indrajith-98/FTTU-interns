@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-01-24 15:55:29</td>
+            <td class="headerValue">2025-01-27 13:25:05</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -1135,8 +1135,8 @@
 <span id="L1073"><span class="lineNum">    1073</span>              :       : _M_current(_Iterator()) { }</span>
 <span id="L1074"><span class="lineNum">    1074</span>              : </span>
 <span id="L1075"><span class="lineNum">    1075</span>              :       explicit _GLIBCXX20_CONSTEXPR</span>
-<span id="L1076"><span class="lineNum">    1076</span> <span class="tlaGNC tlaBgGNC">         512 :       __normal_iterator(const _Iterator&amp; __i) _GLIBCXX_NOEXCEPT</span></span>
-<span id="L1077"><span class="lineNum">    1077</span> <span class="tlaGNC">         512 :       : _M_current(__i) { }</span></span>
+<span id="L1076"><span class="lineNum">    1076</span> <span class="tlaGNC tlaBgGNC">         524 :       __normal_iterator(const _Iterator&amp; __i) _GLIBCXX_NOEXCEPT</span></span>
+<span id="L1077"><span class="lineNum">    1077</span> <span class="tlaGNC">         524 :       : _M_current(__i) { }</span></span>
 <span id="L1078"><span class="lineNum">    1078</span>              : </span>
 <span id="L1079"><span class="lineNum">    1079</span>              :       // Allow iterator to const_iterator conversion</span>
 <span id="L1080"><span class="lineNum">    1080</span>              : #if __cplusplus &gt;= 201103L</span>
@@ -1221,8 +1221,8 @@
 <span id="L1159"><span class="lineNum">    1159</span>              : </span>
 <span id="L1160"><span class="lineNum">    1160</span>              :       _GLIBCXX20_CONSTEXPR</span>
 <span id="L1161"><span class="lineNum">    1161</span>              :       const _Iterator&amp;</span>
-<span id="L1162"><span class="lineNum">    1162</span> <span class="tlaGNC">         400 :       base() const _GLIBCXX_NOEXCEPT</span></span>
-<span id="L1163"><span class="lineNum">    1163</span> <span class="tlaGNC">         400 :       { return _M_current; }</span></span>
+<span id="L1162"><span class="lineNum">    1162</span> <span class="tlaGNC">         408 :       base() const _GLIBCXX_NOEXCEPT</span></span>
+<span id="L1163"><span class="lineNum">    1163</span> <span class="tlaGNC">         408 :       { return _M_current; }</span></span>
 <span id="L1164"><span class="lineNum">    1164</span>              :     };</span>
 <span id="L1165"><span class="lineNum">    1165</span>              : </span>
 <span id="L1166"><span class="lineNum">    1166</span>              :   // Note: In what follows, the left- and right-hand-side iterators are</span>
@@ -1393,10 +1393,10 @@
 <span id="L1331"><span class="lineNum">    1331</span>              :   template&lt;typename _Iterator, typename _Container&gt;</span>
 <span id="L1332"><span class="lineNum">    1332</span>              :     _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR</span>
 <span id="L1333"><span class="lineNum">    1333</span>              :     inline typename __normal_iterator&lt;_Iterator, _Container&gt;::difference_type</span>
-<span id="L1334"><span class="lineNum">    1334</span> <span class="tlaGNC">         100 :     operator-(const __normal_iterator&lt;_Iterator, _Container&gt;&amp; __lhs,</span></span>
+<span id="L1334"><span class="lineNum">    1334</span> <span class="tlaGNC">         102 :     operator-(const __normal_iterator&lt;_Iterator, _Container&gt;&amp; __lhs,</span></span>
 <span id="L1335"><span class="lineNum">    1335</span>              :               const __normal_iterator&lt;_Iterator, _Container&gt;&amp; __rhs)</span>
 <span id="L1336"><span class="lineNum">    1336</span>              :     _GLIBCXX_NOEXCEPT</span>
-<span id="L1337"><span class="lineNum">    1337</span> <span class="tlaGNC">         100 :     { return __lhs.base() - __rhs.base(); }</span></span>
+<span id="L1337"><span class="lineNum">    1337</span> <span class="tlaGNC">         102 :     { return __lhs.base() - __rhs.base(); }</span></span>
 <span id="L1338"><span class="lineNum">    1338</span>              : </span>
 <span id="L1339"><span class="lineNum">    1339</span>              :   template&lt;typename _Iterator, typename _Container&gt;</span>
 <span id="L1340"><span class="lineNum">    1340</span>              :     _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR</span>

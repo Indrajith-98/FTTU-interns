@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-01-24 15:55:29</td>
+            <td class="headerValue">2025-01-27 13:25:05</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">60.0&nbsp;%</td>
@@ -196,13 +196,13 @@
 <span id="L134"><span class="lineNum">     134</span>              :         : public _Tp_alloc_type, public _Vector_impl_data</span>
 <span id="L135"><span class="lineNum">     135</span>              :       {</span>
 <span id="L136"><span class="lineNum">     136</span>              :         _GLIBCXX20_CONSTEXPR</span>
-<span id="L137"><span class="lineNum">     137</span> <span class="tlaGNC tlaBgGNC">          84 :         _Vector_impl() _GLIBCXX_NOEXCEPT_IF(</span></span>
+<span id="L137"><span class="lineNum">     137</span> <span class="tlaGNC tlaBgGNC">          86 :         _Vector_impl() _GLIBCXX_NOEXCEPT_IF(</span></span>
 <span id="L138"><span class="lineNum">     138</span>              :             is_nothrow_default_constructible&lt;_Tp_alloc_type&gt;::value)</span>
 <span id="L139"><span class="lineNum">     139</span>              : #if __cpp_lib_concepts</span>
 <span id="L140"><span class="lineNum">     140</span>              :         requires is_default_constructible_v&lt;_Tp_alloc_type&gt;</span>
 <span id="L141"><span class="lineNum">     141</span>              : #endif</span>
-<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">          84 :         : _Tp_alloc_type()</span></span>
-<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">          84 :         { }</span></span>
+<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">          86 :         : _Tp_alloc_type()</span></span>
+<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">          86 :         { }</span></span>
 <span id="L144"><span class="lineNum">     144</span>              : </span>
 <span id="L145"><span class="lineNum">     145</span>              :         _GLIBCXX20_CONSTEXPR</span>
 <span id="L146"><span class="lineNum">     146</span>              :         _Vector_impl(_Tp_alloc_type const&amp; __a) _GLIBCXX_NOEXCEPT</span>
@@ -365,8 +365,8 @@
 <span id="L303"><span class="lineNum">     303</span>              : </span>
 <span id="L304"><span class="lineNum">     304</span>              :       _GLIBCXX20_CONSTEXPR</span>
 <span id="L305"><span class="lineNum">     305</span>              :       const _Tp_alloc_type&amp;</span>
-<span id="L306"><span class="lineNum">     306</span> <span class="tlaGNC tlaBgGNC">         200 :       _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT</span></span>
-<span id="L307"><span class="lineNum">     307</span> <span class="tlaGNC">         200 :       { return this-&gt;_M_impl; }</span></span>
+<span id="L306"><span class="lineNum">     306</span> <span class="tlaGNC tlaBgGNC">         204 :       _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT</span></span>
+<span id="L307"><span class="lineNum">     307</span> <span class="tlaGNC">         204 :       { return this-&gt;_M_impl; }</span></span>
 <span id="L308"><span class="lineNum">     308</span>              : </span>
 <span id="L309"><span class="lineNum">     309</span>              :       _GLIBCXX20_CONSTEXPR</span>
 <span id="L310"><span class="lineNum">     310</span>              :       allocator_type</span>
@@ -374,7 +374,7 @@
 <span id="L312"><span class="lineNum">     312</span>              :       { return allocator_type(_M_get_Tp_allocator()); }</span>
 <span id="L313"><span class="lineNum">     313</span>              : </span>
 <span id="L314"><span class="lineNum">     314</span>              : #if __cplusplus &gt;= 201103L</span>
-<span id="L315"><span class="lineNum">     315</span> <span class="tlaGNC">          84 :       _Vector_base() = default;</span></span>
+<span id="L315"><span class="lineNum">     315</span> <span class="tlaGNC">          86 :       _Vector_base() = default;</span></span>
 <span id="L316"><span class="lineNum">     316</span>              : #else</span>
 <span id="L317"><span class="lineNum">     317</span>              :       _Vector_base() { }</span>
 <span id="L318"><span class="lineNum">     318</span>              : #endif</span>
@@ -563,12 +563,12 @@
 <span id="L501"><span class="lineNum">     501</span>              :       { return __result; }</span>
 <span id="L502"><span class="lineNum">     502</span>              : </span>
 <span id="L503"><span class="lineNum">     503</span>              :       static _GLIBCXX20_CONSTEXPR pointer</span>
-<span id="L504"><span class="lineNum">     504</span> <span class="tlaGNC tlaBgGNC">         200 :       _S_relocate(pointer __first, pointer __last, pointer __result,</span></span>
+<span id="L504"><span class="lineNum">     504</span> <span class="tlaGNC tlaBgGNC">         204 :       _S_relocate(pointer __first, pointer __last, pointer __result,</span></span>
 <span id="L505"><span class="lineNum">     505</span>              :                   _Tp_alloc_type&amp; __alloc) noexcept</span>
 <span id="L506"><span class="lineNum">     506</span>              :       {</span>
 <span id="L507"><span class="lineNum">     507</span>              : #if __cpp_if_constexpr</span>
 <span id="L508"><span class="lineNum">     508</span>              :         // All callers have already checked _S_use_relocate() so just do it.</span>
-<span id="L509"><span class="lineNum">     509</span> <span class="tlaGNC">         200 :         return std::__relocate_a(__first, __last, __result, __alloc);</span></span>
+<span id="L509"><span class="lineNum">     509</span> <span class="tlaGNC">         204 :         return std::__relocate_a(__first, __last, __result, __alloc);</span></span>
 <span id="L510"><span class="lineNum">     510</span>              : #else</span>
 <span id="L511"><span class="lineNum">     511</span>              :         using __do_it = __bool_constant&lt;_S_use_relocate()&gt;;</span>
 <span id="L512"><span class="lineNum">     512</span>              :         return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});</span>
@@ -590,7 +590,7 @@
 <span id="L528"><span class="lineNum">     528</span>              :        *  @brief  Creates a %vector with no elements.</span>
 <span id="L529"><span class="lineNum">     529</span>              :        */</span>
 <span id="L530"><span class="lineNum">     530</span>              : #if __cplusplus &gt;= 201103L</span>
-<span id="L531"><span class="lineNum">     531</span> <span class="tlaGNC">          84 :       vector() = default;</span></span>
+<span id="L531"><span class="lineNum">     531</span> <span class="tlaGNC">          86 :       vector() = default;</span></span>
 <span id="L532"><span class="lineNum">     532</span>              : #else</span>
 <span id="L533"><span class="lineNum">     533</span>              :       vector() { }</span>
 <span id="L534"><span class="lineNum">     534</span>              : #endif</span>
@@ -932,8 +932,8 @@
 <span id="L870"><span class="lineNum">     870</span>              :        */</span>
 <span id="L871"><span class="lineNum">     871</span>              :       _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR</span>
 <span id="L872"><span class="lineNum">     872</span>              :       iterator</span>
-<span id="L873"><span class="lineNum">     873</span> <span class="tlaGNC tlaBgGNC">         100 :       begin() _GLIBCXX_NOEXCEPT</span></span>
-<span id="L874"><span class="lineNum">     874</span> <span class="tlaGNC">         100 :       { return iterator(this-&gt;_M_impl._M_start); }</span></span>
+<span id="L873"><span class="lineNum">     873</span> <span class="tlaGNC tlaBgGNC">         102 :       begin() _GLIBCXX_NOEXCEPT</span></span>
+<span id="L874"><span class="lineNum">     874</span> <span class="tlaGNC">         102 :       { return iterator(this-&gt;_M_impl._M_start); }</span></span>
 <span id="L875"><span class="lineNum">     875</span>              : </span>
 <span id="L876"><span class="lineNum">     876</span>              :       /**</span>
 <span id="L877"><span class="lineNum">     877</span>              :        *  Returns a read-only (constant) iterator that points to the</span>
@@ -952,8 +952,8 @@
 <span id="L890"><span class="lineNum">     890</span>              :        */</span>
 <span id="L891"><span class="lineNum">     891</span>              :       _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR</span>
 <span id="L892"><span class="lineNum">     892</span>              :       iterator</span>
-<span id="L893"><span class="lineNum">     893</span> <span class="tlaGNC">         256 :       end() _GLIBCXX_NOEXCEPT</span></span>
-<span id="L894"><span class="lineNum">     894</span> <span class="tlaGNC">         256 :       { return iterator(this-&gt;_M_impl._M_finish); }</span></span>
+<span id="L893"><span class="lineNum">     893</span> <span class="tlaGNC">         262 :       end() _GLIBCXX_NOEXCEPT</span></span>
+<span id="L894"><span class="lineNum">     894</span> <span class="tlaGNC">         262 :       { return iterator(this-&gt;_M_impl._M_finish); }</span></span>
 <span id="L895"><span class="lineNum">     895</span>              : </span>
 <span id="L896"><span class="lineNum">     896</span>              :       /**</span>
 <span id="L897"><span class="lineNum">     897</span>              :        *  Returns a read-only (constant) iterator that points one past</span>
@@ -1057,8 +1057,8 @@
 <span id="L995"><span class="lineNum">     995</span>              :       /**  Returns the size() of the largest possible %vector.  */</span>
 <span id="L996"><span class="lineNum">     996</span>              :       _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR</span>
 <span id="L997"><span class="lineNum">     997</span>              :       size_type</span>
-<span id="L998"><span class="lineNum">     998</span> <span class="tlaGNC">         200 :       max_size() const _GLIBCXX_NOEXCEPT</span></span>
-<span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">         200 :       { return _S_max_size(_M_get_Tp_allocator()); }</span></span>
+<span id="L998"><span class="lineNum">     998</span> <span class="tlaGNC">         204 :       max_size() const _GLIBCXX_NOEXCEPT</span></span>
+<span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">         204 :       { return _S_max_size(_M_get_Tp_allocator()); }</span></span>
 <span id="L1000"><span class="lineNum">    1000</span>              : </span>
 <span id="L1001"><span class="lineNum">    1001</span>              : #if __cplusplus &gt;= 201103L</span>
 <span id="L1002"><span class="lineNum">    1002</span>              :       /**</span>
@@ -1955,13 +1955,13 @@
 <span id="L1893"><span class="lineNum">    1893</span>              :       // Called by _M_fill_insert, _M_insert_aux etc.</span>
 <span id="L1894"><span class="lineNum">    1894</span>              :       _GLIBCXX20_CONSTEXPR</span>
 <span id="L1895"><span class="lineNum">    1895</span>              :       size_type</span>
-<span id="L1896"><span class="lineNum">    1896</span> <span class="tlaGNC">         100 :       _M_check_len(size_type __n, const char* __s) const</span></span>
+<span id="L1896"><span class="lineNum">    1896</span> <span class="tlaGNC">         102 :       _M_check_len(size_type __n, const char* __s) const</span></span>
 <span id="L1897"><span class="lineNum">    1897</span>              :       {</span>
-<span id="L1898"><span class="lineNum">    1898</span> <span class="tlaGNC">         100 :         if (max_size() - size() &lt; __n)</span></span>
+<span id="L1898"><span class="lineNum">    1898</span> <span class="tlaGNC">         102 :         if (max_size() - size() &lt; __n)</span></span>
 <span id="L1899"><span class="lineNum">    1899</span> <span class="tlaUNC tlaBgUNC">           0 :           __throw_length_error(__N(__s));</span></span>
 <span id="L1900"><span class="lineNum">    1900</span>              : </span>
-<span id="L1901"><span class="lineNum">    1901</span> <span class="tlaGNC tlaBgGNC">         100 :         const size_type __len = size() + (std::max)(size(), __n);</span></span>
-<span id="L1902"><span class="lineNum">    1902</span> <span class="tlaGNC">         100 :         return (__len &lt; size() || __len &gt; max_size()) ? max_size() : __len;</span></span>
+<span id="L1901"><span class="lineNum">    1901</span> <span class="tlaGNC tlaBgGNC">         102 :         const size_type __len = size() + (std::max)(size(), __n);</span></span>
+<span id="L1902"><span class="lineNum">    1902</span> <span class="tlaGNC">         102 :         return (__len &lt; size() || __len &gt; max_size()) ? max_size() : __len;</span></span>
 <span id="L1903"><span class="lineNum">    1903</span>              :       }</span>
 <span id="L1904"><span class="lineNum">    1904</span>              : </span>
 <span id="L1905"><span class="lineNum">    1905</span>              :       // Called by constructors to check initial size.</span>
