@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/CMakeFiles/gtest-populate"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/CMakeFiles/gtest-populate.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/CMakeFiles/gtest-populate-complete.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-build.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-configure.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-download.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-install.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-patch.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-test.rule"
+		},
+		{
+			"file" : "D:/Santhosh@McW/-1/build/_deps/gtest-subbuild/gtest-populate-prefix/src/gtest-populate-stamp/gtest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"gtest-populate"
+		],
+		"name" : "gtest-populate"
+	}
+}
