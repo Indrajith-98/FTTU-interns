@@ -19,7 +19,9 @@ set(SRC_SOURCES
 )
 
 set(TEST_SOURCES
-    test_coverage/test_my_math.cpp
+    # test_coverage/test_my_math.cpp
+    test_coverage/improved_test_my_math.cpp
+
 )
 
 add_executable(my_math_test ${SRC_SOURCES} ${TEST_SOURCES})

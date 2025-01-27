@@ -59,22 +59,41 @@ TEST(LCMTest, ValidInputs)
     EXPECT_EQ(MyMath::lcm(1, 1), 1);
 }
 
+TEST(LCMTest, InvalidInput)
+{
+    EXPECT_THROW(MyMath::lcm(-4, 5), std::invalid_argument);
+    EXPECT_THROW(MyMath::lcm(4, -5), std::invalid_argument);
+    EXPECT_THROW(MyMath::lcm(-4, -5), std::invalid_argument);
+}
+
+TEST(PrimeFactorsTest, EdgeCase)
+{
+    EXPECT_EQ(MyMath::prime_factors(2), std::vector<int>({2}));
+}
+
 TEST(PrimeFactorsTest, BasicCases)
 {
     EXPECT_EQ(MyMath::prime_factors(28), std::vector<int>({2, 2, 7}));
     EXPECT_EQ(MyMath::prime_factors(29), std::vector<int>({29}));
-    EXPECT_EQ(MyMath::prime_factors(1), std::vector<int>({}));
+    EXPECT_EQ(MyMath::prime_factors(100), std::vector<int>({2, 2, 5, 5}));
+}
+
+TEST(PrimeFactorsTest, LargePrime)
+{
+
+    EXPECT_EQ(MyMath::prime_factors(9973), std::vector<int>({9973}));
+}
+
+TEST(PrimeFactorsTest, SinglePrimeFactor)
+{
+
+    EXPECT_EQ(MyMath::prime_factors(81), std::vector<int>({3, 3, 3, 3}));
 }
 
 TEST(PrimeFactorsTest, InvalidInput)
 {
     EXPECT_THROW(MyMath::prime_factors(0), std::invalid_argument);
     EXPECT_THROW(MyMath::prime_factors(-10), std::invalid_argument);
-}
-
-TEST(PrimeFactorsTest, LargeNumber)
-{
-    EXPECT_EQ(MyMath::prime_factors(100), std::vector<int>({2, 2, 5, 5}));
 }
 
 TEST(SigmoidTest, ValidInput)
