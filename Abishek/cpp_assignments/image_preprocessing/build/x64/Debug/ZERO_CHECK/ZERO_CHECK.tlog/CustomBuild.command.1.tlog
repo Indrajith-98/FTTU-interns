@@ -1,0 +1,10 @@
+^F:\MULTICOREWARE\SUBMISSIONS\FTTU-INTERNS\ABISHEK\CPP_ASSIGNMENTS\IMAGE_PREPROCESSING\BUILD\CMAKEFILES\DE063EFE9BE4CC610CB4C4E3570CE26E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/image_preprocessing -BF:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/image_preprocessing/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/cpp_assignments/image_preprocessing/build/ImagePreprocessor.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

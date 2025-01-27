@@ -1,0 +1,17 @@
+{
+    "users": [
+        {
+            "name": "rohithk",
+            "current_page": 0,
+            "current_book": "test"
+        }
+    ],
+    "books": [
+        {
+            "title": "test",
+            "total_pages": 300,
+            "current_page": 0,
+            "assigned_user": "rohithk"
+        }
+    ]
+}

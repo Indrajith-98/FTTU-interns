@@ -1,0 +1,1912 @@
+Breakpoint 1 at 0x14000199d: file Assignment_3.cpp, line 83.
+Breakpoint 2 at 0x1400019a9: file Assignment_3.cpp, line 86.
+Breakpoint 3 at 0x1400015cf: file Assignment_3.cpp, line 37.
+Breakpoint 4 at 0x140001508: file Assignment_3.cpp, line 31.
+Breakpoint 5 at 0x140001462: file Assignment_3.cpp, line 22.
+Starting program: D:\McW\gdb_assignment_gets2025\Assignment_3\Assignment_3.exe 
+[New Thread 11536.0x4af0]
+[New Thread 11536.0x4a40]
+[New Thread 11536.0x43b4]
+[Thread 11536.0x43b4 exited with code 0]
+[Thread 11536.0x4a40 exited with code 0]
+[Thread 11536.0x4af0 exited with code 0]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_3.cpp:83
+83	    printIsland(grid);
+
+Thread 1 hit Breakpoint 2, main () at Assignment_3.cpp:86
+86	    int max_area = maxAreaOfIsland(grid);
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:37
+37	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:38
+38	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:39
+39	    int max_number = 0;
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=2) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:23
+23	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=2) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+validate (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:27
+27	    return 1;
+28	}
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=2) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:33
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:23
+23	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:23
+23	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:23
+23	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=3) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+validate (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:25
+25	        return 0;
+28	}
+dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:23
+23	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=1) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+validate (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:25
+25	        return 0;
+28	}
+dfs (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=3) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=4) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=5) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=6) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::size (this=0x5ffe90) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:23
+23	    int cols = grid[0].size();
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::size (this=0x6ec1b0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:993
+993	      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator[] (this=0x5ffe90, __n=0) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+std::vector<int, std::allocator<int> >::operator[] (this=0x6ec1b0, __n=7) at C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h:1131
+1131		return *(this->_M_impl._M_start + __n);
+1132	      }
+validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:27
+27	    return 1;
+28	}
+dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+[New Thread 11536.0x431c]
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=1, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=2, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=1, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=1, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=1, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+Hardware watchpoint 6: max_number
+Ambiguous command "m": macro, maintenance, make, mem, memory-tag, monitor, mt.
+
+Thread 1 hit Hardware watchpoint 6: max_number
+
+Old value = 2
+New value = -3
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+
+Thread 1 hit Hardware watchpoint 6: max_number
+
+Old value = -3
+New value = 1
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:42
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+Watchpoint 6 deleted because the program has left the block
+in which its expression is valid.
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=2, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=2, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=2, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=4, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=1, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=0, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=4, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=4, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=5, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=4, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=3, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=4, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=4, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=3, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=5, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=4, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=11, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=6, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=5, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=10, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=7, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=7, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=7, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=7, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=7, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+27	    return 1;
+28	}
+dfs (i=7, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=6, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=7, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=7, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=7, j=9, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=7, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=7, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=7, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+
+Thread 1 hit Breakpoint 4, dfs (i=7, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+
+Thread 1 hit Breakpoint 5, validate (i=7, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:22
+22	    int rows = grid.size();
+23	    int cols = grid[0].size();
+24	    if (i >= rows or j >= cols or i < 0 or j < 0 or grid[i][j] == 0) {
+25	        return 0;
+28	}
+dfs (i=7, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+45	                max_number = (max_number + 2 < val) ? val : max_number-5;
+Undefined command: "nn".  Try "help".
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+41	    for (int i = 0; i < rows; i++) {
+49	    return max_number;
+50	}
+main () at Assignment_3.cpp:88
+88	    std::cout << "Max area of Island: " << max_area << std::endl;
+89	    return 0;
+90	}
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:268
+warning: 268	C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c: No such file or directory
+269	in C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c
+[Thread 11536.0x431c exited with code 0]
+[Inferior 1 (process 11536) exited normally]
+The program is not being run.
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

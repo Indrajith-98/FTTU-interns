@@ -1,0 +1,63 @@
+Breakpoint 1 at 0x140001471: file Assignment_2.cpp, line 13.
+Starting program: E:\gdb_assignment_gets2025\Assignment_2\Assignment_2.exe 
+[New Thread 26284.0x6604]
+[New Thread 26284.0x28d8]
+[New Thread 26284.0x3b30]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:13
+13	    int n = s1.length();
+$1 = 6291168
+14	    for (int i = 0; i < n/2; i++) {
+15	        std::swap(s1[i], s1[n-1]);
+$2 = "debugging"
+14	    for (int i = 0; i < n/2; i++) {
+15	        std::swap(s1[i], s1[n-1]);
+$3 = "gebuggind"
+14	    for (int i = 0; i < n/2; i++) {
+15	        std::swap(s1[i], s1[n-1]);
+$4 = "gdbuggine"
+14	    for (int i = 0; i < n/2; i++) {
+15	        std::swap(s1[i], s1[n-1]);
+$5 = "gdeugginb"
+14	    for (int i = 0; i < n/2; i++) {
+17	    std::cout << s1 << std::endl;
+$6 = "gdebgginu"
+18	    return 0;
+$7 = "gdebgginu"
+$8 = "gdebgginu"
+19	}
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:261
+warning: 261	C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c: No such file or directory
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+
+
+
+#########################################################################################################################################################
+
+>> Inference :
+
+    A breakpoint was set at line 13 of Assignment_2.cpp. This means the program will pause execution at this line when running in GDB.
+
+    The variable s1 initially held the value "debugging".
+
+    Through each iteration of the loop (lines 14-15), you can see the partial results of swapping characters in s1.
+    
+    After exiting the loop, s1 becomes "gdebgginu". The program then prints this value (line 17) and returns (line 18).
+
+        
+#########################################################################################################################################################
+
+
+
+
+Modified :
+
+
+    line 16 :
+
+         actual   :   std::swap(s1[i], s1[n-1]);
+
+         modified :   std::swap(s1[i], s1[n-i-1]);
+

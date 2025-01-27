@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\Grayscale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\Invert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\Brightness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\Normalization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\src\GaussianBlur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\MCW\training assignments\CPP_assignments\Image_Preprocessing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9253F451-75C5-365A-A7D4-DF2A0E613188}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,403 @@
+{
+    "layers": [
+        {
+            "layer_name": "conv2d_3",
+            "type": "Conv2D",
+            "input_file_path": "data/input/conv2d_3_input.bin",
+            "output_file_path": "data/output/conv2d_3_output.bin",
+            "weights_file_paths": [
+                "data/weights/conv2d_3_kernel_0.bin",
+                "data/weights/conv2d_3_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    32,
+                    32,
+                    3
+                ],
+                "output_shape": [
+                    -1,
+                    32,
+                    32,
+                    128
+                ],
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "padding": "same",
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "batch_normalization_3",
+            "type": "BatchNormalization",
+            "input_file_path": "data/input/batch_normalization_3_input.bin",
+            "output_file_path": "data/output/batch_normalization_3_output.bin",
+            "weights_file_paths": [
+                "data/weights/batch_normalization_3_gamma_0.bin",
+                "data/weights/batch_normalization_3_beta_0.bin",
+                "data/weights/batch_normalization_3_moving_mean_0.bin",
+                "data/weights/batch_normalization_3_moving_variance_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    32,
+                    32,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    32,
+                    32,
+                    128
+                ]
+            }
+        },
+        {
+            "layer_name": "max_pooling2d_3",
+            "type": "MaxPooling2D",
+            "input_file_path": "data/input/max_pooling2d_3_input.bin",
+            "output_file_path": "data/output/max_pooling2d_3_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    32,
+                    32,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ],
+                "strides": [
+                    2,
+                    2
+                ],
+                "padding": "valid"
+            }
+        },
+        {
+            "layer_name": "dropout_4",
+            "type": "Dropout",
+            "input_file_path": "data/input/dropout_4_input.bin",
+            "output_file_path": "data/output/dropout_4_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ]
+            }
+        },
+        {
+            "layer_name": "conv2d_4",
+            "type": "Conv2D",
+            "input_file_path": "data/input/conv2d_4_input.bin",
+            "output_file_path": "data/output/conv2d_4_output.bin",
+            "weights_file_paths": [
+                "data/weights/conv2d_4_kernel_0.bin",
+                "data/weights/conv2d_4_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ],
+                "kernel_size": [
+                    5,
+                    5
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "padding": "same",
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "batch_normalization_4",
+            "type": "BatchNormalization",
+            "input_file_path": "data/input/batch_normalization_4_input.bin",
+            "output_file_path": "data/output/batch_normalization_4_output.bin",
+            "weights_file_paths": [
+                "data/weights/batch_normalization_4_gamma_0.bin",
+                "data/weights/batch_normalization_4_beta_0.bin",
+                "data/weights/batch_normalization_4_moving_mean_0.bin",
+                "data/weights/batch_normalization_4_moving_variance_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ]
+            }
+        },
+        {
+            "layer_name": "max_pooling2d_4",
+            "type": "MaxPooling2D",
+            "input_file_path": "data/input/max_pooling2d_4_input.bin",
+            "output_file_path": "data/output/max_pooling2d_4_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    16,
+                    16,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    8,
+                    8,
+                    128
+                ],
+                "strides": [
+                    2,
+                    2
+                ],
+                "padding": "valid"
+            }
+        },
+        {
+            "layer_name": "dropout_5",
+            "type": "Dropout",
+            "input_file_path": "data/input/dropout_5_input.bin",
+            "output_file_path": "data/output/dropout_5_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    8,
+                    8,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    8,
+                    8,
+                    128
+                ]
+            }
+        },
+        {
+            "layer_name": "conv2d_5",
+            "type": "Conv2D",
+            "input_file_path": "data/input/conv2d_5_input.bin",
+            "output_file_path": "data/output/conv2d_5_output.bin",
+            "weights_file_paths": [
+                "data/weights/conv2d_5_kernel_0.bin",
+                "data/weights/conv2d_5_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    8,
+                    8,
+                    128
+                ],
+                "output_shape": [
+                    -1,
+                    8,
+                    8,
+                    256
+                ],
+                "kernel_size": [
+                    5,
+                    5
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "padding": "same",
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "batch_normalization_5",
+            "type": "BatchNormalization",
+            "input_file_path": "data/input/batch_normalization_5_input.bin",
+            "output_file_path": "data/output/batch_normalization_5_output.bin",
+            "weights_file_paths": [
+                "data/weights/batch_normalization_5_gamma_0.bin",
+                "data/weights/batch_normalization_5_beta_0.bin",
+                "data/weights/batch_normalization_5_moving_mean_0.bin",
+                "data/weights/batch_normalization_5_moving_variance_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    8,
+                    8,
+                    256
+                ],
+                "output_shape": [
+                    -1,
+                    8,
+                    8,
+                    256
+                ]
+            }
+        },
+        {
+            "layer_name": "max_pooling2d_5",
+            "type": "MaxPooling2D",
+            "input_file_path": "data/input/max_pooling2d_5_input.bin",
+            "output_file_path": "data/output/max_pooling2d_5_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    8,
+                    8,
+                    256
+                ],
+                "output_shape": [
+                    -1,
+                    4,
+                    4,
+                    256
+                ],
+                "strides": [
+                    2,
+                    2
+                ],
+                "padding": "valid"
+            }
+        },
+        {
+            "layer_name": "dropout_6",
+            "type": "Dropout",
+            "input_file_path": "data/input/dropout_6_input.bin",
+            "output_file_path": "data/output/dropout_6_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    4,
+                    4,
+                    256
+                ],
+                "output_shape": [
+                    -1,
+                    4,
+                    4,
+                    256
+                ]
+            }
+        },
+        {
+            "layer_name": "flatten_1",
+            "type": "Flatten",
+            "input_file_path": "data/input/flatten_1_input.bin",
+            "output_file_path": "data/output/flatten_1_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    4,
+                    4,
+                    256
+                ],
+                "output_shape": [
+                    -1,
+                    4096
+                ]
+            }
+        },
+        {
+            "layer_name": "dense_2",
+            "type": "Dense",
+            "input_file_path": "data/input/dense_2_input.bin",
+            "output_file_path": "data/output/dense_2_output.bin",
+            "weights_file_paths": [
+                "data/weights/dense_2_kernel_0.bin",
+                "data/weights/dense_2_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    4096
+                ],
+                "output_shape": [
+                    -1,
+                    384
+                ],
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "dropout_7",
+            "type": "Dropout",
+            "input_file_path": "data/input/dropout_7_input.bin",
+            "output_file_path": "data/output/dropout_7_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    384
+                ],
+                "output_shape": [
+                    -1,
+                    384
+                ]
+            }
+        },
+        {
+            "layer_name": "dense_3",
+            "type": "Dense",
+            "input_file_path": "data/input/dense_3_input.bin",
+            "output_file_path": "data/output/dense_3_output.bin",
+            "weights_file_paths": [
+                "data/weights/dense_3_kernel_0.bin",
+                "data/weights/dense_3_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    -1,
+                    384
+                ],
+                "output_shape": [
+                    -1,
+                    10
+                ],
+                "activation": "softmax"
+            }
+        }
+    ]
+}

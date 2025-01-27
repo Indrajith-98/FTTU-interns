@@ -1,0 +1,6 @@
+tensorflow
+onnx
+onnx-tf 
+tf2onnx
+onnxruntime
+tensorrt==10.0.1

@@ -1,0 +1,14 @@
+Line 33,
+
+""return 1 + dfs(i-1,j,grid) + dfs(i-1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);""
+The call dfs(i-1, j, grid) is repeated twice, which leads to redundant recursive exploration in the same direction.
+
+The correct form:
+""return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);""
+
+Line 45,
+""max_number = (max_number + 2 < val) ? val : max_number-5;""
+The comparison (max_number + 2 < val) and the expression max_number - 5 are not logically valid for finding the maximum value.
+
+The correct form:
+max_number = (max_number < val) ? val : max_number;

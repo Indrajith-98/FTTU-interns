@@ -1,0 +1,22 @@
+
+
+Image Path: ../data/input/bird.json
+----------------------------------------
+Fri Jan 03 14:51:22 2025
+: Unit Test Results : 
+Fri Jan 03 14:51:22 2025
+: Conv Layer output shape verified
+Fri Jan 03 14:51:23 2025
+: conv2d layer operation was executed
+Fri Jan 03 14:51:25 2025
+: p_re_lu layer operation was executed
+Fri Jan 03 14:51:27 2025
+: batch_normalization layer operation was executed
+Fri Jan 03 14:51:28 2025
+: max_pooling2d layer operation was executed
+Fri Jan 03 14:51:28 2025
+: Conv Layer output shape verified
+Fri Jan 03 14:51:30 2025
+: conv2d_1 layer operation was executed
+Fri Jan 03 14:51:32 2025
+: p_re_lu_1 layer operation was executed

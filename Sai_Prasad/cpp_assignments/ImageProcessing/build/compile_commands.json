@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/ImageProcessing/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/ImageProcessing.dir/includes_CXX.rsp -g -o CMakeFiles\\ImageProcessing.dir\\main.cpp.obj -c D:\\ImageProcessing\\main.cpp",
+  "file": "D:/ImageProcessing/main.cpp",
+  "output": "CMakeFiles/ImageProcessing.dir/main.cpp.obj"
+}
+]

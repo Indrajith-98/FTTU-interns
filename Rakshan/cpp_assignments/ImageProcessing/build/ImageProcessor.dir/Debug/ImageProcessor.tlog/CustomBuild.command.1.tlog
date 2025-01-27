@@ -1,0 +1,10 @@
+^D:\MCW\ASSIGNMENT-3 CPP\IMAGEPROCESSING\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SD:/MCW/Assignment-3 CPP/ImageProcessing" "-BD:/MCW/Assignment-3 CPP/ImageProcessing/build" --check-stamp-file "D:/MCW/Assignment-3 CPP/ImageProcessing/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

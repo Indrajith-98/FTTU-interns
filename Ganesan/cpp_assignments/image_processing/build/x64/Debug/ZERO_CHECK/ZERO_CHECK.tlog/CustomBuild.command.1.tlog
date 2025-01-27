@@ -1,0 +1,10 @@
+^C:\USERS\PRASA\DOWNLOADS\OPENCV_PRO\BUILD\CMAKEFILES\BA5CF94DE230FE5CE9B52254A690F12D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/prasa/Downloads/opencv_pro -BC:/Users/prasa/Downloads/opencv_pro/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/prasa/Downloads/opencv_pro/build/OpenCVProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

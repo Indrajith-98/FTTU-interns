@@ -1,0 +1,24 @@
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_3\Assignment_3_Fixed.exe 
+[New Thread 16840.0x49f8]
+[New Thread 16840.0x4b20]
+[New Thread 16840.0x4a78]
+[New Thread 16840.0x19d0]
+[Thread 16840.0x49f8 exited with code 3221225786]
+[Thread 16840.0x30a0 exited with code 3221225786]
+[Thread 16840.0x4b20 exited with code 3221225786]
+[Thread 16840.0x4a78 exited with code 3221225786]
+
+Program terminated with signal SIGTERM, Terminated.
+The program no longer exists.
+Starting program: F:\MultiCoreWare\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_3\Assignment_3_Fixed.exe < input.txt
+[New Thread 17576.0xaf8]
+[New Thread 17576.0x4418]
+[New Thread 17576.0x4ab8]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_3_Fixed.cpp:86
+$1 = 6 // After debugging, got the correct output
+Continuing.
+[Thread 17576.0x4ab8 exited with code 0]
+[Thread 17576.0x4418 exited with code 0]
+[Thread 17576.0xaf8 exited with code 0]
+[Inferior 1 (process 17576) exited normally]

@@ -1,0 +1,47 @@
+Clock Application
+1. Set Alarm
+2. Stop Watch
+3. Timer
+4. Exit
+ Choose an option: 1
+Set alarm (HH:MM AM/PM): 04:05 PM
+Alarm set for 04:05 PM. It will run in the background.
+
+Clock Application
+1. Set Alarm
+2. Stop Watch
+3. Timer
+4. Exit
+ Choose an option: -----------------------------------------------------------------------------------------------------------------------
+
+[ALARM] The set time (04:05 PM) has been reached!
+-----------------------------------------------------------------------------------------------------------------------
+2
+Press Enter to start the stopwatch...
+Stopwatch started. Press Enter to stop...
+Elapsed time: 8 seconds
+-----------------------------------------------------------------------------------------------------------------------
+Total elapsed time: 9 seconds
+-----------------------------------------------------------------------------------------------------------------------
+
+Clock Application
+1. Set Alarm
+2. Stop Watch
+3. Timer
+4. Exit
+ Choose an option: 3
+Set timer duration (in seconds): 10
+Timer started for 10 seconds
+Time remaining: 0 seconds...-----------------------------------------------------------------------------------------------------------------------
+Time's up!
+-----------------------------------------------------------------------------------------------------------------------
+
+Clock Application
+1. Set Alarm 
+2. Stop Watch 
+3. Timer  
+4. Exit  
+ Choose an option: 4
+Exiting the application.
+
+E:\clock Assignment\build\Debug>

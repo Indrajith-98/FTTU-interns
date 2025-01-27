@@ -1,0 +1,27 @@
+/*
+
+1.Here in the first iteration the elements were  getting properly swapped with the first element going last and last element going first. 
+But from the second iteration onwards we are still replacing 2nd,3rd,4th..etc  element with the last element. 
+This is wrong and we have to replace the nth element from beginning of the array with the nth element from the end of the array.
+ie instead of this     std::swap(s1[i], s1[n -  1]) it should be     std::swap(s1[i], s1[n - i - 1])
+*/
+
+Breakpoint 1 at 0x13c5: file Assignment_2.cpp, line 14.
+Starting program: /home/rohithk/mcw/gdb_assignment_gets2025/Assignment_2/Assignment_2 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at Assignment_2.cpp:14
+$1 = "debugging"
+$2 = 9
+$3 = "gebuggind"
+$4 = "gdbuggine"
+Undefined set logging command: "disabled".  Try "help set logging".
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

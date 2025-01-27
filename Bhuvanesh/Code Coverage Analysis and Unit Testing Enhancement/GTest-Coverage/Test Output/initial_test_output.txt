@@ -1,0 +1,51 @@
+Running main() from /usr/src/googletest/googletest/src/gtest_main.cc
+[==========] Running 9 tests from 9 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from Factorial
+[ RUN      ] Factorial.NormalTest
+[       OK ] Factorial.NormalTest (0 ms)
+[----------] 1 test from Factorial (0 ms total)
+
+[----------] 1 test from Fibonacci
+[ RUN      ] Fibonacci.NormalTest
+[       OK ] Fibonacci.NormalTest (0 ms)
+[----------] 1 test from Fibonacci (0 ms total)
+
+[----------] 1 test from GCD
+[ RUN      ] GCD.NormalTest
+[       OK ] GCD.NormalTest (0 ms)
+[----------] 1 test from GCD (0 ms total)
+
+[----------] 1 test from LCM
+[ RUN      ] LCM.NormalTest
+[       OK ] LCM.NormalTest (0 ms)
+[----------] 1 test from LCM (0 ms total)
+
+[----------] 1 test from PrimeFactors
+[ RUN      ] PrimeFactors.NormalTest
+[       OK ] PrimeFactors.NormalTest (0 ms)
+[----------] 1 test from PrimeFactors (0 ms total)
+
+[----------] 1 test from CalculatePi
+[ RUN      ] CalculatePi.NormalTest
+[       OK ] CalculatePi.NormalTest (0 ms)
+[----------] 1 test from CalculatePi (0 ms total)
+
+[----------] 1 test from Sigmoid
+[ RUN      ] Sigmoid.NormalTest
+[       OK ] Sigmoid.NormalTest (0 ms)
+[----------] 1 test from Sigmoid (0 ms total)
+
+[----------] 1 test from ReLU
+[ RUN      ] ReLU.NormalTest
+[       OK ] ReLU.NormalTest (0 ms)
+[----------] 1 test from ReLU (0 ms total)
+
+[----------] 1 test from MeanSquaredError
+[ RUN      ] MeanSquaredError.NormalTest
+[       OK ] MeanSquaredError.NormalTest (0 ms)
+[----------] 1 test from MeanSquaredError (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 9 test suites ran. (3 ms total)
+[  PASSED  ] 9 tests.

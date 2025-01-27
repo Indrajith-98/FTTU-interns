@@ -1,0 +1,10 @@
+^E:\CLOCK ASSIGNMENT\BUILD\CMAKEFILES\6853EDE9BC74FC36928AE05C6E7F6043\GENERATE.STAMP.RULE
+setlocal
+C:\Users\ragul\cmake-3.31.3-windows-x86_64\bin\cmake.exe "-SE:/clock Assignment" "-BE:/clock Assignment/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "E:/clock Assignment/build/ClockApp.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

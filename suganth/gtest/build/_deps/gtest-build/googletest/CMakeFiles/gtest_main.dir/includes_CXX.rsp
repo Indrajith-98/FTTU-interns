@@ -1,0 +1,1 @@
+-IF:/MULTICOREWARE_FTU_INTERN/GTEST/include -isystem "F:/MULTICOREWARE_FTU_INTERN/GTEST/build/_deps/gtest-src/googletest/include" -isystem "F:/MULTICOREWARE_FTU_INTERN/GTEST/build/_deps/gtest-src/googletest"
