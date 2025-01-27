@@ -1,85 +1,95 @@
-# # Minimum CMake version
-# cmake_minimum_required(VERSION 3.14)
 
-# # Project name and version
-# project(GTestExample VERSION 1.0 LANGUAGES CXX)
+# # Set the minimum required version of CMake
+# cmake_minimum_required(VERSION 3.10)
 
-# # Set C++ standard
-# set(CMAKE_CXX_STANDARD 17)
-# set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-# # Add the library (math_lib)
-# add_library(math_lib math_lib/src/my_math.cpp)
-
-# # Specify the include directories for the library
-# target_include_directories(math_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/math_lib/src)
+# # Project name
+# project(MathLib)
 
 # # Enable testing
 # enable_testing()
 
-# # Add GoogleTest using FetchContent
+# # Set C++ standard
+# set(CMAKE_CXX_STANDARD 11)
+
+# # Enable coverage flags
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+# set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fprofile-arcs -ftest-coverage")    # cmake for unit test 
+
+# # Include directories (modify this if necessary)
+# include_directories(${CMAKE_SOURCE_DIR}/include)
+
+# # Add source files (modify this with your source files)
+# set(SOURCES
+#    Updated_math_lib/updated_math_lib.cpp
+# )
+
+# # Add test files (modify this with your test files)
+# set(TEST_SOURCES
+# unit_test/unit_test_math_lib.cpp)
+
+# # Fetch Google Test from GitHub using FetchContent
 # include(FetchContent)
 # FetchContent_Declare(
-#   googletest
-#   URL https://github.com/google/googletest/archive/refs/heads/main.zip
+#     gtest
+#     GIT_REPOSITORY https://github.com/google/googletest.git
+#     GIT_TAG release-1.11.0  # You can specify the version here, or use 'master' for the latest
 # )
-# # Prevent overriding the parent project's compiler/linker settings
-# set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-# FetchContent_MakeAvailable(googletest)
+# FetchContent_MakeAvailable(gtest)
 
-# # Add the test executable
-# add_executable(test_math_lib ${CMAKE_CURRENT_SOURCE_DIR}/test_math_lib.cpp)
-# message(STATUS "Test sources: ${CMAKE_CURRENT_SOURCE_DIR}/test_math_lib.cpp")
+# # Add the library (your math library)
+# add_library(Updated_math_lib ${SOURCES})
 
+# # Add the executable for tests
+# add_executable(unit_test_math_lib ${TEST_SOURCES})
 
+# # Link Google Test and Updated_math_lib to the test executable
+# target_link_libraries(unit_test_math_lib Updated_math_lib gtest gtest_main)
 
-# # Link the test executable with math_lib and GoogleTest
-# target_link_libraries(test_math_lib PRIVATE math_lib gtest gtest_main)
+ 
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+# Set the minimum required version of CMake
+cmake_minimum_required(VERSION 3.10)
 
-# # Add the test to CTest
-# add_test(NAME MathLibTests COMMAND test_math_lib)
-
-
-# Minimum CMake version
-cmake_minimum_required(VERSION 3.14)
-
-# Project name and version
-project(GTestExample VERSION 1.0 LANGUAGES CXX)
-
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-# Add the library (math_lib)
-add_library(math_lib math_lib/src/my_math.cpp)
-
-# Specify the include directories for the library
-target_include_directories(math_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/math_lib/src)
+# Project name
+project(MathLib)
 
 # Enable testing
 enable_testing()
 
-# Add GoogleTest using FetchContent
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+
+# Enable coverage flags
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fprofile-arcs -ftest-coverage")   # cmake for edge test 
+
+# Include directories (modify this if necessary)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+# Add source files (modify this with your source files)
+set(SOURCES
+   Updated_math_lib/updated_math_lib.cpp
+)
+
+# Add test files (modify this with your test files)
+set(TEST_SOURCES
+edge_test/edge_test_math_lib.cpp)
+
+# Fetch Google Test from GitHub using FetchContent
 include(FetchContent)
 FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/refs/heads/main.zip
+    gtest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG release-1.11.0  # You can specify the version here, or use 'master' for the latest
 )
-# Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+FetchContent_MakeAvailable(gtest)
 
-# Add the test executables
-add_executable(test_math_lib ${CMAKE_CURRENT_SOURCE_DIR}/unit_test/unit_test_math_lib.cpp)
-add_executable(edge_test_math_lib ${CMAKE_CURRENT_SOURCE_DIR}/edge_test/edge_test_math_lib.cpp)
+# Add the library (your math library)
+add_library(Updated_math_lib ${SOURCES})
 
-# Link the test executables with math_lib and GoogleTest
-target_link_libraries(test_math_lib PRIVATE math_lib gtest gtest_main)
-target_link_libraries(edge_test_math_lib PRIVATE math_lib gtest gtest_main)
+# Add the executable for tests
+add_executable(edge_test_math_lib ${TEST_SOURCES})
 
-# Add the tests to CTest
-add_test(NAME MathLibTests COMMAND test_math_lib)
-add_test(NAME EdgeMathLibTests COMMAND edge_test_math_lib)
-
-# Optionally, you can set additional flags or parameters for testing
-# to handle test output, etc.
+# Link Google Test and Updated_math_lib to the test executable
+target_link_libraries(edge_test_math_lib Updated_math_lib gtest gtest_main)
