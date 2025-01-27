@@ -16,3 +16,11 @@ lcov --remove coverage.info '/usr/*' --output-file filtered_coverage.info
 # Generate an HTML report
 genhtml filtered_coverage.info --output-directory report
 
+-------------------------------------------------------------------
+
+# During Unit Tests, for ignoring certain files
+
+lcov --capture --directory . --output-file coverage.info \
+--exclude '*/test_coverage/*' \
+--exclude '/usr/include/*' \
+--exclude '*/external/googletest/*'
