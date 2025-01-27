@@ -1,0 +1,43 @@
+ayushmaan_fcb@Ayushmaan-Workstation:/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/testing_assignments/GTEST_codeCoverage_unitTesting/build$ lcov --capture --directory . --output-file coverage.info
+Capturing coverage data from .
+geninfo cmd: '/usr/bin/geninfo . --output-filename coverage.info --memory 0'
+Found gcov version: 13.3.0
+Using intermediate gcov format
+Writing temporary data to /tmp/geninfo_datbjwN
+Scanning . for .gcda files ...
+Found 2 data files in .
+Processing ./CMakeFiles/my_math.dir/main.cpp.gcda
+Processing ./CMakeFiles/my_math.dir/src/my_math.cpp.gcda
+geninfo: WARNING: /usr/include/c++/13/bits/new_allocator.h:191: unexecuted block on non-branch line with non-zero hit count.  Use "geninfo --rc geninfo_unexecuted_blocks=1 to set count to zero.
+Finished .info-file creation
+ayushmaan_fcb@Ayushmaan-Workstation:/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/testing_assignments/GTEST_codeCoverage_unitTesting/build$ lcov --remove coverage.info '/usr/*' --output-file filtered_coverage.info
+Excluding /usr/include/c++/13/bits/alloc_traits.h
+Excluding /usr/include/c++/13/bits/allocator.h
+Excluding /usr/include/c++/13/bits/cpp_type_traits.h
+Excluding /usr/include/c++/13/bits/move.h
+Excluding /usr/include/c++/13/bits/new_allocator.h
+Excluding /usr/include/c++/13/bits/stl_algobase.h
+Excluding /usr/include/c++/13/bits/stl_construct.h
+Excluding /usr/include/c++/13/bits/stl_iterator.h
+Excluding /usr/include/c++/13/bits/stl_uninitialized.h
+Excluding /usr/include/c++/13/bits/stl_vector.h
+Excluding /usr/include/c++/13/bits/vector.tcc
+Excluding /usr/include/c++/13/new
+Removed 12 files
+Writing data to filtered_coverage.info
+Summary coverage rate:
+  lines......: 68.1% (49 of 72 lines)
+  functions..: 70.0% (7 of 10 functions)
+  branches...: no data found
+
+ayushmaan_fcb@Ayushmaan-Workstation:/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/testing_assignments/GTEST_codeCoverage_unitTesting/build$ genhtml filtered_coverage.info --output-directory report
+Found 2 entries.
+Found common filename prefix "/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/testing_assignments"
+Generating output.
+Processing file GTEST_codeCoverage_unitTesting/main.cpp
+  lines=16 hit=13 functions=1 hit=1
+Processing file GTEST_codeCoverage_unitTesting/src/my_math.cpp
+  lines=56 hit=36 functions=9 hit=6
+Overall coverage rate:
+  lines......: 68.1% (49 of 72 lines)
+  functions......: 70.0% (7 of 10 functions)
