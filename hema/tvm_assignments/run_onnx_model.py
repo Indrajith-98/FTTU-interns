@@ -1,80 +1,38 @@
-import torch
-import torch.nn as nn
 import numpy as np
 import tvm
 import onnx
 from tvm import relay, relax
 from tvm.contrib import graph_executor
+import cv2
 
-# Step 1: Define the PyTorch Model
-class TorchModel(nn.Module):
-    def __init__(self):
-        super(TorchModel, self).__init__()
-        self.fc1 = nn.Linear(784, 256)  # Fully connected layer: 784 -> 256
-        self.relu1 = nn.ReLU()          # ReLU activation
-        self.fc2 = nn.Linear(256, 10)   # Fully connected layer: 256 -> 10
-
-    def forward(self, x):
-        x = self.fc1(x)
-        x = self.relu1(x)
-        x = self.fc2(x)
-        return x
-
-
-# Instantiate the model
-pytorch_model = TorchModel()
-pytorch_model.eval()  # Set the model to evaluation mode
-
-# Step 2: Export the PyTorch Model to ONNX Format
-dummy_input = torch.randn(1, 784)  # Example input tensor
-onnx_model_path = "torch_model.onnx"
-torch.onnx.export(
-    pytorch_model,
-    dummy_input,
-    onnx_model_path,
-    input_names=["input"],
-    output_names=["output"],
-    opset_version=11,  # Ensure compatibility
-)
-
-print(f"ONNX model saved at: {onnx_model_path}")
-
-# Step 3: Import the ONNX Model into TVM
 # Load the ONNX model
+onnx_model_path = "cnn_model.onnx"  # Your ONNX model
 onnx_model = onnx.load(onnx_model_path)
 
-# Convert the ONNX model to TVM Relay format
-input_name = "input"
-input_shape = (1, 784)  # Input shape matching the ONNX model
+# Define the input name and shape
+input_name = "args_0"  # Ensure this matches the input name in your ONNX model
+input_shape = (1, 32, 32, 3)  # Batch size 1, height 32, width 32, channels 3
 shape_dict = {input_name: input_shape}
 
+# Convert the ONNX model to TVM Relay format
 mod, params = relay.frontend.from_onnx(onnx_model, shape_dict)
 
-# Step 4: Visualize the Model Before Transformation
-# Dump the JSON representation of the model
-with open("model_before_transformation.json", "w") as f:
-    f.write(tvm.ir.save_json(mod))
+# Preprocess the input image
+image_path = "img2.jpg"  # Path to your input image
+image = cv2.imread(image_path)  # Load the image
+image = cv2.resize(image, (32, 32))  # Resize to (32, 32)
+image = image.astype("float32") / 255.0  # Normalize pixel values to [0, 1]
+image = np.expand_dims(image, axis=0)  # Add batch dimension (1, 32, 32, 3)
 
-# Dump the computation graph as a .dot file
-with open("model_before_transformation.dot", "w") as f:
-    f.write(str(mod))
-
-
-# Step 5: Apply Transformations for Optimization
+# Compile the model for the LLVM target
 target = tvm.target.Target("llvm")
-# print(tvm.target.Target("llvm").kind)
 with tvm.transform.PassContext(opt_level=3):
-    # Compile the model for the LLVM target (CPU)
     lib = relay.build(mod, target=target, params=params)
 
-# Step 6: Run the Model Using TVM Runtime
-# Create TVM runtime and set the input
+# Run the model using TVM Runtime
 dev = tvm.cpu(0)
 module = graph_executor.GraphModule(lib["default"](dev))
-
-# Generate random input data
-input_data = np.random.rand(1, 784).astype("float32")
-module.set_input(input_name, input_data)
+module.set_input(input_name, image)  # Set the preprocessed image as input
 
 # Run the model
 module.run()
@@ -83,16 +41,14 @@ module.run()
 output = module.get_output(0).numpy()
 print("Model output:", output)
 
-# Step 7: Visualize the Model After Transformation
-# Save the optimized computation graph
-optimized_mod = relay.optimize(mod, tvm.target.Target("llvm"), params)
+# Step 10: Interpret the prediction
+class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+predicted_class = np.argmax(output)
+print(f"Predicted class: {class_names[predicted_class]}")
 
-# Step 7: Visualize the Model After Transformation
-# Save the JSON representation of the optimized model
-with open("model_after_transformation.json", "w") as f:
-    f.write(tvm.ir.save_json(optimized_mod))
+# Visualize and Save the Model Before and After Transformation
+with open("model_before_transformation_2.json", "w") as f:
+    f.write(tvm.ir.save_json(mod))
 
-# Save the optimized computation graph to a .dot file
-with open("model_after_transformation.dot", "w") as f:
-    f.write(str(optimized_mod))
-
+with open("model_after_transformation_2.json", "w") as f:
+    f.write(tvm.ir.save_json(relay.optimize(mod, target, params)))
