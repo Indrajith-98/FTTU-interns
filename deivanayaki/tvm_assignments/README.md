@@ -25,6 +25,14 @@ cmake .. -DUSE_LLVM=ON -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 ```
 
+##### Set up environment variable
+
+```
+export TVM_HOME=/home/deiva/tvm
+export PYTHONPATH=$TVM_HOME/python:$PYTHONPATH
+export LD_LIBRARY_PATH=$TVM_HOME/build/lib:$LD_LIBRARY_PATH
+```
+
 ##### Create Virtual Env and install library
 
 ```
@@ -47,7 +55,11 @@ pip install pillow
 
 ### Model Arch
 
-!["3 Conv and 2 Dense Model Arch"](modelarch/c3d2best.png "Model Architecture")
+!["3 Conv and 2 Dense Model Arch"](images/c3d2best.png "Model Architecture")
+
+### Image used for testing
+
+!["Sample Image"](images/img3.jpg "Sample Image")
 
 ### Model output
 
