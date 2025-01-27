@@ -1,0 +1,10 @@
+conv1 Test Passed: All values match within tolerance (0.01).
+batch_norm1 Test Passed: All values match within tolerance (0.01).
+max_pool1 Test Passed: All values match within tolerance (0.01).
+conv2 Test Passed: All values match within tolerance (0.01).
+batch_norm2 Test Passed: All values match within tolerance (0.01).
+max_pool2 Test Passed: All values match within tolerance (0.01).
+conv3 Test Passed: All values match within tolerance (0.01).
+batch_norm3 Test Passed: All values match within tolerance (0.01).
+dense1 Test Passed: All values match within tolerance (0.01).
+dense2 Test Passed: All values match within tolerance (0.01).
