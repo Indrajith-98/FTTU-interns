@@ -1,3 +1,0 @@
-C:/Users/7501/FTTU-interns/build/CMakeFiles/ImageProcessing.dir
-C:/Users/7501/FTTU-interns/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/7501/FTTU-interns/build/CMakeFiles/ZERO_CHECK.dir
