@@ -1,0 +1,27 @@
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 9 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 9 tests from MyMathTest
+[ RUN      ] MyMathTest.FactorialTest
+[       OK ] MyMathTest.FactorialTest (1 ms)
+[ RUN      ] MyMathTest.FibonacciTest
+[       OK ] MyMathTest.FibonacciTest (0 ms)
+[ RUN      ] MyMathTest.GcdTest
+[       OK ] MyMathTest.GcdTest (0 ms)
+[ RUN      ] MyMathTest.LcmTest
+[       OK ] MyMathTest.LcmTest (0 ms)
+[ RUN      ] MyMathTest.PrimeFactorsTest
+[       OK ] MyMathTest.PrimeFactorsTest (0 ms)
+[ RUN      ] MyMathTest.PiCalculationTest
+[       OK ] MyMathTest.PiCalculationTest (0 ms)
+[ RUN      ] MyMathTest.SigmoidTest
+[       OK ] MyMathTest.SigmoidTest (0 ms)
+[ RUN      ] MyMathTest.ReluTest
+[       OK ] MyMathTest.ReluTest (0 ms)
+[ RUN      ] MyMathTest.MeanSquaredErrorTest
+[       OK ] MyMathTest.MeanSquaredErrorTest (0 ms)
+[----------] 9 tests from MyMathTest (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test suite ran. (4 ms total)
+[  PASSED  ] 9 tests.
