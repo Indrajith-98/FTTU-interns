@@ -1,0 +1,54 @@
+def @main(%input: Tensor[(100, 3, 32, 32), float32] /* ty=Tensor[(100, 3, 32, 32), float32] span=/conv1/Conv.input:0:0 */) -> Tensor[(100, 10), float32] {
+  %15 = fn (%p08: Tensor[(100, 3, 32, 32), float32] /* ty=Tensor[(100, 3, 32, 32), float32] */, %p14: Tensor[(64, 3, 3, 3), float32] /* ty=Tensor[(64, 3, 3, 3), float32] */, %p24: Tensor[(64), float32] /* ty=Tensor[(64), float32] */, Primitive=1) -> Tensor[(100, 64, 32, 32), float32] {
+    %13 = nn.conv2d(%p08, %p14, padding=[1, 1, 1, 1], channels=64, kernel_size=[3, 3]) /* ty=Tensor[(100, 64, 32, 32), float32] span=/conv1/Conv:0:0 */;
+    %14 = nn.bias_add(%13, %p24) /* ty=Tensor[(100, 64, 32, 32), float32] span=/conv1/Conv:0:0 */;
+    nn.relu(%14) /* ty=Tensor[(100, 64, 32, 32), float32] span=/Relu:0:0 */
+  } /* ty=fn (Tensor[(100, 3, 32, 32), float32], Tensor[(64, 3, 3, 3), float32], Tensor[(64), float32]) -> Tensor[(100, 64, 32, 32), float32] */;
+  %16 = %15(%input, meta[relay.Constant][0] /* ty=Tensor[(64, 3, 3, 3), float32] span=/conv1/Conv.onnx::Conv_50:0:0 */, meta[relay.Constant][1] /* ty=Tensor[(64), float32] span=/conv1/Conv.onnx::Conv_51:0:0 */) /* ty=Tensor[(100, 64, 32, 32), float32] */;
+  %17 = fn (%p07: Tensor[(100, 64, 32, 32), float32] /* ty=Tensor[(100, 64, 32, 32), float32] */, Primitive=1) -> Tensor[(100, 64, 16, 16), float32] {
+    nn.max_pool2d(%p07, pool_size=[2, 2], strides=[2, 2], padding=[0, 0, 0, 0]) /* ty=Tensor[(100, 64, 16, 16), float32] span=/pool/MaxPool:0:0 */
+  } /* ty=fn (Tensor[(100, 64, 32, 32), float32]) -> Tensor[(100, 64, 16, 16), float32] */;
+  %18 = %17(%16) /* ty=Tensor[(100, 64, 16, 16), float32] */;
+  %19 = fn (%p06: Tensor[(100, 64, 16, 16), float32] /* ty=Tensor[(100, 64, 16, 16), float32] */, %p13: Tensor[(128, 64, 3, 3), float32] /* ty=Tensor[(128, 64, 3, 3), float32] */, %p23: Tensor[(128), float32] /* ty=Tensor[(128), float32] */, Primitive=1) -> Tensor[(100, 128, 16, 16), float32] {
+    %11 = nn.conv2d(%p06, %p13, padding=[1, 1, 1, 1], channels=128, kernel_size=[3, 3]) /* ty=Tensor[(100, 128, 16, 16), float32] span=/conv2/Conv:0:0 */;
+    %12 = nn.bias_add(%11, %p23) /* ty=Tensor[(100, 128, 16, 16), float32] span=/conv2/Conv:0:0 */;
+    nn.relu(%12) /* ty=Tensor[(100, 128, 16, 16), float32] span=/Relu_1:0:0 */
+  } /* ty=fn (Tensor[(100, 64, 16, 16), float32], Tensor[(128, 64, 3, 3), float32], Tensor[(128), float32]) -> Tensor[(100, 128, 16, 16), float32] */;
+  %20 = %19(%18, meta[relay.Constant][2] /* ty=Tensor[(128, 64, 3, 3), float32] span=/conv2/Conv.onnx::Conv_53:0:0 */, meta[relay.Constant][3] /* ty=Tensor[(128), float32] span=/conv2/Conv.onnx::Conv_54:0:0 */) /* ty=Tensor[(100, 128, 16, 16), float32] */;
+  %21 = fn (%p05: Tensor[(100, 128, 16, 16), float32] /* ty=Tensor[(100, 128, 16, 16), float32] */, Primitive=1) -> Tensor[(100, 128, 8, 8), float32] {
+    nn.max_pool2d(%p05, pool_size=[2, 2], strides=[2, 2], padding=[0, 0, 0, 0]) /* ty=Tensor[(100, 128, 8, 8), float32] span=/pool_1/MaxPool:0:0 */
+  } /* ty=fn (Tensor[(100, 128, 16, 16), float32]) -> Tensor[(100, 128, 8, 8), float32] */;
+  %22 = %21(%20) /* ty=Tensor[(100, 128, 8, 8), float32] */;
+  %23 = fn (%p04: Tensor[(100, 128, 8, 8), float32] /* ty=Tensor[(100, 128, 8, 8), float32] */, %p12: Tensor[(256, 128, 3, 3), float32] /* ty=Tensor[(256, 128, 3, 3), float32] */, %p22: Tensor[(256), float32] /* ty=Tensor[(256), float32] */, Primitive=1) -> Tensor[(100, 256, 8, 8), float32] {
+    %9 = nn.conv2d(%p04, %p12, padding=[1, 1, 1, 1], channels=256, kernel_size=[3, 3]) /* ty=Tensor[(100, 256, 8, 8), float32] span=/conv3/Conv:0:0 */;
+    %10 = nn.bias_add(%9, %p22) /* ty=Tensor[(100, 256, 8, 8), float32] span=/conv3/Conv:0:0 */;
+    nn.relu(%10) /* ty=Tensor[(100, 256, 8, 8), float32] span=/Relu_2:0:0 */
+  } /* ty=fn (Tensor[(100, 128, 8, 8), float32], Tensor[(256, 128, 3, 3), float32], Tensor[(256), float32]) -> Tensor[(100, 256, 8, 8), float32] */;
+  %24 = %23(%22, meta[relay.Constant][4] /* ty=Tensor[(256, 128, 3, 3), float32] span=/conv3/Conv.onnx::Conv_56:0:0 */, meta[relay.Constant][5] /* ty=Tensor[(256), float32] span=/conv3/Conv.onnx::Conv_57:0:0 */) /* ty=Tensor[(100, 256, 8, 8), float32] */;
+  %25 = fn (%p03: Tensor[(100, 256, 8, 8), float32] /* ty=Tensor[(100, 256, 8, 8), float32] */, Primitive=1) -> Tensor[(100, 256, 4, 4), float32] {
+    nn.max_pool2d(%p03, pool_size=[2, 2], strides=[2, 2], padding=[0, 0, 0, 0]) /* ty=Tensor[(100, 256, 4, 4), float32] span=/pool_2/MaxPool:0:0 */
+  } /* ty=fn (Tensor[(100, 256, 8, 8), float32]) -> Tensor[(100, 256, 4, 4), float32] */;
+  %26 = %25(%24) /* ty=Tensor[(100, 256, 4, 4), float32] */;
+  %27 = fn (%p02: Tensor[(100, 256, 4, 4), float32] /* ty=Tensor[(100, 256, 4, 4), float32] */, Primitive=1, relay.reshape_only=1) -> Tensor[(100, 4096), float32] {
+    reshape(%p02, newshape=[-1, 4096]) /* ty=Tensor[(100, 4096), float32] span=/Reshape:0:0 */
+  } /* ty=fn (Tensor[(100, 256, 4, 4), float32]) -> Tensor[(100, 4096), float32] */;
+  %28 = %27(%26) /* ty=Tensor[(100, 4096), float32] */;
+  %29 = fn (%p01: Tensor[(100, 4096), float32] /* ty=Tensor[(100, 4096), float32] */, %p11: Tensor[(1024, 4096), float32] /* ty=Tensor[(1024, 4096), float32] */, %p21: Tensor[(1024), float32] /* ty=Tensor[(1024), float32] */, %p3: Tensor[(1024), float32] /* ty=Tensor[(1024), float32] */, %p4: Tensor[(1024), float32] /* ty=Tensor[(1024), float32] */, Primitive=1) -> Tensor[(100, 1024), float32] {
+    %2 = nn.dense(%p01, %p11, units=1024) /* ty=Tensor[(100, 1024), float32] span=/fc1/Gemm:0:0 */;
+    %3 = expand_dims(%p21, axis=0) /* ty=Tensor[(1, 1024), float32] */;
+    %4 = add(%2, %3) /* ty=Tensor[(100, 1024), float32] span=/fc1/Gemm:0:0 */;
+    %5 = expand_dims(%p3, axis=0) /* ty=Tensor[(1, 1024), float32] */;
+    %6 = multiply(%4, %5) /* ty=Tensor[(100, 1024), float32] */;
+    %7 = expand_dims(%p4, axis=0) /* ty=Tensor[(1, 1024), float32] */;
+    %8 = add(%6, %7) /* ty=Tensor[(100, 1024), float32] */;
+    nn.relu(%8) /* ty=Tensor[(100, 1024), float32] span=/Relu_3:0:0 */
+  } /* ty=fn (Tensor[(100, 4096), float32], Tensor[(1024, 4096), float32], Tensor[(1024), float32], Tensor[(1024), float32], Tensor[(1024), float32]) -> Tensor[(100, 1024), float32] */;
+  %30 = %29(%28, meta[relay.Constant][6] /* ty=Tensor[(1024, 4096), float32] span=/fc1/Gemm.fc1.weight:0:0 */, meta[relay.Constant][7] /* ty=Tensor[(1024), float32] span=/fc1/Gemm.fc1.bias:0:0 */, meta[relay.Constant][8] /* ty=Tensor[(1024), float32] */, meta[relay.Constant][9] /* ty=Tensor[(1024), float32] */) /* ty=Tensor[(100, 1024), float32] */;
+  %31 = fn (%p0: Tensor[(100, 1024), float32] /* ty=Tensor[(100, 1024), float32] */, %p1: Tensor[(10, 1024), float32] /* ty=Tensor[(10, 1024), float32] */, %p2: Tensor[(10), float32] /* ty=Tensor[(10), float32] */, Primitive=1) -> Tensor[(100, 10), float32] {
+    %0 = nn.dense(%p0, %p1, units=10) /* ty=Tensor[(100, 10), float32] span=/fc2/Gemm:0:0 */;
+    %1 = expand_dims(%p2, axis=0) /* ty=Tensor[(1, 10), float32] */;
+    add(%0, %1) /* ty=Tensor[(100, 10), float32] span=/fc2/Gemm:0:0 */
+  } /* ty=fn (Tensor[(100, 1024), float32], Tensor[(10, 1024), float32], Tensor[(10), float32]) -> Tensor[(100, 10), float32] */;
+  %31(%30, meta[relay.Constant][10] /* ty=Tensor[(10, 1024), float32] span=/fc2/Gemm.fc2.weight:0:0 */, meta[relay.Constant][11] /* ty=Tensor[(10), float32] span=/fc2/Gemm.fc2.bias:0:0 */) /* ty=Tensor[(100, 10), float32] */
+}
+
