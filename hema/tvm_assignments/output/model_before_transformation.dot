@@ -1,8 +1,0 @@
-def @main(%input: Tensor[(1, 784), float32] /* ty=Tensor[(1, 784), float32] span=/fc1/Gemm.input:0:0 */) -> Tensor[(1, 10), float32] {
-  %0 = nn.dense(%input, meta[relay.Constant][0] /* ty=Tensor[(256, 784), float32] span=/fc1/Gemm.fc1.weight:0:0 */, units=256) /* ty=Tensor[(1, 256), float32] span=/fc1/Gemm:0:0 */;
-  %1 = add(%0, meta[relay.Constant][1] /* ty=Tensor[(256), float32] span=/fc1/Gemm.fc1.bias:0:0 */) /* ty=Tensor[(1, 256), float32] span=/fc1/Gemm:0:0 */;
-  %2 = nn.relu(%1) /* ty=Tensor[(1, 256), float32] span=/relu1/Relu:0:0 */;
-  %3 = nn.dense(%2, meta[relay.Constant][2] /* ty=Tensor[(10, 256), float32] span=/fc2/Gemm.fc2.weight:0:0 */, units=10) /* ty=Tensor[(1, 10), float32] span=/fc2/Gemm:0:0 */;
-  add(%3, meta[relay.Constant][3] /* ty=Tensor[(10), float32] span=/fc2/Gemm.fc2.bias:0:0 */) /* ty=Tensor[(1, 10), float32] span=/fc2/Gemm:0:0 */
-}
-
