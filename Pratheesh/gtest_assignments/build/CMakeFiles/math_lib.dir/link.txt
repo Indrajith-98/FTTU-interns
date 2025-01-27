@@ -1,2 +1,0 @@
-"F:\code blocks\CodeBlocks\MinGW\bin\ar.exe" qc libmath_lib.a CMakeFiles/math_lib.dir/math_lib/src/updated_my_math.cpp.obj
-"F:\code blocks\CodeBlocks\MinGW\bin\ranlib.exe" libmath_lib.a
