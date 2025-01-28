@@ -4,9 +4,13 @@ including tracking the current page and topic of each book. The system stores us
 
 ## Features
 **User Registration & Login:** Users can register with a unique username and password, or log in if they already have an account. <br>
+
 **Add a Book:** Users can add a new book to their collection with details like the current page and topic. <br>
+
 **Update Book Info:** Users can update their current page and topic for any of their books. <br>
+
 **Display User Info:** Displays information about all the books a user has added, including the current page and topic. <br>
+
 **Data Persistence:** All user and book data is stored in an Excel file, making it persistent across a single session. <br>
 
 ## Requirements
@@ -29,6 +33,7 @@ project/
 ## How to Use
 Run the Program: To start the system, simply run the following command in your terminal: <br>
 `python user_book.py`
+
 **User Login or Registration:** Upon starting the program, you will be prompted to either: <br>
 1. Login: Enter your username and password to log into your existing account. <br>
 2. Register: Enter a new username and password to create a new account. <br>
