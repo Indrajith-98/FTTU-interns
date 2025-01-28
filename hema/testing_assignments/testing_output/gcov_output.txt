@@ -1,0 +1,58 @@
+PS D:\Documents_personal\Multicoreware\training\gtest_trial\gcov_trial\build> gcov CMakeFiles/unit_test.dir/test_coverage/test/test_my_math.cpp.gcno CMakeFiles/my_math.dir/src/my_math.cpp.gcno CMakeFiles/unit_test.dir/test_coverage/main.cc.gcno
+File 'D:/Documents_personal/Multicoreware/training/gtest_trial/gcov_trial/test_coverage/test/test_my_math.cpp'
+Lines executed:100.00% of 117
+Creating 'test_my_math.cpp.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/allocator.h'
+Lines executed:100.00% of 3
+Creating 'allocator.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/cpp_type_traits.h'
+Lines executed:100.00% of 6
+Creating 'cpp_type_traits.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_uninitialized.h'
+Lines executed:100.00% of 32
+Creating 'stl_uninitialized.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/alloc_traits.h'
+Lines executed:100.00% of 7
+Creating 'alloc_traits.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/initializer_list'
+Lines executed:100.00% of 9
+Creating 'initializer_list.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator_base_types.h'
+Lines executed:100.00% of 1
+Creating 'stl_iterator_base_types.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_iterator_base_funcs.h'
+Lines executed:100.00% of 3
+Creating 'stl_iterator_base_funcs.h.gcov'
+
+File 'D:/Documents_personal/Multicoreware/training/gtest_trial/gcov_trial/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h'
+No executable lines
+Removing 'gtest-message.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h'
+Lines executed:100.00% of 1
+Creating 'c++config.h.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/ptr_traits.h'
+Lines executed:100.00% of 2
+Creating 'ptr_traits.h.gcov'
+
+File 'D:/Documents_personal/Multicoreware/training/gtest_trial/gcov_trial/src/my_math.cpp'
+Lines executed:100.00% of 55
+Creating 'my_math.cpp.gcov'
+
+File 'D:/w64devkit/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/new'
+Lines executed:100.00% of 2
+Creating 'new.gcov'
+
+File 'D:/Documents_personal/Multicoreware/training/gtest_trial/gcov_trial/test_coverage/main.cc'
+Lines executed:100.00% of 3
+Creating 'main.cc.gcov'
+
+Lines executed:100.00% of 241

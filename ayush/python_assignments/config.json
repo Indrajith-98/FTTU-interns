@@ -1,0 +1,125 @@
+{
+    "layers": [
+        {
+            "name": "features.0",
+            "type": "Conv2d",
+            "input_path": "./data/input/features.0_input.pt",
+            "output_path": "./data/output/features.0_output.pt",
+            "weights_path": "./data/weights/features.0_weights.pt",
+            "attributes": {
+                "in_features": null,
+                "out_features": null,
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "features.1",
+            "type": "ReLU",
+            "input_path": "./data/input/features.1_input.pt",
+            "output_path": "./data/output/features.1_output.pt"
+        },
+        {
+            "name": "features.3",
+            "type": "Conv2d",
+            "input_path": "./data/input/features.3_input.pt",
+            "output_path": "./data/output/features.3_output.pt",
+            "weights_path": "./data/weights/features.3_weights.pt",
+            "attributes": {
+                "in_features": null,
+                "out_features": null,
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "features.4",
+            "type": "ReLU",
+            "input_path": "./data/input/features.4_input.pt",
+            "output_path": "./data/output/features.4_output.pt"
+        },
+        {
+            "name": "features.6",
+            "type": "Conv2d",
+            "input_path": "./data/input/features.6_input.pt",
+            "output_path": "./data/output/features.6_output.pt",
+            "weights_path": "./data/weights/features.6_weights.pt",
+            "attributes": {
+                "in_features": null,
+                "out_features": null,
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "stride": [
+                    1,
+                    1
+                ],
+                "padding": [
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "features.7",
+            "type": "ReLU",
+            "input_path": "./data/input/features.7_input.pt",
+            "output_path": "./data/output/features.7_output.pt"
+        },
+        {
+            "name": "classifier.0",
+            "type": "Linear",
+            "input_path": "./data/input/classifier.0_input.pt",
+            "output_path": "./data/output/classifier.0_output.pt",
+            "weights_path": "./data/weights/classifier.0_weights.pt",
+            "attributes": {
+                "in_features": 2048,
+                "out_features": 256,
+                "kernel_size": null,
+                "stride": null,
+                "padding": null
+            }
+        },
+        {
+            "name": "classifier.1",
+            "type": "ReLU",
+            "input_path": "./data/input/classifier.1_input.pt",
+            "output_path": "./data/output/classifier.1_output.pt"
+        },
+        {
+            "name": "classifier.3",
+            "type": "Linear",
+            "input_path": "./data/input/classifier.3_input.pt",
+            "output_path": "./data/output/classifier.3_output.pt",
+            "weights_path": "./data/weights/classifier.3_weights.pt",
+            "attributes": {
+                "in_features": 256,
+                "out_features": 10,
+                "kernel_size": null,
+                "stride": null,
+                "padding": null
+            }
+        }
+    ]
+}

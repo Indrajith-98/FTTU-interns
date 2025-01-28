@@ -1,0 +1,26 @@
+# Building and Making
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug .
+make
+
+# Run the Executable
+./my_math
+
+# Generate Coverage Data
+lcov --capture --directory . --output-file coverage.info
+
+# Filter out irrelevant files
+lcov --remove coverage.info '/usr/*' --output-file filtered_coverage.info
+
+# Generate an HTML report
+genhtml filtered_coverage.info --output-directory report
+
+-------------------------------------------------------------------
+
+# During Unit Tests, for ignoring certain files
+
+lcov --capture --directory . --output-file coverage.info \
+--exclude '*/test_coverage/*' \
+--exclude '/usr/include/*' \
+--exclude '*/external/googletest/*'

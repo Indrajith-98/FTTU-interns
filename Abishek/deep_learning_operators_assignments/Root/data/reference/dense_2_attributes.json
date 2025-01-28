@@ -1,0 +1,13 @@
+{
+    "layer_name": "dense_2",
+    "type": "Dense",
+    "input_shape": [
+        null,
+        4096
+    ],
+    "output_shape": [
+        null,
+        384
+    ],
+    "activation": "relu"
+}

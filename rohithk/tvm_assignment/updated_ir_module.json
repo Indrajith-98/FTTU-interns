@@ -1,0 +1,148 @@
+#[version = "0.0.5"]
+def @main(%input: Tensor[(1, 3, 32, 32), float32], %fc.weight: Tensor[(1000, 512), float32], %fc.bias: Tensor[(1000), float32], %onnx::Conv_193: Tensor[(64, 3, 7, 7), float32], %onnx::Conv_194: Tensor[(64), float32], %onnx::Conv_196: Tensor[(64, 64, 3, 3), float32], %onnx::Conv_197: Tensor[(64), float32], %onnx::Conv_199: Tensor[(64, 64, 3, 3), float32], %onnx::Conv_200: Tensor[(64), float32], %onnx::Conv_202: Tensor[(64, 64, 3, 3), float32], %onnx::Conv_203: Tensor[(64), float32], %onnx::Conv_205: Tensor[(64, 64, 3, 3), float32], %onnx::Conv_206: Tensor[(64), float32], %onnx::Conv_208: Tensor[(128, 64, 3, 3), float32], %onnx::Conv_209: Tensor[(128), float32], %onnx::Conv_211: Tensor[(128, 128, 3, 3), float32], %onnx::Conv_212: Tensor[(128), float32], %onnx::Conv_214: Tensor[(128, 64, 1, 1), float32], %onnx::Conv_215: Tensor[(128), float32], %onnx::Conv_217: Tensor[(128, 128, 3, 3), float32], %onnx::Conv_218: Tensor[(128), float32], %onnx::Conv_220: Tensor[(128, 128, 3, 3), float32], %onnx::Conv_221: Tensor[(128), float32], %onnx::Conv_223: Tensor[(256, 128, 3, 3), float32], %onnx::Conv_224: Tensor[(256), float32], %onnx::Conv_226: Tensor[(256, 256, 3, 3), float32], %onnx::Conv_227: Tensor[(256), float32], %onnx::Conv_229: Tensor[(256, 128, 1, 1), float32], %onnx::Conv_230: Tensor[(256), float32], %onnx::Conv_232: Tensor[(256, 256, 3, 3), float32], %onnx::Conv_233: Tensor[(256), float32], %onnx::Conv_235: Tensor[(256, 256, 3, 3), float32], %onnx::Conv_236: Tensor[(256), float32], %onnx::Conv_238: Tensor[(512, 256, 3, 3), float32], %onnx::Conv_239: Tensor[(512), float32], %onnx::Conv_241: Tensor[(512, 512, 3, 3), float32], %onnx::Conv_242: Tensor[(512), float32], %onnx::Conv_244: Tensor[(512, 256, 1, 1), float32], %onnx::Conv_245: Tensor[(512), float32], %onnx::Conv_247: Tensor[(512, 512, 3, 3), float32], %onnx::Conv_248: Tensor[(512), float32], %onnx::Conv_250: Tensor[(512, 512, 3, 3), float32], %onnx::Conv_251: Tensor[(512), float32]) -> Tensor[(1, 1000), float32] {
+  %46 = fn (%p020: Tensor[(1, 3, 32, 32), float32], %p117: Tensor[(64, 3, 7, 7), float32], %p217: Tensor[(64), float32], Primitive=1) -> Tensor[(1, 64, 16, 16), float32] {
+    %44 = nn.conv2d(%p020, %p117, strides=[2, 2], padding=[3, 3, 3, 3], channels=64, kernel_size=[7, 7]) /* ty=Tensor[(1, 64, 16, 16), float32] */;
+    %45 = nn.bias_add(%44, %p217) /* ty=Tensor[(1, 64, 16, 16), float32] */;
+    nn.relu(%45) /* ty=Tensor[(1, 64, 16, 16), float32] */
+  };
+  %47 = %46(%input, %onnx::Conv_193, %onnx::Conv_194) /* ty=Tensor[(1, 64, 16, 16), float32] */;
+  %48 = fn (%p019: Tensor[(1, 64, 16, 16), float32], Primitive=1) -> Tensor[(1, 64, 8, 8), float32] {
+    nn.max_pool2d(%p019, pool_size=[3, 3], strides=[2, 2], padding=[1, 1, 1, 1]) /* ty=Tensor[(1, 64, 8, 8), float32] */
+  };
+  %49 = %48(%47) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+  %50 = fn (%p018: Tensor[(1, 64, 8, 8), float32], %p116: Tensor[(64, 64, 3, 3), float32], %p216: Tensor[(64), float32], Primitive=1) -> Tensor[(1, 64, 8, 8), float32] {
+    %42 = nn.conv2d(%p018, %p116, padding=[1, 1, 1, 1], channels=64, kernel_size=[3, 3]) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    %43 = nn.bias_add(%42, %p216) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    nn.relu(%43) /* ty=Tensor[(1, 64, 8, 8), float32] */
+  };
+  %51 = %50(%49, %onnx::Conv_196, %onnx::Conv_197) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+  %52 = fn (%p017: Tensor[(1, 64, 8, 8), float32], %p115: Tensor[(64, 64, 3, 3), float32], %p215: Tensor[(64), float32], %p37: Tensor[(1, 64, 8, 8), float32], Primitive=1) -> Tensor[(1, 64, 8, 8), float32] {
+    %39 = nn.conv2d(%p017, %p115, padding=[1, 1, 1, 1], channels=64, kernel_size=[3, 3]) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    %40 = nn.bias_add(%39, %p215) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    %41 = add(%40, %p37) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    nn.relu(%41) /* ty=Tensor[(1, 64, 8, 8), float32] */
+  };
+  %53 = %52(%51, %onnx::Conv_199, %onnx::Conv_200, %49) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+  %54 = fn (%p016: Tensor[(1, 64, 8, 8), float32], %p114: Tensor[(64, 64, 3, 3), float32], %p214: Tensor[(64), float32], Primitive=1) -> Tensor[(1, 64, 8, 8), float32] {
+    %37 = nn.conv2d(%p016, %p114, padding=[1, 1, 1, 1], channels=64, kernel_size=[3, 3]) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    %38 = nn.bias_add(%37, %p214) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    nn.relu(%38) /* ty=Tensor[(1, 64, 8, 8), float32] */
+  };
+  %55 = %54(%53, %onnx::Conv_202, %onnx::Conv_203) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+  %56 = fn (%p015: Tensor[(1, 64, 8, 8), float32], %p113: Tensor[(64, 64, 3, 3), float32], %p213: Tensor[(64), float32], %p36: Tensor[(1, 64, 8, 8), float32], Primitive=1) -> Tensor[(1, 64, 8, 8), float32] {
+    %34 = nn.conv2d(%p015, %p113, padding=[1, 1, 1, 1], channels=64, kernel_size=[3, 3]) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    %35 = nn.bias_add(%34, %p213) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    %36 = add(%35, %p36) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+    nn.relu(%36) /* ty=Tensor[(1, 64, 8, 8), float32] */
+  };
+  %57 = %56(%55, %onnx::Conv_205, %onnx::Conv_206, %53) /* ty=Tensor[(1, 64, 8, 8), float32] */;
+  %58 = fn (%p014: Tensor[(1, 64, 8, 8), float32], %p112: Tensor[(128, 64, 3, 3), float32], %p212: Tensor[(128), float32], Primitive=1) -> Tensor[(1, 128, 4, 4), float32] {
+    %32 = nn.conv2d(%p014, %p112, strides=[2, 2], padding=[1, 1, 1, 1], channels=128, kernel_size=[3, 3]) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    %33 = nn.bias_add(%32, %p212) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    nn.relu(%33) /* ty=Tensor[(1, 128, 4, 4), float32] */
+  };
+  %60 = fn (%p021: Tensor[(1, 64, 8, 8), float32], %p118: Tensor[(128, 64, 1, 1), float32], %p218: Tensor[(128), float32], Primitive=1) -> Tensor[(1, 128, 4, 4), float32] {
+    %59 = nn.conv2d(%p021, %p118, strides=[2, 2], padding=[0, 0, 0, 0], channels=128, kernel_size=[1, 1]) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    nn.bias_add(%59, %p218) /* ty=Tensor[(1, 128, 4, 4), float32] */
+  };
+  %61 = %58(%57, %onnx::Conv_208, %onnx::Conv_209) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+  %62 = %60(%57, %onnx::Conv_214, %onnx::Conv_215) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+  %63 = fn (%p013: Tensor[(1, 128, 4, 4), float32], %p111: Tensor[(128, 128, 3, 3), float32], %p211: Tensor[(128), float32], %p35: Tensor[(1, 128, 4, 4), float32], Primitive=1) -> Tensor[(1, 128, 4, 4), float32] {
+    %29 = nn.conv2d(%p013, %p111, padding=[1, 1, 1, 1], channels=128, kernel_size=[3, 3]) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    %30 = nn.bias_add(%29, %p211) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    %31 = add(%30, %p35) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    nn.relu(%31) /* ty=Tensor[(1, 128, 4, 4), float32] */
+  };
+  %64 = %63(%61, %onnx::Conv_211, %onnx::Conv_212, %62) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+  %65 = fn (%p012: Tensor[(1, 128, 4, 4), float32], %p110: Tensor[(128, 128, 3, 3), float32], %p210: Tensor[(128), float32], Primitive=1) -> Tensor[(1, 128, 4, 4), float32] {
+    %27 = nn.conv2d(%p012, %p110, padding=[1, 1, 1, 1], channels=128, kernel_size=[3, 3]) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    %28 = nn.bias_add(%27, %p210) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    nn.relu(%28) /* ty=Tensor[(1, 128, 4, 4), float32] */
+  };
+  %66 = %65(%64, %onnx::Conv_217, %onnx::Conv_218) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+  %67 = fn (%p011: Tensor[(1, 128, 4, 4), float32], %p19: Tensor[(128, 128, 3, 3), float32], %p29: Tensor[(128), float32], %p34: Tensor[(1, 128, 4, 4), float32], Primitive=1) -> Tensor[(1, 128, 4, 4), float32] {
+    %24 = nn.conv2d(%p011, %p19, padding=[1, 1, 1, 1], channels=128, kernel_size=[3, 3]) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    %25 = nn.bias_add(%24, %p29) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    %26 = add(%25, %p34) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+    nn.relu(%26) /* ty=Tensor[(1, 128, 4, 4), float32] */
+  };
+  %68 = %67(%66, %onnx::Conv_220, %onnx::Conv_221, %64) /* ty=Tensor[(1, 128, 4, 4), float32] */;
+  %69 = fn (%p010: Tensor[(1, 128, 4, 4), float32], %p18: Tensor[(256, 128, 3, 3), float32], %p28: Tensor[(256), float32], Primitive=1) -> Tensor[(1, 256, 2, 2), float32] {
+    %22 = nn.conv2d(%p010, %p18, strides=[2, 2], padding=[1, 1, 1, 1], channels=256, kernel_size=[3, 3]) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    %23 = nn.bias_add(%22, %p28) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    nn.relu(%23) /* ty=Tensor[(1, 256, 2, 2), float32] */
+  };
+  %71 = fn (%p022: Tensor[(1, 128, 4, 4), float32], %p119: Tensor[(256, 128, 1, 1), float32], %p219: Tensor[(256), float32], Primitive=1) -> Tensor[(1, 256, 2, 2), float32] {
+    %70 = nn.conv2d(%p022, %p119, strides=[2, 2], padding=[0, 0, 0, 0], channels=256, kernel_size=[1, 1]) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    nn.bias_add(%70, %p219) /* ty=Tensor[(1, 256, 2, 2), float32] */
+  };
+  %72 = %69(%68, %onnx::Conv_223, %onnx::Conv_224) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+  %73 = %71(%68, %onnx::Conv_229, %onnx::Conv_230) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+  %74 = fn (%p09: Tensor[(1, 256, 2, 2), float32], %p17: Tensor[(256, 256, 3, 3), float32], %p27: Tensor[(256), float32], %p33: Tensor[(1, 256, 2, 2), float32], Primitive=1) -> Tensor[(1, 256, 2, 2), float32] {
+    %19 = nn.conv2d(%p09, %p17, padding=[1, 1, 1, 1], channels=256, kernel_size=[3, 3]) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    %20 = nn.bias_add(%19, %p27) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    %21 = add(%20, %p33) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    nn.relu(%21) /* ty=Tensor[(1, 256, 2, 2), float32] */
+  };
+  %75 = %74(%72, %onnx::Conv_226, %onnx::Conv_227, %73) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+  %76 = fn (%p08: Tensor[(1, 256, 2, 2), float32], %p16: Tensor[(256, 256, 3, 3), float32], %p26: Tensor[(256), float32], Primitive=1) -> Tensor[(1, 256, 2, 2), float32] {
+    %17 = nn.conv2d(%p08, %p16, padding=[1, 1, 1, 1], channels=256, kernel_size=[3, 3]) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    %18 = nn.bias_add(%17, %p26) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    nn.relu(%18) /* ty=Tensor[(1, 256, 2, 2), float32] */
+  };
+  %77 = %76(%75, %onnx::Conv_232, %onnx::Conv_233) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+  %78 = fn (%p07: Tensor[(1, 256, 2, 2), float32], %p15: Tensor[(256, 256, 3, 3), float32], %p25: Tensor[(256), float32], %p32: Tensor[(1, 256, 2, 2), float32], Primitive=1) -> Tensor[(1, 256, 2, 2), float32] {
+    %14 = nn.conv2d(%p07, %p15, padding=[1, 1, 1, 1], channels=256, kernel_size=[3, 3]) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    %15 = nn.bias_add(%14, %p25) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    %16 = add(%15, %p32) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+    nn.relu(%16) /* ty=Tensor[(1, 256, 2, 2), float32] */
+  };
+  %79 = %78(%77, %onnx::Conv_235, %onnx::Conv_236, %75) /* ty=Tensor[(1, 256, 2, 2), float32] */;
+  %80 = fn (%p06: Tensor[(1, 256, 2, 2), float32], %p14: Tensor[(512, 256, 3, 3), float32], %p24: Tensor[(512), float32], Primitive=1) -> Tensor[(1, 512, 1, 1), float32] {
+    %12 = nn.conv2d(%p06, %p14, strides=[2, 2], padding=[1, 1, 1, 1], channels=512, kernel_size=[3, 3]) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    %13 = nn.bias_add(%12, %p24) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    nn.relu(%13) /* ty=Tensor[(1, 512, 1, 1), float32] */
+  };
+  %82 = fn (%p023: Tensor[(1, 256, 2, 2), float32], %p120: Tensor[(512, 256, 1, 1), float32], %p220: Tensor[(512), float32], Primitive=1) -> Tensor[(1, 512, 1, 1), float32] {
+    %81 = nn.conv2d(%p023, %p120, strides=[2, 2], padding=[0, 0, 0, 0], channels=512, kernel_size=[1, 1]) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    nn.bias_add(%81, %p220) /* ty=Tensor[(1, 512, 1, 1), float32] */
+  };
+  %83 = %80(%79, %onnx::Conv_238, %onnx::Conv_239) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+  %84 = %82(%79, %onnx::Conv_244, %onnx::Conv_245) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+  %85 = fn (%p05: Tensor[(1, 512, 1, 1), float32], %p13: Tensor[(512, 512, 3, 3), float32], %p23: Tensor[(512), float32], %p31: Tensor[(1, 512, 1, 1), float32], Primitive=1) -> Tensor[(1, 512, 1, 1), float32] {
+    %9 = nn.conv2d(%p05, %p13, padding=[1, 1, 1, 1], channels=512, kernel_size=[3, 3]) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    %10 = nn.bias_add(%9, %p23) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    %11 = add(%10, %p31) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    nn.relu(%11) /* ty=Tensor[(1, 512, 1, 1), float32] */
+  };
+  %86 = %85(%83, %onnx::Conv_241, %onnx::Conv_242, %84) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+  %87 = fn (%p04: Tensor[(1, 512, 1, 1), float32], %p12: Tensor[(512, 512, 3, 3), float32], %p22: Tensor[(512), float32], Primitive=1) -> Tensor[(1, 512, 1, 1), float32] {
+    %7 = nn.conv2d(%p04, %p12, padding=[1, 1, 1, 1], channels=512, kernel_size=[3, 3]) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    %8 = nn.bias_add(%7, %p22) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    nn.relu(%8) /* ty=Tensor[(1, 512, 1, 1), float32] */
+  };
+  %88 = %87(%86, %onnx::Conv_247, %onnx::Conv_248) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+  %89 = fn (%p03: Tensor[(1, 512, 1, 1), float32], %p11: Tensor[(512, 512, 3, 3), float32], %p21: Tensor[(512), float32], %p3: Tensor[(1, 512, 1, 1), float32], Primitive=1) -> Tensor[(1, 512, 1, 1), float32] {
+    %4 = nn.conv2d(%p03, %p11, padding=[1, 1, 1, 1], channels=512, kernel_size=[3, 3]) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    %5 = nn.bias_add(%4, %p21) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    %6 = add(%5, %p3) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+    nn.relu(%6) /* ty=Tensor[(1, 512, 1, 1), float32] */
+  };
+  %90 = %89(%88, %onnx::Conv_250, %onnx::Conv_251, %86) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+  %91 = fn (%p02: Tensor[(1, 512, 1, 1), float32], Primitive=1) -> Tensor[(1, 512, 1, 1), float32] {
+    nn.global_avg_pool2d(%p02) /* ty=Tensor[(1, 512, 1, 1), float32] */
+  };
+  %92 = %91(%90) /* ty=Tensor[(1, 512, 1, 1), float32] */;
+  %93 = fn (%p01: Tensor[(1, 512, 1, 1), float32], Primitive=1) -> Tensor[(1, 512), float32] {
+    %3 = nn.batch_flatten(%p01) /* ty=Tensor[(1, 512), float32] */;
+    nn.batch_flatten(%3) /* ty=Tensor[(1, 512), float32] */
+  };
+  %94 = %93(%92) /* ty=Tensor[(1, 512), float32] */;
+  %95 = fn (%p0: Tensor[(1, 512), float32], %p1: Tensor[(1000, 512), float32], %p2: Tensor[(1000), float32], Primitive=1) -> Tensor[(1, 1000), float32] {
+    %0 = multiply(1f /* ty=float32 */, %p2) /* ty=Tensor[(1000), float32] */;
+    %1 = nn.dense(%p0, %p1, units=1000) /* ty=Tensor[(1, 1000), float32] */;
+    %2 = expand_dims(%0, axis=0) /* ty=Tensor[(1, 1000), float32] */;
+    add(%1, %2) /* ty=Tensor[(1, 1000), float32] */
+  };
+  %95(%94, %fc.weight, %fc.bias) /* ty=Tensor[(1, 1000), float32] */
+}

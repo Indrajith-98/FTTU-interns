@@ -1,0 +1,294 @@
+
+
+Image Path: ../data/input/bird.json
+----------------------------------------
+Fri Jan 03 12:53:14 2025
+: Layer: conv2d, Function: convolve, Time: 35.1731ms, Status: Pass
+Fri Jan 03 12:53:15 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 15.3592ms, Status: Pass
+Fri Jan 03 12:53:17 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 3.0943ms, Status: Pass
+Fri Jan 03 12:53:19 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.3097ms, Status: Pass
+Fri Jan 03 12:53:22 2025
+: Layer: conv2d_1, Function: convolve, Time: 478.031ms, Status: Pass
+Fri Jan 03 12:53:25 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 8.9856ms, Status: Pass
+Fri Jan 03 12:53:28 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.9298ms, Status: Pass
+Fri Jan 03 12:53:30 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 1.069ms, Status: Pass
+Fri Jan 03 12:53:33 2025
+: Layer: conv2d_2, Function: convolve, Time: 132.354ms, Status: Pass
+Fri Jan 03 12:53:36 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.9385ms, Status: Pass
+
+
+Image Path: ../data/input/bird.json
+----------------------------------------
+Fri Jan 03 12:54:57 2025
+: Layer: conv2d, Function: convolve, Time: 40.2445ms, Status: Pass
+Fri Jan 03 12:54:59 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 16.2782ms, Status: Pass
+Fri Jan 03 12:55:00 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 3.466ms, Status: Pass
+Fri Jan 03 12:55:02 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.2584ms, Status: Pass
+Fri Jan 03 12:55:04 2025
+: Layer: conv2d_1, Function: convolve, Time: 477.024ms, Status: Pass
+Fri Jan 03 12:55:06 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 12.0539ms, Status: Pass
+Fri Jan 03 12:55:09 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.8642ms, Status: Pass
+Fri Jan 03 12:55:11 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 1.0887ms, Status: Pass
+Fri Jan 03 12:55:14 2025
+: Layer: conv2d_2, Function: convolve, Time: 133.275ms, Status: Pass
+Fri Jan 03 12:55:17 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.9175ms, Status: Pass
+Fri Jan 03 12:55:19 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.4027ms, Status: Pass
+Fri Jan 03 12:55:22 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.2023ms, Status: Pass
+Fri Jan 03 12:55:24 2025
+: Layer: flatten, Function: flatten, Time: 0.0265ms, Status: Pass
+Fri Jan 03 12:55:27 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 47.934ms, Status: Pass
+Fri Jan 03 12:55:30 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.7937ms, Status: Pass
+Fri Jan 03 12:55:32 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 3.3636ms, Status: Pass
+
+
+Image Path: ../data/input/frog.json
+----------------------------------------
+Fri Jan 03 13:02:11 2025
+: Layer: conv2d, Function: convolve, Time: 40.96ms, Status: Pass
+Fri Jan 03 13:02:12 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 15.9828ms, Status: Pass
+Fri Jan 03 13:02:14 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 2.8869ms, Status: Pass
+Fri Jan 03 13:02:15 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.284ms, Status: Pass
+Fri Jan 03 13:02:18 2025
+: Layer: conv2d_1, Function: convolve, Time: 452.984ms, Status: Pass
+Fri Jan 03 13:02:20 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 8.9942ms, Status: Pass
+Fri Jan 03 13:02:23 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.8561ms, Status: Pass
+Fri Jan 03 13:02:25 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 1.1265ms, Status: Pass
+Fri Jan 03 13:02:28 2025
+: Layer: conv2d_2, Function: convolve, Time: 130.789ms, Status: Pass
+Fri Jan 03 13:02:30 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.9314ms, Status: Pass
+Fri Jan 03 13:02:33 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.3894ms, Status: Pass
+Fri Jan 03 13:02:36 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.1958ms, Status: Pass
+Fri Jan 03 13:02:38 2025
+: Layer: flatten, Function: flatten, Time: 0.0409ms, Status: Pass
+Fri Jan 03 13:02:41 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 51.5285ms, Status: Pass
+Fri Jan 03 13:02:43 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.5374ms, Status: Pass
+Fri Jan 03 13:02:46 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 1.6719ms, Status: Pass
+
+
+Image Path: ../data/input/frog.json
+----------------------------------------
+Fri Jan 03 14:28:14 2025
+: Layer: conv2d, Function: convolve, Time: 53.7058ms, Status: Pass
+Fri Jan 03 14:28:16 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 14.96ms, Status: Pass
+Fri Jan 03 14:28:17 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 4.0503ms, Status: Pass
+Fri Jan 03 14:28:19 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.0011ms, Status: Pass
+Fri Jan 03 14:28:21 2025
+: Layer: conv2d_1, Function: convolve, Time: 464.91ms, Status: Pass
+Fri Jan 03 14:28:24 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 9.1169ms, Status: Pass
+Fri Jan 03 14:28:27 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.9127ms, Status: Pass
+Fri Jan 03 14:28:30 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 1.2518ms, Status: Pass
+Fri Jan 03 14:28:33 2025
+: Layer: conv2d_2, Function: convolve, Time: 144.905ms, Status: Pass
+Fri Jan 03 14:28:35 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.9216ms, Status: Pass
+Fri Jan 03 14:28:38 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.4261ms, Status: Pass
+Fri Jan 03 14:28:41 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.2009ms, Status: Pass
+Fri Jan 03 14:28:44 2025
+: Layer: flatten, Function: flatten, Time: 0.022ms, Status: Pass
+Fri Jan 03 14:28:47 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 46.7379ms, Status: Pass
+Fri Jan 03 14:28:49 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.589ms, Status: Pass
+Fri Jan 03 14:28:51 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 1.8836ms, Status: Pass
+
+
+Image Path: ../data/input/frog.json
+----------------------------------------
+Fri Jan 03 14:41:24 2025
+: Layer: conv2d, Function: convolve, Time: 45.2114ms, Status: Pass
+Fri Jan 03 14:41:26 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 18.2848ms, Status: Pass
+Fri Jan 03 14:41:28 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 4.1248ms, Status: Pass
+Fri Jan 03 14:41:30 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.469ms, Status: Pass
+Fri Jan 03 14:41:33 2025
+: Layer: conv2d_1, Function: convolve, Time: 462.89ms, Status: Pass
+Fri Jan 03 14:41:35 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 6.6495ms, Status: Pass
+Fri Jan 03 14:41:36 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.6145ms, Status: Pass
+Fri Jan 03 14:41:38 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 0.9843ms, Status: Pass
+Fri Jan 03 14:41:40 2025
+: Layer: conv2d_2, Function: convolve, Time: 82.7908ms, Status: Pass
+Fri Jan 03 14:41:41 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.6516ms, Status: Pass
+Fri Jan 03 14:41:43 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.272ms, Status: Pass
+Fri Jan 03 14:41:44 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.1234ms, Status: Pass
+Fri Jan 03 14:41:46 2025
+: Layer: flatten, Function: flatten, Time: 0.0136ms, Status: Pass
+Fri Jan 03 14:41:47 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 33.5917ms, Status: Pass
+Fri Jan 03 14:41:49 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.4659ms, Status: Pass
+Fri Jan 03 14:41:50 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 1.4987ms, Status: Pass
+
+
+Image Path: ../data/input/frog.json
+----------------------------------------
+Fri Jan 03 14:44:26 2025
+: Layer: conv2d, Function: convolve, Time: 32.6663ms, Status: Pass
+Fri Jan 03 14:44:27 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 14.9519ms, Status: Pass
+Fri Jan 03 14:44:29 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 3.0323ms, Status: Pass
+Fri Jan 03 14:44:30 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.441ms, Status: Pass
+Fri Jan 03 14:44:32 2025
+: Layer: conv2d_1, Function: convolve, Time: 301.93ms, Status: Pass
+Fri Jan 03 14:44:33 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 6.806ms, Status: Pass
+Fri Jan 03 14:44:35 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.6225ms, Status: Pass
+Fri Jan 03 14:44:36 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 0.8439ms, Status: Pass
+Fri Jan 03 14:44:38 2025
+: Layer: conv2d_2, Function: convolve, Time: 96.687ms, Status: Pass
+Fri Jan 03 14:44:39 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.7186ms, Status: Pass
+Fri Jan 03 14:44:41 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.3962ms, Status: Pass
+Fri Jan 03 14:44:43 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.1852ms, Status: Pass
+Fri Jan 03 14:44:44 2025
+: Layer: flatten, Function: flatten, Time: 0.0137ms, Status: Pass
+Fri Jan 03 14:44:46 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 28.0883ms, Status: Pass
+Fri Jan 03 14:44:47 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.3061ms, Status: Pass
+Fri Jan 03 14:44:49 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 1.3655ms, Status: Pass
+
+
+Image Path: ../data/input/frog.json
+----------------------------------------
+Fri Jan 03 14:46:48 2025
+: Layer: conv2d, Function: convolve, Time: 32.182ms, Status: Pass
+Fri Jan 03 14:46:50 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 14.8946ms, Status: Pass
+Fri Jan 03 14:46:51 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 3.293ms, Status: Pass
+Fri Jan 03 14:46:53 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.0987ms, Status: Pass
+Fri Jan 03 14:46:55 2025
+: Layer: conv2d_1, Function: convolve, Time: 330.945ms, Status: Pass
+Fri Jan 03 14:46:56 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 7.0901ms, Status: Pass
+Fri Jan 03 14:46:58 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 2.0821ms, Status: Pass
+Fri Jan 03 14:47:00 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 1.2026ms, Status: Pass
+Fri Jan 03 14:47:02 2025
+: Layer: conv2d_2, Function: convolve, Time: 141.888ms, Status: Pass
+Fri Jan 03 14:47:04 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 0.9248ms, Status: Pass
+Fri Jan 03 14:47:06 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.3982ms, Status: Pass
+Fri Jan 03 14:47:07 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.3419ms, Status: Pass
+Fri Jan 03 14:47:09 2025
+: Layer: flatten, Function: flatten, Time: 0.0161ms, Status: Pass
+Fri Jan 03 14:47:11 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 48.579ms, Status: Pass
+Fri Jan 03 14:47:13 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.4182ms, Status: Pass
+Fri Jan 03 14:47:15 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 1.5509ms, Status: Pass
+
+
+Image Path: ../data/input/catw.json
+----------------------------------------
+Fri Jan 03 14:48:00 2025
+: Layer: conv2d, Function: convolve, Time: 31.2399ms, Status: Pass
+Fri Jan 03 14:48:01 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 14.8861ms, Status: Pass
+Fri Jan 03 14:48:03 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 3.0357ms, Status: Pass
+Fri Jan 03 14:48:04 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 2.0013ms, Status: Pass
+Fri Jan 03 14:48:06 2025
+: Layer: conv2d_1, Function: convolve, Time: 259.864ms, Status: Pass
+Fri Jan 03 14:48:07 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 5.427ms, Status: Pass
+Fri Jan 03 14:48:09 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 1.7975ms, Status: Pass
+Fri Jan 03 14:48:10 2025
+: Layer: max_pooling2d_1, Function: apply MaxPool, Time: 0.8307ms, Status: Pass
+Fri Jan 03 14:48:12 2025
+: Layer: conv2d_2, Function: convolve, Time: 76.9163ms, Status: Pass
+Fri Jan 03 14:48:13 2025
+: Layer: p_re_lu_2, Function: applyPReLU, Time: 1.1859ms, Status: Pass
+Fri Jan 03 14:48:15 2025
+: Layer: batch_normalization_2, Function: applyBatchNorm, Time: 0.3374ms, Status: Pass
+Fri Jan 03 14:48:16 2025
+: Layer: max_pooling2d_2, Function: apply MaxPool, Time: 0.1289ms, Status: Pass
+Fri Jan 03 14:48:18 2025
+: Layer: flatten, Function: flatten, Time: 0.0257ms, Status: Pass
+Fri Jan 03 14:48:20 2025
+: Layer: dense, Function: apply_dense_with_selu, Time: 36.0473ms, Status: Pass
+Fri Jan 03 14:48:21 2025
+: Layer: batch_normalization_3, Function: applyBatchNorm, Time: 0.5493ms, Status: Pass
+Fri Jan 03 14:48:23 2025
+: Layer: dense_1, Function: apply_dense_with_softmax, Time: 1.576ms, Status: Pass
+
+
+Image Path: ../data/input/bird.json
+----------------------------------------
+Fri Jan 03 14:51:22 2025
+: Layer: conv2d, Function: convolve, Time: 32.2124ms, Status: Pass
+Fri Jan 03 14:51:23 2025
+: Layer: p_re_lu, Function: applyPReLU, Time: 15.6434ms, Status: Pass
+Fri Jan 03 14:51:25 2025
+: Layer: batch_normalization, Function: applyBatchNorm, Time: 3.2447ms, Status: Pass
+Fri Jan 03 14:51:27 2025
+: Layer: max_pooling2d, Function: apply MaxPool, Time: 3.5756ms, Status: Pass
+Fri Jan 03 14:51:28 2025
+: Layer: conv2d_1, Function: convolve, Time: 300.207ms, Status: Pass
+Fri Jan 03 14:51:30 2025
+: Layer: p_re_lu_1, Function: applyPReLU, Time: 6.2792ms, Status: Pass
+Fri Jan 03 14:51:32 2025
+: Layer: batch_normalization_1, Function: applyBatchNorm, Time: 2.2374ms, Status: Pass

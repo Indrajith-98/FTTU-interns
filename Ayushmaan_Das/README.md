@@ -2,6 +2,7 @@
 
 - [C++ Assignment Contents](./cpp_assignments/README.md)
 - [Python Assignment Contents](./python_assignments/README.md)
+- [Testing Assignment Contents](./testing_assignments/README.md)
 
 ### All Assignments
 
@@ -44,7 +45,19 @@
     <tr style="background-color: #C8E6C9;">
       <td><strong>eBook Application</strong></td>
       <td><strong>Python</strong></td>
-      <td><a href="./python_assignments/eBookApplication\README.md">Check Docs</a></td>
+      <td><a href="./python_assignments/eBookApplication/README.md">Check Docs</a></td>
+    </tr>
+    <tr style="background-color: #C8E6C9;">
+      <td><strong>ResNet Model and Optimization using TensorRT</strong></td>
+      <td><strong>Python (Deep Learning)</strong></td>
+      <td><a href="./python_assignments/Deep_Learning_TensorRT/README.md">Check Docs</a></td>
+    </tr>
+    </tr>
+    <!-- Testing-->
+    <tr style="background-color:rgb(230, 205, 200);">
+      <td><strong>Code Coverage Analysis and Unit Testing Enhancement</strong></td>
+      <td><strong>GTEST (C++)</strong></td>
+      <td><a href="./testing_assignments/GTEST_codeCoverage_unitTesting/README.md">Check Docs</a></td>
     </tr>
     </tr>
   </tbody>

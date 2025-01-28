@@ -6,6 +6,7 @@
 **/*.o
 **/__pycache__/
 **/.pth
-**/data/
 **/*.pth
 **/*.DS_Store
+**/data
+

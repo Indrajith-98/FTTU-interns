@@ -1,0 +1,4 @@
+/mnt/d/gtest_codecoverage/build/CMakeFiles/runTests.dir
+/mnt/d/gtest_codecoverage/build/CMakeFiles/test.dir
+/mnt/d/gtest_codecoverage/build/CMakeFiles/edit_cache.dir
+/mnt/d/gtest_codecoverage/build/CMakeFiles/rebuild_cache.dir
