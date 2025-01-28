@@ -68,8 +68,8 @@ The predicted class is interpreted based on a predefined list of class names (cl
 
 ## Project structure
 .
-├── best_model_final.onnx      # ONNX model file
-├── Pic.jpg                   # Sample input image
-├── tvm_1.py   # Python script performing the workflow
-├── README.md                 # Project README
+├── best_model_final.onnx      # ONNX model file <br>
+├── Pic.jpg                   # Sample input image <br>
+├── tvm_1.py   # Python script performing the workflow <br>
+├── README.md                 # Project README <br>
 
