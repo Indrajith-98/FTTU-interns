@@ -1,0 +1,86 @@
+Breakpoint 1 at 0x14000171c: file Assignment_1.cpp, line 50.
+Breakpoint 2 at 0x14000148d: file Assignment_1.cpp, line 21.
+Starting program: F:\MULTICOREWARE- FTU INTERN\DEBUGGING_ASSESSMENT\gdb_assignment_gets2025_1\gdb_assignment_gets2025\Assignment_1\Assignment_1.exe 
+[New Thread 14472.0xc6c]
+[New Thread 14472.0x3314]
+[New Thread 14472.0x112c]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:50
+50	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21	    vector<pair<long, long>> v2;
+22	    int i = 0;
+24	    sort(v1.begin() + 1, v1.end());
+$2 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+26	    while (i < v1.size()) {
+$3 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+29	            p.first = v1[i];
+30	            p.second = count(v1.begin(), v1.end(), v1[i]);
+31	            v2.push_back(p);
+32	            i++;
+33	            continue;
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+35	            p.first = v1[i];
+36	            p.second = count(v1.begin(), v1.end(), v1[i]);
+37	            v2.push_back(p);
+38	            i++;
+39	            continue;
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+41	        i++;
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+41	        i++;
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+35	            p.first = v1[i];
+36	            p.second = count(v1.begin(), v1.end(), v1[i]);
+37	            v2.push_back(p);
+38	            i++;
+39	            continue;
+26	    while (i < v1.size()) {
+27	        pair<long,long> p;
+28	        if (v2.size() == 0) {
+34	        } else if (v2[v2.size()-1].first != v1[i]) {
+35	            p.first = v1[i];
+36	            p.second = count(v1.begin(), v1.end(), v1[i]);
+37	            v2.push_back(p);
+38	            i++;
+39	            continue;
+26	    while (i < v1.size()) {
+43	    sort(v2.begin() + 1, v2.end(),  comparecount);
+$4 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+44	    return v2;
+$5 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+main () at Assignment_1.cpp:51
+51	    vector<pair<long, long>>::iterator it = v2.begin();
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+53	        cout << v2[i].first << " " << v2[i].second << std::endl;
+52	    for (int i =0; i != v2.size(); i++) {
+55	    return 0;
+$6 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+56	}
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
+warning: 267	C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c: No such file or directory
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

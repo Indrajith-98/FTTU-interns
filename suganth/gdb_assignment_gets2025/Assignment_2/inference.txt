@@ -1,0 +1,11 @@
+Line 15,
+
+""swap(s1[i], s1[n-1]);""
+Issue: The loop swaps elements incorrectly by always using s1[n-1] instead of the correct symmetric position s1[n-i-1].
+Cause: swap(s1[i], s1[n-1]) swaps the current element with only the last character (s1[n-1]) instead of progressively moving inward. 
+       This leads to undesired behavior and incorrect reversal.
+
+The correct form:
+""swap(s1[i], s1[n-i-1]);""
+-->>Using s1[n-1] incorrectly targets the last character throughout the loop.
+-->>s1[n-i-1] correctly points to the corresponding character from the end, ensuring proper reversal of the string.

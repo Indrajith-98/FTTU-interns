@@ -1,0 +1,2 @@
+F:\C++\mingw64\bin\ar.exe qc libmath_lib.a CMakeFiles/math_lib.dir/src/my_math_updated.cpp.obj
+F:\C++\mingw64\bin\ranlib.exe libmath_lib.a

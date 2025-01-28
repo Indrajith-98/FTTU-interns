@@ -1,0 +1,1 @@
+/usr/bin/c++  --coverage CMakeFiles/runTests.dir/tests/test_my_program.cpp.o CMakeFiles/runTests.dir/src/my_math.cpp.o -o runTests  -lpthread /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 

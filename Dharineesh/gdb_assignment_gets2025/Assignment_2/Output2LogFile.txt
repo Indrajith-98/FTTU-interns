@@ -1,0 +1,178 @@
+Breakpoint 1 at 0x1400014b0: file Assignment_2.cpp, line 14.
+Starting program: O:\gdb_assignment_gets2025\Assignment_2\Output2.exe 
+[New Thread 20484.0x4d78]
+[New Thread 20484.0x5134]
+[New Thread 20484.0x71a4]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+$1 = "debugging"
+$2 = 9
+Hardware watchpoint 2: s1
+std::swap<char> (__a=@0x5ffe90: 100 'd', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe90: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe90: 100 'd', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+std::swap<char> (__a=@0x5ffe91: 101 'e', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe91: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe91: 101 'e', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggind"
+New value = "gdbuggind"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdbuggine"
+New value = "gdbuggine"
+std::swap<char> (__a=@0x5ffe91: 100 'd', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+std::swap<char> (__a=@0x5ffe92: 98 'b', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe92: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe92: 98 'b', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeuggine"
+New value = "gdeuggine"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdeugginb"
+New value = "gdeugginb"
+std::swap<char> (__a=@0x5ffe92: 101 'e', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+std::swap<char> (__a=@0x5ffe93: 117 'u', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe93: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe93: 117 'u', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginb"
+New value = "gdebgginb"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gdebgginu"
+New value = "gdebgginu"
+std::swap<char> (__a=@0x5ffe93: 98 'b', __b=@0x5ffe98: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+$3 = "gdebgginu"
+$4 = "gdebgginu"
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+
+##################################################################################################
+After Changes
+##################################################################################################
+
+Breakpoint 1 at 0x1400014b0: file Assignment_2.cpp, line 14.
+Starting program: O:\gdb_assignment_gets2025\Assignment_2\Output2.exe 
+[New Thread 19052.0x1c3c]
+[New Thread 19052.0x390c]
+[New Thread 19052.0x6e40]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_2.cpp:14
+$1 = "debugging"
+Hardware watchpoint 2: s1
+std::swap<char> (__a=@0x5ffe90: 100 'd', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe90: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe90: 100 'd', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebugging"
+New value = "gebugging"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gebuggind"
+New value = "gebuggind"
+std::swap<char> (__a=@0x5ffe90: 103 'g', __b=@0x5ffe98: 100 'd') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+std::swap<char> (__a=@0x5ffe91: 101 'e', __b=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe91: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe91: 101 'e', __b=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggind"
+New value = "gnbuggind"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 110 'n') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnbuggied"
+New value = "gnbuggied"
+std::swap<char> (__a=@0x5ffe91: 110 'n', __b=@0x5ffe97: 101 'e') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+std::swap<char> (__a=@0x5ffe92: 98 'b', __b=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe92: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe92: 98 'b', __b=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggied"
+New value = "gniuggied"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 105 'i') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniuggbed"
+New value = "gniuggbed"
+std::swap<char> (__a=@0x5ffe92: 105 'i', __b=@0x5ffe96: 98 'b') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+std::swap<char> (__a=@0x5ffe93: 117 'u', __b=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:221
+std::move<char&> (__t=@0x5ffe93: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+std::swap<char> (__a=@0x5ffe93: 117 'u', __b=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:222
+std::move<char&> (__t=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gnigggbed"
+New value = "gnigggbed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 103 'g') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:223
+std::move<char&> (__t=@0x5ffe4f: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:127
+
+Thread 1 hit Hardware watchpoint 2: s1
+
+Old value = "gniggubed"
+New value = "gniggubed"
+std::swap<char> (__a=@0x5ffe93: 103 'g', __b=@0x5ffe95: 117 'u') at C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h:224
+main () at Assignment_2.cpp:14
+$2 = "gniggubed"
+$3 = "gniggubed"
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

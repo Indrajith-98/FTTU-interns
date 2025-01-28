@@ -1,0 +1,247 @@
+Breakpoint 3 at 0x555555555541: file Assignment_1.cpp, line 52.
+Note: breakpoint 2 also set at pc 0x5555555552d7.
+Breakpoint 4 at 0x5555555552d7: file Assignment_1.cpp, line 21.
+Starting program: /mnt/c/Users/prasa/OneDrive/Desktop/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 3, main () at Assignment_1.cpp:52
+52	int main() {
+53	    long a[] = {6,5,7,5,5,6};
+54	    vector<long> v1(a,a+6);
+No symbol "vector" in current context.
+type = long [6]
+55	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+std::vector<long, std::allocator<long> >::vector (this=0x7fffffffdab0, __x=std::vector of length 6, capacity 6 = {...}) at /usr/include/c++/13/bits/stl_vector.h:601
+601	      vector(const vector& __x)
+603		_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+608					      _M_get_Tp_allocator());
+606		  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+605		this->_M_impl._M_finish =
+609	      }
+
+Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21	vector<pair<long, long>> sortWithFrequency(vector<long> v1){
+24	    sort(v1.begin(), v1.end());
+27	    vector<pair<long, long>> v2;
+$1 = std::vector of length -8585216, capacity -8796093021324 = {{first = 93824992351008, second = 140737349580770}, {first = 6, second = 5}, {first = 7, second = 5}, {first = 5, second = 6}, {first = 140737488346016, second = 5296378136334512640}, {first = 140737353828944, second = 140737488346184}, {first = 140737488346048, second = 140737349042634}, {first = 8, second = 140737488346184}, {first = 8452566952, second = 93824992236849}, {first = 140737488346184, second = -4647089489517708141}, {first = 1, second = 0}, {first = 93824992271688, second = 140737354125312}, {first = -4647089489544971117, second = -4647107746559525741}, {first = 140733193388032, second = 0}, {first = 0, second = 1}, {first = 140737488346176, second = 5296378136334512640}, {first = 140737488346144, second = 140737349042827}, {first = 140737488346200, second = 93824992271688}, {first = 140737488346200, second = 93824992236849}, {first = 0, second = 0}, {first = 93824992235936, second = 140737488346176}, {first = 0, second = 0}, {first = 0, second = 93824992235973}, {first = 140737488346168, second = 56}, {first = 1, second = 140737488346815}, {first = 0, second = 140737488346901}, {first = 140737488346917, second = 140737488346941}, {first = 140737488346964, second = 140737488346985}, {first = 140737488347062, second = 140737488347078}, {first = 140737488347093, second = 140737488347102}, {first = 140737488347121, second = 140737488347134}, {first = 140737488347167, second = 140737488348984}, {first = 140737488348996, second = 140737488349022}
+Continous...
+[Inferior 1 (process 1042) exited normally]
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x00005555555552d7 in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:21
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x0000555555555541 in main() at Assignment_1.cpp:52
+	breakpoint already hit 1 time
+4       breakpoint     keep y   0x00005555555552d7 in sortWithFrequency(std::vector<long, std::allocator<long> >) at Assignment_1.cpp:21
+	breakpoint already hit 1 time
+Bad breakpoint number 'sortWithFrequency'
+The program is not being run.
+Starting program: /mnt/c/Users/prasa/OneDrive/Desktop/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 3, main () at Assignment_1.cpp:52
+52	int main() {
+53	    long a[] = {6,5,7,5,5,6};
+54	    vector<long> v1(a,a+6);
+55	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+std::vector<long, std::allocator<long> >::vector (this=0x7fffffffdab0, __x=std::vector of length 6, capacity 6 = {...}) at /usr/include/c++/13/bits/stl_vector.h:601
+601	      vector(const vector& __x)
+603		_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+std::_Vector_base<long, std::allocator<long> >::_M_get_Tp_allocator (this=0x7fffffffda70) at /usr/include/c++/13/bits/stl_vector.h:307
+307	      { return this->_M_impl; }
+__gnu_cxx::__alloc_traits<std::allocator<long>, long>::_S_select_on_copy (__a=...) at /usr/include/c++/13/ext/alloc_traits.h:98
+98	    { return _Base_type::select_on_container_copy_construction(__a); }
+std::allocator_traits<std::allocator<long> >::select_on_container_copy_construction (__rhs=...) at /usr/include/c++/13/bits/alloc_traits.h:588
+588	      { return __rhs; }
+std::allocator<long>::allocator (__a=..., this=0x7fffffffd9f7) at /usr/include/c++/13/bits/allocator.h:168
+168	      : __allocator_base<_Tp>(__a) { }
+std::allocator_traits<std::allocator<long> >::select_on_container_copy_construction (__rhs=...) at /usr/include/c++/13/bits/alloc_traits.h:588
+588	      { return __rhs; }
+__gnu_cxx::__alloc_traits<std::allocator<long>, long>::_S_select_on_copy (__a=...) at /usr/include/c++/13/ext/alloc_traits.h:98
+98	    { return _Base_type::select_on_container_copy_construction(__a); }
+std::vector<long, std::allocator<long> >::vector (this=0x7fffffffdab0, __x=std::vector of length 6, capacity 6 = {...}) at /usr/include/c++/13/bits/stl_vector.h:603
+603		_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+608					      _M_get_Tp_allocator());
+606		  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+605		this->_M_impl._M_finish =
+609	      }
+
+Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21	vector<pair<long, long>> sortWithFrequency(vector<long> v1){
+24	    sort(v1.begin(), v1.end());
+27	    vector<pair<long, long>> v2;
+28	    int i = 0;
+31	    while (i < v1.size()) {
+$2 = std::vector of length 6, capacity 6 = {5, 5, 5, 6, 6, 7}
+32	        pair<long,long> p;
+
+rax            0x1                 1
+rbx            0x0                 0
+rcx            0x7fffffffd8e8      140737488345320
+rdx            0x30                48
+rsi            0x7fffffffd930      140737488345392
+rdi            0x7fffffffdab0      140737488345776
+rbp            0x7fffffffda50      0x7fffffffda50
+rsp            0x7fffffffda00      0x7fffffffda00
+r8             0x7ffff7cfdb20      140737350982432
+r9             0x40                64
+r10            0x1                 1
+r11            0x0                 0
+r12            0x1                 1
+r13            0x0                 0
+r14            0x55555555dd48      93824992271688
+r15            0x7ffff7ffd000      140737354125312
+rip            0x555555555324      0x555555555324 <sortWithFrequency(std::vector<long, std::allocator<long> >)+100>
+eflags         0x202               [ IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+fs_base        0x7ffff7a0c740      140737347897152
+gs_base        0x0                 0
+33	        if (v2.size() == 0) {
+34	            p.first = v1[i];
+35	            p.second = count(v1.begin(), v1.end(), v1[i]);
+36	            v2.push_back(p);
+37	            i++;
+38	            continue;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+46	        i++;
+31	    while (i < v1.size()) {
+$3 = std::vector of length 6, capacity 6 = {5, 5, 5, 6, 6, 7}
+$4 = std::vector of length 1, capacity 1 = {{first = 5, second = 3}}
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+46	        i++;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+40	            p.first = v1[i];
+41	            p.second = count(v1.begin(), v1.end(), v1[i]);
+$5 = std::vector of length 1, capacity 1 = {{first = 5, second = 3}}
+42	            v2.push_back(p);
+43	            i++;
+44	            continue;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+46	        i++;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+40	            p.first = v1[i];
+41	            p.second = count(v1.begin(), v1.end(), v1[i]);
+42	            v2.push_back(p);
+43	            i++;
+44	            continue;
+Undefined command: "nn".  Try "help".
+31	    while (i < v1.size()) {
+48	    sort(v2.begin(), v2.end(),  comparecount);
+49	    return v2;
+main () at Assignment_1.cpp:56
+56	    vector<pair<long, long>>::iterator it = v2.begin();
+57	    for (int i =0; i != v2.size(); i++) {
+58	        cout << v2[i].first << " " << v2[i].second << std::endl;
+$6 = 0
+57	    for (int i =0; i != v2.size(); i++) {
+58	        cout << v2[i].first << " " << v2[i].second << std::endl;
+57	    for (int i =0; i != v2.size(); i++) {
+58	        cout << v2[i].first << " " << v2[i].second << std::endl;
+57	    for (int i =0; i != v2.size(); i++) {
+60	    return 0;
+61	}
+__libc_start_call_main (main=main@entry=0x555555555531 <main()>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdc48) at ../sysdeps/nptl/libc_start_call_main.h:74
+warning: 74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory
+[Inferior 1 (process 1064) exited normally]
+The program is not being run.
+The program is not being run.
+Starting program: /mnt/c/Users/prasa/OneDrive/Desktop/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 3, main () at Assignment_1.cpp:52
+52	int main() {
+Continuing.
+
+Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21	vector<pair<long, long>> sortWithFrequency(vector<long> v1){
+Continuing.
+[Inferior 1 (process 1133) exited normally]
+Undefined command: "watchpoints".  Try "help".
+No symbol "v2" in current context.
+No symbol "i" in current context.
+Starting program: /mnt/c/Users/prasa/OneDrive/Desktop/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 3, main () at Assignment_1.cpp:52
+52	int main() {
+Hardware watchpoint 5: v1
+Num     Type           Disp Enb Address            What
+5       hw watchpoint  keep y                      v1
+Hardware watchpoint 6: v2
+Warning:
+Could not insert hardware watchpoint 6.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Note: breakpoint 3 also set at pc 0x555555555541.
+Breakpoint 7 at 0x555555555541: file Assignment_1.cpp, line 52.
+Warning:
+Could not insert hardware watchpoint 6.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Command aborted.
+Starting program: /mnt/c/Users/prasa/OneDrive/Desktop/gdb_assignment_gets2025/Assignment_1/Assignment_1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 3, main () at Assignment_1.cpp:52
+52	int main() {
+53	    long a[] = {6,5,7,5,5,6};
+54	    vector<long> v1(a,a+6);
+55	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+
+Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:21
+21	vector<pair<long, long>> sortWithFrequency(vector<long> v1){
+24	    sort(v1.begin(), v1.end());
+27	    vector<pair<long, long>> v2;
+Undefined command: "nn".  Try "help".
+28	    int i = 0;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+34	            p.first = v1[i];
+35	            p.second = count(v1.begin(), v1.end(), v1[i]);
+36	            v2.push_back(p);
+37	            i++;
+38	            continue;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+46	        i++;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+39	        } else if (v2[v2.size()-1].first != v1[i]) {
+46	        i++;
+31	    while (i < v1.size()) {
+32	        pair<long,long> p;
+33	        if (v2.size() == 0) {
+Hardware watchpoint 8: v2
+Num     Type           Disp Enb Address            What
+8       hw watchpoint  keep y                      v2
+$7 = std::vector of length 1, capacity 1 = {{first = 5, second = 3}}

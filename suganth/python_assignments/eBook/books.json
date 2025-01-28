@@ -1,0 +1,14 @@
+{
+    "books": [
+        {
+            "title": "Harry Potter",
+            "total_pages": 100,
+            "current_reader": null
+        },
+        {
+            "title": "Pirates of the Caribbean",
+            "total_pages": 90,
+            "current_reader": null
+        }
+    ]
+}

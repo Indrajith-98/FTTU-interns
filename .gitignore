@@ -1,3 +1,12 @@
-# Ignore .vscode in any directory
 **/.vscode/
 **/**/.vscode/
+**/.vscode/
+**/**/.vscode/
+**/.vscode/
+**/*.o
+**/__pycache__/
+**/.pth
+**/*.pth
+**/*.DS_Store
+**/data
+

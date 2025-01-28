@@ -1,0 +1,8 @@
+F:\MultiCoreWare\C++ Application\Project_Root\src\main.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\main.obj
+F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\batch_norm.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\batch_norm.obj
+F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\conv.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\conv.obj
+F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\dense.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\dense.obj
+F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\dropout.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\dropout.obj
+F:\MultiCoreWare\C++ Application\Project_Root\Operators\src\maxpool.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\maxpool.obj
+F:\MultiCoreWare\C++ Application\Project_Root\utilities\src\config_parser.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\config_parser.obj
+F:\MultiCoreWare\C++ Application\Project_Root\utilities\src\tensor_utils.cpp;F:\MultiCoreWare\C++ Application\Project_Root\build\my_executable.dir\Debug\tensor_utils.obj

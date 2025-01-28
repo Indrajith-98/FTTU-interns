@@ -1,0 +1,98 @@
+Breakpoint 1 at 0x140001ad1: file Assignment_3.cpp, line 93.
+Starting program: O:\gdb_assignment_gets2025\Assignment_3\Output3.exe 
+[New Thread 22748.0x3704]
+[New Thread 22748.0x1a1c]
+[New Thread 22748.0x6cfc]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_3.cpp:93
+printIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:53
+Breakpoint 2 at 0x7ff78da21add: file Assignment_3.cpp, line 96.
+Continuing.
+
+Thread 1 hit Breakpoint 2, main () at Assignment_3.cpp:96
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:37
+$1 = 8
+$2 = 13
+Breakpoint 3 at 0x7ff78da21651: file Assignment_3.cpp, line 44.
+Continuing.
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:44
+dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:31
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:45
+Breakpoint 4 at 0x7ff78da2149d: file Assignment_3.cpp, line 24.
+Continuing.
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:44
+
+Thread 1 hit Breakpoint 4, validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+
+Thread 1 hit Breakpoint 4, validate (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+
+Thread 1 hit Breakpoint 4, validate (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+
+Thread 1 hit Breakpoint 4, validate (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+
+Thread 1 hit Breakpoint 4, validate (i=0, j=6, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+Breakpoint 5 at 0x7ff78da21699: file Assignment_3.cpp, line 49.
+Continuing.
+
+Thread 1 hit Breakpoint 3, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:44
+
+Thread 1 hit Breakpoint 4, validate (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:32
+
+Thread 1 hit Breakpoint 4, validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:34
+
+Thread 1 hit Breakpoint 4, validate (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:24
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00007ff78da21ad1 in main() at Assignment_3.cpp:93
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00007ff78da21add in main() at Assignment_3.cpp:96
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x00007ff78da21651 in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at Assignment_3.cpp:44
+	breakpoint already hit 3 times
+4       breakpoint     keep y   0x00007ff78da2149d in validate(int, int, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at Assignment_3.cpp:24
+	breakpoint already hit 8 times
+5       breakpoint     keep y   0x00007ff78da21699 in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at Assignment_3.cpp:49
+Num     Type           Disp Enb Address            What
+5       breakpoint     keep y   0x00007ff78da21699 in maxAreaOfIsland(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) at Assignment_3.cpp:49
+Continuing.
+
+Thread 1 hit Breakpoint 5, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:49
+$3 = -2
+main () at Assignment_3.cpp:98
+$4 = -2
+[New Thread 22748.0xed4]
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+
+####################################################################################################
+AFTER CHANGES
+####################################################################################################
+
+
+Breakpoint 1 at 0x140001acb: file Assignment_3.cpp, line 93.
+Starting program: O:\gdb_assignment_gets2025\Assignment_3\Output3.exe 
+[New Thread 21532.0x73d4]
+[New Thread 21532.0x6b18]
+[New Thread 21532.0x9bc]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_3.cpp:93
+$1 = std::vector of length 8, capacity 8 = {std::vector of length 13, capacity 13 = {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, std::vector of length 13, capacity 13 = {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, std::vector of length 13, capacity 13 = {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, std::vector of length 13, capacity 13 = {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0}, std::vector of length 13, capacity 13 = {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0}, std::vector of length 13, capacity 13 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0}, std::vector of length 13, capacity 13 = {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, std::vector of length 13, capacity 13 = {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:37
+Breakpoint 2 at 0x7ff7619d1693: file Assignment_3.cpp, line 49.
+Continuing.
+
+Thread 1 hit Breakpoint 2, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at Assignment_3.cpp:49
+$2 = 6
+main () at Assignment_3.cpp:98
+$3 = 6
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

@@ -1,0 +1,107 @@
+Breakpoint 1 at 0x40180d: file .\Assignment_1.cpp, line 51.
+Starting program: F:\MCW\Gdb_Vangrind\gdb_assignment_gets2025\Assignment_1\Assignment_1.exe 
+[New Thread 15620.0x50e8]
+[New Thread 15620.0x71ec]
+[New Thread 15620.0x73f8]
+
+Thread 1 hit Breakpoint 1, main () at .\Assignment_1.cpp:51
+51	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+Breakpoint 2 at 0x40158e: file .\Assignment_1.cpp, line 22.
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at .\Assignment_1.cpp:22
+22	    vector<pair<long, long>> v2;
+23	    int i = 0;
+25	    sort(v1.begin()+1, v1.end());
+$1 = std::vector of length 6, capacity 6 = {6, 5, 7, 5, 5, 6}
+27	    while (i < v1.size()) {
+$2 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+28	        pair<long,long> p;
+29	        if (v2.size() == 0) {
+30	            p.first = v1[i];
+31	            p.second = count(v1.begin(), v1.end(), v1[i]);
+32	            v2.push_back(p);
+33	            i++;
+34	            continue;
+27	    while (i < v1.size()) {
+$3 = std::vector of length 1, capacity 1 = {{first = 6, second = 2}}
+28	        pair<long,long> p;
+29	        if (v2.size() == 0) {
+35	        } else if (v2[v2.size()-1].first != v1[i]) {
+36	            p.first = v1[i];
+37	            p.second = count(v1.begin(), v1.end(), v1[i]);
+38	            v2.push_back(p);
+39	            i++;
+40	            continue;
+27	    while (i < v1.size()) {
+$4 = std::vector of length 2, capacity 2 = {{first = 6, second = 2}, {first = 5, second = 3}}
+28	        pair<long,long> p;
+29	        if (v2.size() == 0) {
+35	        } else if (v2[v2.size()-1].first != v1[i]) {
+42	        i++;
+27	    while (i < v1.size()) {
+28	        pair<long,long> p;
+29	        if (v2.size() == 0) {
+35	        } else if (v2[v2.size()-1].first != v1[i]) {
+42	        i++;
+27	    while (i < v1.size()) {
+28	        pair<long,long> p;
+29	        if (v2.size() == 0) {
+35	        } else if (v2[v2.size()-1].first != v1[i]) {
+36	            p.first = v1[i];
+37	            p.second = count(v1.begin(), v1.end(), v1[i]);
+38	            v2.push_back(p);
+39	            i++;
+40	            continue;
+27	    while (i < v1.size()) {
+$5 = std::vector of length 3, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}}
+28	        pair<long,long> p;
+29	        if (v2.size() == 0) {
+35	        } else if (v2[v2.size()-1].first != v1[i]) {
+36	            p.first = v1[i];
+37	            p.second = count(v1.begin(), v1.end(), v1[i]);
+38	            v2.push_back(p);
+39	            i++;
+40	            continue;
+27	    while (i < v1.size()) {
+$6 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+44	    sort(v2.begin()+1, v2.end(),  comparecount);
+45	    return v2;
+$7 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+46	}
+main () at .\Assignment_1.cpp:52
+52	    vector<pair<long, long>>::iterator it = v2.begin();
+53	    for (int i =0; i != v2.size(); i++) {
+54	        cout << v2[i].first << " " << v2[i].second << std::endl;
+53	    for (int i =0; i != v2.size(); i++) {
+54	        cout << v2[i].first << " " << v2[i].second << std::endl;
+53	    for (int i =0; i != v2.size(); i++) {
+54	        cout << v2[i].first << " " << v2[i].second << std::endl;
+53	    for (int i =0; i != v2.size(); i++) {
+54	        cout << v2[i].first << " " << v2[i].second << std::endl;
+53	    for (int i =0; i != v2.size(); i++) {
+56	    return 0;
+51	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+50	    vector<long> v1(a,a+6);
+57	}
+0x00000000004013c7 in __tmainCRTStartup ()
+
+
+================================================================================================================
+Inference:
+
+Breakpoints:
+        line 51
+        line 22
+
+Errors in the Code: 
+        The range passed to sort(v1.begin() + 1, v1.end()) skips the first element of the array. This causes the 
+input array to be partially sorted, which results in incorrect frequency calculations.
+
+        The vector v2 of pairs is being sorted with sort(v2.begin() + 1, v2.end()). This skips the first element,
+leaving part of the vector unsorted.
+
+Changes to be made in Code:
+        sort(v1.begin(), v1.end());                  // at line 24
+        sort(v2.begin(), v2.end(), comparecount);    // at line 43
+
+================================================================================================================

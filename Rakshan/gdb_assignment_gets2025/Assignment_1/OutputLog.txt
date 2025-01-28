@@ -1,0 +1,96 @@
+Breakpoint 1 at 0x1400016bc: file Assignment_1.cpp, line 55.
+Breakpoint 2 at 0x14000148d: file Assignment_1.cpp, line 23.
+Starting program: D:\MCW\Assignment-2\gdb_assignment_gets2025\Assignment_1\output.exe 
+[New Thread 10956.0x30a8]
+[New Thread 10956.0x1200]
+[New Thread 10956.0x2ae0]
+
+Thread 1 hit Breakpoint 1, main () at Assignment_1.cpp:55
+55	    long a[] = {6, 5, 7, 5, 5, 6};
+$1 = {8, 0, 0, 0, -268953376, 32758}
+56	    vector<long> v1(a, a + 6);
+$2 = {6, 5, 7, 5, 5, 6}
+57	    vector<pair<long, long>> v2 = sortWithFrequency(v1);
+
+Thread 1 hit Breakpoint 2, sortWithFrequency (v1=std::vector of length 6, capacity 6 = {...}) at Assignment_1.cpp:23
+23	    vector<pair<long, long>> v2;
+24	    int i = 0;
+26	    sort(v1.begin() + 1, v1.end());
+28	    while (i < v1.size())
+$3 = std::vector of length 6, capacity 6 = {6, 5, 5, 5, 6, 7}
+30	        pair<long, long> p;
+31	        if (v2.size() == 0)
+33	            p.first = v1[i];
+34	            p.second = count(v1.begin(), v1.end(), v1[i]);
+35	            v2.push_back(p);
+36	            i++;
+37	            continue;
+28	    while (i < v1.size())
+30	        pair<long, long> p;
+31	        if (v2.size() == 0)
+39	        else if (v2[v2.size() - 1].first != v1[i])
+41	            p.first = v1[i];
+42	            p.second = count(v1.begin(), v1.end(), v1[i]);
+43	            v2.push_back(p);
+44	            i++;
+45	            continue;
+28	    while (i < v1.size())
+30	        pair<long, long> p;
+31	        if (v2.size() == 0)
+39	        else if (v2[v2.size() - 1].first != v1[i])
+47	        i++;
+28	    while (i < v1.size())
+30	        pair<long, long> p;
+31	        if (v2.size() == 0)
+39	        else if (v2[v2.size() - 1].first != v1[i])
+47	        i++;
+28	    while (i < v1.size())
+30	        pair<long, long> p;
+31	        if (v2.size() == 0)
+39	        else if (v2[v2.size() - 1].first != v1[i])
+41	            p.first = v1[i];
+42	            p.second = count(v1.begin(), v1.end(), v1[i]);
+43	            v2.push_back(p);
+44	            i++;
+45	            continue;
+28	    while (i < v1.size())
+30	        pair<long, long> p;
+31	        if (v2.size() == 0)
+39	        else if (v2[v2.size() - 1].first != v1[i])
+41	            p.first = v1[i];
+42	            p.second = count(v1.begin(), v1.end(), v1[i]);
+43	            v2.push_back(p);
+44	            i++;
+45	            continue;
+28	    while (i < v1.size())
+49	    sort(v2.begin() + 1, v2.end(), comparecount);
+50	    return v2;
+main () at Assignment_1.cpp:58
+58	    vector<pair<long, long>>::iterator it = v2.begin();
+59	    for (int i = 0; i != v2.size(); i++)
+61	        cout << v2[i].first << " " << v2[i].second << std::endl;
+59	    for (int i = 0; i != v2.size(); i++)
+61	        cout << v2[i].first << " " << v2[i].second << std::endl;
+59	    for (int i = 0; i != v2.size(); i++)
+61	        cout << v2[i].first << " " << v2[i].second << std::endl;
+59	    for (int i = 0; i != v2.size(); i++)
+61	        cout << v2[i].first << " " << v2[i].second << std::endl;
+59	    for (int i = 0; i != v2.size(); i++)
+$4 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+63	    return 0;
+$5 = std::vector of length 4, capacity 4 = {{first = 6, second = 2}, {first = 5, second = 3}, {first = 6, second = 2}, {first = 7, second = 1}}
+64	}
+__tmainCRTStartup () at C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
+warning: 267	C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c: No such file or directory
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Inference:
+
+During this debugging process, I did not use "gdb output --tui" as it prevents detailed logging in this text file. By not using it, I was able to
+    record the step-by-step debugging process. The issue identified was that the sorting operation only sorted elements between the second and last 
+    positions. The code was updated to sort the entire vector at lines 26 and 49. After making this change, the code produced the expected output.
+----------------------------------------------------------------------------------------------------------------------------------------------------

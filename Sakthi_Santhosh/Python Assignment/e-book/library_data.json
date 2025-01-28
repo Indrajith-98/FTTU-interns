@@ -1,0 +1,32 @@
+{
+    "books": {
+        "Book Title": {
+            "title": "Book Title",
+            "author": "Author Name",
+            "total_pages": 300,
+            "topic": "Fiction",
+            "chapters": [
+                "Chapter 1",
+                "Chapter 2",
+                "Chapter 3"
+            ],
+            "users": {
+                "John Doe": {
+                    "current_page": 45,
+                    "current_chapter": "Chapter 2"
+                }
+            }
+        },
+        "test-book-2": {
+            "title": "test-book-2",
+            "author": "test-author-2",
+            "total_pages": 124,
+            "topic": "test-topic-1",
+            "chapters": [
+                "test-chap-1",
+                "test-chap-2"
+            ],
+            "users": {}
+        }
+    }
+}

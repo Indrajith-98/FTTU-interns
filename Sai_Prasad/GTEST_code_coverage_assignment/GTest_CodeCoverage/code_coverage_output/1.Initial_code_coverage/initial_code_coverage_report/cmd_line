@@ -1,0 +1,1 @@
+genhtml initial_test_coverage.info --output-directory out

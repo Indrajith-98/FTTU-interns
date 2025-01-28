@@ -1,0 +1,131 @@
+Breakpoint 1 at 0x140001651: file .\Assignment_3.cpp, line 44.
+Breakpoint 2 at 0x140001518: file .\Assignment_3.cpp, line 31.
+Starting program: F:\MULTICOREWARE- FTU INTERN\DEBUGGING_ASSESSMENT\gdb_assignment_gets2025_1\gdb_assignment_gets2025\Assignment_3\Assignment_3.exe 
+[New Thread 20644.0x29c4]
+[New Thread 20644.0x45f0]
+[New Thread 20644.0x503c]
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=-1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=2, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=3, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=1, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:45
+45	                max_number = (max_number < val) ? val : max_number;
+$1 = 0
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+42	        for (int j = 0; j < cols; j++) {
+43	            if (grid[i][j] == 1) {
+
+Thread 1 hit Breakpoint 1, maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:44
+44	                int val  = dfs(i,j,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=-1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=7, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=2, j=7, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=2, j=8, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=9, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+32	    grid[i][j] = 0;
+33	    return 1 + dfs(i-1,j,grid) + dfs(i+1,j,grid) + dfs(i,j+1,grid) + dfs(i,j-1,grid);
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=9, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=2, j=9, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=10, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=8, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=7, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=1, j=6, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=8, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+
+Thread 1 hit Breakpoint 2, dfs (i=0, j=6, grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:31
+31	    if (!validate(i,j,grid)) return 0;
+34	}
+34	}
+maxAreaOfIsland (grid=std::vector of length 8, capacity 8 = {...}) at .\Assignment_3.cpp:45
+45	                max_number = (max_number < val) ? val : max_number;
+$2 = 1
+42	        for (int j = 0; j < cols; j++) {
+$3 = 4
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

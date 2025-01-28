@@ -1,0 +1,5 @@
+if(EXISTS "F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/gtest_assignments/math_lib/build/math_lib_test[1]_tests.cmake")
+  include("F:/MultiCoreWare/Submissions/FTTU-interns/Abishek/gtest_assignments/math_lib/build/math_lib_test[1]_tests.cmake")
+else()
+  add_test(math_lib_test_NOT_BUILT math_lib_test_NOT_BUILT)
+endif()

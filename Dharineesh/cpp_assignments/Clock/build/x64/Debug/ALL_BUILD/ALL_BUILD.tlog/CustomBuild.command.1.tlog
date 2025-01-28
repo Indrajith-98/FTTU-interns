@@ -1,0 +1,10 @@
+^O:\TRAINING ASSIGNMENTS\CLOCK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SO:/Training Assignments/Clock" "-BO:/Training Assignments/Clock/build" --check-stamp-file "O:/Training Assignments/Clock/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

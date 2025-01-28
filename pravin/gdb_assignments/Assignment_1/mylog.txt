@@ -1,0 +1,339 @@
+ Processing command: b 47
+ HandleCommand, cmd_obj : '_regexp-break'
+ HandleCommand, (revised) command_string: '_regexp-break 47'
+ HandleCommand, wants_raw_input:'True'
+ HandleCommand, command line after removing command name(s): '47'
+ Processing command: breakpoint set --line 47
+ HandleCommand, cmd_obj : 'breakpoint set'
+ HandleCommand, (revised) command_string: 'breakpoint set --line 47'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): '--line 47'
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000019a4058 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: breakpoint added}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = no) => break_id = 1: file = '/Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp', line = 47, exact_match = 0
+
+
+ Added location (skipped prologue: yes): 1.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:48:10
+  address = a.out[0x00000001000035b8]
+  resolved = false
+  hardware = false
+  hit count = 0   
+ 
+
+ HandleCommand, command succeeded
+ HandleCommand, command succeeded
+ Processing command: breakpoint set -name sortWithFrequency
+ HandleCommand, cmd_obj : 'breakpoint set'
+ HandleCommand, (revised) command_string: 'breakpoint set -name sortWithFrequency'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): '-name sortWithFrequency'
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000019a4058 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: breakpoint added}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = no) => break_id = 2: name = 'sortWithFrequency'
+
+
+ Added location: 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:21:5
+  address = a.out[0x0000000100002f14]
+  resolved = false
+  hardware = false
+  hit count = 0   
+
+
+ HandleCommand, command succeeded
+ Processing command: r
+ HandleCommand, cmd_obj : 'process launch'
+ HandleCommand, (revised) command_string: 'process launch -X true --'
+ HandleCommand, wants_raw_input:'False'
+ Repeat command: 
+ HandleCommand, command line after removing command name(s): '-X true --'
+ Breakpoint::ModulesChanged: num_modules: 45 load: 0 delete_locations: 0
+
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600001980858 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 45 load: 0 delete_locations: 0
+
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600001980858 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x1000035b8
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600001980858 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f14
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000019858d8 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = yes) => break_id = -1: name = 'lldb_image_notifier', module = dyld
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x1000653a0
+ HandleCommand, command succeeded
+ Target::RemoveBreakpointByID (break_id = -1, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -1, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x1000653a0
+ Breakpoint::ModulesChanged: num_modules: 1 load: 0 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x1000035b8
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000019808d8 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 1 load: 0 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f14
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x6000019808d8 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations removed}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = yes) => break_id = -2: address = 0x000000019f9d73a0
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Hit breakpoint location: -1.1: 
+  module = /usr/lib/dyld
+  symbol = lldb_image_notifier
+  address = dyld[0x00000001801073a0]
+  resolved = false
+  hardware = false
+  hit count = 1   
+, continuing.
+
+ Target::RemoveBreakpointByID (break_id = -2, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -2, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x19f9d73a0
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x1000035b8
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600001980d58 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 1 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Breakpoint::ModulesChanged: num_modules: 2 load: 1 delete_locations: 0
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f14
+ 0x0000000138f487e8 Broadcaster("lldb.target")::BroadcastEvent (event_sp = 0x600001980d58 Event: broadcaster = 0x13988aa00 (lldb.target), type = 0x00000001 (breakpoint-changed), data = {bkpt: 2 type: locations resolved}, unique=false) hijack = 0x0000000000000000
+ Target::AddBreakpoint (internal = yes) => break_id = -3: name = 'lldb_image_notifier', module = dyld
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Hit breakpoint location: -2.1: 
+  address = 0x000000019f9d73a0
+  resolved = false
+  hardware = false
+  hit count = 1   
+, continuing.
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x19f9d73a0
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Breakpoint::ModulesChanged: num_modules: 43 load: 1 delete_locations: 0
+
+ Breakpoint::ModulesChanged: num_modules: 43 load: 1 delete_locations: 0
+
+ Breakpoint::ModulesChanged: num_modules: 43 load: 1 delete_locations: 0
+
+ Target::AddBreakpoint (internal = yes) => break_id = -4: address = libsystem_sanitizers.dylib[0x0000000260d6a3a4]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x28063a3a4
+ Hit breakpoint location: -3.1: 
+  module = /usr/lib/dyld
+  symbol = lldb_image_notifier
+  address = 0x000000019f9d73a0
+  resolved = true
+  hardware = false
+  hit count = 1   
+, continuing.
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x19f9d73a0
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x19f9d73a0
+ Hit breakpoint location: 1.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = main
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:48:10
+  address = 0x00000001000035b8
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Process::PerformAction returning from action with m_should_stop: 1.
+ Processing command: c
+ HandleCommand, cmd_obj : 'process continue'
+ HandleCommand, (revised) command_string: 'process continue'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): ''
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x1000035b8
+ HandleCommand, command succeeded
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x1000035b8
+ Hit breakpoint location: 2.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:21:5
+  address = 0x0000000100002f14
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Process::PerformAction returning from action with m_should_stop: 1.
+ Processing command: p v1
+ HandleCommand, cmd_obj : 'dwim-print'
+ HandleCommand, (revised) command_string: 'dwim-print -- v1'
+ HandleCommand, wants_raw_input:'True'
+ HandleCommand, command line after removing command name(s): '-- v1'
+ HandleCommand, command succeeded
+ Processing command: s
+ HandleCommand, cmd_obj : 'thread step-in'
+ HandleCommand, (revised) command_string: 'thread step-in'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): ''
+ Target::AddBreakpoint (internal = yes) => break_id = -5: address = a.out[0x0000000100002f20]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f20
+ Target::AddBreakpoint (internal = yes) => break_id = -6: names = {'start_wqthread', '_pthread_wqthread', '_pthread_start'}, modules(2) = libsystem_c.dylib, libSystem.B.dylib
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f14
+ HandleCommand, command succeeded
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f14
+ Hit breakpoint location: -5.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:21:31
+  address = 0x0000000100002f20
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -5, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -5, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f20
+ Target::AddBreakpoint (internal = yes) => break_id = -7: address = a.out[0x0000000100002f24]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f24
+ Hit breakpoint location: -7.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:21:31
+  address = 0x0000000100002f24
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -7, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -7, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f24
+ Processing command: s
+ HandleCommand, cmd_obj : 'thread step-in'
+ HandleCommand, (revised) command_string: 'thread step-in'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): ''
+ HandleCommand, command succeeded
+ Processing command: s
+ HandleCommand, cmd_obj : 'thread step-in'
+ HandleCommand, (revised) command_string: 'thread step-in'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): ''
+ HandleCommand, command succeeded
+ Target::AddBreakpoint (internal = yes) => break_id = -8: address = a.out[0x0000000100002f40]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f40
+ Hit breakpoint location: -8.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:24:20
+  address = 0x0000000100002f40
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -8, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -8, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f40
+ Target::AddBreakpoint (internal = yes) => break_id = -9: address = a.out[0x0000000100002f50]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f50
+ Hit breakpoint location: -9.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:24:27
+  address = 0x0000000100002f50
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -9, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -9, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f50
+ Target::AddBreakpoint (internal = yes) => break_id = -10: address = a.out[0x0000000100002f60]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f60
+ Hit breakpoint location: -10.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:24:5
+  address = 0x0000000100002f60
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -10, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -10, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f60
+ Target::AddBreakpoint (internal = yes) => break_id = -11: address = a.out[0x0000000100002f64]
+
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() add at addr = 0x100002f64
+ Hit breakpoint location: -11.1: 
+  module = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/a.out
+  compile unit = Assignment_1.cpp
+  function = sortWithFrequency(std::__1::vector<long, std::__1::allocator<long>>)
+  location = /Users/pravinpb/pycode/MCW/Assignments/debugging/Assignment_1/Assignment_1.cpp:24:5
+  address = 0x0000000100002f64
+  resolved = true
+  hardware = false
+  hit count = 1   
+, stopping.
+
+ Target::RemoveBreakpointByID (break_id = -11, internal = yes)
+
+ Target::DisableBreakpointByID (break_id = -11, internal = yes)
+
+ GDBRemoteCommunicationClient::SendGDBStoppointTypePacket() remove at addr = 0x100002f64
+ Processing command: p v1
+ HandleCommand, cmd_obj : 'dwim-print'
+ HandleCommand, (revised) command_string: 'dwim-print -- v1'
+ HandleCommand, wants_raw_input:'True'
+ HandleCommand, command line after removing command name(s): '-- v1'
+ HandleCommand, command succeeded
+ Processing command: c
+ HandleCommand, cmd_obj : 'process continue'
+ HandleCommand, (revised) command_string: 'process continue'
+ HandleCommand, wants_raw_input:'False'
+ HandleCommand, command line after removing command name(s): ''
+ HandleCommand, command succeeded

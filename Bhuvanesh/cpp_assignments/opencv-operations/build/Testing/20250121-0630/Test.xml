@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-MSBuild"
+	BuildStamp="20250121-0630-Experimental"
+	Name="ASUS"
+	Generator="ctest-3.31.4"
+	CompilerName="C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.42.34433/bin/Hostx64/x64/cl.exe"
+	CompilerVersion="19.42.34436.0"
+	OSName="Windows"
+	Hostname="ASUS"
+	OSRelease=" Personal"
+	OSVersion=" (Build 22631)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="12"
+	ModelName=""
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="23538"
+	TotalPhysicalMemory="16078"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2803"
+	>
+	<Testing>
+		<StartDateTime>Jan 21 12:00 India Standard Time</StartDateTime>
+		<StartTestTime>1737441031</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jan 21 12:00 India Standard Time</EndDateTime>
+		<EndTestTime>1737441031</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

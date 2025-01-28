@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/CheckIncludeFile.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/CheckLibraryExists.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/FindPackageMessage.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/FindThreads.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake
+C:/Users/ragul/cmake-3.31.3-windows-x86_64/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake
+E:/G-TEST/build/_deps/googletest-src/googletest/CMakeLists.txt
+E:/G-TEST/build/_deps/googletest-src/googletest/cmake/Config.cmake.in
+E:/G-TEST/build/_deps/googletest-src/googletest/cmake/gtest.pc.in
+E:/G-TEST/build/_deps/googletest-src/googletest/cmake/gtest_main.pc.in
+E:/G-TEST/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake

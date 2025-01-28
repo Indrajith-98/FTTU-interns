@@ -1,0 +1,59 @@
+cmake_minimum_required(VERSION 3.16)
+project(GTestExample)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Enable testing
+enable_testing()
+
+# Set compiler flags for coverage
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage -g -O0")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fprofile-arcs -ftest-coverage")
+endif()
+
+# Add include directories
+include_directories(${CMAKE_SOURCE_DIR}/math_lib/src)
+
+# Add math library
+set(MATH_LIB_SRC
+    math_lib/src/my_math.cpp
+    math_lib/src/my_math.h
+    math_lib/src/Modified_my_math.cpp
+    math_lib/src/Modified_my_math.h
+)
+add_library(math_lib ${MATH_LIB_SRC})
+
+# Add test files
+set(TEST_FILES
+    test_coverage/test.cpp
+    test_coverage/EdgeCase.cpp
+)
+
+# Fetch Google Test
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/release-1.12.1.zip
+)
+# Ensure GTest is available
+FetchContent_MakeAvailable(googletest)
+
+# Add the test executable
+add_executable(GTestExample ${TEST_FILES})
+target_link_libraries(GTestExample PRIVATE gtest gtest_main math_lib)
+
+# Add tests
+add_test(NAME GTestExample COMMAND GTestExample)
+
+# Add custom target for coverage
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    add_custom_target(coverage
+        COMMAND lcov --capture --directory . --output-file coverage.info
+        COMMAND genhtml coverage.info --output-directory coverage_report
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        COMMENT "Generating code coverage report"
+    )
+endif()
