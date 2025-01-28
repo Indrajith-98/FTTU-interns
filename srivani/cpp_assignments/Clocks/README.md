@@ -30,6 +30,7 @@ When the program is started, you'll see a menu with the following options: <br>
 4. Exit
 ```
 <br>
+
 ### 1. Set Alarm
 You'll be prompted to set an alarm at a specific time in 24-hour format (hour and minute). <br>
 You can also give the alarm a name for easier identification. <br>
