@@ -67,7 +67,7 @@ The output of the model is retrieved. The average output across the batch is com
 The predicted class is interpreted based on a predefined list of class names (class_names). The final predicted class is printed to the console.
 
 ## Project structure
-.
+
 ├── best_model_final.onnx      # ONNX model file <br>
 ├── Pic.jpg                   # Sample input image <br>
 ├── tvm_1.py   # Python script performing the workflow <br>
