@@ -39,9 +39,14 @@ Run the Program: To start the system, simply run the following command in your t
 2. Register: Enter a new username and password to create a new account. <br>
 
 **Available Actions:** Once logged in, you can perform the following actions: <br>
+
 (r)ead: View all books you've added along with their current page and topic. <br>
+
 (u)pdate: Select a book to update its current page and topic. <br>
+
 (a)dd a book: Add a new book to your collection by providing its title, current page, and topic.<br>
+
 (q)uit: Exit the program.<br>
+
 
 **Data Storage:** All user information (username, password, books, pages, topics) is stored in an Excel file (user_book_data.xlsx). This file is automatically created if it does not exist.
