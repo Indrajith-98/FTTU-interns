@@ -44,6 +44,11 @@ cmake --build .
 
 ## Output images
 ![Screenshot 2025-01-28 120819](https://github.com/user-attachments/assets/4d040bc4-f3c7-40f7-9344-77ce9ad0c0d3)
+![Screenshot 2025-01-28 120742](https://github.com/user-attachments/assets/20233a32-a73b-4188-ba6e-476208b752dd)
+![Screenshot 2025-01-28 120754](https://github.com/user-attachments/assets/7609b3c1-37bc-4425-b150-61c49c827da7)
+![Screenshot 2025-01-28 120805](https://github.com/user-attachments/assets/df68d8c2-c989-4f75-aff7-eb6cd1daf375)
+![Screenshot 2025-01-28 120813](https://github.com/user-attachments/assets/de1c2469-da45-44fe-8f03-ce9fd81f30f4)
+
 
 
 
