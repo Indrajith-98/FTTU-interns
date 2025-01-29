@@ -17,11 +17,11 @@ This task involves training a ResNet model using TensorFlow on the MNIST dataset
 Based on inference from Section 1, I have chosen the data augmented model as the final model, then converted the h5 model to onnx and optimized the onnx model using TensorRT.
 
 ### **Section 2: Inference**
-H5 Model Accuracy: 98.82%
-TRT Model Accuracy: 98.83%
+* H5 Model Accuracy: 98.82%
+* TRT Model Accuracy: 98.83%
 
-H5 Model Latency: 0.132996 seconds
-TRT Model Latency: 0.004294 seconds
+* H5 Model Latency: 0.132996 seconds
+* TRT Model Latency: 0.004294 seconds
 
 ## **Project Folder Contents**
 
