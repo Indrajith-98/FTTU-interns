@@ -3,11 +3,11 @@
 ## **Task Overview**
 This assignment involves implementing five image preprocessing techniques—Resize, Normalize, RGB to Grayscale, Random Crop, and Random Rotation—using direct pixel manipulation in C++. OpenCV is used for loading and saving images.
 
-**Resize**: Adjusts the image dimensions using interpolation.
-**Normalize**: Scales pixel values to a specified range for consistency.
-**RGB to Grayscale**: Converts a color image to grayscale by computing luminance.
-**Random Crop**: Extracts a randomly selected region from the image.
-**Random Rotation**: Rotates the image by a random angle while handling pixel mapping.
+* **Resize**: Adjusts the image dimensions using interpolation.
+* **Normalize**: Scales pixel values to a specified range for consistency.
+* **RGB to Grayscale**: Converts a color image to grayscale by computing luminance.
+* **Random Crop**: Extracts a randomly selected region from the image.
+* **Random Rotation**: Rotates the image by a random angle while handling pixel mapping.
 
 ## **Project Folder Contents**
 
