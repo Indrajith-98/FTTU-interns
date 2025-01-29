@@ -4,7 +4,7 @@
 This task invloves debugging three cpp files using the GDB.
 
 ## **Project Folder Contents**
-It contains three directores, **Assignmen_1**, **Assignmen_2**, **Assignmen_3**. Inside each directory there are:
+It contains three directores, **Assignment_1**, **Assignment_2**, **Assignment_3**. Inside each directory there are:
 
 ### **Assignment.cpp**
 The cpp file with some bug.
