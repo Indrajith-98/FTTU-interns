@@ -1,0 +1,6 @@
+/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles/CTensor.dir
+/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles/Conv2d.dir
+/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles/Utils.dir
+/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles/main.dir
+/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles/edit_cache.dir
+/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles/rebuild_cache.dir
