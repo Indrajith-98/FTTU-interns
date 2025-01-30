@@ -66,6 +66,8 @@ CMAKE_BINARY_DIR = /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators
 all: CMakeFiles/CTensor.dir/all
 all: CMakeFiles/Conv2d.dir/all
 all: CMakeFiles/Utils.dir/all
+all: CMakeFiles/BatchNorm.dir/all
+all: CMakeFiles/MaxPooling.dir/all
 all: CMakeFiles/main.dir/all
 .PHONY : all
 
@@ -77,6 +79,8 @@ preinstall:
 clean: CMakeFiles/CTensor.dir/clean
 clean: CMakeFiles/Conv2d.dir/clean
 clean: CMakeFiles/Utils.dir/clean
+clean: CMakeFiles/BatchNorm.dir/clean
+clean: CMakeFiles/MaxPooling.dir/clean
 clean: CMakeFiles/main.dir/clean
 .PHONY : clean
 
@@ -87,7 +91,7 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/CTensor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=1,2 "Built target CTensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=3,4 "Built target CTensor"
 .PHONY : CMakeFiles/CTensor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -113,7 +117,7 @@ CMakeFiles/CTensor.dir/clean:
 CMakeFiles/Conv2d.dir/all: CMakeFiles/CTensor.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=3,4 "Built target Conv2d"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=5,6 "Built target Conv2d"
 .PHONY : CMakeFiles/Conv2d.dir/all
 
 # Build rule for subdir invocation for target.
@@ -139,7 +143,7 @@ CMakeFiles/Conv2d.dir/clean:
 CMakeFiles/Utils.dir/all: CMakeFiles/CTensor.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Utils.dir/build.make CMakeFiles/Utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Utils.dir/build.make CMakeFiles/Utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=5,6 "Built target Utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=9,10 "Built target Utils"
 .PHONY : CMakeFiles/Utils.dir/all
 
 # Build rule for subdir invocation for target.
@@ -159,20 +163,74 @@ CMakeFiles/Utils.dir/clean:
 .PHONY : CMakeFiles/Utils.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/BatchNorm.dir
+
+# All Build rule for target.
+CMakeFiles/BatchNorm.dir/all: CMakeFiles/CTensor.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=1,2 "Built target BatchNorm"
+.PHONY : CMakeFiles/BatchNorm.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BatchNorm.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BatchNorm.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 0
+.PHONY : CMakeFiles/BatchNorm.dir/rule
+
+# Convenience name for target.
+BatchNorm: CMakeFiles/BatchNorm.dir/rule
+.PHONY : BatchNorm
+
+# clean rule for target.
+CMakeFiles/BatchNorm.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/clean
+.PHONY : CMakeFiles/BatchNorm.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MaxPooling.dir
+
+# All Build rule for target.
+CMakeFiles/MaxPooling.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=7,8 "Built target MaxPooling"
+.PHONY : CMakeFiles/MaxPooling.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MaxPooling.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MaxPooling.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 0
+.PHONY : CMakeFiles/MaxPooling.dir/rule
+
+# Convenience name for target.
+MaxPooling: CMakeFiles/MaxPooling.dir/rule
+.PHONY : MaxPooling
+
+# clean rule for target.
+CMakeFiles/MaxPooling.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/clean
+.PHONY : CMakeFiles/MaxPooling.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
 CMakeFiles/main.dir/all: CMakeFiles/CTensor.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/Conv2d.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/Utils.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/BatchNorm.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/MaxPooling.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=7,8 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=11,12 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule

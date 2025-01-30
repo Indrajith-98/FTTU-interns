@@ -23,5 +23,9 @@ public:
                                               const vector<vector<int>> &B);
   static vector<vector<float>> multiplyMatrices(const vector<vector<float>> &A,
                                                 const vector<vector<float>> &B);
+  static vector<float> compute_mean(const CImage &image);
+
+  static vector<float> compute_variance(const CImage &image,
+                                        const vector<float> &mean);
 };
 #endif

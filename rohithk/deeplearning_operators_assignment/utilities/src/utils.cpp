@@ -1,3 +1,4 @@
+#include <cmath>
 #include <ctypes.h>
 #include <stdio.h>
 #include <utils.h>
@@ -30,7 +31,9 @@ void Utils::printCImage(const CImage &image) {
       for (size_t h = 0; h < image[c][w].size(); h++) {
         cout << image[c][w][h] << " ";
       }
+      cout << endl;
     }
+    cout << endl;
   }
 }
 void Utils::printKernel(const CImage &tensor) {
@@ -103,7 +106,7 @@ vector<vector<float>> Utils::multiplyMatrices(const vector<vector<float>> &A,
   int rowsB = B.size();
   int colsB = B[0].size();
 
-  if (colsA != rowsB) {
+  if (colsA != colsB && rowsA == rowsB) {
     throw invalid_argument("Matrix multiplication not possible: Columns of A "
                            "must match rows of B.");
   }
@@ -112,9 +115,7 @@ vector<vector<float>> Utils::multiplyMatrices(const vector<vector<float>> &A,
 
   for (int i = 0; i < rowsA; i++) {
     for (int j = 0; j < colsB; j++) {
-      for (int k = 0; k < colsA; k++) {
-        result[i][j] += A[i][k] * B[k][j];
-      }
+      result[i][j] = A[i][j] * B[i][j];
     }
   }
   return result;
@@ -127,7 +128,6 @@ void Utils::printMatrix(const vector<vector<int>> &matrix) {
     cout << "\n";
   }
 }
-// Function to print a matrix
 void Utils::printMatrix(const vector<vector<float>> &matrix) {
   for (const auto &row : matrix) {
     for (int val : row) {
@@ -136,3 +136,43 @@ void Utils::printMatrix(const vector<vector<float>> &matrix) {
     cout << "\n";
   }
 }
+vector<float> Utils::compute_mean(const CImage &image) {
+  int C = image.size();
+  int H = image[0].size();
+  int W = image[0][0].size();
+
+  vector<float> mean(C, 0.0f);
+
+  for (int c = 0; c < C; ++c) {
+    float sum = 0.0f;
+    for (int h = 0; h < H; ++h) {
+      for (int w = 0; w < W; ++w) {
+        sum += image[c][h][w];
+      }
+    }
+    mean[c] = sum / (H * W);
+  }
+  return mean;
+}
+
+vector<float> Utils::compute_variance(const CImage &image,
+                                      const vector<float> &mean) {
+  int C = image.size();
+  int H = image[0].size();
+  int W = image[0][0].size();
+
+  vector<float> variance(C, 0.0f);
+
+  for (int c = 0; c < C; ++c) {
+    float sum = 0.0f;
+    for (int h = 0; h < H; ++h) {
+      for (int w = 0; w < W; ++w) {
+        sum += pow(image[c][h][w] - mean[c], 2);
+      }
+    }
+    variance[c] = sum / (H * W);
+  }
+  return variance;
+}
+
+// Function to apply batch normalization

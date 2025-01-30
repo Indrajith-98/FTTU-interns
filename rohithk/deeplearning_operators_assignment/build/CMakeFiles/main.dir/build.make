@@ -95,6 +95,8 @@ main: CMakeFiles/main.dir/build.make
 main: libCTensor.a
 main: libConv2d.a
 main: libUtils.a
+main: libBatchNorm.a
+main: libMaxPooling.a
 main: libCTensor.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"

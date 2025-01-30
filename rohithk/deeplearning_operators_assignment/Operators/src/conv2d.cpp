@@ -60,19 +60,18 @@ CTensor Conv2D::performConvOp(CTensor input) {
 
   int out_height = (in_height + 2 * padding - kernel_size) / stride + 1;
   int out_width = (in_width + 2 * padding - kernel_size) / stride + 1;
-
+  cout << "Out Height : " << out_height << endl;
   CTensor output;
   std::vector<std::vector<float>> output2(out_width,
                                           std::vector<float>(out_height, 0.0));
-
+  Utils::printMatrix(output2);
   CImage input_image = Utils::deflattenTensor(input);
   CImage weightsDeflattened = Utils::deflattenTensor(weights);
   int out_i = 0;
   int out_j = 0;
   for (int oc = 0; oc < this->out_channels; oc++) {
     int s = 0;
-    int value = 0;
-    for (int c = 0; c < in_height; c++) {
+    for (int c = 0; c < in_channels; c++) {
       for (int r = 0; r < kernel_size; r += this->stride) {
         for (int w = 0; w < kernel_size; w += this->stride) {
           int start = -1;
@@ -94,37 +93,25 @@ CTensor Conv2D::performConvOp(CTensor input) {
             }
             pixelMatrix.push_back(temp);
           }
-          vector<vector<float>> output = Utils::multiplyMatrices(
-              pixelMatrix, weightsDeflattened[out_channels]);
-          cout << "Input : " << endl;
-          Utils::printMatrix(pixelMatrix);
-          cout << "Weights : " << endl;
-          Utils::printMatrix(weightsDeflattened[out_channels]);
-          cout << "Output : " << endl;
-          Utils::printMatrix(output);
+          vector<vector<float>> output =
+              Utils::multiplyMatrices(pixelMatrix, weightsDeflattened[c]);
+          output2[out_i][out_j] += Utils::addElementsMatrix(output);
+
+          if (out_j < out_width - 1) {
+            out_j++;
+          } else {
+
+            out_j = 0;
+            out_i++;
+            if (out_i >= out_height) {
+              out_i = 0;
+            }
+          }
         }
       }
     }
   }
+  Utils::printMatrix(output2);
+
   return output;
-};
-vector<CTensor> Conv2D::forward(const vector<CTensor> &inputs) {
-
-  int batch = inputs[0].shape[0];
-  int in_channel = inputs[0].shape[1];
-  int in_height = inputs[0].shape[2];
-  int in_width = inputs[0].shape[3];
-
-  int out_height =
-      (in_height + 2 * this->padding - this->kernel_size) / this->stride + 1;
-  int out_width =
-      (in_width + 2 * this->padding - this->kernel_size) / this->stride + 1;
-  vector<CTensor> outputs;
-  for (int input_index = 0; input_index <= inputs.size(); input_index++) {
-    CTensor input = CTensor();
-    input.shape = inputs[input_index].shape;
-    input.data = inputs[input_index].data;
-    CTensor output =
-        CTensor({batch, this->out_channels, out_height, out_width});
-  }
 };

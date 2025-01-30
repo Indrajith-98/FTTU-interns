@@ -156,6 +156,32 @@ Utils/fast:
 .PHONY : Utils/fast
 
 #=============================================================================
+# Target rules for targets named BatchNorm
+
+# Build rule for target.
+BatchNorm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BatchNorm
+.PHONY : BatchNorm
+
+# fast build rule for target.
+BatchNorm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/build
+.PHONY : BatchNorm/fast
+
+#=============================================================================
+# Target rules for targets named MaxPooling
+
+# Build rule for target.
+MaxPooling: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MaxPooling
+.PHONY : MaxPooling
+
+# fast build rule for target.
+MaxPooling/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/build
+.PHONY : MaxPooling/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -167,6 +193,30 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+Operators/src/batch_normalisation.o: Operators/src/batch_normalisation.cpp.o
+.PHONY : Operators/src/batch_normalisation.o
+
+# target to build an object file
+Operators/src/batch_normalisation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batch_normalisation.cpp.o
+.PHONY : Operators/src/batch_normalisation.cpp.o
+
+Operators/src/batch_normalisation.i: Operators/src/batch_normalisation.cpp.i
+.PHONY : Operators/src/batch_normalisation.i
+
+# target to preprocess a source file
+Operators/src/batch_normalisation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batch_normalisation.cpp.i
+.PHONY : Operators/src/batch_normalisation.cpp.i
+
+Operators/src/batch_normalisation.s: Operators/src/batch_normalisation.cpp.s
+.PHONY : Operators/src/batch_normalisation.s
+
+# target to generate assembly for a file
+Operators/src/batch_normalisation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batch_normalisation.cpp.s
+.PHONY : Operators/src/batch_normalisation.cpp.s
 
 Operators/src/conv2d.o: Operators/src/conv2d.cpp.o
 .PHONY : Operators/src/conv2d.o
@@ -215,6 +265,30 @@ Operators/src/ctensor.s: Operators/src/ctensor.cpp.s
 Operators/src/ctensor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/Operators/src/ctensor.cpp.s
 .PHONY : Operators/src/ctensor.cpp.s
+
+Operators/src/max_pooling.o: Operators/src/max_pooling.cpp.o
+.PHONY : Operators/src/max_pooling.o
+
+# target to build an object file
+Operators/src/max_pooling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/max_pooling.cpp.o
+.PHONY : Operators/src/max_pooling.cpp.o
+
+Operators/src/max_pooling.i: Operators/src/max_pooling.cpp.i
+.PHONY : Operators/src/max_pooling.i
+
+# target to preprocess a source file
+Operators/src/max_pooling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/max_pooling.cpp.i
+.PHONY : Operators/src/max_pooling.cpp.i
+
+Operators/src/max_pooling.s: Operators/src/max_pooling.cpp.s
+.PHONY : Operators/src/max_pooling.s
+
+# target to generate assembly for a file
+Operators/src/max_pooling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/max_pooling.cpp.s
+.PHONY : Operators/src/max_pooling.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -272,16 +346,24 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... BatchNorm"
 	@echo "... CTensor"
 	@echo "... Conv2d"
+	@echo "... MaxPooling"
 	@echo "... Utils"
 	@echo "... main"
+	@echo "... Operators/src/batch_normalisation.o"
+	@echo "... Operators/src/batch_normalisation.i"
+	@echo "... Operators/src/batch_normalisation.s"
 	@echo "... Operators/src/conv2d.o"
 	@echo "... Operators/src/conv2d.i"
 	@echo "... Operators/src/conv2d.s"
 	@echo "... Operators/src/ctensor.o"
 	@echo "... Operators/src/ctensor.i"
 	@echo "... Operators/src/ctensor.s"
+	@echo "... Operators/src/max_pooling.o"
+	@echo "... Operators/src/max_pooling.i"
+	@echo "... Operators/src/max_pooling.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

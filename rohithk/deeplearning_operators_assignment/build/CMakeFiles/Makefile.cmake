@@ -129,5 +129,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/CTensor.dir/DependInfo.cmake"
   "CMakeFiles/Conv2d.dir/DependInfo.cmake"
   "CMakeFiles/Utils.dir/DependInfo.cmake"
+  "CMakeFiles/BatchNorm.dir/DependInfo.cmake"
+  "CMakeFiles/MaxPooling.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   )
