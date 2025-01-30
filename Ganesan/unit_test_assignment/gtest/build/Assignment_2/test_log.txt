@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from SortWithFrequency
+[ RUN      ] SortWithFrequency.validtest
+[       OK ] SortWithFrequency.validtest (0 ms)
+[ RUN      ] SortWithFrequency.emptyvector
+[       OK ] SortWithFrequency.emptyvector (0 ms)
+[ RUN      ] SortWithFrequency.negativevalues
+[       OK ] SortWithFrequency.negativevalues (0 ms)
+[ RUN      ] SortWithFrequency.allsamevalues
+[       OK ] SortWithFrequency.allsamevalues (0 ms)
+[----------] 4 tests from SortWithFrequency (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 4 tests.

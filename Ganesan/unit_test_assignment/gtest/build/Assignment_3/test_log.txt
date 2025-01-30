@@ -1,0 +1,15 @@
+Running main() from /mnt/c/Users/prasa/OneDrive/Desktop/gtest/build/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from FibonacciTest
+[ RUN      ] FibonacciTest.BasicCases
+[       OK ] FibonacciTest.BasicCases (0 ms)
+[ RUN      ] FibonacciTest.EdgeCaseZero
+[       OK ] FibonacciTest.EdgeCaseZero (0 ms)
+[ RUN      ] FibonacciTest.LargeN
+[       OK ] FibonacciTest.LargeN (0 ms)
+[----------] 3 tests from FibonacciTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 3 tests.
