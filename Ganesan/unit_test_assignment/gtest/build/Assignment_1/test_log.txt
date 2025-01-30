@@ -1,0 +1,28 @@
+[==========] Running 4 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from Reverse_string
+[ RUN      ] Reverse_string.validtest
+[       OK ] Reverse_string.validtest (0 ms)
+[ RUN      ] Reverse_string.emptystring
+[       OK ] Reverse_string.emptystring (0 ms)
+[ RUN      ] Reverse_string.SpecialChar
+[       OK ] Reverse_string.SpecialChar (0 ms)
+[----------] 3 tests from Reverse_string (0 ms total)
+
+[----------] 1 test from REVERSEDSTRING
+[ RUN      ] REVERSEDSTRING.FAILTEST
+/mnt/c/Users/prasa/OneDrive/Desktop/gtest/Assignment_1/test_assignment_1.cpp:18: Failure
+Expected equality of these values:
+  reverse("hello")
+    Which is: "olleh"
+  "hello"
+[  FAILED  ] REVERSEDSTRING.FAILTEST (0 ms)
+[----------] 1 test from REVERSEDSTRING (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test suites ran. (3 ms total)
+[  PASSED  ] 3 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] REVERSEDSTRING.FAILTEST
+
+ 1 FAILED TEST

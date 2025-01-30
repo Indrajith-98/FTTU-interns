@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Assignment_1)
+
+# Add Google Test
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+# Add the executable for Assignment_1
+add_executable(assignment_1 assignment_1.cpp reverse.cpp)
+
+add_library(reverse reverse.cpp)
+# Add the test executable for Assignment_1
+add_executable(test_assignment_1 test_assignment_1.cpp)
+
+# Link the executable with the Google Test libraries
+target_link_libraries(test_assignment_1 reverse)
+
+# linkthe custom library with the main executable
+target_link_libraries(assignment_1 reverse)
+
+# Link Google Test and pthread libraries
+target_link_libraries(assignment_1 ${GTEST_LIBRARIES} pthread)
+target_link_libraries(test_assignment_1 ${GTEST_LIBRARIES} pthread)

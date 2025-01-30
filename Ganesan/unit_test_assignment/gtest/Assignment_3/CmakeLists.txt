@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Assignment_3)
+
+# Add the main executable
+add_executable(assignment_3 assignment_3.cpp fibonacci.cpp)
+
+# Create a library for reusable code
+add_library(fibonacci fibonacci.cpp)
+
+# Link the custom library with the main executable
+target_link_libraries(assignment_3 fibonacci)
+
+# Add the test executable
+add_executable(test_assignment_3 test_assignment_3.cpp fibonacci)
+
+# Link the test executable with the library and Google Test
+target_link_libraries(test_assignment_3 gtest gtest_main pthread)
+
+# Register the test with CTest
+add_test(NAME test_assignment_3 COMMAND test_assignment_3)

@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Assignment_2)
+
+# Add the main executable
+add_executable(assignment_2 assignment_2.cpp sort.cpp)
+
+# Create a library for reusable code
+add_library(sort sort.cpp)
+
+# Link the custom library with the main executable
+target_link_libraries(assignment_2 sort)
+
+# Add the test executable
+add_executable(test_assignment_2 sort test_assignment_2.cpp)
+
+# Link the test executable with the library and Google Test
+target_link_libraries(test_assignment_2 gtest gtest_main pthread)
+
+# Register the test with CTest
+add_test(NAME test_assignment_2 COMMAND test_assignment_2)

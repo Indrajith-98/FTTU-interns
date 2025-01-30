@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/assignment_2.dir/assignment_2.cpp.o CMakeFiles/assignment_2.dir/sort.cpp.o -o assignment_2  libsort.a 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfibonacci.a CMakeFiles/fibonacci.dir/fibonacci.cpp.o
+/usr/bin/ranlib libfibonacci.a

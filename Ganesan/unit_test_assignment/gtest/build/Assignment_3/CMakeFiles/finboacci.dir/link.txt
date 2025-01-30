@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfinboacci.a CMakeFiles/finboacci.dir/finboacci.cpp.o
+/usr/bin/ranlib libfinboacci.a

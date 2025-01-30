@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_assignment_2.dir/sort.cpp.o CMakeFiles/test_assignment_2.dir/test_assignment_2.cpp.o -o test_assignment_2  ../lib/libgtest.a ../lib/libgtest_main.a -lpthread ../lib/libgtest.a 
