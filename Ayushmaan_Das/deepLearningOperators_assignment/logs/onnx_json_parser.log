@@ -1,0 +1,472 @@
+/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build/FashionMNIST
+ayushmaan_fcb@Ayushmaan-Workstation:/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build$ /mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build/FashionMNIST
+ayushmaan_fcb@Ayushmaan-Workstation:/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build$ /mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build/FashionMNIST
+Parsing graph...
+Processing initializer: new_shape__713
+Decoding rawData for new_shape__713
+Processing initializer: new_shape__696
+Decoding rawData for new_shape__696
+Processing initializer: const_fold_opt__808
+Decoding rawData for const_fold_opt__808
+Processing initializer: const_fold_opt__807
+Decoding rawData for const_fold_opt__807
+Processing initializer: const_fold_opt__806
+Decoding rawData for const_fold_opt__806
+Processing initializer: const_fold_opt__805
+Decoding rawData for const_fold_opt__805
+Processing initializer: const_fold_opt__804
+Decoding rawData for const_fold_opt__804
+Processing initializer: const_fold_opt__803
+Decoding rawData for const_fold_opt__803
+Processing initializer: const_fold_opt__802
+Decoding rawData for const_fold_opt__802
+Processing initializer: const_fold_opt__801
+Decoding rawData for const_fold_opt__801
+Processing initializer: const_fold_opt__800
+Decoding rawData for const_fold_opt__800
+Processing initializer: const_fold_opt__799
+Decoding rawData for const_fold_opt__799
+Processing initializer: const_fold_opt__798
+Decoding rawData for const_fold_opt__798
+Processing initializer: const_fold_opt__797
+Decoding rawData for const_fold_opt__797
+Processing initializer: const_fold_opt__796
+Decoding rawData for const_fold_opt__796
+Processing initializer: const_fold_opt__794
+Decoding rawData for const_fold_opt__794
+Processing initializer: const_fold_opt__793
+Decoding rawData for const_fold_opt__793
+Processing initializer: const_fold_opt__791
+Decoding rawData for const_fold_opt__791
+Processing initializer: const_fold_opt__790
+Decoding rawData for const_fold_opt__790
+Processing initializer: const_fold_opt__789
+Decoding rawData for const_fold_opt__789
+Processing initializer: const_fold_opt__787
+Decoding rawData for const_fold_opt__787
+Processing initializer: const_fold_opt__786
+Decoding rawData for const_fold_opt__786
+Processing initializer: const_fold_opt__785
+Decoding rawData for const_fold_opt__785
+Processing initializer: const_fold_opt__784
+Decoding rawData for const_fold_opt__784
+Processing initializer: const_fold_opt__782
+Decoding rawData for const_fold_opt__782
+Processing initializer: const_fold_opt__781
+Decoding rawData for const_fold_opt__781
+Processing initializer: const_fold_opt__780
+Decoding rawData for const_fold_opt__780
+Processing initializer: const_fold_opt__771
+Decoding rawData for const_fold_opt__771
+Processing initializer: const_fold_opt__766
+Decoding rawData for const_fold_opt__766
+Processing initializer: const_fold_opt__764
+Decoding rawData for const_fold_opt__764
+Processing initializer: const_fold_opt__763
+Decoding rawData for const_fold_opt__763
+Processing initializer: const_fold_opt__761
+Decoding rawData for const_fold_opt__761
+Processing initializer: const_fold_opt__758
+Decoding rawData for const_fold_opt__758
+Processing initializer: const_fold_opt__757
+Decoding rawData for const_fold_opt__757
+Processing initializer: const_fold_opt__754
+Decoding rawData for const_fold_opt__754
+Processing initializer: const_fold_opt__753
+Decoding rawData for const_fold_opt__753
+Processing initializer: const_fold_opt__749
+Decoding rawData for const_fold_opt__749
+Processing initializer: const_fold_opt__747
+Decoding rawData for const_fold_opt__747
+Processing initializer: const_axes__809
+Decoding rawData for const_axes__809
+Processing initializer: StatefulPartitionedCall/functional_1/dense_1/Cast/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/dense_1/Cast/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/dense_1/Add/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/dense_1/Add/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_9_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_9_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_9_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_9_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_8_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_8_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_8_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_8_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_7_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_7_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_7_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_7_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_6_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_6_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_6_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_6_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_5_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_5_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_5_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_5_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_4_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_4_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_4_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_4_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_3_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_3_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_3_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_3_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_35_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_35_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_35_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_35_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_34_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_34_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_34_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_34_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_33_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_33_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_33_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_33_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_32_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_32_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_32_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_32_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_31_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_31_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_31_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_31_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_30_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_30_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_30_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_30_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_2_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_2_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_2_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_2_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_29_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_29_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_29_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_29_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_28_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_28_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_28_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_28_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_27_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_27_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_27_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_27_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_26_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_26_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_26_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_26_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_25_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_25_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_25_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_25_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_24_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_24_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_24_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_24_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_23_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_23_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_23_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_23_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_22_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_22_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_22_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_22_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_21_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_21_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_21_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_21_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_20_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_20_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_20_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_20_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1_2/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_1_2/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1_2/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_1_2/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_19_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_19_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_19_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_19_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_18_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_18_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_18_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_18_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_17_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_17_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_17_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_17_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_16_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_16_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_16_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_16_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_15_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_15_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_15_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_15_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_14_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_14_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_14_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_14_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_13_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_13_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_13_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_13_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_12_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_12_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_12_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_12_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_11_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_11_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_11_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_11_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_10_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_10_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_10_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_10_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1/convolution/ReadVariableOp:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1/Reshape:0
+Decoding rawData for StatefulPartitionedCall/functional_1/conv2d_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul:0
+Decoding rawData for StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul:0
+Parsed node: StatefulPartitionedCall/functional_1/conv2d_1/convolution__6 (Reshape)
+Parsed node: Conv__154 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_1/Relu (Relu)
+Parsed node: StatefulPartitionedCall/functional_1/max_pooling2d_1/MaxPool2d (MaxPool)
+Parsed node: Conv__168 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_1_2/Relu (Relu)
+Parsed node: Conv__178 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_2_1/Relu (Relu)
+Parsed node: Conv__188 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_3_1/Relu (Relu)
+Parsed node: Conv__198 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_1_2/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_4_1/Relu (Relu)
+Parsed node: Conv__208 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_5_1/Relu (Relu)
+Parsed node: Conv__218 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_2_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_6_1/Relu (Relu)
+Parsed node: Conv__238 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_7_1/Relu (Relu)
+Parsed node: Conv__248 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/add_1 (Add)
+Parsed node: Conv__228 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_3_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_8_1/Relu (Relu)
+Parsed node: Conv__258 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_9_1/Relu (Relu)
+Parsed node: Conv__268 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_4_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_10_1/Relu (Relu)
+Parsed node: Conv__278 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_11_1/Relu (Relu)
+Parsed node: Conv__288 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_5_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_12_1/Relu (Relu)
+Parsed node: Conv__298 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_13_1/Relu (Relu)
+Parsed node: Conv__308 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_6_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_14_1/Relu (Relu)
+Parsed node: Conv__328 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_15_1/Relu (Relu)
+Parsed node: Conv__338 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/add_1 (Add)
+Parsed node: Conv__318 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_7_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_16_1/Relu (Relu)
+Parsed node: Conv__348 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_17_1/Relu (Relu)
+Parsed node: Conv__358 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_8_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_18_1/Relu (Relu)
+Parsed node: Conv__368 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_19_1/Relu (Relu)
+Parsed node: Conv__378 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_9_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_20_1/Relu (Relu)
+Parsed node: Conv__388 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_21_1/Relu (Relu)
+Parsed node: Conv__398 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_10_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_22_1/Relu (Relu)
+Parsed node: Conv__408 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_23_1/Relu (Relu)
+Parsed node: Conv__418 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_11_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_24_1/Relu (Relu)
+Parsed node: Conv__428 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_25_1/Relu (Relu)
+Parsed node: Conv__438 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_12_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_26_1/Relu (Relu)
+Parsed node: Conv__458 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_27_1/Relu (Relu)
+Parsed node: StatefulPartitionedCall/functional_1/conv2d_30_1/convolution__134 (Reshape)
+Parsed node: Conv__468 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/add_1 (Add)
+Parsed node: Conv__448 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_13_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_28_1/Relu (Relu)
+Parsed node: Transpose__614 (Reshape)
+Parsed node: Conv__478 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_29_1/Relu (Relu)
+Parsed node: StatefulPartitionedCall/functional_1/conv2d_33_1/convolution__142 (Reshape)
+Parsed node: Conv__488 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_14_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_30_1/Relu (Relu)
+Parsed node: Transpose__622 (Reshape)
+Parsed node: Conv__498 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_31_1/Relu (Relu)
+Parsed node: StatefulPartitionedCall/functional_1/conv2d_35_1/convolution__150 (Reshape)
+Parsed node: Conv__508 (Conv)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/mul_1 (Mul)
+Parsed node: StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/add_1 (Add)
+Parsed node: StatefulPartitionedCall/functional_1/add_15_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/re_lu_32_1/Relu (Relu)
+Parsed node: StatefulPartitionedCall/functional_1/global_average_pooling2d_1/Mean (GlobalAveragePool)
+Parsed node: StatefulPartitionedCall/functional_1/global_average_pooling2d_1/Mean_Squeeze__810 (Squeeze)
+Parsed node: StatefulPartitionedCall/functional_1/dense_1/MatMul (MatMul)
+Parsed node: StatefulPartitionedCall/functional_1/dense_1/Add (Add)
+Parsed node: StatefulPartitionedCall/functional_1/dense_1/Softmax (Softmax)
+Model successfully loaded.
