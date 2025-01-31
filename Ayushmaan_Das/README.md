@@ -3,6 +3,7 @@
 - [C++ Assignment Contents](./cpp_assignments/README.md)
 - [Python Assignment Contents](./python_assignments/README.md)
 - [Testing Assignment Contents](./testing_assignments/README.md)
+- [DL Operatos and Layers Project](./deepLearningOperators_assignment/)
 
 ### All Assignments
 
@@ -58,6 +59,13 @@
       <td><strong>Code Coverage Analysis and Unit Testing Enhancement</strong></td>
       <td><strong>GTEST (C++)</strong></td>
       <td><a href="./testing_assignments/GTEST_codeCoverage_unitTesting/README.md">Check Docs</a></td>
+    </tr>
+    </tr>
+    <!--Deep Learning Operators-->
+    <tr style="background-color:rgb(169, 213, 240);">
+      <td><strong>Deep Learning Operators and Layers</strong></td>
+      <td><strong>C++ (main language), Python</strong></td>
+      <td><a href="./deepLearningOperators_assignment/README.md">Check Docs</a></td>
     </tr>
     </tr>
   </tbody>

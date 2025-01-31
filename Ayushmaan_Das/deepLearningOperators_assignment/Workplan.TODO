@@ -93,9 +93,10 @@
                   "content": "Implement a C++ version of each operator (floating point Operation) and execute them.",
                   "id": 1738210226071,
                   "level": "default",
-                  "done": false,
+                  "done": true,
                   "start": 1738210226071,
-                  "focus": true
+                  "focus": false,
+                  "end": 1738349457747
                 }
               },
               {
@@ -116,8 +117,10 @@
               "content": "C++ Application Development for Kernel/Operators execution",
               "id": 1738210164752,
               "level": "success",
-              "done": false,
-              "start": 1738210164752
+              "done": true,
+              "start": 1738210164752,
+              "focus": false,
+              "end": 1738349456855
             }
           },
           {
@@ -165,10 +168,10 @@
           "content": "Implementing the core functionality of the layers with C++.",
           "id": 1738209961751,
           "level": "warning",
-          "done": false,
+          "done": true,
           "start": 1738209961751,
           "focus": false,
-          "end": 1738210248112
+          "end": 1738349455438
         }
       }
     ],
@@ -190,6 +193,6 @@
     "showEndTime": false,
     "simpleMode": false,
     "lang": "en",
-    "version": "1738295956436"
+    "version": "1738349457798"
   }
 }

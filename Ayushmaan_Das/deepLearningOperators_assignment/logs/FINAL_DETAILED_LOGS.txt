@@ -1,0 +1,513 @@
+ayushmaan_fcb@Ayushmaan-Workstation:/mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build$ /mnt/d/MulticoreWare/FTTU-interns/Ayushmaan_Das/deepLearningOperators_assignment/build/FashionMNIST
+Starting ONNX Model Execution...
+Parsing graph...
+Manually inserted input tensor: inputs | Shape: 1x28x28
+
+--- Checking loaded input tensors ---
+Tensor: inputs | Shape: 1 28 28  | Data size: 784
+--------------------------------------
+Processing initializer: new_shape__713
+Processing initializer: new_shape__696
+Processing initializer: const_fold_opt__808
+Processing initializer: const_fold_opt__807
+Processing initializer: const_fold_opt__806
+Processing initializer: const_fold_opt__805
+Processing initializer: const_fold_opt__804
+Processing initializer: const_fold_opt__803
+Processing initializer: const_fold_opt__802
+Processing initializer: const_fold_opt__801
+Processing initializer: const_fold_opt__800
+Processing initializer: const_fold_opt__799
+Processing initializer: const_fold_opt__798
+Processing initializer: const_fold_opt__797
+Processing initializer: const_fold_opt__796
+Processing initializer: const_fold_opt__794
+Processing initializer: const_fold_opt__793
+Processing initializer: const_fold_opt__791
+Processing initializer: const_fold_opt__790
+Processing initializer: const_fold_opt__789
+Processing initializer: const_fold_opt__787
+Processing initializer: const_fold_opt__786
+Processing initializer: const_fold_opt__785
+Processing initializer: const_fold_opt__784
+Processing initializer: const_fold_opt__782
+Processing initializer: const_fold_opt__781
+Processing initializer: const_fold_opt__780
+Processing initializer: const_fold_opt__771
+Processing initializer: const_fold_opt__766
+Processing initializer: const_fold_opt__764
+Processing initializer: const_fold_opt__763
+Processing initializer: const_fold_opt__761
+Processing initializer: const_fold_opt__758
+Processing initializer: const_fold_opt__757
+Processing initializer: const_fold_opt__754
+Processing initializer: const_fold_opt__753
+Processing initializer: const_fold_opt__749
+Processing initializer: const_fold_opt__747
+Processing initializer: const_axes__809
+Processing initializer: StatefulPartitionedCall/functional_1/dense_1/Cast/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/dense_1/Add/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_9_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_9_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_8_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_8_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_7_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_7_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_6_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_6_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_5_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_5_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_4_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_4_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_3_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_3_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_35_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_35_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_34_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_34_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_33_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_33_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_32_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_32_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_31_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_31_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_30_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_30_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_2_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_2_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_29_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_29_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_28_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_28_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_27_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_27_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_26_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_26_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_25_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_25_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_24_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_24_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_23_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_23_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_22_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_22_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_21_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_21_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_20_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_20_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1_2/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1_2/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_19_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_19_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_18_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_18_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_17_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_17_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_16_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_16_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_15_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_15_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_14_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_14_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_13_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_13_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_12_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_12_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_11_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_11_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_10_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_10_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1/convolution/ReadVariableOp:0
+Processing initializer: StatefulPartitionedCall/functional_1/conv2d_1/Reshape:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/mul:0
+Processing initializer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul:0
+
+--- Checking loaded initializer tensors ---
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_5_1/convolution/ReadVariableOp:0 | Shape: 64 64 3 3  | Data size: 18432
+Tensor: const_fold_opt__781 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_1/convolution/ReadVariableOp:0 | Shape: 64 1 7 7  | Data size: 1568
+Tensor: StatefulPartitionedCall/functional_1/conv2d_6_1/convolution/ReadVariableOp:0 | Shape: 64 64 3 3  | Data size: 18432
+Tensor: const_fold_opt__782 | Shape: 1 128 1 1  | Data size: 64
+Tensor: const_fold_opt__753 | Shape: 1 512 1 1  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_1_2/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_7_1/convolution/ReadVariableOp:0 | Shape: 128 64 3 3  | Data size: 36864
+Tensor: StatefulPartitionedCall/functional_1/conv2d_3_1/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_33_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_9_1/convolution/ReadVariableOp:0 | Shape: 128 64 1 1  | Data size: 4096
+Tensor: StatefulPartitionedCall/functional_1/conv2d_8_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: StatefulPartitionedCall/functional_1/conv2d_7_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: const_fold_opt__749 | Shape: 1 256 1 1  | Data size: 128
+Tensor: const_fold_opt__785 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_22_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: const_fold_opt__754 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_34_1/convolution/ReadVariableOp:0 | Shape: 512 512 3 3  | Data size: 1179648
+Tensor: StatefulPartitionedCall/functional_1/conv2d_25_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_9_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: const_fold_opt__758 | Shape: 1 128 1 1  | Data size: 64
+Tensor: const_fold_opt__763 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_23_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: const_fold_opt__766 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/dense_1/Add/ReadVariableOp:0 | Shape: 10  | Data size: 5
+Tensor: const_fold_opt__799 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_5_1/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: new_shape__696 | Shape: 4  | Data size: 4
+Tensor: const_fold_opt__761 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_35_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_21_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_12_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: const_fold_opt__800 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/dense_1/Cast/ReadVariableOp:0 | Shape: 512 10  | Data size: 2560
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+Tensor: const_fold_opt__804 | Shape: 1 256 1 1  | Data size: 128
+Tensor: const_fold_opt__805 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_16_1/convolution/ReadVariableOp:0 | Shape: 256 128 3 3  | Data size: 147456
+Tensor: const_fold_opt__806 | Shape: 1 64 1 1  | Data size: 32
+Tensor: const_fold_opt__807 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_3_1/convolution/ReadVariableOp:0 | Shape: 64 64 3 3  | Data size: 18432
+Tensor: const_fold_opt__808 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_30_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: const_fold_opt__757 | Shape: 1 256 1 1  | Data size: 128
+Tensor: const_fold_opt__791 | Shape: 1 512 1 1  | Data size: 256
+Tensor: new_shape__713 | Shape: 4  | Data size: 4
+Tensor: const_fold_opt__780 | Shape: 1 512 1 1  | Data size: 256
+Tensor: const_fold_opt__784 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_4_1/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_35_1/convolution/ReadVariableOp:0 | Shape: 512 512 3 3  | Data size: 1179648
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: const_fold_opt__797 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_14_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: const_fold_opt__794 | Shape: 1 256 1 1  | Data size: 128
+Tensor: const_fold_opt__764 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_32_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: const_fold_opt__790 | Shape: 1 128 1 1  | Data size: 64
+Tensor: const_fold_opt__787 | Shape: 1 64 1 1  | Data size: 32
+Tensor: const_fold_opt__786 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_19_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_24_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+Tensor: const_fold_opt__803 | Shape: 1 64 1 1  | Data size: 32
+Tensor: const_fold_opt__798 | Shape: 1 512 1 1  | Data size: 256
+Tensor: const_fold_opt__793 | Shape: 1 512 1 1  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_15_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_15_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: const_fold_opt__771 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_34_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_31_1/convolution/ReadVariableOp:0 | Shape: 512 256 1 1  | Data size: 65536
+Tensor: const_axes__809 | Shape: 2  | Data size: 2
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_31_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_2_1/convolution/ReadVariableOp:0 | Shape: 64 64 3 3  | Data size: 18432
+Tensor: StatefulPartitionedCall/functional_1/conv2d_30_1/convolution/ReadVariableOp:0 | Shape: 512 512 3 3  | Data size: 1179648
+Tensor: StatefulPartitionedCall/functional_1/conv2d_2_1/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_29_1/convolution/ReadVariableOp:0 | Shape: 512 256 3 3  | Data size: 589824
+Tensor: StatefulPartitionedCall/functional_1/conv2d_6_1/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_29_1/Reshape:0 | Shape: 512  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_4_1/convolution/ReadVariableOp:0 | Shape: 64 64 3 3  | Data size: 18432
+Tensor: StatefulPartitionedCall/functional_1/conv2d_20_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/conv2d_28_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: const_fold_opt__801 | Shape: 1 512 1 1  | Data size: 256
+Tensor: const_fold_opt__796 | Shape: 1 512 1 1  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_28_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_14_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: const_fold_opt__747 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_27_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/conv2d_26_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/conv2d_25_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/conv2d_24_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_16_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_27_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_23_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_22_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: const_fold_opt__789 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_10_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: StatefulPartitionedCall/functional_1/conv2d_21_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/conv2d_20_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_8_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_1_2/convolution/ReadVariableOp:0 | Shape: 64 64 3 3  | Data size: 18432
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_26_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_19_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_18_1/convolution/ReadVariableOp:0 | Shape: 256 128 1 1  | Data size: 16384
+Tensor: StatefulPartitionedCall/functional_1/conv2d_18_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_33_1/convolution/ReadVariableOp:0 | Shape: 512 512 3 3  | Data size: 1179648
+Tensor: StatefulPartitionedCall/functional_1/conv2d_17_1/convolution/ReadVariableOp:0 | Shape: 256 256 3 3  | Data size: 294912
+Tensor: StatefulPartitionedCall/functional_1/conv2d_17_1/Reshape:0 | Shape: 256  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_13_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: StatefulPartitionedCall/functional_1/conv2d_13_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_11_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/mul:0 | Shape: 1 256 1 1  | Data size: 128
+Tensor: StatefulPartitionedCall/functional_1/conv2d_10_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: inputs | Shape: 1 28 28  | Data size: 784
+Tensor: StatefulPartitionedCall/functional_1/conv2d_11_1/Reshape:0 | Shape: 128  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/conv2d_1/Reshape:0 | Shape: 64  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/mul:0 | Shape: 1 128 1 1  | Data size: 64
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+Tensor: StatefulPartitionedCall/functional_1/conv2d_12_1/convolution/ReadVariableOp:0 | Shape: 128 128 3 3  | Data size: 73728
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul:0 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+Tensor: const_fold_opt__802 | Shape: 1 64 1 1  | Data size: 32
+Tensor: StatefulPartitionedCall/functional_1/conv2d_32_1/convolution/ReadVariableOp:0 | Shape: 512 512 3 3  | Data size: 1179648
+Tensor: StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/mul:0 | Shape: 1 512 1 1  | Data size: 256
+--------------------------------------
+Model loaded successfully!
+Executing model...
+
+--------------------------------------------
+Available Tensors in Model:
+ - StatefulPartitionedCall/functional_1/batch_normalization_10_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_12_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_13_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_15_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_16_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_17_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_18_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_19_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_20_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_21_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_22_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_25_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_26_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_27_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_28_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_5_1/convolution/ReadVariableOp:0 (shape: 64 64 3 3 )
+ - const_fold_opt__781 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_1/convolution/ReadVariableOp:0 (shape: 64 1 7 7 )
+ - StatefulPartitionedCall/functional_1/conv2d_6_1/convolution/ReadVariableOp:0 (shape: 64 64 3 3 )
+ - const_fold_opt__782 (shape: 1 128 1 1 )
+ - const_fold_opt__753 (shape: 1 512 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_1_2/Reshape:0 (shape: 64 )
+ - StatefulPartitionedCall/functional_1/conv2d_7_1/convolution/ReadVariableOp:0 (shape: 128 64 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_3_1/Reshape:0 (shape: 64 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_14_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_33_1/Reshape:0 (shape: 512 )
+ - StatefulPartitionedCall/functional_1/conv2d_9_1/convolution/ReadVariableOp:0 (shape: 128 64 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_8_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_7_1/Reshape:0 (shape: 128 )
+ - const_fold_opt__749 (shape: 1 256 1 1 )
+ - const_fold_opt__785 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_22_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - const_fold_opt__754 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_34_1/convolution/ReadVariableOp:0 (shape: 512 512 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_25_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_9_1/Reshape:0 (shape: 128 )
+ - const_fold_opt__758 (shape: 1 128 1 1 )
+ - const_fold_opt__763 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_23_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - const_fold_opt__766 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/dense_1/Add/ReadVariableOp:0 (shape: 10 )
+ - const_fold_opt__799 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_5_1/Reshape:0 (shape: 64 )
+ - new_shape__696 (shape: 4 )
+ - const_fold_opt__761 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_35_1/Reshape:0 (shape: 512 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_21_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_12_1/Reshape:0 (shape: 128 )
+ - const_fold_opt__800 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/dense_1/Cast/ReadVariableOp:0 (shape: 512 10 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_29_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+ - const_fold_opt__804 (shape: 1 256 1 1 )
+ - const_fold_opt__805 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_16_1/convolution/ReadVariableOp:0 (shape: 256 128 3 3 )
+ - const_fold_opt__806 (shape: 1 64 1 1 )
+ - const_fold_opt__807 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_3_1/convolution/ReadVariableOp:0 (shape: 64 64 3 3 )
+ - const_fold_opt__808 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_30_1/Reshape:0 (shape: 512 )
+ - const_fold_opt__757 (shape: 1 256 1 1 )
+ - const_fold_opt__791 (shape: 1 512 1 1 )
+ - new_shape__713 (shape: 4 )
+ - const_fold_opt__780 (shape: 1 512 1 1 )
+ - const_fold_opt__784 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_33_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_4_1/Reshape:0 (shape: 64 )
+ - StatefulPartitionedCall/functional_1/conv2d_35_1/convolution/ReadVariableOp:0 (shape: 512 512 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - const_fold_opt__797 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_14_1/Reshape:0 (shape: 128 )
+ - const_fold_opt__794 (shape: 1 256 1 1 )
+ - const_fold_opt__764 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_32_1/Reshape:0 (shape: 512 )
+ - const_fold_opt__790 (shape: 1 128 1 1 )
+ - const_fold_opt__787 (shape: 1 64 1 1 )
+ - const_fold_opt__786 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_19_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_24_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_24_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_34_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+ - const_fold_opt__803 (shape: 1 64 1 1 )
+ - const_fold_opt__798 (shape: 1 512 1 1 )
+ - const_fold_opt__793 (shape: 1 512 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_15_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_15_1/Reshape:0 (shape: 128 )
+ - const_fold_opt__771 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_34_1/Reshape:0 (shape: 512 )
+ - StatefulPartitionedCall/functional_1/conv2d_31_1/convolution/ReadVariableOp:0 (shape: 512 256 1 1 )
+ - const_axes__809 (shape: 2 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_32_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_31_1/Reshape:0 (shape: 512 )
+ - StatefulPartitionedCall/functional_1/conv2d_2_1/convolution/ReadVariableOp:0 (shape: 64 64 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_30_1/convolution/ReadVariableOp:0 (shape: 512 512 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_2_1/Reshape:0 (shape: 64 )
+ - StatefulPartitionedCall/functional_1/conv2d_29_1/convolution/ReadVariableOp:0 (shape: 512 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_6_1/Reshape:0 (shape: 64 )
+ - StatefulPartitionedCall/functional_1/conv2d_29_1/Reshape:0 (shape: 512 )
+ - StatefulPartitionedCall/functional_1/conv2d_4_1/convolution/ReadVariableOp:0 (shape: 64 64 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_20_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_28_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - const_fold_opt__801 (shape: 1 512 1 1 )
+ - const_fold_opt__796 (shape: 1 512 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_28_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_14_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - const_fold_opt__747 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_27_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_26_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_25_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_24_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_16_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_27_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_23_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_22_1/Reshape:0 (shape: 256 )
+ - const_fold_opt__789 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_10_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_21_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_20_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_8_1/Reshape:0 (shape: 128 )
+ - StatefulPartitionedCall/functional_1/conv2d_1_2/convolution/ReadVariableOp:0 (shape: 64 64 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_11_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_26_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_19_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_18_1/convolution/ReadVariableOp:0 (shape: 256 128 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_18_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_33_1/convolution/ReadVariableOp:0 (shape: 512 512 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_17_1/convolution/ReadVariableOp:0 (shape: 256 256 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_17_1/Reshape:0 (shape: 256 )
+ - StatefulPartitionedCall/functional_1/conv2d_13_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - StatefulPartitionedCall/functional_1/conv2d_13_1/Reshape:0 (shape: 128 )
+ - StatefulPartitionedCall/functional_1/conv2d_11_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_23_1/batchnorm/mul:0 (shape: 1 256 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_10_1/Reshape:0 (shape: 128 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - inputs (shape: 1 28 28 )
+ - StatefulPartitionedCall/functional_1/conv2d_11_1/Reshape:0 (shape: 128 )
+ - StatefulPartitionedCall/functional_1/conv2d_1/Reshape:0 (shape: 64 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_9_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_8_1/batchnorm/mul:0 (shape: 1 128 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_31_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_12_1/convolution/ReadVariableOp:0 (shape: 128 128 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul:0 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_35_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+ - const_fold_opt__802 (shape: 1 64 1 1 )
+ - StatefulPartitionedCall/functional_1/conv2d_32_1/convolution/ReadVariableOp:0 (shape: 512 512 3 3 )
+ - StatefulPartitionedCall/functional_1/batch_normalization_30_1/batchnorm/mul:0 (shape: 1 512 1 1 )
+
+--------------------------------------------
+
+Starting ONNX Model Execution...
+Parsing graph...
+Model loaded successfully!
+Executing model...
+Layer: StatefulPartitionedCall/functional_1/conv2d_1/convolution__6 | Function: Reshape | Time: 0.000002ms | Status: PASS
+Layer: Conv__154 | Function: Conv | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul_1 | Function: Mul | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/add_1 | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/max_pooling2d_1/MaxPool2d | Function: MaxPool | Time: 0.000003ms | Status: PASS
+Layer: Conv__168 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_1_2/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__178 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/add_1/Add | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_2_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: Conv__188 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_3_1/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__198 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/add_1_2/Add | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_4_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: Conv__208 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_5_1/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__218 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/add_2_1/Add | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_6_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: Conv__238 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_7_1/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__248 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/dense_1/Add | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/dense_1/Softmax | Function: Softmax | Time: 0.000003ms | Status: PASS
+Execution completed!
