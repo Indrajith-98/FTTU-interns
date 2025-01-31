@@ -3,6 +3,9 @@ project(FashionMNIST)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+
 # ONNX Runtime Paths
 set(ONNX_RUNTIME_DIR ${CMAKE_SOURCE_DIR}/onnxruntime)
 include_directories(${ONNX_RUNTIME_DIR}/include)
@@ -21,7 +24,7 @@ link_directories(${ONNX_RUNTIME_DIR}/lib)
 find_package(nlohmann_json REQUIRED)
 
 # Executable and Linking
-add_executable(FashionMNIST onnx_json_parser.cpp base64.cpp)
+add_executable(FashionMNIST main.cpp parser.cpp operators.cpp executor.cpp base64.cpp)
 # target_link_libraries(FashionMNIST ${OpenCV_LIBS} onnxruntime ${TORCH_LIBRARIES} nlohmann_json::nlohmann_json)
 target_link_libraries(FashionMNIST onnxruntime nlohmann_json::nlohmann_json)
 

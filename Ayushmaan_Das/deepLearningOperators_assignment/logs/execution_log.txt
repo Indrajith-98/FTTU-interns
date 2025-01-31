@@ -1,0 +1,4 @@
+Layer: StatefulPartitionedCall/functional_1/conv2d_1/convolution__6 | Function: Reshape | Time: 0.019729ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul_1 | Function: Mul | Time: 0.068972ms | Status: FAIL
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/add_1 | Function: Add | Time: 0.06144ms | Status: FAIL
+Layer: StatefulPartitionedCall/functional_1/re_lu_1/Relu | Function: Relu | Time: 0.015532ms | Status: PASS

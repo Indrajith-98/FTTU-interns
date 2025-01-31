@@ -80,9 +80,10 @@
                   "content": "Build Computation Graph and Tensor Initialization",
                   "id": 1738213860396,
                   "level": "default",
-                  "done": false,
+                  "done": true,
                   "start": 1738213860396,
-                  "focus": true
+                  "focus": false,
+                  "end": 1738261778289
                 }
               },
               {
@@ -93,7 +94,8 @@
                   "id": 1738210226071,
                   "level": "default",
                   "done": false,
-                  "start": 1738210226071
+                  "start": 1738210226071,
+                  "focus": true
                 }
               },
               {
@@ -103,8 +105,10 @@
                   "content": "Store and Pass Outputs: Save outputs and pass them to dependent layers.",
                   "id": 1738210463821,
                   "level": "default",
-                  "done": false,
-                  "start": 1738210463821
+                  "done": true,
+                  "start": 1738210463821,
+                  "focus": false,
+                  "end": 1738261767135
                 }
               }
             ],
@@ -126,8 +130,10 @@
                   "content": "Measure Execution Time:",
                   "id": 1738210484981,
                   "level": "default",
-                  "done": false,
-                  "start": 1738210484981
+                  "done": true,
+                  "start": 1738210484981,
+                  "focus": false,
+                  "end": 1738261756592
                 }
               },
               {
@@ -137,8 +143,10 @@
                   "content": "Validate outputs and generate logs.",
                   "id": 1738210527941,
                   "level": "default",
-                  "done": false,
-                  "start": 1738210527941
+                  "done": true,
+                  "start": 1738210527941,
+                  "focus": false,
+                  "end": 1738261758698
                 }
               }
             ],
@@ -146,8 +154,10 @@
               "content": "Logging and Debugging",
               "id": 1738210469744,
               "level": "success",
-              "done": false,
-              "start": 1738210469744
+              "done": true,
+              "start": 1738210469744,
+              "focus": false,
+              "end": 1738295956285
             }
           }
         ],
@@ -180,6 +190,6 @@
     "showEndTime": false,
     "simpleMode": false,
     "lang": "en",
-    "version": "1738226874209"
+    "version": "1738295956436"
   }
 }
