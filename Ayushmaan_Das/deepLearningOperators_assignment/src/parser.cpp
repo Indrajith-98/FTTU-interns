@@ -1,4 +1,4 @@
-#include "onnx_model.h" // Include the correct header file
+#include "onnx_model.h"
 #include <iostream>
 #include <fstream>
 #include <nlohmann/json.hpp>
@@ -7,10 +7,10 @@
 #include <string>
 #include <cstring>
 #include "base64.h"
+#include <cstdint>
 
 using json = nlohmann::json;
 
-// Function Definitions
 bool ONNXModel::loadModel(const std::string &filePath)
 {
     std::ifstream file(filePath);
@@ -50,10 +50,35 @@ void ONNXModel::parseGraph(const json &graph)
     try
     {
         std::cout << "Parsing graph..." << std::endl;
+
+        std::string tensorName = "inputs";
+        Tensor tensor;
+        tensor.shape = {1, 28, 28};
+
+        tensor.data.resize(28 * 28);
+        for (size_t i = 0; i < 28 * 28; ++i)
+        {
+            tensor.data[i] = static_cast<float>(rand() % 256) / 255.0f;
+        }
+
+        tensors[tensorName] = tensor;
+        std::cout << "Manually inserted input tensor: " << tensorName << " | Shape: 1x28x28" << std::endl;
+
+        std::cout << "\n--- Checking loaded input tensors ---\n";
+        for (const auto &tensor : tensors)
+        {
+            std::cout << "Tensor: " << tensor.first << " | Shape: ";
+            for (int dim : tensor.second.shape)
+                std::cout << dim << " ";
+            std::cout << " | Data size: " << tensor.second.data.size() << std::endl;
+        }
+        std::cout << "--------------------------------------\n";
+
         for (const auto &initJson : graph.at("initializer"))
         {
             Tensor tensor;
             std::string tensorName = initJson.at("name").get<std::string>();
+            std::cout << "Processing initializer: " << tensorName << std::endl;
 
             if (initJson.contains("dims"))
             {
@@ -76,12 +101,20 @@ void ONNXModel::parseGraph(const json &graph)
             if (initJson.contains("rawData"))
             {
                 std::string rawDataBase64 = initJson["rawData"].get<std::string>();
-                std::vector<float> decodedData = decodeBase64RawData(rawDataBase64);
-                tensor.data = decodedData;
+                tensor.data = decodeBase64RawData(rawDataBase64);
             }
-
             tensors[tensorName] = tensor;
         }
+
+        std::cout << "\n--- Checking loaded initializer tensors ---\n";
+        for (const auto &tensor : tensors)
+        {
+            std::cout << "Tensor: " << tensor.first << " | Shape: ";
+            for (int dim : tensor.second.shape)
+                std::cout << dim << " ";
+            std::cout << " | Data size: " << tensor.second.data.size() << std::endl;
+        }
+        std::cout << "--------------------------------------\n";
 
         for (const auto &nodeJson : graph.at("node"))
         {
@@ -101,10 +134,17 @@ void ONNXModel::parseGraph(const json &graph)
 
 std::vector<float> ONNXModel::decodeBase64RawData(const std::string &rawDataBase64)
 {
-    std::vector<float> data;
+    std::vector<int64_t> intData;
     std::string decodedBytes = base64_decode(rawDataBase64);
-    size_t numFloats = decodedBytes.size() / sizeof(float);
-    data.resize(numFloats);
-    std::memcpy(data.data(), decodedBytes.data(), decodedBytes.size());
-    return data;
+    size_t numInts = decodedBytes.size() / sizeof(int64_t);
+    intData.resize(numInts);
+    std::memcpy(intData.data(), decodedBytes.data(), decodedBytes.size());
+
+    std::vector<float> floatData(numInts);
+    for (size_t i = 0; i < numInts; ++i)
+    {
+        floatData[i] = static_cast<float>(intData[i]);
+    }
+
+    return floatData;
 }

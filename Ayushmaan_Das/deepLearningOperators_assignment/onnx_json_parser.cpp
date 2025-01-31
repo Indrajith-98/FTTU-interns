@@ -128,7 +128,7 @@ public:
     std::vector<float> decodeBase64RawData(const std::string &rawDataBase64)
     {
         std::vector<float> data;
-        std::string decodedBytes = base64_decode(rawDataBase64); // Using Base64 decoder
+        std::string decodedBytes = base64_decode(rawDataBase64);
         size_t numFloats = decodedBytes.size() / sizeof(float);
         data.resize(numFloats);
         std::memcpy(data.data(), decodedBytes.data(), decodedBytes.size());
@@ -143,5 +143,6 @@ int main()
     {
         model.log("Model successfully loaded.");
     }
+
     return 0;
 }

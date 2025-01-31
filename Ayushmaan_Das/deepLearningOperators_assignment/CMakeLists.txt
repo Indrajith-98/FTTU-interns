@@ -24,7 +24,7 @@ link_directories(${ONNX_RUNTIME_DIR}/lib)
 find_package(nlohmann_json REQUIRED)
 
 # Executable and Linking
-add_executable(FashionMNIST main.cpp parser.cpp operators.cpp executor.cpp base64.cpp)
+add_executable(FashionMNIST main.cpp src/parser.cpp src/operators.cpp src/executor.cpp src/base64.cpp)
 # target_link_libraries(FashionMNIST ${OpenCV_LIBS} onnxruntime ${TORCH_LIBRARIES} nlohmann_json::nlohmann_json)
 target_link_libraries(FashionMNIST onnxruntime nlohmann_json::nlohmann_json)
 

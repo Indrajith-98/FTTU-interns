@@ -4,9 +4,24 @@
 
 bool executeAdd(const Tensor &input1, const Tensor &input2, Tensor &output)
 {
+    std::cout << "Executing Add: Input1 Shape: " << input1.shape.size()
+              << ", Input2 Shape: " << input2.shape.size() << std::endl;
+
+    if (input1.data.empty() || input2.data.empty())
+    {
+        std::cerr << "Error: One of the input tensors is empty!" << std::endl;
+        return false;
+    }
+
     if (input1.shape != input2.shape)
     {
-        std::cerr << "Shape mismatch in Add operation\n";
+        std::cerr << "Shape mismatch in Add operation: ";
+        for (int s : input1.shape)
+            std::cerr << s << " ";
+        std::cerr << " vs ";
+        for (int s : input2.shape)
+            std::cerr << s << " ";
+        std::cerr << std::endl;
         return false;
     }
 
@@ -23,9 +38,24 @@ bool executeAdd(const Tensor &input1, const Tensor &input2, Tensor &output)
 
 bool executeMul(const Tensor &input1, const Tensor &input2, Tensor &output)
 {
+    std::cout << "Executing Mul: Input1 Shape: " << input1.shape.size()
+              << ", Input2 Shape: " << input2.shape.size() << std::endl;
+
+    if (input1.data.empty() || input2.data.empty())
+    {
+        std::cerr << "Error: One of the input tensors is empty!" << std::endl;
+        return false;
+    }
+
     if (input1.shape != input2.shape)
     {
-        std::cerr << "Shape mismatch in Mul operation\n";
+        std::cerr << "Shape mismatch in Mul operation: ";
+        for (int s : input1.shape)
+            std::cerr << s << " ";
+        std::cerr << " vs ";
+        for (int s : input2.shape)
+            std::cerr << s << " ";
+        std::cerr << std::endl;
         return false;
     }
 
@@ -100,14 +130,32 @@ bool executeSoftmax(const Tensor &input, Tensor &output)
 
 bool executeReshape(const Tensor &input, Tensor &output, const std::vector<int> &newShape)
 {
-    int newSize = std::accumulate(newShape.begin(), newShape.end(), 1, std::multiplies<int>());
-    if (newSize != input.data.size())
+    std::cout << "Executing Reshape: New Shape: ";
+    for (int s : newShape)
+        std::cout << s << " ";
+    std::cout << std::endl;
+
+    int totalElements = 1;
+    for (int dim : newShape)
     {
-        std::cerr << "Invalid reshape size\n";
+        if (dim > 0)
+            totalElements *= dim;
+    }
+
+    if (input.data.size() != totalElements)
+    {
+        std::cerr << "Error: Reshape mismatch! Input size: " << input.data.size()
+                  << ", Expected: " << totalElements << std::endl;
         return false;
     }
+
     output.shape = newShape;
     output.data = input.data;
+
+    std::cout << "Reshaped Output Shape: ";
+    for (int s : output.shape)
+        std::cout << s << " ";
+    std::cout << std::endl;
     return true;
 }
 
