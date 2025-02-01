@@ -1,0 +1,192 @@
+[
+    {
+        "layer_name": "conv2d",
+        "type": "Conv2D",
+        "input_file_path": "data/input/conv2d_input.bin",
+        "output_file_path": "data/output/conv2d_output.bin",
+        "attributes": {
+            "input_shape": [
+                32,
+                32,
+                3
+            ],
+            "output_shape": [
+                30,
+                30,
+                32
+            ],
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "valid",
+            "activation": "relu"
+        },
+        "weight_file_paths": [
+            "D:/data/weight/conv2d_weight.bin",
+            "D:/data/weight/conv2d_bias.bin"
+        ]
+    },
+    {
+        "layer_name": "max_pooling2d",
+        "type": "MaxPooling2D",
+        "input_file_path": "data/input/max_pooling2d_input.bin",
+        "output_file_path": "data/output/max_pooling2d_output.bin",
+        "attributes": {
+            "input_shape": [
+                30,
+                30,
+                32
+            ],
+            "output_shape": [
+                15,
+                15,
+                32
+            ]
+        }
+    },
+    {
+        "layer_name": "conv2d_1",
+        "type": "Conv2D",
+        "input_file_path": "data/input/conv2d_1_input.bin",
+        "output_file_path": "data/output/conv2d_1_output.bin",
+        "attributes": {
+            "input_shape": [
+                15,
+                15,
+                32
+            ],
+            "output_shape": [
+                13,
+                13,
+                64
+            ],
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "valid",
+            "activation": "relu"
+        },
+        "weight_file_paths": [
+            "D:/data/weight/conv2d_1_weight.bin",
+            "D:/data/weight/conv2d_1_bias.bin"
+        ]
+    },
+    {
+        "layer_name": "max_pooling2d_1",
+        "type": "MaxPooling2D",
+        "input_file_path": "data/input/max_pooling2d_1_input.bin",
+        "output_file_path": "data/output/max_pooling2d_1_output.bin",
+        "attributes": {
+            "input_shape": [
+                13,
+                13,
+                64
+            ],
+            "output_shape": [
+                6,
+                6,
+                64
+            ]
+        }
+    },
+    {
+        "layer_name": "conv2d_2",
+        "type": "Conv2D",
+        "input_file_path": "data/input/conv2d_2_input.bin",
+        "output_file_path": "data/output/conv2d_2_output.bin",
+        "attributes": {
+            "input_shape": [
+                6,
+                6,
+                64
+            ],
+            "output_shape": [
+                4,
+                4,
+                128
+            ],
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "valid",
+            "activation": "relu"
+        },
+        "weight_file_paths": [
+            "D:/data/weight/conv2d_2_weight.bin",
+            "D:/data/weight/conv2d_2_bias.bin"
+        ]
+    },
+    {
+        "layer_name": "flatten",
+        "type": "Flatten",
+        "input_file_path": "data/input/flatten_input.bin",
+        "output_file_path": "data/output/flatten_output.bin",
+        "attributes": {
+            "input_shape": [
+                4,
+                4,
+                128
+            ],
+            "output_shape": [
+                2048
+            ]
+        }
+    },
+    {
+        "layer_name": "dense",
+        "type": "Dense",
+        "input_file_path": "data/input/dense_input.bin",
+        "output_file_path": "data/output/dense_output.bin",
+        "attributes": {
+            "input_shape": [
+                2048
+            ],
+            "output_shape": [
+                64
+            ],
+            "units": 64,
+            "activation": "relu"
+        },
+        "weight_file_paths": [
+            "D:/data/weight/dense_weight.bin",
+            "D:/data/weight/dense_bias.bin"
+        ]
+    },
+    {
+        "layer_name": "dense_1",
+        "type": "Dense",
+        "input_file_path": "data/input/dense_1_input.bin",
+        "output_file_path": "data/output/dense_1_output.bin",
+        "attributes": {
+            "input_shape": [
+                64
+            ],
+            "output_shape": [
+                10
+            ],
+            "units": 10,
+            "activation": "linear"
+        },
+        "weight_file_paths": [
+            "D:/data/weight/dense_1_weight.bin",
+            "D:/data/weight/dense_1_bias.bin"
+        ]
+    }
+]
+
+    
