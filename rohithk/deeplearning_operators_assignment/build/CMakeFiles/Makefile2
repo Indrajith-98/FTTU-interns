@@ -192,7 +192,8 @@ CMakeFiles/BatchNorm.dir/clean:
 # Target rules for target CMakeFiles/MaxPooling.dir
 
 # All Build rule for target.
-CMakeFiles/MaxPooling.dir/all:
+CMakeFiles/MaxPooling.dir/all: CMakeFiles/CTensor.dir/all
+CMakeFiles/MaxPooling.dir/all: CMakeFiles/Utils.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=7,8 "Built target MaxPooling"
@@ -200,7 +201,7 @@ CMakeFiles/MaxPooling.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MaxPooling.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MaxPooling.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles 0
 .PHONY : CMakeFiles/MaxPooling.dir/rule

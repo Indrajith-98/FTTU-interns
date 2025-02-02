@@ -2,11 +2,11 @@
 
 CTensor::CTensor() : shape(), data() {}
 
-CTensor::CTensor(const std::vector<int> &shape_, float val) : shape(shape_) {
+CTensor::CTensor(const std::vector<int> &shape_, double val) : shape(shape_) {
   int size = 1;
   for (int dim : shape)
     size *= dim;
-  data = std::vector<float>(size, val);
+  data = std::vector<double>(size, val);
 }
 
 CTensor::CTensor(const CTensor &copy) : shape(copy.shape), data(copy.data) {}

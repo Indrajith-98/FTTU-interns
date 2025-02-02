@@ -6,9 +6,8 @@
 
 using namespace std;
 
-vector<vector<vector<float>>>
-batch_norm(const vector<vector<vector<float>>> &image,
-           const vector<float> &gamma, const vector<float> &beta,
-           float epsilon = 1e-5);
-
+vector<vector<vector<double>>>
+batch_norm(const vector<vector<vector<double>>> &image,
+           const vector<double> &gamma, const vector<double> &beta,
+           double epsilon);
 #endif

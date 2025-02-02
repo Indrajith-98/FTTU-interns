@@ -3,7 +3,8 @@
 
 #include <vector>
 
-typedef std::vector<std::vector<std::vector<std::vector<float>>>> CImageBatch;
-typedef std::vector<std::vector<std::vector<float>>> CImage;
+typedef std::vector<std::vector<std::vector<std::vector<double>>>> CImageBatch;
+typedef std::vector<std::vector<std::vector<double>>> CImage;
+typedef std::vector<std::vector<std::vector<std::vector<double>>>> CWeight;
 
 #endif

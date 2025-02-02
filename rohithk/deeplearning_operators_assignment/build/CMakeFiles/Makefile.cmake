@@ -11,6 +11,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/resources/input.png"
+  "/home/rohithk/miniconda3/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVModules.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
@@ -98,6 +104,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+  "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake"
@@ -106,6 +114,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake"
+  "/usr/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake"
+  "/usr/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake"
   )
 
 # The corresponding makefile is:
@@ -121,6 +132,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
+  "input.png"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

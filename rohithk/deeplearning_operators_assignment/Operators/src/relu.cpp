@@ -6,7 +6,7 @@ CTensor relu(CTensor input) {
   output.shape = input.shape;
   output.data = input.data;
   for (size_t i = 0; i < input.data.size(); i++) {
-    output.data[i] = max((float)0.0, input.data[i]);
+    output.data[i] = max((double)0.0, input.data[i]);
   }
   return output;
 }

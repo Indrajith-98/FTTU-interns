@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/include -I/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/utilities/include
+CXX_INCLUDES = -I/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/include -I/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/utilities/include -I/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/include -isystem /usr/local/include/opencv4
 
-CXX_FLAGS = 
+CXX_FLAGS =  -g -g
 

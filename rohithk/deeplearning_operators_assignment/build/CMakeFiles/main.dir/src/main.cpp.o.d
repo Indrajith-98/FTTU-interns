@@ -182,4 +182,260 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
  /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/utilities/include/ctypes.h \
- /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/include/max_pooling.h
+ /usr/include/nlohmann/json.hpp /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/functional \
+ /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/array \
+ /usr/include/c++/13/compare /usr/include/c++/13/iterator \
+ /usr/include/c++/13/bits/stream_iterator.h /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/13/bits/align.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/ext/concurrence.h \
+ /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/bits/atomic_base.h \
+ /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/13/backward/auto_ptr.h \
+ /usr/include/c++/13/pstl/glue_memory_defs.h /usr/include/c++/13/utility \
+ /usr/include/c++/13/bits/stl_relops.h \
+ /usr/include/nlohmann/adl_serializer.hpp \
+ /usr/include/nlohmann/detail/abi_macros.hpp \
+ /usr/include/nlohmann/detail/conversions/from_json.hpp \
+ /usr/include/c++/13/forward_list /usr/include/c++/13/bits/forward_list.h \
+ /usr/include/c++/13/bits/forward_list.tcc /usr/include/c++/13/map \
+ /usr/include/c++/13/bits/stl_tree.h /usr/include/c++/13/bits/stl_map.h \
+ /usr/include/c++/13/bits/stl_multimap.h /usr/include/c++/13/valarray \
+ /usr/include/c++/13/bits/valarray_array.h \
+ /usr/include/c++/13/bits/valarray_array.tcc \
+ /usr/include/c++/13/bits/valarray_before.h \
+ /usr/include/c++/13/bits/slice_array.h \
+ /usr/include/c++/13/bits/valarray_after.h \
+ /usr/include/c++/13/bits/gslice.h \
+ /usr/include/c++/13/bits/gslice_array.h \
+ /usr/include/c++/13/bits/mask_array.h \
+ /usr/include/c++/13/bits/indirect_array.h \
+ /usr/include/nlohmann/detail/exceptions.hpp \
+ /usr/include/nlohmann/detail/value_t.hpp /usr/include/c++/13/cstdint \
+ /usr/include/nlohmann/detail/macro_scope.hpp \
+ /usr/include/nlohmann/detail/meta/detected.hpp \
+ /usr/include/nlohmann/detail/meta/void_t.hpp \
+ /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /usr/include/c++/13/version /usr/include/c++/13/cassert \
+ /usr/include/assert.h /usr/include/nlohmann/detail/string_escape.hpp \
+ /usr/include/nlohmann/detail/input/position_t.hpp \
+ /usr/include/nlohmann/detail/meta/cpp_future.hpp \
+ /usr/include/nlohmann/detail/meta/type_traits.hpp \
+ /usr/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /usr/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /usr/include/nlohmann/detail/meta/call_std/end.hpp \
+ /usr/include/nlohmann/json_fwd.hpp \
+ /usr/include/nlohmann/detail/string_concat.hpp \
+ /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/nlohmann/detail/meta/identity_tag.hpp \
+ /usr/include/nlohmann/detail/meta/std_fs.hpp \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /usr/include/nlohmann/detail/conversions/to_json.hpp \
+ /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /usr/include/nlohmann/byte_container_with_subtype.hpp \
+ /usr/include/nlohmann/detail/hash.hpp \
+ /usr/include/nlohmann/detail/input/binary_reader.hpp \
+ /usr/include/nlohmann/detail/input/input_adapters.hpp \
+ /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
+ /usr/include/nlohmann/detail/input/json_sax.hpp \
+ /usr/include/nlohmann/detail/input/lexer.hpp \
+ /usr/include/nlohmann/detail/meta/is_sax.hpp \
+ /usr/include/nlohmann/detail/input/parser.hpp \
+ /usr/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /usr/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /usr/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /usr/include/nlohmann/detail/json_custom_base_class.hpp \
+ /usr/include/nlohmann/detail/json_pointer.hpp \
+ /usr/include/nlohmann/detail/json_ref.hpp \
+ /usr/include/nlohmann/detail/output/binary_writer.hpp \
+ /usr/include/nlohmann/detail/output/output_adapters.hpp \
+ /usr/include/nlohmann/detail/output/serializer.hpp \
+ /usr/include/nlohmann/detail/conversions/to_chars.hpp \
+ /usr/include/nlohmann/ordered_map.hpp /usr/include/c++/13/any \
+ /usr/include/nlohmann/detail/macro_unscope.hpp \
+ /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /usr/include/c++/13/fstream \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc \
+ /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/include/max_pooling.h \
+ /usr/local/include/opencv4/opencv2/opencv.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/local/include/opencv4/opencv2/core.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/core/version.hpp \
+ /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
+ /usr/include/c++/13/stdlib.h \
+ /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/c++/13/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/check.hpp \
+ /usr/local/include/opencv4/opencv2/core/traits.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.hpp \
+ /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/types.hpp \
+ /usr/include/c++/13/cfloat \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+ /usr/local/include/opencv4/opencv2/core/mat.hpp \
+ /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/local/include/opencv4/opencv2/core/operations.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/c++/13/complex \
+ /usr/local/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /usr/local/include/opencv4/opencv2/core/optim.hpp \
+ /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/calib3d.hpp \
+ /usr/local/include/opencv4/opencv2/features2d.hpp \
+ /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/local/include/opencv4/opencv2/flann/defines.h \
+ /usr/local/include/opencv4/opencv2/flann/config.h \
+ /usr/local/include/opencv4/opencv2/core/affine.hpp \
+ /usr/local/include/opencv4/opencv2/core/utils/logger.hpp \
+ /usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp \
+ /usr/local/include/opencv4/opencv2/core/utils/logtag.hpp \
+ /usr/local/include/opencv4/opencv2/dnn.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
+ /usr/local/include/opencv4/opencv2/core/async.hpp \
+ /usr/include/c++/13/chrono \
+ /usr/local/include/opencv4/opencv2/dnn/version.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dict.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/layer.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+ /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
+ /usr/local/include/opencv4/opencv2/flann.hpp \
+ /usr/local/include/opencv4/opencv2/flann/flann_base.hpp \
+ /usr/local/include/opencv4/opencv2/flann/general.h \
+ /usr/local/include/opencv4/opencv2/flann/matrix.h \
+ /usr/local/include/opencv4/opencv2/flann/params.h \
+ /usr/local/include/opencv4/opencv2/flann/any.h \
+ /usr/local/include/opencv4/opencv2/flann/defines.h \
+ /usr/local/include/opencv4/opencv2/flann/saving.h \
+ /usr/local/include/opencv4/opencv2/flann/nn_index.h \
+ /usr/local/include/opencv4/opencv2/flann/result_set.h \
+ /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
+ /usr/include/c++/13/bits/stl_multiset.h \
+ /usr/local/include/opencv4/opencv2/flann/all_indices.h \
+ /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
+ /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
+ /usr/local/include/opencv4/opencv2/flann/dist.h \
+ /usr/local/include/opencv4/opencv2/flann/heap.h \
+ /usr/local/include/opencv4/opencv2/flann/allocator.h \
+ /usr/local/include/opencv4/opencv2/flann/random.h \
+ /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h \
+ /usr/local/include/opencv4/opencv2/flann/kmeans_index.h \
+ /usr/local/include/opencv4/opencv2/flann/logger.h \
+ /usr/local/include/opencv4/opencv2/flann/composite_index.h \
+ /usr/local/include/opencv4/opencv2/flann/linear_index.h \
+ /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+ /usr/local/include/opencv4/opencv2/flann/lsh_index.h \
+ /usr/local/include/opencv4/opencv2/flann/lsh_table.h \
+ /usr/include/c++/13/math.h \
+ /usr/local/include/opencv4/opencv2/flann/autotuned_index.h \
+ /usr/local/include/opencv4/opencv2/flann/ground_truth.h \
+ /usr/local/include/opencv4/opencv2/flann/index_testing.h \
+ /usr/local/include/opencv4/opencv2/flann/timer.h \
+ /usr/local/include/opencv4/opencv2/flann/sampling.h \
+ /usr/local/include/opencv4/opencv2/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/local/include/opencv4/opencv2/videoio.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/local/include/opencv4/opencv2/ml.hpp \
+ /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/aruco_board.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/face.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
+ /usr/local/include/opencv4/opencv2/objdetect/barcode.hpp \
+ /usr/local/include/opencv4/opencv2/photo.hpp \
+ /usr/local/include/opencv4/opencv2/stitching.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /usr/local/include/opencv4/opencv2/core/cuda.hpp \
+ /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
+ /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp \
+ /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
+ /usr/include/c++/13/bits/list.tcc \
+ /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+ /usr/include/c++/13/queue /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
+ /usr/include/c++/13/bits/stl_queue.h \
+ /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+ /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
+ /usr/local/include/opencv4/opencv2/video.hpp \
+ /usr/local/include/opencv4/opencv2/video/tracking.hpp \
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp

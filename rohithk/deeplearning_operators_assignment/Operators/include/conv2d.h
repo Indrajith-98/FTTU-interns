@@ -21,7 +21,7 @@ public:
          int padding);
 
   CTensor addPadding(CTensor input);
-  CTensor performConvOp(CTensor input);
-};
 
+  CImage performConvOp(CTensor input);
+};
 #endif // CONV2D_H
