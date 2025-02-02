@@ -1,0 +1,245 @@
+{
+    "layers": [
+        {
+            "layer_name": "conv2d",
+            "type": "Conv2D",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/conv2d_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/conv2d_output.bin",
+            "weights_file_paths": [
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/conv2d_kernel_0.bin",
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/conv2d_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    32,
+                    32,
+                    3
+                ],
+                "output_shape": [
+                    null,
+                    32,
+                    32,
+                    32
+                ],
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "padding": "same",
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "max_pooling2d",
+            "type": "MaxPooling2D",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/max_pooling2d_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/max_pooling2d_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    32,
+                    32,
+                    32
+                ],
+                "output_shape": [
+                    null,
+                    16,
+                    16,
+                    32
+                ],
+                "strides": [
+                    2,
+                    2
+                ],
+                "padding": "valid"
+            }
+        },
+        {
+            "layer_name": "conv2d_1",
+            "type": "Conv2D",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/conv2d_1_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/conv2d_1_output.bin",
+            "weights_file_paths": [
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/conv2d_1_kernel_0.bin",
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/conv2d_1_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    16,
+                    16,
+                    32
+                ],
+                "output_shape": [
+                    null,
+                    16,
+                    16,
+                    64
+                ],
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "padding": "same",
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "max_pooling2d_1",
+            "type": "MaxPooling2D",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/max_pooling2d_1_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/max_pooling2d_1_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    16,
+                    16,
+                    64
+                ],
+                "output_shape": [
+                    null,
+                    8,
+                    8,
+                    64
+                ],
+                "strides": [
+                    2,
+                    2
+                ],
+                "padding": "valid"
+            }
+        },
+        {
+            "layer_name": "conv2d_2",
+            "type": "Conv2D",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/conv2d_2_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/conv2d_2_output.bin",
+            "weights_file_paths": [
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/conv2d_2_kernel_0.bin",
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/conv2d_2_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    8,
+                    8,
+                    64
+                ],
+                "output_shape": [
+                    null,
+                    8,
+                    8,
+                    128
+                ],
+                "kernel_size": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "padding": "same",
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "max_pooling2d_2",
+            "type": "MaxPooling2D",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/max_pooling2d_2_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/max_pooling2d_2_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    8,
+                    8,
+                    128
+                ],
+                "output_shape": [
+                    null,
+                    4,
+                    4,
+                    128
+                ],
+                "strides": [
+                    2,
+                    2
+                ],
+                "padding": "valid"
+            }
+        },
+        {
+            "layer_name": "flatten",
+            "type": "Flatten",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/flatten_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/flatten_output.bin",
+            "weights_file_paths": [],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    4,
+                    4,
+                    128
+                ],
+                "output_shape": [
+                    null,
+                    2048
+                ]
+            }
+        },
+        {
+            "layer_name": "dense",
+            "type": "Dense",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/dense_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/dense_output.bin",
+            "weights_file_paths": [
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/dense_kernel_0.bin",
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/dense_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    2048
+                ],
+                "output_shape": [
+                    null,
+                    128
+                ],
+                "activation": "relu"
+            }
+        },
+        {
+            "layer_name": "dense_1",
+            "type": "Dense",
+            "input_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/input/dense_1_input.bin",
+            "output_file_path": "C:/Users/HP/Z-Submission_Op_DL/data/output/dense_1_output.bin",
+            "weights_file_paths": [
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/dense_1_kernel_0.bin",
+                "C:/Users/HP/Z-Submission_Op_DL/data/weights/dense_1_bias_0.bin"
+            ],
+            "attributes": {
+                "input_shape": [
+                    null,
+                    128
+                ],
+                "output_shape": [
+                    null,
+                    10
+                ],
+                "activation": "softmax"
+            }
+        }
+    ]
+}
