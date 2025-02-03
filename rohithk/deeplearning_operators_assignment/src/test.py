@@ -170,10 +170,8 @@ def max_pooling(layer_output):
     strides = layer["attributes"]["strides"]
     padding = layer["attributes"]["padding"].upper()
 
-    # Default pool_size for MaxPooling2D
-    pool_size = [2, 2]  # Default pool size
+    pool_size = [2, 2]  
 
-    # Perform MaxPooling operation
     maxpooling_output = tf.nn.max_pool2d(
         input=layer_output,
         ksize=[1, pool_size[0], pool_size[1], 1],
@@ -181,17 +179,14 @@ def max_pooling(layer_output):
         padding=padding,
     )
 
-    # Update the shared layer output
     layer_output = maxpooling_output.numpy()
 
-    # Print first channel output
     save_first_channel(layer_output, layer["layer_name"])
 
     return layer_output
 
 
 def dense(layer_output):
-    # Load the weights and biases for the Dense layer
     weights_file_paths = layer["weights_file_paths"]
     assert (
         len(weights_file_paths) == 2
@@ -199,7 +194,6 @@ def dense(layer_output):
 
     weights_path = base_path + weights_file_paths[0]
     bias_path = base_path + weights_file_paths[1]
-
     # Load weights and biases
     weights = np.fromfile(weights_path, dtype=np.float32)
     biases = np.fromfile(bias_path, dtype=np.float32)
@@ -207,17 +201,14 @@ def dense(layer_output):
     input_size = layer["attributes"]["input_shape"][1]
     output_size = layer["attributes"]["output_shape"][1]
 
-    # Reshape weights to match the Dense layer configuration
     weights = weights.reshape((input_size, output_size))
 
     # Flatten the input if necessary
     if len(layer_output.shape) > 2:
         layer_output = layer_output.reshape((layer_output.shape[0], -1))
 
-    # Perform the forward pass through the Dense layer
     dense_output = tf.matmul(layer_output, weights) + biases
 
-    # Apply activation function (e.g., linear, ReLU, etc.)
     activation = layer["attributes"]["activation"]
     if activation == "relu":
         dense_output = tf.nn.relu(dense_output)
@@ -226,10 +217,8 @@ def dense(layer_output):
     else:
         pass
 
-    # Update the shared layer output
     layer_output = dense_output.numpy()
 
-    # Print the dense layer output
     save_first_channel(layer_output, layer["layer_name"])
 
     return layer_output
