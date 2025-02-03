@@ -6,7 +6,7 @@ from scripts.logger import get_logger
 logger = get_logger("CompileModel")
 
 
-def compile_and_save_model(mod, params, target="llvm", model_dir="compiled_tvm_model"):
+def compile_and_save_model(mod, params, target="llvm", model_dir="optimized_tvm_model"):
     logger.info("Compiling the model with LLVM...")
 
     with tvm.transform.PassContext(opt_level=3):

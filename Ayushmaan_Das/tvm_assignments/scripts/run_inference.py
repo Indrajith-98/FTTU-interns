@@ -8,7 +8,10 @@ logger = get_logger("RunInference")
 
 
 def run_inference(
-    lib, input_name="inputs", input_shape=(1, 1, 28, 28), model_dir="compiled_tvm_model"
+    lib,
+    input_name="inputs",
+    input_shape=(1, 1, 28, 28),
+    model_dir="optimized_tvm_model",
 ):
     logger.info("Loading the compiled model for execution...")
 
