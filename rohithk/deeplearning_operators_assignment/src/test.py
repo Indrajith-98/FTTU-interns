@@ -41,14 +41,12 @@ def batch_normalization(layer_output):
 
     output_channels = layer["attributes"]["output_shape"][3]
 
-    # Load weights
     gamma = np.fromfile(gamma_path, dtype=np.float32)
     beta = np.fromfile(beta_path, dtype=np.float32)
     moving_mean = np.fromfile(moving_mean_path, dtype=np.float32)
     moving_variance = np.fromfile(moving_variance_path, dtype=np.float32)
     epsilon = 1e-5  # Small constant to avoid division by zero
 
-    # Perform Batch Normalization using TensorFlow's inbuilt 
     layer_output = tf.nn.batch_normalization(
         x=layer_output,
         mean=moving_mean,
@@ -60,10 +58,8 @@ def batch_normalization(layer_output):
 
     layer_output = tf.nn.relu(layer_output)
 
-    # Convert TensorFlow tensor to numpy array for inspection
     layer_output = layer_output.numpy()
 
-    # Print first channel output
     save_first_channel(layer_output, layer["layer_name"])
 
     return layer_output
@@ -90,7 +86,7 @@ def batch_normalization1d(layer_output):
     moving_variance = np.fromfile(moving_variance_path, dtype=np.float32)
     epsilon = 1e-5  # Small constant to avoid division by zero
 
-    # Perform Batch Normalization for 1D output (e.g., a vector of 256 features per sample)
+    # Perform Batch Normalization for 1D output 
     layer_output = tf.nn.batch_normalization(
         x=layer_output,  # Input tensor of shape [batch_size, 256]
         mean=moving_mean,  # Moving mean (shape: [256])
@@ -100,13 +96,10 @@ def batch_normalization1d(layer_output):
         variance_epsilon=epsilon,
     )
 
-    # Apply ReLU activation after batch normalization
     layer_output = tf.nn.relu(layer_output)
 
-    # Convert TensorFlow tensor to numpy array for inspection (if needed)
     layer_output = layer_output.numpy()
 
-    # Print first channel output (if useful for debugging)
     save_first_channel(layer_output, layer["layer_name"])
 
     return layer_output
@@ -124,18 +117,15 @@ def convolution(layer_output):
     input_height = layer["attributes"]["input_shape"][1]
     input_width = layer["attributes"]["input_shape"][2]
     input_channels = layer["attributes"]["input_shape"][3]
-
-    # Initialize input (if it's the first layer)
     if layer_output is None:
         layer_output = np.ones(
             (1, input_height, input_width, input_channels), dtype=np.float32
-        )  # Dummy values (1.0)
+        ) 
 
     kernel_height = layer["attributes"]["kernel_size"][0]
     kernel_width = layer["attributes"]["kernel_size"][1]
     output_channels = layer["attributes"]["output_shape"][3]
 
-    # Load weights and biases
     kernels_flat = np.fromfile(kernel_path, dtype=np.float32)
     biases = np.fromfile(bias_path, dtype=np.float32)
 
@@ -143,7 +133,6 @@ def convolution(layer_output):
         (kernel_height, kernel_width, input_channels, output_channels)
     )
 
-    # Perform Conv2D operation with linear activation
     strides = layer["attributes"]["strides"]
     padding = layer["attributes"]["padding"].upper()
 
@@ -154,13 +143,10 @@ def convolution(layer_output):
         padding=padding,
     )
 
-    # Add biases to the output
     conv2d_output = tf.nn.bias_add(conv2d_output, biases)
 
-    # Update the shared layer output
     layer_output = conv2d_output.numpy()
 
-    # Print first channel output
     save_first_channel(layer_output, layer["layer_name"])
 
     return layer_output
