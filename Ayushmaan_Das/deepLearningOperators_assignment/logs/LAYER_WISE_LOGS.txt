@@ -1,0 +1,45 @@
+Starting ONNX Model Execution...
+Parsing graph...
+Model loaded successfully!
+Executing model...
+Layer: StatefulPartitionedCall/functional_1/conv2d_1/convolution__6 | Function: Reshape | Time: 0.000002ms | Status: PASS
+Layer: Conv__154 | Function: Conv | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/mul_1 | Function: Mul | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1/batchnorm/add_1 | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/max_pooling2d_1/MaxPool2d | Function: MaxPool | Time: 0.000003ms | Status: PASS
+Layer: Conv__168 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_1_2/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_1_2/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__178 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_2_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/add_1/Add | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_2_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: Conv__188 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_3_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_3_1/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__198 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_4_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/add_1_2/Add | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_4_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: Conv__208 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_5_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_5_1/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__218 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_6_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/add_2_1/Add | Function: Add | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_6_1/Relu | Function: Relu | Time: 0.000002ms | Status: PASS
+Layer: Conv__238 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/mul_1 | Function: Mul | Time: 0.000003ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/batch_normalization_7_1/batchnorm/add_1 | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/re_lu_7_1/Relu | Function: Relu | Time: 0.000003ms | Status: PASS
+Layer: Conv__248 | Function: Conv | Time: 0.000004ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/dense_1/Add | Function: Add | Time: 0.000002ms | Status: PASS
+Layer: StatefulPartitionedCall/functional_1/dense_1/Softmax | Function: Softmax | Time: 0.000003ms | Status: PASS
+Execution completed!

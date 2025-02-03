@@ -1,0 +1,198 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1738209961751,
+        "children": [
+          {
+            "key": 1738210076286,
+            "children": [
+              {
+                "key": 1738210095027,
+                "children": [],
+                "todo": {
+                  "content": "Do a layer-wise dump for the model you have generated with your previous Deep-Leaming assignment.",
+                  "id": 1738210095027,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210095027,
+                  "focus": false,
+                  "end": 1738210308154
+                }
+              },
+              {
+                "key": 1738210115925,
+                "children": [],
+                "todo": {
+                  "content": "It can include inputs, outputs, weights, and other coefficients.",
+                  "id": 1738210115925,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210115925,
+                  "focus": false,
+                  "end": 1738210309779
+                }
+              },
+              {
+                "key": 1738210140101,
+                "children": [],
+                "todo": {
+                  "content": "Create a config file (text file/JSON file./YAML file) containing the details of each of your layers.",
+                  "id": 1738210140101,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210140101,
+                  "focus": false,
+                  "end": 1738210311137
+                }
+              }
+            ],
+            "todo": {
+              "content": "Dumping of Model Layers",
+              "id": 1738210076286,
+              "level": "success",
+              "done": true,
+              "start": 1738210076286,
+              "focus": false,
+              "end": 1738210313089
+            }
+          },
+          {
+            "key": 1738210164752,
+            "children": [
+              {
+                "key": 1738210207315,
+                "children": [],
+                "todo": {
+                  "content": "Implement the required utility functions like file read, file dump, and output comparison.",
+                  "id": 1738210207315,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210207315,
+                  "focus": false,
+                  "end": 1738226874148
+                }
+              },
+              {
+                "key": 1738213860396,
+                "children": [],
+                "todo": {
+                  "content": "Build Computation Graph and Tensor Initialization",
+                  "id": 1738213860396,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738213860396,
+                  "focus": false,
+                  "end": 1738261778289
+                }
+              },
+              {
+                "key": 1738210226071,
+                "children": [],
+                "todo": {
+                  "content": "Implement a C++ version of each operator (floating point Operation) and execute them.",
+                  "id": 1738210226071,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210226071,
+                  "focus": false,
+                  "end": 1738349457747
+                }
+              },
+              {
+                "key": 1738210463821,
+                "children": [],
+                "todo": {
+                  "content": "Store and Pass Outputs: Save outputs and pass them to dependent layers.",
+                  "id": 1738210463821,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210463821,
+                  "focus": false,
+                  "end": 1738261767135
+                }
+              }
+            ],
+            "todo": {
+              "content": "C++ Application Development for Kernel/Operators execution",
+              "id": 1738210164752,
+              "level": "success",
+              "done": true,
+              "start": 1738210164752,
+              "focus": false,
+              "end": 1738349456855
+            }
+          },
+          {
+            "key": 1738210469744,
+            "children": [
+              {
+                "key": 1738210484981,
+                "children": [],
+                "todo": {
+                  "content": "Measure Execution Time:",
+                  "id": 1738210484981,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210484981,
+                  "focus": false,
+                  "end": 1738261756592
+                }
+              },
+              {
+                "key": 1738210527941,
+                "children": [],
+                "todo": {
+                  "content": "Validate outputs and generate logs.",
+                  "id": 1738210527941,
+                  "level": "default",
+                  "done": true,
+                  "start": 1738210527941,
+                  "focus": false,
+                  "end": 1738261758698
+                }
+              }
+            ],
+            "todo": {
+              "content": "Logging and Debugging",
+              "id": 1738210469744,
+              "level": "success",
+              "done": true,
+              "start": 1738210469744,
+              "focus": false,
+              "end": 1738295956285
+            }
+          }
+        ],
+        "todo": {
+          "content": "Implementing the core functionality of the layers with C++.",
+          "id": 1738209961751,
+          "level": "warning",
+          "done": true,
+          "start": 1738209961751,
+          "focus": false,
+          "end": 1738349455438
+        }
+      }
+    ],
+    "expandKeys": [
+      1738210164752,
+      1738210207315,
+      1738209961751,
+      1738210076286,
+      1738210469744
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": "Workplan",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1738349457798"
+  }
+}
