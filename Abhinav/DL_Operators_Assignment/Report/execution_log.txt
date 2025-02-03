@@ -1,0 +1,8 @@
+Layer: Convolution, Function: Forward Pass, Time: 0.0082 ms, Status: PASS
+Layer: Convolution, Function: Forward Pass, Time: 0.0105 ms, Status: PASS
+Layer: Convolution, Function: Forward Pass, Time: 0.0034 ms, Status: PASS
+Layer: Dense Layer, Function: Forward Pass, Time: 0.002 ms, Status: PASS
+Layer: Convolution, Function: Forward Pass, Time: 0.0221 ms, Status: PASS
+Layer: Convolution, Function: Forward Pass, Time: 0.0096 ms, Status: PASS
+Layer: Convolution, Function: Forward Pass, Time: 0.0038 ms, Status: PASS
+Layer: Dense Layer, Function: Forward Pass, Time: 0.0017 ms, Status: PASS
