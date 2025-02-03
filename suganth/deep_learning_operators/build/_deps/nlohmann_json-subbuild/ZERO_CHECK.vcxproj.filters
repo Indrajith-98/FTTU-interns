@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\MULTICOREWARE_FTU_INTERN\DEEP_LEARNING_OPERATORS\build\_deps\nlohmann_json-subbuild\CMakeFiles\db14ba356184de9edf841fd8edb4dc43\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{562A055D-420B-3BD3-96D8-732869700CCA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
