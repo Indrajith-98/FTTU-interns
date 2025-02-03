@@ -8,9 +8,9 @@ The implementation consists of the following key components:
 
 ### Operators Definition
 
-The operators required for the CNN, such as binary operations, convolution, dense layers, flattening, and pooling, are defined in the utilities directory. These operators form the core building blocks for constructing and executing the model.
+The operators required for the CNN, such as convolution, dense layers, flattening, and pooling, are defined in the Operators directory. These operators form the core building blocks for constructing and executing the model.
 
-- **Binary Operations**: These include element-wise mathematical operations (e.g., addition, multiplication) essential for combining inputs, weights, and biases in a neural network. They are optimized for efficient execution to handle large datasets and tensors.
+
 - **Convolution**: This operator performs the convolutional operation on input data using learned filters. Convolution is critical for feature extraction in images, as it captures spatial hierarchies such as edges, textures, and complex patterns.
 - **Dense (Fully Connected) Layer**: The dense layer is responsible for combining all input neurons with weights to produce output neurons. It plays a critical role in decision-making by aggregating features learned in earlier layers.
 - **Flattening**: The flatten operation converts multi-dimensional inputs (e.g., feature maps from convolutional layers) into a single-dimensional array. This transformation is necessary to connect convolutional outputs to dense layers for final classification.
@@ -26,7 +26,7 @@ The extracted weights, biases, and other parameters from the Python-trained mode
 
 ### Input Classification
 
-A sample image (`resized_image.jpeg`, representing the "dog" class) is provided in the report folder for testing and classification. The image is preprocessed and passed through the implemented CNN, and the final output confirms that the model correctly classifies the image.
+A sample image folder mnist_images is provided in the report folder for testing and classification. The image is preprocessed and passed through the implemented CNN, and the final output confirms that the model correctly classifies the image.
 
 ## Key Highlights
 
