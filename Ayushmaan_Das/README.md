@@ -4,6 +4,7 @@
 - [Python Assignment Contents](./python_assignments/README.md)
 - [Testing Assignment Contents](./testing_assignments/README.md)
 - [DL Operatos and Layers Project](./deepLearningOperators_assignment/)
+- [TVM Assignment](./tvm_assignments/)
 
 ### All Assignments
 
@@ -66,6 +67,13 @@
       <td><strong>Deep Learning Operators and Layers</strong></td>
       <td><strong>C++ (main language), Python</strong></td>
       <td><a href="./deepLearningOperators_assignment/README.md">Check Docs</a></td>
+    </tr>
+    </tr>
+    <!--TVM-->
+    <tr style="background-color:rgb(234, 165, 221);">
+      <td><strong>TVM Assignment</strong></td>
+      <td><strong>Python</strong></td>
+      <td><a href="./tvm_assignments/README.md">Check Docs</a></td>
     </tr>
     </tr>
   </tbody>
