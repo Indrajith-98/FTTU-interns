@@ -1,0 +1,2 @@
+/usr/bin/ar qc libConv2d.a CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o
+/usr/bin/ranlib libConv2d.a
