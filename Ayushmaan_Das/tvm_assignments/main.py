@@ -6,29 +6,24 @@ from scripts.logger import get_logger
 
 logger = get_logger("Main")
 
-# Model path
-MODEL_PATH = "models/fashion_mnist.onnx"
+MODEL_PATH = "models/hypertuned_resnet34_fashion_mnist.onnx"
 
 
 def main():
     logger.info("Starting TVM model processing pipeline...")
 
-    # Step 1: Load and Convert Model
     mod, params = load_onnx_model(MODEL_PATH)
     if mod is None:
         logger.error("Failed to load model. Exiting...")
         return
 
-    # Step 2: Optimize Model
-    # mod = optimize_model(mod)
+    mod = optimize_model(mod)
 
-    # Step 3: Compile Model
-    # lib = compile_and_save_model(mod, params)
+    lib = compile_and_save_model(mod, params)
 
-    # Step 4: Run Inference
-    # run_inference(lib)
+    run_inference(lib)
 
-    # logger.info("TVM processing pipeline completed successfully!")
+    logger.info("TVM processing pipeline completed successfully!")
 
 
 if __name__ == "__main__":

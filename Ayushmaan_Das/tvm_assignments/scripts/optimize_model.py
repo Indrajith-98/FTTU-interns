@@ -23,7 +23,6 @@ def optimize_model(mod):
 
     logger.info("Optimization passes applied.")
 
-    # Save the optimized IR
     with open("relay_ir.txt", "w") as f:
         f.write(str(mod))
     logger.info("Relay IR saved to relay_ir.txt")

@@ -14,10 +14,8 @@ def compile_and_save_model(mod, params, target="llvm", model_dir="compiled_tvm_m
 
     logger.info("Compilation successful.")
 
-    # Create directory if not exists
     os.makedirs(model_dir, exist_ok=True)
 
-    # Save compiled artifacts
     lib.export_library(os.path.join(model_dir, "deploy_lib.tar"))
 
     with open(os.path.join(model_dir, "deploy_graph.json"), "w") as f:
