@@ -1,0 +1,3 @@
+/mnt/d/DeepLearningOperators/build/CMakeFiles/DEEPLEARNINGOPERATORS.dir
+/mnt/d/DeepLearningOperators/build/CMakeFiles/edit_cache.dir
+/mnt/d/DeepLearningOperators/build/CMakeFiles/rebuild_cache.dir

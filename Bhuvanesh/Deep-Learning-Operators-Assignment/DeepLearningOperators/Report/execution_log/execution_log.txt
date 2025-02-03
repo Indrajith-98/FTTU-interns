@@ -1,0 +1,440 @@
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0464874 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00885717 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.108561 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00593632 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.0980392 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00750044 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0340246 seconds
+Pass/Fail: Pass
+
+Layer: dense_3
+Function Executed: Dense
+Execution Time: 0.00542581 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0394477 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00392319 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.138493 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00381668 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.152773 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00469142 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.037774 seconds
+Pass/Fail: Pass
+
+Layer: dense_3
+Function Executed: Dense
+Execution Time: 0.0106291 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0965263 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00836614 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.200684 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00349672 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.187904 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00433978 seconds
+Pass/Fail: Pass
+
+Layer: dense_1
+Function Executed: Dense
+Execution Time: 0.0623512 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0441679 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0394684 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00677039 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.126341 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.0058462 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.137895 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.0037678 seconds
+Pass/Fail: Pass
+
+Layer: dense_1
+Function Executed: Dense
+Execution Time: 0.0305124 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.00945534 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0475542 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.0105249 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.164664 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00393546 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.158634 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00374935 seconds
+Pass/Fail: Pass
+
+Layer: dense_1
+Function Executed: Dense
+Execution Time: 0.0350311 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0177674 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0507798 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00704589 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.15484 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00510179 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.178602 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00507319 seconds
+Pass/Fail: Pass
+
+Layer: dense_1
+Function Executed: Dense
+Execution Time: 0.0355572 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0114437 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0409547 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00866533 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.155537 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.0059911 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.158188 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00680594 seconds
+Pass/Fail: Pass
+
+Layer: dense_1
+Function Executed: Dense
+Execution Time: 0.0317177 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.00997937 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0530296 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00650004 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.176918 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00598806 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.160167 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00517868 seconds
+Pass/Fail: Pass
+
+Layer: dense_1
+Function Executed: Dense
+Execution Time: 0.0368412 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0102516 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0414811 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00295424 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.117311 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00320941 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.112761 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.0017652 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0332247 seconds
+Pass/Fail: Pass
+
+Layer: dense_3
+Function Executed: Dense
+Execution Time: 0.0132606 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0279922 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00328844 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.103392 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00266051 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.0916318 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00210322 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.020165 seconds
+Pass/Fail: Pass
+
+Layer: dense_3
+Function Executed: Dense
+Execution Time: 0.00505229 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_3
+Function Executed: Conv2D
+Execution Time: 0.0649917 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_2
+Function Executed: MaxPooling2D
+Execution Time: 0.00910353 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_4
+Function Executed: Conv2D
+Execution Time: 0.169322 seconds
+Pass/Fail: Pass
+
+Layer: max_pooling2d_3
+Function Executed: MaxPooling2D
+Execution Time: 0.00660083 seconds
+Pass/Fail: Pass
+
+Layer: conv2d_5
+Function Executed: Conv2D
+Execution Time: 0.190042 seconds
+Pass/Fail: Pass
+
+Layer: flatten_1
+Function Executed: Flatten
+Execution Time: 0.00584201 seconds
+Pass/Fail: Pass
+
+Layer: dense_2
+Function Executed: Dense
+Execution Time: 0.0790542 seconds
+Pass/Fail: Pass
+
+Layer: dense_3
+Function Executed: Dense
+Execution Time: 0.0631949 seconds
+Pass/Fail: Pass
+
