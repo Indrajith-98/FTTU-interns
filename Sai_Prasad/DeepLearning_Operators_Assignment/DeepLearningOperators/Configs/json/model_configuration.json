@@ -1,0 +1,215 @@
+{
+    "model_name": "sequential_1",
+    "layer_count": 8,
+    "input_shape": [
+        null,
+        32,
+        32,
+        3
+    ],
+    "output_shape": [
+        null,
+        10
+    ],
+    "layer_details": [
+        {
+            "name": "conv2d_3",
+            "type": "Conv2D",
+            "input_shape": [
+                null,
+                32,
+                32,
+                3
+            ],
+            "output_shape": [
+                null,
+                32,
+                32,
+                32
+            ],
+            "input_bin": "../Data/inputs/conv2d_3_input.bin",
+            "output_bin": "../Data/outputs/conv2d_3_output.bin",
+            "weight_files": [
+                "../Data/weights/conv2d_3_kernel.bin",
+                "../Data/weights/conv2d_3_bias.bin"
+            ],
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "same",
+            "activation": "relu"
+        },
+        {
+            "name": "max_pooling2d_2",
+            "type": "MaxPooling2D",
+            "input_shape": [
+                null,
+                32,
+                32,
+                32
+            ],
+            "output_shape": [
+                null,
+                16,
+                16,
+                32
+            ],
+            "input_bin": "../Data/inputs/max_pooling2d_2_input.bin",
+            "output_bin": "../Data/outputs/max_pooling2d_2_output.bin",
+            "weight_files": [],
+            "strides": [
+                2,
+                2
+            ],
+            "padding": "valid"
+        },
+        {
+            "name": "conv2d_4",
+            "type": "Conv2D",
+            "input_shape": [
+                null,
+                16,
+                16,
+                32
+            ],
+            "output_shape": [
+                null,
+                16,
+                16,
+                64
+            ],
+            "input_bin": "../Data/inputs/conv2d_4_input.bin",
+            "output_bin": "../Data/outputs/conv2d_4_output.bin",
+            "weight_files": [
+                "../Data/weights/conv2d_4_kernel.bin",
+                "../Data/weights/conv2d_4_bias.bin"
+            ],
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "same",
+            "activation": "relu"
+        },
+        {
+            "name": "max_pooling2d_3",
+            "type": "MaxPooling2D",
+            "input_shape": [
+                null,
+                16,
+                16,
+                64
+            ],
+            "output_shape": [
+                null,
+                8,
+                8,
+                64
+            ],
+            "input_bin": "../Data/inputs/max_pooling2d_3_input.bin",
+            "output_bin": "../Data/outputs/max_pooling2d_3_output.bin",
+            "weight_files": [],
+            "strides": [
+                2,
+                2
+            ],
+            "padding": "valid"
+        },
+        {
+            "name": "conv2d_5",
+            "type": "Conv2D",
+            "input_shape": [
+                null,
+                8,
+                8,
+                64
+            ],
+            "output_shape": [
+                null,
+                8,
+                8,
+                128
+            ],
+            "input_bin": "../Data/inputs/conv2d_5_input.bin",
+            "output_bin": "../Data/outputs/conv2d_5_output.bin",
+            "weight_files": [
+                "../Data/weights/conv2d_5_kernel.bin",
+                "../Data/weights/conv2d_5_bias.bin"
+            ],
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "same",
+            "activation": "relu"
+        },
+        {
+            "name": "flatten_1",
+            "type": "Flatten",
+            "input_shape": [
+                null,
+                8,
+                8,
+                128
+            ],
+            "output_shape": [
+                null,
+                8192
+            ],
+            "input_bin": "../Data/inputs/flatten_1_input.bin",
+            "output_bin": "../Data/outputs/flatten_1_output.bin",
+            "weight_files": []
+        },
+        {
+            "name": "dense_2",
+            "type": "Dense",
+            "input_shape": [
+                null,
+                8192
+            ],
+            "output_shape": [
+                null,
+                64
+            ],
+            "input_bin": "../Data/inputs/dense_2_input.bin",
+            "output_bin": "../Data/outputs/dense_2_output.bin",
+            "weight_files": [
+                "../Data/weights/dense_2_kernel.bin",
+                "../Data/weights/dense_2_bias.bin"
+            ],
+            "activation": "relu"
+        },
+        {
+            "name": "dense_3",
+            "type": "Dense",
+            "input_shape": [
+                null,
+                64
+            ],
+            "output_shape": [
+                null,
+                10
+            ],
+            "input_bin": "../Data/inputs/dense_3_input.bin",
+            "output_bin": "../Data/outputs/dense_3_output.bin",
+            "weight_files": [
+                "../Data/weights/dense_3_kernel.bin",
+                "../Data/weights/dense_3_bias.bin"
+            ],
+            "activation": "softmax"
+        }
+    ]
+}
