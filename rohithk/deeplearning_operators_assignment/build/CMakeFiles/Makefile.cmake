@@ -138,10 +138,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/CTensor.dir/DependInfo.cmake"
   "CMakeFiles/Conv2d.dir/DependInfo.cmake"
-  "CMakeFiles/Utils.dir/DependInfo.cmake"
   "CMakeFiles/BatchNorm.dir/DependInfo.cmake"
+  "CMakeFiles/Utils.dir/DependInfo.cmake"
+  "CMakeFiles/UtilsTest.dir/DependInfo.cmake"
   "CMakeFiles/MaxPooling.dir/DependInfo.cmake"
+  "CMakeFiles/Dense.dir/DependInfo.cmake"
+  "CMakeFiles/TestOperators.dir/DependInfo.cmake"
+  "CMakeFiles/Relu.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   )

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libCTensor.a CMakeFiles/CTensor.dir/Operators/src/ctensor.cpp.o
-/usr/bin/ranlib libCTensor.a

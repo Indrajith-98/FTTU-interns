@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.28.3)
 project(DeepLearningOperators)
 
@@ -12,22 +13,23 @@ include_directories(${OpenCV_INCLUDE_DIRS} include)
 
 configure_file(resources/input.png ${CMAKE_BINARY_DIR}/input.png COPYONLY)
 
-add_library(CTensor Operators/src/ctensor.cpp)
-add_library(Conv2d Operators/src/conv2d.cpp)
+add_library(Conv2d Operators/src/Conv2D.cpp)
+add_library(BatchNorm Operators/src/batchnorm.cpp)
 add_library(Utils utilities/src/utils.cpp)
-add_library(BatchNorm Operators/src/batch_normalisation.cpp)
-add_library(MaxPooling Operators/src/max_pooling.cpp)
+add_library(UtilsTest utilities/src/test.cpp)
+add_library(MaxPooling Operators/src/maxpooling.cpp)
+add_library(Dense Operators/src/dense.cpp)
+add_library(TestOperators Test_Operators/src/unit_test.cpp)
+add_library(Relu Operators/src/relu.cpp)
 
-target_include_directories(CTensor PUBLIC Operators/include)
 target_include_directories(Conv2d PUBLIC Operators/include)
 target_include_directories(Utils PUBLIC utilities/include)
+target_include_directories(UtilsTest PUBLIC utilities/include)
 target_include_directories(BatchNorm PUBLIC Operators/include)
 target_include_directories(MaxPooling PUBLIC Operators/include)
-
-target_link_libraries(Conv2d PUBLIC CTensor)
-target_link_libraries(Utils PUBLIC CTensor)
-target_link_libraries(MaxPooling PUBLIC Utils)
-target_link_libraries(BatchNorm PUBLIC CTensor)
+target_include_directories(Dense PUBLIC Operators/include)
+target_include_directories(TestOperators PUBLIC Test_Operators/include)
+target_include_directories(Relu PUBLIC Operators/include)
 
 add_executable(main src/main.cpp)
-target_link_libraries(main PUBLIC CTensor Conv2d Utils BatchNorm MaxPooling PRIVATE nlohmann_json::nlohmann_json ${OpenCV_LIBS})
+target_link_libraries(main PUBLIC  Dense TestOperators UtilsTest Conv2d Utils BatchNorm MaxPooling PRIVATE nlohmann_json::nlohmann_json TestOperators ${OpenCV_LIBS})

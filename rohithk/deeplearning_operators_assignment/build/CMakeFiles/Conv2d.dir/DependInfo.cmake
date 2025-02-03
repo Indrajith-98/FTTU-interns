@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/conv2d.cpp" "CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o" "gcc" "CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o.d"
+  "/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/Conv2D.cpp" "CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o" "gcc" "CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

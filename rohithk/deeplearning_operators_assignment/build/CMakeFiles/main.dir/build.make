@@ -92,11 +92,14 @@ main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/main.cpp.o
 main: CMakeFiles/main.dir/build.make
-main: libCTensor.a
+main: libDense.a
+main: libTestOperators.a
+main: libUtilsTest.a
 main: libConv2d.a
 main: libUtils.a
 main: libBatchNorm.a
 main: libMaxPooling.a
+main: libTestOperators.a
 main: /usr/local/lib/libopencv_gapi.so.4.12.0
 main: /usr/local/lib/libopencv_stitching.so.4.12.0
 main: /usr/local/lib/libopencv_aruco.so.4.12.0
@@ -130,8 +133,6 @@ main: /usr/local/lib/libopencv_wechat_qrcode.so.4.12.0
 main: /usr/local/lib/libopencv_xfeatures2d.so.4.12.0
 main: /usr/local/lib/libopencv_xobjdetect.so.4.12.0
 main: /usr/local/lib/libopencv_xphoto.so.4.12.0
-main: libUtils.a
-main: libCTensor.a
 main: /usr/local/lib/libopencv_shape.so.4.12.0
 main: /usr/local/lib/libopencv_highgui.so.4.12.0
 main: /usr/local/lib/libopencv_datasets.so.4.12.0

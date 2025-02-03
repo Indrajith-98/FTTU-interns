@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CTensor
-
-# Build rule for target.
-CTensor: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CTensor
-.PHONY : CTensor
-
-# fast build rule for target.
-CTensor/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/build
-.PHONY : CTensor/fast
-
-#=============================================================================
 # Target rules for targets named Conv2d
 
 # Build rule for target.
@@ -141,19 +128,6 @@ Conv2d: cmake_check_build_system
 Conv2d/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/build
 .PHONY : Conv2d/fast
-
-#=============================================================================
-# Target rules for targets named Utils
-
-# Build rule for target.
-Utils: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Utils
-.PHONY : Utils
-
-# fast build rule for target.
-Utils/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Utils.dir/build.make CMakeFiles/Utils.dir/build
-.PHONY : Utils/fast
 
 #=============================================================================
 # Target rules for targets named BatchNorm
@@ -169,6 +143,32 @@ BatchNorm/fast:
 .PHONY : BatchNorm/fast
 
 #=============================================================================
+# Target rules for targets named Utils
+
+# Build rule for target.
+Utils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Utils
+.PHONY : Utils
+
+# fast build rule for target.
+Utils/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Utils.dir/build.make CMakeFiles/Utils.dir/build
+.PHONY : Utils/fast
+
+#=============================================================================
+# Target rules for targets named UtilsTest
+
+# Build rule for target.
+UtilsTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UtilsTest
+.PHONY : UtilsTest
+
+# fast build rule for target.
+UtilsTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UtilsTest.dir/build.make CMakeFiles/UtilsTest.dir/build
+.PHONY : UtilsTest/fast
+
+#=============================================================================
 # Target rules for targets named MaxPooling
 
 # Build rule for target.
@@ -180,6 +180,45 @@ MaxPooling: cmake_check_build_system
 MaxPooling/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/build
 .PHONY : MaxPooling/fast
+
+#=============================================================================
+# Target rules for targets named Dense
+
+# Build rule for target.
+Dense: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dense
+.PHONY : Dense
+
+# fast build rule for target.
+Dense/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dense.dir/build.make CMakeFiles/Dense.dir/build
+.PHONY : Dense/fast
+
+#=============================================================================
+# Target rules for targets named TestOperators
+
+# Build rule for target.
+TestOperators: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestOperators
+.PHONY : TestOperators
+
+# fast build rule for target.
+TestOperators/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOperators.dir/build.make CMakeFiles/TestOperators.dir/build
+.PHONY : TestOperators/fast
+
+#=============================================================================
+# Target rules for targets named Relu
+
+# Build rule for target.
+Relu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Relu
+.PHONY : Relu
+
+# fast build rule for target.
+Relu/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Relu.dir/build.make CMakeFiles/Relu.dir/build
+.PHONY : Relu/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -194,101 +233,149 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-Operators/src/batch_normalisation.o: Operators/src/batch_normalisation.cpp.o
-.PHONY : Operators/src/batch_normalisation.o
+Operators/src/Conv2D.o: Operators/src/Conv2D.cpp.o
+.PHONY : Operators/src/Conv2D.o
 
 # target to build an object file
-Operators/src/batch_normalisation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batch_normalisation.cpp.o
-.PHONY : Operators/src/batch_normalisation.cpp.o
+Operators/src/Conv2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o
+.PHONY : Operators/src/Conv2D.cpp.o
 
-Operators/src/batch_normalisation.i: Operators/src/batch_normalisation.cpp.i
-.PHONY : Operators/src/batch_normalisation.i
+Operators/src/Conv2D.i: Operators/src/Conv2D.cpp.i
+.PHONY : Operators/src/Conv2D.i
 
 # target to preprocess a source file
-Operators/src/batch_normalisation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batch_normalisation.cpp.i
-.PHONY : Operators/src/batch_normalisation.cpp.i
+Operators/src/Conv2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.i
+.PHONY : Operators/src/Conv2D.cpp.i
 
-Operators/src/batch_normalisation.s: Operators/src/batch_normalisation.cpp.s
-.PHONY : Operators/src/batch_normalisation.s
+Operators/src/Conv2D.s: Operators/src/Conv2D.cpp.s
+.PHONY : Operators/src/Conv2D.s
 
 # target to generate assembly for a file
-Operators/src/batch_normalisation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batch_normalisation.cpp.s
-.PHONY : Operators/src/batch_normalisation.cpp.s
+Operators/src/Conv2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.s
+.PHONY : Operators/src/Conv2D.cpp.s
 
-Operators/src/conv2d.o: Operators/src/conv2d.cpp.o
-.PHONY : Operators/src/conv2d.o
+Operators/src/batchnorm.o: Operators/src/batchnorm.cpp.o
+.PHONY : Operators/src/batchnorm.o
 
 # target to build an object file
-Operators/src/conv2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o
-.PHONY : Operators/src/conv2d.cpp.o
+Operators/src/batchnorm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batchnorm.cpp.o
+.PHONY : Operators/src/batchnorm.cpp.o
 
-Operators/src/conv2d.i: Operators/src/conv2d.cpp.i
-.PHONY : Operators/src/conv2d.i
+Operators/src/batchnorm.i: Operators/src/batchnorm.cpp.i
+.PHONY : Operators/src/batchnorm.i
 
 # target to preprocess a source file
-Operators/src/conv2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.i
-.PHONY : Operators/src/conv2d.cpp.i
+Operators/src/batchnorm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batchnorm.cpp.i
+.PHONY : Operators/src/batchnorm.cpp.i
 
-Operators/src/conv2d.s: Operators/src/conv2d.cpp.s
-.PHONY : Operators/src/conv2d.s
+Operators/src/batchnorm.s: Operators/src/batchnorm.cpp.s
+.PHONY : Operators/src/batchnorm.s
 
 # target to generate assembly for a file
-Operators/src/conv2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Conv2d.dir/build.make CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.s
-.PHONY : Operators/src/conv2d.cpp.s
+Operators/src/batchnorm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BatchNorm.dir/build.make CMakeFiles/BatchNorm.dir/Operators/src/batchnorm.cpp.s
+.PHONY : Operators/src/batchnorm.cpp.s
 
-Operators/src/ctensor.o: Operators/src/ctensor.cpp.o
-.PHONY : Operators/src/ctensor.o
+Operators/src/dense.o: Operators/src/dense.cpp.o
+.PHONY : Operators/src/dense.o
 
 # target to build an object file
-Operators/src/ctensor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/Operators/src/ctensor.cpp.o
-.PHONY : Operators/src/ctensor.cpp.o
+Operators/src/dense.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dense.dir/build.make CMakeFiles/Dense.dir/Operators/src/dense.cpp.o
+.PHONY : Operators/src/dense.cpp.o
 
-Operators/src/ctensor.i: Operators/src/ctensor.cpp.i
-.PHONY : Operators/src/ctensor.i
+Operators/src/dense.i: Operators/src/dense.cpp.i
+.PHONY : Operators/src/dense.i
 
 # target to preprocess a source file
-Operators/src/ctensor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/Operators/src/ctensor.cpp.i
-.PHONY : Operators/src/ctensor.cpp.i
+Operators/src/dense.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dense.dir/build.make CMakeFiles/Dense.dir/Operators/src/dense.cpp.i
+.PHONY : Operators/src/dense.cpp.i
 
-Operators/src/ctensor.s: Operators/src/ctensor.cpp.s
-.PHONY : Operators/src/ctensor.s
+Operators/src/dense.s: Operators/src/dense.cpp.s
+.PHONY : Operators/src/dense.s
 
 # target to generate assembly for a file
-Operators/src/ctensor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CTensor.dir/build.make CMakeFiles/CTensor.dir/Operators/src/ctensor.cpp.s
-.PHONY : Operators/src/ctensor.cpp.s
+Operators/src/dense.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dense.dir/build.make CMakeFiles/Dense.dir/Operators/src/dense.cpp.s
+.PHONY : Operators/src/dense.cpp.s
 
-Operators/src/max_pooling.o: Operators/src/max_pooling.cpp.o
-.PHONY : Operators/src/max_pooling.o
+Operators/src/maxpooling.o: Operators/src/maxpooling.cpp.o
+.PHONY : Operators/src/maxpooling.o
 
 # target to build an object file
-Operators/src/max_pooling.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/max_pooling.cpp.o
-.PHONY : Operators/src/max_pooling.cpp.o
+Operators/src/maxpooling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/maxpooling.cpp.o
+.PHONY : Operators/src/maxpooling.cpp.o
 
-Operators/src/max_pooling.i: Operators/src/max_pooling.cpp.i
-.PHONY : Operators/src/max_pooling.i
+Operators/src/maxpooling.i: Operators/src/maxpooling.cpp.i
+.PHONY : Operators/src/maxpooling.i
 
 # target to preprocess a source file
-Operators/src/max_pooling.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/max_pooling.cpp.i
-.PHONY : Operators/src/max_pooling.cpp.i
+Operators/src/maxpooling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/maxpooling.cpp.i
+.PHONY : Operators/src/maxpooling.cpp.i
 
-Operators/src/max_pooling.s: Operators/src/max_pooling.cpp.s
-.PHONY : Operators/src/max_pooling.s
+Operators/src/maxpooling.s: Operators/src/maxpooling.cpp.s
+.PHONY : Operators/src/maxpooling.s
 
 # target to generate assembly for a file
-Operators/src/max_pooling.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/max_pooling.cpp.s
-.PHONY : Operators/src/max_pooling.cpp.s
+Operators/src/maxpooling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxPooling.dir/build.make CMakeFiles/MaxPooling.dir/Operators/src/maxpooling.cpp.s
+.PHONY : Operators/src/maxpooling.cpp.s
+
+Operators/src/relu.o: Operators/src/relu.cpp.o
+.PHONY : Operators/src/relu.o
+
+# target to build an object file
+Operators/src/relu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Relu.dir/build.make CMakeFiles/Relu.dir/Operators/src/relu.cpp.o
+.PHONY : Operators/src/relu.cpp.o
+
+Operators/src/relu.i: Operators/src/relu.cpp.i
+.PHONY : Operators/src/relu.i
+
+# target to preprocess a source file
+Operators/src/relu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Relu.dir/build.make CMakeFiles/Relu.dir/Operators/src/relu.cpp.i
+.PHONY : Operators/src/relu.cpp.i
+
+Operators/src/relu.s: Operators/src/relu.cpp.s
+.PHONY : Operators/src/relu.s
+
+# target to generate assembly for a file
+Operators/src/relu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Relu.dir/build.make CMakeFiles/Relu.dir/Operators/src/relu.cpp.s
+.PHONY : Operators/src/relu.cpp.s
+
+Test_Operators/src/unit_test.o: Test_Operators/src/unit_test.cpp.o
+.PHONY : Test_Operators/src/unit_test.o
+
+# target to build an object file
+Test_Operators/src/unit_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOperators.dir/build.make CMakeFiles/TestOperators.dir/Test_Operators/src/unit_test.cpp.o
+.PHONY : Test_Operators/src/unit_test.cpp.o
+
+Test_Operators/src/unit_test.i: Test_Operators/src/unit_test.cpp.i
+.PHONY : Test_Operators/src/unit_test.i
+
+# target to preprocess a source file
+Test_Operators/src/unit_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOperators.dir/build.make CMakeFiles/TestOperators.dir/Test_Operators/src/unit_test.cpp.i
+.PHONY : Test_Operators/src/unit_test.cpp.i
+
+Test_Operators/src/unit_test.s: Test_Operators/src/unit_test.cpp.s
+.PHONY : Test_Operators/src/unit_test.s
+
+# target to generate assembly for a file
+Test_Operators/src/unit_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestOperators.dir/build.make CMakeFiles/TestOperators.dir/Test_Operators/src/unit_test.cpp.s
+.PHONY : Test_Operators/src/unit_test.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -313,6 +400,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+utilities/src/test.o: utilities/src/test.cpp.o
+.PHONY : utilities/src/test.o
+
+# target to build an object file
+utilities/src/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UtilsTest.dir/build.make CMakeFiles/UtilsTest.dir/utilities/src/test.cpp.o
+.PHONY : utilities/src/test.cpp.o
+
+utilities/src/test.i: utilities/src/test.cpp.i
+.PHONY : utilities/src/test.i
+
+# target to preprocess a source file
+utilities/src/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UtilsTest.dir/build.make CMakeFiles/UtilsTest.dir/utilities/src/test.cpp.i
+.PHONY : utilities/src/test.cpp.i
+
+utilities/src/test.s: utilities/src/test.cpp.s
+.PHONY : utilities/src/test.s
+
+# target to generate assembly for a file
+utilities/src/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UtilsTest.dir/build.make CMakeFiles/UtilsTest.dir/utilities/src/test.cpp.s
+.PHONY : utilities/src/test.cpp.s
 
 utilities/src/utils.o: utilities/src/utils.cpp.o
 .PHONY : utilities/src/utils.o
@@ -347,26 +458,38 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... BatchNorm"
-	@echo "... CTensor"
 	@echo "... Conv2d"
+	@echo "... Dense"
 	@echo "... MaxPooling"
+	@echo "... Relu"
+	@echo "... TestOperators"
 	@echo "... Utils"
+	@echo "... UtilsTest"
 	@echo "... main"
-	@echo "... Operators/src/batch_normalisation.o"
-	@echo "... Operators/src/batch_normalisation.i"
-	@echo "... Operators/src/batch_normalisation.s"
-	@echo "... Operators/src/conv2d.o"
-	@echo "... Operators/src/conv2d.i"
-	@echo "... Operators/src/conv2d.s"
-	@echo "... Operators/src/ctensor.o"
-	@echo "... Operators/src/ctensor.i"
-	@echo "... Operators/src/ctensor.s"
-	@echo "... Operators/src/max_pooling.o"
-	@echo "... Operators/src/max_pooling.i"
-	@echo "... Operators/src/max_pooling.s"
+	@echo "... Operators/src/Conv2D.o"
+	@echo "... Operators/src/Conv2D.i"
+	@echo "... Operators/src/Conv2D.s"
+	@echo "... Operators/src/batchnorm.o"
+	@echo "... Operators/src/batchnorm.i"
+	@echo "... Operators/src/batchnorm.s"
+	@echo "... Operators/src/dense.o"
+	@echo "... Operators/src/dense.i"
+	@echo "... Operators/src/dense.s"
+	@echo "... Operators/src/maxpooling.o"
+	@echo "... Operators/src/maxpooling.i"
+	@echo "... Operators/src/maxpooling.s"
+	@echo "... Operators/src/relu.o"
+	@echo "... Operators/src/relu.i"
+	@echo "... Operators/src/relu.s"
+	@echo "... Test_Operators/src/unit_test.o"
+	@echo "... Test_Operators/src/unit_test.i"
+	@echo "... Test_Operators/src/unit_test.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... utilities/src/test.o"
+	@echo "... utilities/src/test.i"
+	@echo "... utilities/src/test.s"
 	@echo "... utilities/src/utils.o"
 	@echo "... utilities/src/utils.i"
 	@echo "... utilities/src/utils.s"

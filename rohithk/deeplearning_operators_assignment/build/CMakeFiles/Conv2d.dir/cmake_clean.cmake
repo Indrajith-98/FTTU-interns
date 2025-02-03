@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o"
-  "CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o.d"
+  "CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o"
+  "CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o.d"
   "libConv2d.a"
   "libConv2d.pdb"
 )

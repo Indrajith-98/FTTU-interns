@@ -69,28 +69,28 @@ include CMakeFiles/Conv2d.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Conv2d.dir/flags.make
 
-CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o: CMakeFiles/Conv2d.dir/flags.make
-CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o: /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/conv2d.cpp
-CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o: CMakeFiles/Conv2d.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o -MF CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o.d -o CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o -c /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/conv2d.cpp
+CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o: CMakeFiles/Conv2d.dir/flags.make
+CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o: /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/Conv2D.cpp
+CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o: CMakeFiles/Conv2d.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o -MF CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o.d -o CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o -c /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/Conv2D.cpp
 
-CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/conv2d.cpp > CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.i
+CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/Conv2D.cpp > CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.i
 
-CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/conv2d.cpp -o CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.s
+CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/Operators/src/Conv2D.cpp -o CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.s
 
 # Object files for target Conv2d
 Conv2d_OBJECTS = \
-"CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o"
+"CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o"
 
 # External object files for target Conv2d
 Conv2d_EXTERNAL_OBJECTS =
 
-libConv2d.a: CMakeFiles/Conv2d.dir/Operators/src/conv2d.cpp.o
+libConv2d.a: CMakeFiles/Conv2d.dir/Operators/src/Conv2D.cpp.o
 libConv2d.a: CMakeFiles/Conv2d.dir/build.make
 libConv2d.a: CMakeFiles/Conv2d.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rohithk/mcw/FTTU-interns/rohithk/deeplearning_operators_assignment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libConv2d.a"

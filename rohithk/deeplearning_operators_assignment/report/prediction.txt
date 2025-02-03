@@ -1,0 +1,1 @@
+Predicted class at cpp: Airplane (Index: 0)

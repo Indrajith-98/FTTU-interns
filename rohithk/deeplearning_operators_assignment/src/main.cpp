@@ -1,453 +1,456 @@
-#include <batch_normalisation.h>
-#include <conv2d.h>
-#include <ctypes.h>
-#include <fstream> // Include ofstream to write to a file
+#include "../Operators/include/Conv2D.h"
+#include "../Operators/include/maxpooling.h"
+#include "../utilities/include/utils.h"
+#include "batchnorm.h"
+#include "dense.h"
+#include "unit_test.h"
+#include <cassert>
+#include <fstream>
 #include <iostream>
-#include <max_pooling.h>
-#include <nlohmann/json.hpp> // Include the nlohmann/json header
+#include <nlohmann/json.hpp>
 #include <opencv2/opencv.hpp>
-#include <utils.h>
+#include <vector>
 
-using namespace cv;
-using namespace std;
 using json = nlohmann::json;
-void write3DVectorToJson(const CImage &data, const std::string &filename) {
-  json j = json::array();
-
-  int channels = 32;
-  int width = 30;
-  int height = 30;
-
-  for (int c = 0; c < channels; c++) {
-    json channel = json::array();
-    for (int w = 0; w < width; w++) {
-      json row = json::array();
-      for (int h = 0; h < height; h++) {
-        row.push_back(data[c][w][h]);
-      }
-      channel.push_back(row);
-    }
-    j.push_back(channel);
-  }
-
-  std::ofstream file(filename);
-  if (file.is_open()) {
-    file << j.dump(4);
-    file.close();
-  } else {
-    throw std::runtime_error("Unable to open file: " + filename);
-  }
-}
-void write3DVectorToJsonInverted(const CImage &data,
-                                 const std::string &filename) {
-  json j = json::array();
-
-  int channels = 3;
-  int width = data.size();
-  int height = data[0].size();
-
-  for (int w = 0; w < width; w++) {
-    json channel = json::array();
-    for (int h = 0; h < height; h++) {
-      json row = json::array();
-      for (int c = 0; c < channels; c++) {
-        row.push_back(data[w][h][c]);
-      }
-      reverse(row.begin(), row.end());
-      channel.push_back(row);
-    }
-    j.push_back(channel);
-  }
-
-  std::ofstream file(filename);
-  if (file.is_open()) {
-    file << j.dump(4);
-    file.close();
-  } else {
-    throw std::runtime_error("Unable to open file: " + filename);
-  }
-}
-CImage deflattenTensor(CTensor &tensor, int channels, int height, int width) {
-
-  CImage deflattened_tensor(
-      channels, vector<vector<double>>(width, vector<double>(height)));
-
-  for (int c = 0; c < channels; c++) {
-    for (int w = 0; w < width; w++) {
-      for (int h = 0; h < height; h++) {
-        deflattened_tensor[c][w][h] =
-            tensor.data[c * width * height + w * height + h];
-        ;
-      }
-    }
-  }
-  return deflattened_tensor;
-}
-vector<vector<vector<vector<double>>>> tempd = {
-    {{{0.147136, 0.159735, -0.045086},
-      {0.176787, -0.042167, 0.038835},
-      {-0.093695, 0.113023, 0.169653}},
-     {{-0.141187, 0.167277, 0.036019},
-      {0.142184, 0.026064, 0.092797},
-      {-0.027172, 0.148357, 0.028446}},
-     {{-0.089843, 0.049055, -0.088669},
-      {-0.022569, -0.078165, 0.127666},
-      {-0.151914, -0.088721, -0.054343}}},
-    {{{-0.115715, 0.018164, -0.190079},
-      {0.173803, -0.163480, 0.148577},
-      {0.032027, -0.062489, 0.118925}},
-     {{0.029993, 0.155493, 0.021039},
-      {-0.060694, 0.051708, -0.052189},
-      {0.080994, 0.171824, 0.111248}},
-     {{-0.084134, 0.111095, 0.034434},
-      {0.097733, -0.117299, -0.190508},
-      {-0.074355, -0.147614, 0.157913}}},
-    {{{0.055432, 0.079715, 0.060864},
-      {-0.003348, 0.150613, -0.136738},
-      {0.012117, -0.131355, 0.059342}},
-     {{-0.066276, 0.058970, -0.040095},
-      {0.159617, -0.114066, -0.114777},
-      {-0.114784, 0.173098, 0.064134}},
-     {{0.185185, -0.158824, -0.190887},
-      {-0.150566, -0.129459, 0.077950},
-      {0.068912, 0.159911, -0.099386}}},
-    {{{-0.131196, 0.102110, -0.077789},
-      {0.116803, -0.045669, 0.110090},
-      {-0.149528, -0.097120, 0.058674}},
-     {{0.040685, -0.049067, 0.114714},
-      {0.130829, -0.139560, -0.102743},
-      {0.176219, -0.064939, -0.068227}},
-     {{-0.186214, -0.110210, 0.048075},
-      {-0.025402, -0.139697, 0.004514},
-      {-0.131459, -0.163274, -0.105975}}},
-    {{{-0.168435, -0.122540, 0.192375},
-      {0.036349, 0.059305, -0.179495},
-      {-0.126396, -0.064058, 0.030094}},
-     {{-0.169341, -0.082922, -0.115214},
-      {0.000533, -0.071611, -0.013336},
-      {-0.130410, -0.132097, -0.112276}},
-     {{-0.065875, -0.151897, 0.161364},
-      {-0.038194, 0.165583, 0.059964},
-      {-0.162966, 0.133182, -0.052952}}},
-    {{{-0.073771, -0.159747, -0.191326},
-      {0.055062, -0.042040, 0.074925},
-      {-0.157937, 0.142881, -0.141269}},
-     {{-0.033231, 0.040197, 0.099353},
-      {0.155367, 0.175314, -0.152598},
-      {0.048433, -0.082778, -0.021090}},
-     {{-0.144047, 0.175295, -0.141249},
-      {0.102855, 0.067635, 0.062538},
-      {-0.104047, 0.174928, 0.042291}}},
-    {{{0.024757, -0.169598, 0.080788},
-      {-0.028871, -0.088166, 0.165304},
-      {0.042907, -0.106478, -0.097406}},
-     {{-0.009191, 0.107457, -0.049178},
-      {-0.109807, -0.065903, -0.143775},
-      {0.068634, 0.148964, -0.181180}},
-     {{0.044697, 0.099418, 0.034897},
-      {-0.068536, 0.100448, 0.101135},
-      {0.071962, -0.033818, -0.050961}}},
-    {{{0.020588, -0.033997, -0.057350},
-      {0.123015, 0.165392, -0.019052},
-      {-0.043089, 0.002808, -0.011491}},
-     {{0.046267, 0.053931, -0.174794},
-      {-0.071021, 0.162068, 0.074970},
-      {-0.009572, -0.116029, -0.117742}},
-     {{-0.172390, -0.062731, 0.064991},
-      {0.122710, 0.088854, -0.170115},
-      {-0.115732, -0.030372, 0.186167}}},
-    {{{0.027839, -0.049839, 0.079620},
-      {-0.073301, -0.124564, 0.140467},
-      {-0.087507, -0.038580, -0.191450}},
-     {{0.128801, 0.145807, 0.070138},
-      {-0.134190, -0.189937, -0.156304},
-      {0.143510, 0.092396, 0.161948}},
-     {{0.100819, 0.048708, -0.001885},
-      {-0.146359, -0.164886, -0.180008},
-      {0.078782, -0.094487, -0.038731}}},
-    {{{-0.110756, -0.035069, -0.135453},
-      {-0.125750, 0.063838, -0.057195},
-      {0.118808, -0.061740, -0.141175}},
-     {{-0.033956, -0.093290, -0.058878},
-      {-0.183212, 0.107674, -0.133985},
-      {0.096729, 0.087331, 0.137493}},
-     {{-0.147619, 0.138409, -0.090981},
-      {0.071412, 0.180733, -0.027142},
-      {-0.001488, -0.044308, -0.160693}}},
-    {{{0.092357, -0.191049, 0.119473},
-      {0.143996, 0.182001, -0.045395},
-      {-0.158125, 0.043269, 0.106315}},
-     {{-0.191547, -0.043683, -0.115365},
-      {-0.016832, -0.094727, -0.078667},
-      {-0.061095, -0.182886, 0.157907}},
-     {{0.161337, -0.030189, -0.021917},
-      {-0.078543, -0.173795, -0.187282},
-      {0.071526, -0.105664, -0.123722}}},
-    {{{-0.015016, -0.064088, -0.062262},
-      {0.006184, -0.040821, -0.066263},
-      {-0.092146, -0.156621, 0.161371}},
-     {{-0.077016, 0.050995, -0.066774},
-      {0.015639, 0.179421, 0.088666},
-      {-0.166777, 0.076384, 0.182682}},
-     {{0.050630, 0.129023, 0.189734},
-      {-0.029489, 0.039944, -0.133760},
-      {-0.039660, 0.142525, 0.098659}}},
-    {{{-0.121780, -0.154323, -0.131513},
-      {-0.189925, -0.148502, -0.047592},
-      {0.129880, 0.032213, -0.146379}},
-     {{-0.154388, 0.095739, -0.143152},
-      {-0.023696, 0.092319, -0.089068},
-      {-0.020985, -0.016752, -0.045530}},
-     {{-0.097578, -0.171557, -0.155568},
-      {-0.103050, 0.185876, -0.092956},
-      {-0.129236, 0.046649, 0.053041}}},
-    {{{0.105445, 0.146285, 0.107170},
-      {-0.190814, 0.017068, 0.116577},
-      {-0.017787, -0.113407, 0.183470}},
-     {{-0.071982, -0.109570, -0.173504},
-      {0.008596, 0.085281, 0.042601},
-      {0.038057, -0.145952, -0.179727}},
-     {{0.003389, 0.175483, 0.111029},
-      {-0.112051, -0.024982, -0.141871},
-      {-0.092842, 0.034852, 0.104796}}},
-    {{{0.159420, -0.176690, 0.128675},
-      {-0.135734, 0.072066, 0.162860},
-      {0.002702, 0.175093, -0.163977}},
-     {{-0.073508, 0.112247, -0.041929},
-      {-0.039395, -0.080212, 0.132657},
-      {0.094397, 0.061671, -0.108150}},
-     {{-0.156221, 0.020816, 0.057019},
-      {-0.088856, -0.053847, 0.129975},
-      {0.015331, 0.008683, -0.047362}}},
-    {{{-0.174281, -0.180953, -0.091994},
-      {-0.097827, 0.059959, -0.056024},
-      {-0.075291, 0.183488, 0.067035}},
-     {{0.137198, -0.093168, -0.078609},
-      {0.070733, -0.128225, -0.125805},
-      {-0.009295, -0.070391, -0.144272}},
-     {{0.114153, 0.154761, 0.031220},
-      {-0.033508, -0.178261, -0.070098},
-      {0.048995, 0.090746, -0.024329}}},
-    {{{-0.076086, 0.107238, -0.153267},
-      {0.121632, -0.074662, 0.002946},
-      {-0.038031, 0.023332, -0.058158}},
-     {{0.139936, -0.005003, 0.150226},
-      {0.185037, -0.093760, -0.140394},
-      {0.154403, 0.150807, -0.146945}},
-     {{-0.014877, -0.189780, -0.157539},
-      {0.037170, 0.051198, 0.040796},
-      {-0.052378, 0.177550, 0.027516}}},
-    {{{-0.113562, -0.010895, 0.046216},
-      {0.067395, -0.136078, 0.072128},
-      {-0.098319, -0.159915, -0.105118}},
-     {{0.185601, 0.164517, 0.172336},
-      {0.112970, 0.145386, -0.025759},
-      {-0.105891, 0.096159, -0.099724}},
-     {{-0.129878, -0.061456, 0.040387},
-      {0.099073, -0.074749, -0.113270},
-      {0.025960, -0.113436, -0.125297}}},
-    {{{0.100315, -0.032329, 0.175858},
-      {0.187212, 0.057563, 0.066233},
-      {0.044318, 0.003014, -0.013997}},
-     {{0.002645, 0.071866, 0.178934},
-      {-0.049875, -0.081352, -0.046605},
-      {-0.092977, 0.032724, 0.143654}},
-     {{0.150492, 0.088359, -0.141630},
-      {-0.103289, -0.042283, -0.035473},
-      {0.015829, -0.176664, 0.059899}}},
-    {{{-0.146815, -0.121772, -0.160000},
-      {0.167686, -0.182239, 0.145178},
-      {-0.006470, -0.022382, 0.120373}},
-     {{-0.017788, 0.120696, 0.139144},
-      {-0.167087, 0.074052, 0.036331},
-      {0.041379, 0.028096, 0.052641}},
-     {{-0.092581, -0.024622, 0.182851},
-      {0.129297, -0.007230, -0.181005},
-      {0.008435, -0.131053, 0.156499}}},
-    {{{-0.116834, -0.013895, -0.042713},
-      {0.034247, 0.181101, 0.018286},
-      {0.111460, 0.149384, 0.155367}},
-     {{-0.066463, -0.043043, 0.092749},
-      {-0.052513, 0.090117, -0.042044},
-      {-0.130530, 0.078336, 0.029506}},
-     {{0.085804, 0.191196, 0.131392},
-      {0.182439, 0.010300, -0.165548},
-      {-0.135009, -0.119545, -0.169596}}},
-    {{{-0.096465, -0.177163, -0.177557},
-      {-0.114999, -0.189724, -0.118128},
-      {0.073383, 0.160514, -0.057247}},
-     {{-0.055980, 0.102759, -0.094949},
-      {-0.090997, 0.118574, -0.167682},
-      {0.023532, 0.170007, 0.033003}},
-     {{0.052336, -0.112081, -0.002655},
-      {0.010582, 0.047234, 0.074776},
-      {0.167225, -0.146897, 0.005769}}},
-    {{{-0.096155, -0.152240, -0.015411},
-      {-0.169402, 0.134311, 0.022289},
-      {-0.103723, 0.100570, -0.182140}},
-     {{-0.074440, -0.037493, -0.163535},
-      {-0.122377, -0.031411, 0.146024},
-      {0.185840, 0.122449, -0.114917}},
-     {{-0.125905, 0.167950, 0.068073},
-      {0.005113, 0.026045, -0.154672},
-      {-0.064256, 0.185256, -0.047464}}},
-    {{{-0.009654, -0.159797, -0.107658},
-      {-0.003930, -0.119542, -0.023866},
-      {0.078319, -0.188250, 0.057160}},
-     {{-0.127250, -0.093925, 0.073883},
-      {0.153021, -0.052598, -0.079014},
-      {-0.174020, -0.099238, -0.168516}},
-     {{-0.044046, 0.039270, -0.180302},
-      {0.168031, 0.120741, -0.188398},
-      {-0.091921, 0.062769, -0.039541}}},
-    {{{-0.020973, -0.086894, 0.154580},
-      {-0.107579, 0.159594, 0.012417},
-      {0.038687, 0.150136, -0.031709}},
-     {{-0.109570, -0.031126, 0.156087},
-      {-0.142796, 0.043682, -0.189138},
-      {0.100902, 0.071104, 0.008158}},
-     {{0.082598, 0.000216, 0.106493},
-      {-0.152347, -0.028262, 0.085374},
-      {0.191645, 0.098032, -0.139945}}},
-    {{{0.148013, -0.042916, -0.041091},
-      {-0.174920, -0.030294, 0.136125},
-      {0.026836, -0.112093, 0.059238}},
-     {{-0.061708, 0.175706, -0.167038},
-      {-0.060790, -0.185825, -0.075793},
-      {0.060669, 0.185255, 0.032321}},
-     {{0.188670, 0.037653, 0.111147},
-      {0.154280, 0.160874, -0.107719},
-      {0.176937, 0.116580, -0.089986}}},
-    {{{-0.091838, -0.161417, 0.048331},
-      {-0.155990, 0.081296, 0.060775},
-      {-0.167201, 0.052443, -0.015652}},
-     {{0.087915, 0.110426, -0.191323},
-      {0.176496, 0.161397, 0.076573},
-      {-0.175892, -0.068747, -0.055774}},
-     {{-0.049459, 0.108527, 0.069969},
-      {0.152455, -0.072077, 0.064767},
-      {0.068473, -0.160232, -0.186680}}},
-    {{{-0.099860, 0.131741, -0.181184},
-      {-0.167515, 0.107811, 0.103832},
-      {0.158270, -0.145288, -0.140854}},
-     {{0.098724, 0.167360, 0.115150},
-      {0.030148, 0.063427, 0.182660},
-      {-0.124170, -0.087375, 0.134612}},
-     {{-0.131682, -0.106119, 0.140487},
-      {0.060722, 0.062175, -0.081568},
-      {-0.002656, 0.176137, -0.115512}}},
-    {{{0.001513, 0.091529, -0.132859},
-      {0.186903, -0.096150, -0.046214},
-      {-0.052071, -0.125412, -0.188844}},
-     {{0.108513, 0.051129, -0.180249},
-      {-0.123866, 0.190212, 0.073561},
-      {0.077220, -0.115143, -0.084369}},
-     {{-0.029051, -0.035195, -0.131876},
-      {0.015855, 0.019127, -0.024368},
-      {0.026680, -0.076278, 0.050085}}},
-    {{{0.072581, -0.101371, -0.190829},
-      {0.100735, 0.045906, -0.097878},
-      {0.185465, -0.087035, 0.130048}},
-     {{0.097635, -0.161352, 0.124119},
-      {-0.176953, -0.106620, -0.032084},
-      {-0.129720, 0.188006, -0.038602}},
-     {{0.076439, -0.171841, 0.110787},
-      {-0.059810, -0.146391, 0.028141},
-      {0.093235, 0.166546, -0.117547}}},
-    {{{-0.094706, 0.037001, 0.052204},
-      {0.073992, 0.105631, -0.043639},
-      {0.106919, 0.141892, -0.050272}},
-     {{0.136920, 0.094027, 0.169751},
-      {-0.109364, -0.095034, -0.055645},
-      {0.009762, 0.115508, -0.109863}},
-     {{0.096351, -0.068971, 0.116261},
-      {-0.009137, -0.168603, -0.105895},
-      {-0.139286, 0.095448, -0.129047}}},
-    {{{-0.016035, 0.041522, -0.105539},
-      {0.055516, -0.187913, -0.137700},
-      {-0.174384, -0.058212, -0.070109}},
-     {{0.027558, -0.035587, 0.090467},
-      {0.176437, 0.069049, -0.075819},
-      {-0.180208, 0.069706, -0.095351}},
-     {{0.097933, 0.128650, 0.074232},
-      {0.180578, 0.182788, 0.040749},
-      {-0.140226, 0.171943, -0.091317}}}};
-void write3DVectorToFile(const CImage &tensor, const string &filename) {
-  ofstream file(filename);
-
-  if (!file) {
-    cerr << "Error opening file!" << endl;
-    return;
-  }
-
-  int out_channels = tensor.size();
-  int width = tensor[0].size();
-  int height = tensor[0][0].size();
-
-  file << out_channels << " " << width << " " << height
-       << endl; // Write dimensions
-
-  for (int oc = 0; oc < out_channels; oc++) {
-    file << "Channel " << oc << ":\n";
-    for (int w = 0; w < width; w++) {
-      for (int h = 0; h < height; h++) {
-        file << tensor[oc][w][h] << " ";
-      }
-      file << endl; // Newline after each row
-    }
-    file << endl; // Extra newline for separation
-  }
-
-  file.close();
-  cout << "3D vector written to " << filename << endl;
-}
+using namespace std;
 
 int main() {
-  Mat image = imread("input.png");
-  if (image.empty()) {
-    cout << "Could not open or find the image" << endl;
-    return -1;
-  }
+  // Load JSON configuration
+  ifstream json_file("../configs/config_file.json");
+  assert(json_file.is_open() && "Unable to open JSON configuration file");
 
-  int height = image.rows;
-  int width = image.cols;
-  int channels = image.channels();
+  json config;
+  json_file >> config;
+  json_file.close();
 
-  vector<vector<vector<double>>> imageVector(
-      height, vector<vector<double>>(width, vector<double>(channels)));
+  // Access layers array from config
+  auto layers = config["layers"];
 
-  for (int i = 0; i < height; ++i) {
-    for (int j = 0; j < width; ++j) {
-      Vec3b pixel = image.at<Vec3b>(i, j);
+  // Variables to store Conv2D attributes
+  string base_path = "../";
+  string output_file = "../layer_outputs.txt/";
 
-      imageVector[i][j][0] = pixel[0]; // Blue channel
-      imageVector[i][j][1] = pixel[1]; // Green channel
-      imageVector[i][j][2] = pixel[2]; // Red channel
+  // Initialize a shared variable for layer outputs
+  vector<float> layer_output;
+  vector<int> strides;
+  string padding;
+
+  // Process each layer sequentially
+  for (const auto &layer : layers) {
+    if (layer["layer_name"] == "conv2d") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 2 &&
+             "Invalid number of weight paths in the configuration file for "
+             "conv2d layer");
+
+      string kernel_path = base_path + weights_file_paths[0];
+      string bias_path = base_path + weights_file_paths[1];
+
+      int input_height = layer["attributes"]["input_shape"][1];
+      int input_width = layer["attributes"]["input_shape"][2];
+      int input_channels = layer["attributes"]["input_shape"][3];
+      int stride_height = layer["attributes"]["strides"][0];
+      int stride_width = layer["attributes"]["strides"][1];
+
+      // Initialize input (if it's the first layer)
+      if (layer_output.empty()) {
+        layer_output =
+            vector<float>(input_height * input_width * input_channels, 1.0);
+      }
+
+      int kernel_height = layer["attributes"]["kernel_size"][0];
+      int kernel_width = layer["attributes"]["kernel_size"][0];
+      int output_channels = layer["attributes"]["output_shape"][3];
+      padding = layer["attributes"]["padding"];
+
+      vector<float> kernels_flat =
+          load_binary_data(kernel_path, kernel_height * kernel_width *
+                                            output_channels * input_channels);
+      vector<float> biases = load_binary_data(bias_path, output_channels);
+
+      // Perform Conv2D operation
+      vector<float> conv2d_output;
+      conv2d_1d(layer_output, kernels_flat, biases, conv2d_output, input_height,
+                input_width, input_channels, kernel_height, kernel_width,
+                output_channels, stride_height, padding, layer["layer_name"]);
+
+      // Update the shared layer output
+      layer_output = conv2d_output;
+
+      // Display output for the first channel (channel 0) after Conv2D
+      cout << "================================================================"
+              "==============="
+           << endl;
+    }
+
+    if (layer["layer_name"] == "batch_normalization") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 4 &&
+             "Invalid number of weight paths in the configuration file for "
+             "batch_normalization layer");
+
+      string gamma_path = base_path + weights_file_paths[0];
+      string beta_path = base_path + weights_file_paths[1];
+      string moving_mean_path = base_path + weights_file_paths[2];
+      string moving_variance_path = base_path + weights_file_paths[3];
+
+      int output_channels = layer["attributes"]["output_shape"][3];
+
+      vector<float> gamma = load_binary_data(gamma_path, output_channels);
+      vector<float> beta = load_binary_data(beta_path, output_channels);
+      vector<float> moving_mean =
+          load_binary_data(moving_mean_path, output_channels);
+      vector<float> moving_variance =
+          load_binary_data(moving_variance_path, output_channels);
+      float epsilon = 1e-5;
+      int input_height = layer["attributes"]["input_shape"][1];
+      int input_width = layer["attributes"]["input_shape"][2];
+
+      // Perform Batch Normalization
+      vector<float> batch_normalized_output;
+      batch_normalization_1d(layer_output, batch_normalized_output, gamma, beta,
+                             moving_mean, moving_variance, epsilon,
+                             output_channels, input_height, input_width,
+                             layer["layer_name"]);
+
+      // Update the shared layer output
+      layer_output = batch_normalized_output;
+    }
+
+    if (layer["layer_name"] == "max_pooling2d") {
+      std::array<int, 2> strides = {layer["attributes"]["strides"][0],
+                                    layer["attributes"]["strides"][1]};
+      string padding = layer["attributes"]["padding"].get<string>();
+      std::array<int, 4> input_shape = {1,
+                                        layer["attributes"]["input_shape"][1],
+                                        layer["attributes"]["input_shape"][2],
+                                        layer["attributes"]["input_shape"][3]};
+      std::array<int, 4> output_shape = {
+          1, layer["attributes"]["output_shape"][1],
+          layer["attributes"]["output_shape"][2],
+          layer["attributes"]["output_shape"][3]};
+      std::array<int, 2> pool_size = {2, 2};
+
+      vector<float> maxpooling_output;
+      max_pooling2d(layer_output, maxpooling_output, input_shape, output_shape,
+                    pool_size, strides, padding, layer["layer_name"]);
+
+      layer_output = maxpooling_output;
+    }
+
+    if (layer["layer_name"] == "conv2d_1") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 2 &&
+             "Invalid number of weight paths in the configuration file for "
+             "conv2d layer");
+
+      string kernel_path = base_path + weights_file_paths[0];
+      string bias_path = base_path + weights_file_paths[1];
+
+      int input_height = layer["attributes"]["input_shape"][1];
+      int input_width = layer["attributes"]["input_shape"][2];
+      int input_channels = layer["attributes"]["input_shape"][3];
+      int stride_height = layer["attributes"]["strides"][0];
+      int stride_width = layer["attributes"]["strides"][1];
+      int kernel_height = layer["attributes"]["kernel_size"][0];
+      int kernel_width = layer["attributes"]["kernel_size"][0];
+      int output_channels = layer["attributes"]["output_shape"][3];
+      padding = layer["attributes"]["padding"];
+
+      vector<float> kernels_flat =
+          load_binary_data(kernel_path, kernel_height * kernel_width *
+                                            output_channels * input_channels);
+      vector<float> biases = load_binary_data(bias_path, output_channels);
+
+      // Perform Conv2D operation
+      vector<float> conv2d_output;
+      conv2d_1d(layer_output, kernels_flat, biases, conv2d_output, input_height,
+                input_width, input_channels, kernel_height, kernel_width,
+                output_channels, stride_height, padding, layer["layer_name"]);
+
+      // Update the shared layer output
+      layer_output = conv2d_output;
+    }
+    if (layer["layer_name"] == "batch_normalization_1") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 4 &&
+             "Invalid number of weight paths in the configuration file for "
+             "batch_normalization layer");
+
+      string gamma_path = base_path + weights_file_paths[0];
+      string beta_path = base_path + weights_file_paths[1];
+      string moving_mean_path = base_path + weights_file_paths[2];
+      string moving_variance_path = base_path + weights_file_paths[3];
+
+      int output_channels = layer["attributes"]["output_shape"][3];
+
+      vector<float> gamma = load_binary_data(gamma_path, output_channels);
+      vector<float> beta = load_binary_data(beta_path, output_channels);
+      vector<float> moving_mean =
+          load_binary_data(moving_mean_path, output_channels);
+      vector<float> moving_variance =
+          load_binary_data(moving_variance_path, output_channels);
+      float epsilon = 1e-5;
+      int input_height = layer["attributes"]["input_shape"][1];
+      int input_width = layer["attributes"]["input_shape"][2];
+
+      // Perform Batch Normalization
+      vector<float> batch_normalized_output;
+      batch_normalization_1d(layer_output, batch_normalized_output, gamma, beta,
+                             moving_mean, moving_variance, epsilon,
+                             output_channels, input_height, input_width,
+                             layer["layer_name"]);
+
+      // Update the shared layer output
+      layer_output = batch_normalized_output;
+    }
+
+    if (layer["layer_name"] == "max_pooling2d_1") {
+      std::array<int, 2> strides = {layer["attributes"]["strides"][0],
+                                    layer["attributes"]["strides"][1]};
+      string padding = layer["attributes"]["padding"].get<string>();
+      std::array<int, 4> input_shape = {1,
+                                        layer["attributes"]["input_shape"][1],
+                                        layer["attributes"]["input_shape"][2],
+                                        layer["attributes"]["input_shape"][3]};
+      std::array<int, 4> output_shape = {
+          1, layer["attributes"]["output_shape"][1],
+          layer["attributes"]["output_shape"][2],
+          layer["attributes"]["output_shape"][3]};
+      std::array<int, 2> pool_size = {2, 2};
+
+      vector<float> maxpooling_output;
+      max_pooling2d(layer_output, maxpooling_output, input_shape, output_shape,
+                    pool_size, strides, padding, layer["layer_name"]);
+
+      layer_output = maxpooling_output;
+    }
+
+    if (layer["layer_name"] == "conv2d_2") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 2 &&
+             "Invalid number of weight paths in the configuration file for "
+             "conv2d layer");
+
+      string kernel_path = base_path + weights_file_paths[0];
+      string bias_path = base_path + weights_file_paths[1];
+
+      int input_height = layer["attributes"]["input_shape"][1];
+      int input_width = layer["attributes"]["input_shape"][2];
+      int input_channels = layer["attributes"]["input_shape"][3];
+      int stride_height = layer["attributes"]["strides"][0];
+      int stride_width = layer["attributes"]["strides"][1];
+      int kernel_height = layer["attributes"]["kernel_size"][0];
+      int kernel_width = layer["attributes"]["kernel_size"][0];
+      int output_channels = layer["attributes"]["output_shape"][3];
+      padding = layer["attributes"]["padding"];
+
+      vector<float> kernels_flat =
+          load_binary_data(kernel_path, kernel_height * kernel_width *
+                                            output_channels * input_channels);
+      vector<float> biases = load_binary_data(bias_path, output_channels);
+
+      // Perform Conv2D operation
+      vector<float> conv2d_output;
+      conv2d_1d(layer_output, kernels_flat, biases, conv2d_output, input_height,
+                input_width, input_channels, kernel_height, kernel_width,
+                output_channels, stride_height, padding, layer["layer_name"]);
+
+      // Update the shared layer output
+      layer_output = conv2d_output;
+    }
+    if (layer["layer_name"] == "batch_normalization_2") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 4 &&
+             "Invalid number of weight paths in the configuration file for "
+             "batch_normalization layer");
+
+      string gamma_path = base_path + weights_file_paths[0];
+      string beta_path = base_path + weights_file_paths[1];
+      string moving_mean_path = base_path + weights_file_paths[2];
+      string moving_variance_path = base_path + weights_file_paths[3];
+
+      int output_channels = layer["attributes"]["output_shape"][3];
+
+      vector<float> gamma = load_binary_data(gamma_path, output_channels);
+      vector<float> beta = load_binary_data(beta_path, output_channels);
+      vector<float> moving_mean =
+          load_binary_data(moving_mean_path, output_channels);
+      vector<float> moving_variance =
+          load_binary_data(moving_variance_path, output_channels);
+      float epsilon = 1e-5;
+      int input_height = layer["attributes"]["input_shape"][1];
+      int input_width = layer["attributes"]["input_shape"][2];
+
+      // Perform Batch Normalization
+      vector<float> batch_normalized_output;
+      batch_normalization_1d(layer_output, batch_normalized_output, gamma, beta,
+                             moving_mean, moving_variance, epsilon,
+                             output_channels, input_height, input_width,
+                             layer["layer_name"]);
+
+      // Update the shared layer output
+      layer_output = batch_normalized_output;
+    }
+
+    if (layer["layer_name"] == "dense") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 2 &&
+             "Invalid number of weight paths in the configuration file for "
+             "dense layer");
+
+      string weights_path = base_path + weights_file_paths[0];
+      string bias_path = base_path + weights_file_paths[1];
+
+      // Load weights and biases
+      cout << layer["attributes"]["output_shape"][1];
+      vector<float> weights =
+          load_binary_data(weights_path, layer_output.size() * 256);
+      vector<float> biases = load_binary_data(bias_path, 256);
+
+      std::array<int, 2> dense_input_shape = {
+          1, layer["attributes"]["input_shape"][1]};
+      std::array<int, 2> dense_output_shape = {
+          1, layer["attributes"]["output_shape"][1]};
+      std::string activation = layer["attributes"]["activation"];
+      // Create a Dense layer instance
+      vector<float> dense_output;
+      dense(layer_output, weights, biases, dense_output, dense_input_shape,
+            dense_output_shape, activation, layer["layer_name"]);
+      layer_output = dense_output;
+    }
+
+    if (layer["layer_name"] == "batch_normalization_3") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 4 &&
+             "Invalid number of weight paths in the configuration file for "
+             "batch_normalization layer");
+
+      string gamma_path = base_path + weights_file_paths[0];
+      string beta_path = base_path + weights_file_paths[1];
+      string moving_mean_path = base_path + weights_file_paths[2];
+      string moving_variance_path = base_path + weights_file_paths[3];
+
+      int output_channels = layer["attributes"]["output_shape"][1];
+
+      vector<float> gamma = load_binary_data(gamma_path, output_channels);
+      vector<float> beta = load_binary_data(beta_path, output_channels);
+      vector<float> moving_mean =
+          load_binary_data(moving_mean_path, output_channels);
+      vector<float> moving_variance =
+          load_binary_data(moving_variance_path, output_channels);
+      float epsilon = 1e-5;
+      int input_height = 1;
+      int input_width = layer["attributes"]["input_shape"][1];
+
+      vector<float> batch_normalized_output;
+      batch_normalization_1d1(layer_output, batch_normalized_output, gamma,
+                              beta, moving_mean, moving_variance, epsilon,
+                              output_channels, layer["layer_name"]);
+      layer_output = batch_normalized_output;
+    }
+
+    if (layer["layer_name"] == "dense_1") {
+      vector<string> weights_file_paths =
+          layer["weights_file_paths"].get<vector<string>>();
+      assert(weights_file_paths.size() == 2 &&
+             "Invalid number of weight paths in the configuration file for "
+             "dense layer");
+
+      string weights_path = base_path + weights_file_paths[0];
+      string bias_path = base_path + weights_file_paths[1];
+
+      vector<float> weights =
+          load_binary_data(weights_path, layer_output.size() * 10);
+      vector<float> biases =
+          load_binary_data(bias_path, layer["attributes"]["output_shape"][1]);
+
+      std::array<int, 2> dense_input_shape = {
+          1, layer["attributes"]["input_shape"][1]};
+      std::array<int, 2> dense_output_shape = {
+          1, layer["attributes"]["output_shape"][1]};
+      std::string activation = layer["attributes"]["activation"];
+      vector<float> dense_output;
+      dense(layer_output, weights, biases, dense_output, dense_input_shape,
+            dense_output_shape, activation, layer["layer_name"]);
+      layer_output = dense_output;
     }
   }
-  // CImage max_pooled_output = max_pooling(
-  //     Utils::unflattenImage(Utils::flattenImage(imageVector), 32, 32, 3), 2,
-  //     2, 0);
-  // cout << "Max pooled output: " << endl;
-  // cout << max_pooled_output.size() << " " << max_pooled_output[0].size() << "
-  // "
-  //      << max_pooled_output[0][0].size() << endl;
+  std::vector<std::string> labels = {"Airplane", "Automobile", "Bird", "Cat",
+                                     "Deer",     "Dog",        "Frog", "Horse",
+                                     "Ship",     "Truck"};
 
-  CImage batch_norm_output =
-      batch_norm(imageVector, {1.0, 1.0, 1.0}, {0.0, 0.0, 0.0}, 1e-05);
-  write3DVectorToJsonInverted(batch_norm_output,
-                              "batch_norm_output_large.json");
+  // Find the index of the maximum value
+  auto max_iter = std::max_element(layer_output.begin(), layer_output.end());
+  int predicted_index = std::distance(layer_output.begin(), max_iter);
 
-  // CTensor input = CTensor();
-  // input.shape = {1, channels, height, width};
-  // input.data = Utils::flattenImage(imageVector);
-  // Conv2D c = Conv2D(3, 32, 3, 1, 0);
-  // c.weights.shape = {32, 3, 3, 3};
-  // c.weights.data = Utils::flatten4DVector(tempd);
+  // Predict the class
+  std::string predicted_class = labels[predicted_index];
 
-  // CImage output = c.performConvOp(input);
+  // Print the prediction
+  std::cout << "Predicted class: " << predicted_class
+            << " (Index: " << predicted_index << ")" << std::endl;
 
-  // write3DVectorToJson(output, "output_large.json");
+  std::ofstream outfile("../report/prediction.txt");
+  if (outfile.is_open()) {
+    outfile << "Predicted class at cpp: " << predicted_class
+            << " (Index: " << predicted_index << ")" << std::endl;
+    outfile.close();
+  } else {
+    std::cerr << "Error opening file for writing!" << std::endl;
+  }
+
+  cout << "Unit Test Begins" << endl;
+  std::string output_file1 = "../data/cpp_outputs/conv2d.txt";
+  std::string expected_file1 = "../data/python_outputs/conv2d_output.txt";
+  std::string output_file4 = "../data/cpp_outputs/batch_normalization.txt";
+  std::string expected_file4 = "../data/python_outputs/"
+                               "batch_normalization_output.txt";
+  std::string output_file9 = "../data/cpp_outputs/max_pooling2d.txt";
+  std::string expected_file9 =
+      "../data/python_outputs/max_pooling2d_output.txt";
+  std::string output_file2 = "../data/cpp_outputs/conv2d_1.txt";
+  std::string expected_file2 = "../data/python_outputs/conv2d_1_output.txt";
+  std::string output_file5 = "../data/cpp_outputs/batch_normalization_1.txt";
+  std::string expected_file5 = "../data/python_outputs/"
+                               "batch_normalization_1_output.txt";
+  std::string output_file8 = "../data/cpp_outputs/max_pooling2d_1.txt";
+  std::string expected_file8 =
+      "../data/python_outputs/max_pooling2d_1_output.txt";
+  std::string output_file3 = "../data/cpp_outputs/conv2d_2.txt";
+  std::string expected_file3 = "../data/python_outputs/conv2d_2_output.txt";
+  std::string output_file6 = "../data/cpp_outputs/batch_normalization_2.txt";
+  std::string expected_file6 = "../data/python_outputs/"
+                               "batch_normalization_2_output.txt";
+  std::string output_file10 = "../data/cpp_outputs/dense.txt";
+  std::string expected_file10 = "../data/python_outputs/dense_output.txt";
+  std::string output_file7 = "../data/cpp_outputs/batch_normalization_3.txt";
+  std::string expected_file7 = "../data/python_outputs/"
+                               "batch_normalization_3_output.txt";
+  std::string output_file11 = "../data/cpp_outputs/dense_1.txt";
+  std::string expected_file11 = "../data/python_outputs/dense_1_output.txt";
+
+  unit_test("conv1", output_file1, expected_file1);
+  unit_test("batch_norm1", output_file4, expected_file4);
+  unit_test("max_pool1", output_file9, expected_file9);
+  unit_test("conv2", output_file2, expected_file2);
+  unit_test("batch_norm2", output_file5, expected_file5);
+  unit_test("max_pool2", output_file8, expected_file8);
+  unit_test("conv3", output_file3, expected_file3);
+  unit_test("batch_norm3", output_file6, expected_file6);
+  unit_test("dense1", output_file10, expected_file10);
+  unit_test("batch_norm4", output_file7, expected_file7);
+  unit_test("dense2", output_file11, expected_file11);
+
+  cout << "Unit Test Ends";
 
   return 0;
 }
