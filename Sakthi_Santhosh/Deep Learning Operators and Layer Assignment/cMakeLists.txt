@@ -1,0 +1,65 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Project Name
+project(DL_Inference)
+
+# Set C++ standard to C++17
+set(CMAKE_CXX_STANDARD 17)
+enable_testing()
+
+# Find OpenCV package (CMake will search for the config files)
+find_package(OpenCV REQUIRED)
+
+# Fetch nlohmann_json (for JSON parsing)
+include(FetchContent)
+
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG v3.11.2  # Replace with the latest stable version
+)
+
+
+# Make nlohmann_json available
+FetchContent_MakeAvailable(nlohmann_json)
+
+# Add the executable with the necessary source files
+add_executable(DL_Inference 
+    src/main.cpp
+    Operators/src/conv2d.cpp
+    Operators/src/maxpooling.cpp
+    Operators/src/dense.cpp
+    Operators/src/softmax.cpp
+    Operators/src/relu.cpp
+    Operators/src/flatten.cpp
+    Test_Operators/src/model_test.cpp
+    
+)
+
+# Include directories for header files
+target_include_directories(DL_Inference PUBLIC
+    ${OpenCV_INCLUDE_DIRS}          # OpenCV include path
+    Operators/include
+    Test_Operators/include               # Path to your operators
+    ${nlohmann_json_SOURCE_DIR}/single_include  # Path to nlohmann_json (since FetchContent will place it here)
+)
+
+# Link specific OpenCV libraries required for your project
+target_link_libraries(DL_Inference PRIVATE 
+    ${OpenCV_LIBS}                # Link all the required OpenCV libraries
+    nlohmann_json::nlohmann_json  # Link nlohmann_json
+)
+
+# Add the test executable for Google Test
+add_executable(DL_Inference_tests 
+    Test_Operators/src/model_test.cpp
+    Test_Operators/src/conv2d_test.cpp
+    Test_Operators/src/maxpooling_test.cpp
+    Test_Operators/src/dense_test.cpp
+    Test_Operators/src/flatten_test.cpp
+)
+
+
+
+
+
