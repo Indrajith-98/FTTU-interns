@@ -20,41 +20,44 @@
 
 ### Snapshots of the Application created
 
-<div>
-  <div style="display: inline-block; text-align: center; width: 48%;">
-    <img src="output/user.png" alt="New Reader" width="275" />
-    <p><em>New Reader</em></p>
-  </div>
-  <div style="display: inline-block; text-align: center; width: 48%;">
-    <img src="output/book.png" alt="New Book" width="275" />
-    <p><em>New Book</em></p>
-  </div>
-</div>
+<div style="text-align:center">
+<table border="1">
+  <tr>
+    <td><img src="output/user.png" alt="New Reader" width="300"></td>
+    <td><img src="output/book.png" alt="New Book" width="300"></td>
+  </tr>
+  <tr>
+    <td><em>New Reader</em></td>
+    <td><em>New Book</em></td>
+  </tr>
+</table>
 
-<div>
-  <div style="display: inline-block; text-align: center; width: 32%;">
-    <img src="output/startReading.png" alt="Start Reading" width="275" />
-    <p><em>Start Reading</em></p>
-  </div>
-  <div style="display: inline-block; text-align: center; width: 32%;">
-    <img src="output/updateReading.png" alt="Update Read Pages" width="275" />
-    <p><em>Update Read Pages</em></p>
-  </div>
-  <div style="display: inline-block; text-align: center; width: 32%;">
-    <img src="output/status.png" alt="Reading Status" width="275" />
-    <p><em>Reading Status</em></p>
-  </div>
-</div>
+<br>
 
-<div>
-  <div style="display: inline-block; text-align: center; width: 48%;">
-    <img src="output/allBooks.png" alt="All Books" width="275" />
-    <p><em>All Books</em></p>
-  </div>
-  <div style="display: inline-block; text-align: center; width: 48%;">
-    <img src="output/database.png" alt="All Registered Readers" width="275" />
-    <p><em>All Registered Readers</em></p>
-  </div>
-</div>
+<table border="1">
+  <tr>
+    <td><img src="output/startReading.png" alt="Start Reading" width="300"></td>
+    <td><img src="output/updateReading.png" alt="Update Read Pages" width="300"></td>
+    <td><img src="output/status.png" alt="Reading Status" width="300"></td>
+  </tr>
+  <tr>
+    <td><em>Start Reading</em></td>
+    <td><em>Update Read Pages</em></td>
+    <td><em>Reading Status</em></td>
+  </tr>
+</table>
 
-<hr>
+<br>
+
+<table border="1">
+  <tr>
+    <td><img src="output/allBooks.png" alt="All Books" width="300"></td>
+    <td><img src="output/database.png" alt="All Registered Readers" width="300"></td>
+  </tr>
+  <tr>
+    <td><em>All Books</em></td>
+    <td><em>All Registered Readers</em></td>
+  </tr>
+</table>
+
+</div>
