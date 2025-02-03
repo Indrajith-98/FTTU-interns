@@ -1,0 +1,49 @@
+Performing Convolution operation for layer: conv2d_3
+Applying ReLU activation for layer: conv2d_3
+Layer output saved to ../Report/output/conv2d_3_output.bin
+Execution started for conv2d_3
+Performing MaxPooling operation for layer: max_pooling2d_2
+Layer output saved to ../Report/output/max_pooling2d_2_output.bin
+Execution started for max_pooling2d_2
+Performing Convolution operation for layer: conv2d_4
+Applying ReLU activation for layer: conv2d_4
+Layer output saved to ../Report/output/conv2d_4_output.bin
+Execution started for conv2d_4
+Performing MaxPooling operation for layer: max_pooling2d_3
+Layer output saved to ../Report/output/max_pooling2d_3_output.bin
+Execution started for max_pooling2d_3
+Performing Convolution operation for layer: conv2d_5
+Applying ReLU activation for layer: conv2d_5
+Layer output saved to ../Report/output/conv2d_5_output.bin
+Execution started for conv2d_5
+Performing Flatten operation
+Layer output saved to ../Report/output/flatten_1_output.bin
+Execution started for flatten_1
+Performing Dense operation for layer: dense_2
+Applying ReLU activation for layer: dense_2
+Layer output saved to ../Report/output/dense_2_output.bin
+Execution started for dense_2
+Performing Dense operation for layer: dense_3
+Applying Softmax activation for layer: dense_3
+Layer output saved to ../Report/output/dense_3_output.bin
+Execution started for dense_3
+~~~~~~~~~~~~Unit Testing~~~~~~~~~~~~~~~~~
+File similarity: 94.9855% for layer conv2d_3
+Test Completed for conv2d_3 layer Successfully.
+File similarity: 93.3852% for layer max_pooling2d_2
+Test Completed for max_pooling2d_2 layer Successfully.
+File similarity: 95.9983% for layer conv2d_4
+Test Completed for conv2d_4 layer Successfully.
+File similarity: 93.0871% for layer max_pooling2d_3
+Test Completed for max_pooling2d_3 layer Successfully.
+File similarity: 97.6196% for layer conv2d_5
+Test Completed for conv2d_5 layer Successfully.
+File similarity: 97.6196% for layer flatten_1
+Test Completed for flatten_1 layer Successfully.
+File similarity: 56.8627% for layer dense_2
+Test Completed for dense_2 layer Successfully.
+~~~~~~~~~~~~Model Testing~~~~~~~~~~~~~~~~~
+File similarity: 56.8627% for layer dense_3
+Test Completed for dense_3 (final) layer Successfully.
+Predicted class : ship
+Execution complete, logs saved to execution_log.txt.
