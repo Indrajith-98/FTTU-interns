@@ -1,0 +1,540 @@
+Layer: Conv_0
+Function Executed: Conv2D
+Execution Time: 0.000423 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_0
+Function Executed: ReLU
+Execution Time: 0.000027 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_0
+Function Executed: Softmax
+Execution Time: 0.000853 seconds
+Pass/Fail: Pass
+
+Layer: Conv_1
+Function Executed: Conv2D
+Execution Time: 0.000441 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_1
+Function Executed: ReLU
+Execution Time: 0.000017 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_1
+Function Executed: Softmax
+Execution Time: 0.000058 seconds
+Pass/Fail: Pass
+
+Layer: Conv_2
+Function Executed: Conv2D
+Execution Time: 0.000378 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_2
+Function Executed: ReLU
+Execution Time: 0.000025 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_2
+Function Executed: Softmax
+Execution Time: 0.000057 seconds
+Pass/Fail: Pass
+
+Layer: Conv_3
+Function Executed: Conv2D
+Execution Time: 0.000442 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_3
+Function Executed: ReLU
+Execution Time: 0.000033 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_3
+Function Executed: Softmax
+Execution Time: 0.000094 seconds
+Pass/Fail: Pass
+
+Layer: Conv_4
+Function Executed: Conv2D
+Execution Time: 0.000343 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_4
+Function Executed: ReLU
+Execution Time: 0.000027 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_4
+Function Executed: Softmax
+Execution Time: 0.000094 seconds
+Pass/Fail: Pass
+
+Layer: Conv_5
+Function Executed: Conv2D
+Execution Time: 0.000406 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_5
+Function Executed: ReLU
+Execution Time: 0.000031 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_5
+Function Executed: Softmax
+Execution Time: 0.000098 seconds
+Pass/Fail: Pass
+
+Layer: Conv_6
+Function Executed: Conv2D
+Execution Time: 0.000374 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_6
+Function Executed: ReLU
+Execution Time: 0.000032 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_6
+Function Executed: Softmax
+Execution Time: 0.000098 seconds
+Pass/Fail: Pass
+
+Layer: Conv_7
+Function Executed: Conv2D
+Execution Time: 0.000660 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_7
+Function Executed: ReLU
+Execution Time: 0.000018 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_7
+Function Executed: Softmax
+Execution Time: 0.000082 seconds
+Pass/Fail: Pass
+
+Layer: Conv_8
+Function Executed: Conv2D
+Execution Time: 0.000348 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_8
+Function Executed: ReLU
+Execution Time: 0.000016 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_8
+Function Executed: Softmax
+Execution Time: 0.000152 seconds
+Pass/Fail: Pass
+
+Layer: Conv_9
+Function Executed: Conv2D
+Execution Time: 0.000376 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_9
+Function Executed: ReLU
+Execution Time: 0.000148 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_9
+Function Executed: Softmax
+Execution Time: 0.000060 seconds
+Pass/Fail: Pass
+
+Layer: Conv_10
+Function Executed: Conv2D
+Execution Time: 0.000868 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_10
+Function Executed: ReLU
+Execution Time: 0.000018 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_10
+Function Executed: Softmax
+Execution Time: 0.000094 seconds
+Pass/Fail: Pass
+
+Layer: Conv_11
+Function Executed: Conv2D
+Execution Time: 0.000513 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_11
+Function Executed: ReLU
+Execution Time: 0.000025 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_11
+Function Executed: Softmax
+Execution Time: 0.000067 seconds
+Pass/Fail: Pass
+
+Layer: Conv_0
+Function Executed: Conv2D
+Execution Time: 0.000453 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_0
+Function Executed: ReLU
+Execution Time: 0.000027 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_0
+Function Executed: Softmax
+Execution Time: 0.000121 seconds
+Pass/Fail: Pass
+
+Layer: Conv_1
+Function Executed: Conv2D
+Execution Time: 0.000475 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_1
+Function Executed: ReLU
+Execution Time: 0.000017 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_1
+Function Executed: Softmax
+Execution Time: 0.000094 seconds
+Pass/Fail: Pass
+
+Layer: Conv_2
+Function Executed: Conv2D
+Execution Time: 0.000356 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_2
+Function Executed: ReLU
+Execution Time: 0.000017 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_2
+Function Executed: Softmax
+Execution Time: 0.000097 seconds
+Pass/Fail: Pass
+
+Layer: Conv_3
+Function Executed: Conv2D
+Execution Time: 0.000424 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_3
+Function Executed: ReLU
+Execution Time: 0.000030 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_3
+Function Executed: Softmax
+Execution Time: 0.000072 seconds
+Pass/Fail: Pass
+
+Layer: Conv_4
+Function Executed: Conv2D
+Execution Time: 0.000444 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_4
+Function Executed: ReLU
+Execution Time: 0.000018 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_4
+Function Executed: Softmax
+Execution Time: 0.000094 seconds
+Pass/Fail: Pass
+
+Layer: Conv_5
+Function Executed: Conv2D
+Execution Time: 0.000474 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_5
+Function Executed: ReLU
+Execution Time: 0.000028 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_5
+Function Executed: Softmax
+Execution Time: 0.000100 seconds
+Pass/Fail: Pass
+
+Layer: Conv_6
+Function Executed: Conv2D
+Execution Time: 0.000420 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_6
+Function Executed: ReLU
+Execution Time: 0.000024 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_6
+Function Executed: Softmax
+Execution Time: 0.000070 seconds
+Pass/Fail: Pass
+
+Layer: Conv_7
+Function Executed: Conv2D
+Execution Time: 0.000434 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_7
+Function Executed: ReLU
+Execution Time: 0.000027 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_7
+Function Executed: Softmax
+Execution Time: 0.000062 seconds
+Pass/Fail: Pass
+
+Layer: Conv_8
+Function Executed: Conv2D
+Execution Time: 0.000417 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_8
+Function Executed: ReLU
+Execution Time: 0.000016 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_8
+Function Executed: Softmax
+Execution Time: 0.000057 seconds
+Pass/Fail: Pass
+
+Layer: Conv_9
+Function Executed: Conv2D
+Execution Time: 0.000445 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_9
+Function Executed: ReLU
+Execution Time: 0.000025 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_9
+Function Executed: Softmax
+Execution Time: 0.000095 seconds
+Pass/Fail: Pass
+
+Layer: Conv_10
+Function Executed: Conv2D
+Execution Time: 0.000323 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_10
+Function Executed: ReLU
+Execution Time: 0.000028 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_10
+Function Executed: Softmax
+Execution Time: 0.000061 seconds
+Pass/Fail: Pass
+
+Layer: Conv_11
+Function Executed: Conv2D
+Execution Time: 0.000442 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_11
+Function Executed: ReLU
+Execution Time: 0.000026 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_11
+Function Executed: Softmax
+Execution Time: 0.000057 seconds
+Pass/Fail: Pass
+
+Layer: Conv_0
+Function Executed: Conv2D
+Execution Time: 0.000324 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_0
+Function Executed: ReLU
+Execution Time: 0.000038 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_0
+Function Executed: Softmax
+Execution Time: 0.000235 seconds
+Pass/Fail: Pass
+
+Layer: Conv_1
+Function Executed: Conv2D
+Execution Time: 0.000458 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_1
+Function Executed: ReLU
+Execution Time: 0.000025 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_1
+Function Executed: Softmax
+Execution Time: 0.000076 seconds
+Pass/Fail: Pass
+
+Layer: Conv_2
+Function Executed: Conv2D
+Execution Time: 0.000320 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_2
+Function Executed: ReLU
+Execution Time: 0.000025 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_2
+Function Executed: Softmax
+Execution Time: 0.000058 seconds
+Pass/Fail: Pass
+
+Layer: Conv_3
+Function Executed: Conv2D
+Execution Time: 0.000411 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_3
+Function Executed: ReLU
+Execution Time: 0.000017 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_3
+Function Executed: Softmax
+Execution Time: 0.000096 seconds
+Pass/Fail: Pass
+
+Layer: Conv_4
+Function Executed: Conv2D
+Execution Time: 0.000432 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_4
+Function Executed: ReLU
+Execution Time: 0.000027 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_4
+Function Executed: Softmax
+Execution Time: 0.000094 seconds
+Pass/Fail: Pass
+
+Layer: Conv_5
+Function Executed: Conv2D
+Execution Time: 0.000434 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_5
+Function Executed: ReLU
+Execution Time: 0.000017 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_5
+Function Executed: Softmax
+Execution Time: 0.000057 seconds
+Pass/Fail: Pass
+
+Layer: Conv_6
+Function Executed: Conv2D
+Execution Time: 0.000307 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_6
+Function Executed: ReLU
+Execution Time: 0.000024 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_6
+Function Executed: Softmax
+Execution Time: 0.000059 seconds
+Pass/Fail: Pass
+
+Layer: Conv_7
+Function Executed: Conv2D
+Execution Time: 0.000547 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_7
+Function Executed: ReLU
+Execution Time: 0.000019 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_7
+Function Executed: Softmax
+Execution Time: 0.000099 seconds
+Pass/Fail: Pass
+
+Layer: Conv_8
+Function Executed: Conv2D
+Execution Time: 0.000340 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_8
+Function Executed: ReLU
+Execution Time: 0.000026 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_8
+Function Executed: Softmax
+Execution Time: 0.000096 seconds
+Pass/Fail: Pass
+
+Layer: Conv_9
+Function Executed: Conv2D
+Execution Time: 0.000245 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_9
+Function Executed: ReLU
+Execution Time: 0.000025 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_9
+Function Executed: Softmax
+Execution Time: 0.000095 seconds
+Pass/Fail: Pass
+
+Layer: Conv_10
+Function Executed: Conv2D
+Execution Time: 0.000350 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_10
+Function Executed: ReLU
+Execution Time: 0.000018 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_10
+Function Executed: Softmax
+Execution Time: 0.000062 seconds
+Pass/Fail: Pass
+
+Layer: Conv_11
+Function Executed: Conv2D
+Execution Time: 0.000314 seconds
+Pass/Fail: Pass
+
+Layer: ReLU_11
+Function Executed: ReLU
+Execution Time: 0.000017 seconds
+Pass/Fail: Pass
+
+Layer: Softmax_11
+Function Executed: Softmax
+Execution Time: 0.000093 seconds
+Pass/Fail: Pass
+

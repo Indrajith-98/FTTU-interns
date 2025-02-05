@@ -1,0 +1,16 @@
+# Ignore build artifacts
+/build/
+
+# Ignore model files
+/models/
+
+# Ignore VS Code and JetBrains IDE settings
+.vscode/
+.idea/
+
+# Ignore all data files (input/output) but keep structure
+/data/
+!/data/example_config.json   # Keep a sample config file
+
+# Ignore data folder inside scripts
+/scripts/data/

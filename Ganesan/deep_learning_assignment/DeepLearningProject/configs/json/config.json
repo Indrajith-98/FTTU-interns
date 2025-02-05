@@ -1,0 +1,581 @@
+{
+    "test_type": "model",
+    "layers": [
+        {
+            "name": "Conv_0",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_0.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_0.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_0",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_0.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_0.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_0",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_0.bin"
+            ],
+            "output": [
+                "./data/output/final_output_0.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_1",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_1.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_1.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_1",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_1.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_1.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_1",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_1.bin"
+            ],
+            "output": [
+                "./data/output/final_output_1.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_2",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_10.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_2.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_2",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_2.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_2.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_2",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_2.bin"
+            ],
+            "output": [
+                "./data/output/final_output_2.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_3",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_11.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_3.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_3",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_3.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_3.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_3",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_3.bin"
+            ],
+            "output": [
+                "./data/output/final_output_3.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_4",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_12.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_4.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_4",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_4.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_4.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_4",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_4.bin"
+            ],
+            "output": [
+                "./data/output/final_output_4.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_5",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_13.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_5.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_5",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_5.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_5.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_5",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_5.bin"
+            ],
+            "output": [
+                "./data/output/final_output_5.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_6",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_14.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_6.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_6",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_6.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_6.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_6",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_6.bin"
+            ],
+            "output": [
+                "./data/output/final_output_6.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_7",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_15.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_7.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_7",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_7.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_7.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_7",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_7.bin"
+            ],
+            "output": [
+                "./data/output/final_output_7.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_8",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_16.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_8.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_8",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_8.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_8.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_8",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_8.bin"
+            ],
+            "output": [
+                "./data/output/final_output_8.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_9",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_17.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_9.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_9",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_9.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_9.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_9",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_9.bin"
+            ],
+            "output": [
+                "./data/output/final_output_9.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_10",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_18.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_10.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_10",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_10.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_10.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_10",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_10.bin"
+            ],
+            "output": [
+                "./data/output/final_output_10.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Conv_11",
+            "type": "Conv",
+            "input": [
+                "./data/input/cifar_image_2.bin"
+            ],
+            "output": [
+                "./data/output/cifar_conv_output_11.bin"
+            ],
+            "attributes": {
+                "kernel_shape": [
+                    3,
+                    3
+                ],
+                "strides": [
+                    1,
+                    1
+                ],
+                "pads": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        },
+        {
+            "name": "ReLU_11",
+            "type": "ReLU",
+            "input": [
+                "./data/output/cifar_conv_output_11.bin"
+            ],
+            "output": [
+                "./data/output/cifar_relu_output_11.bin"
+            ],
+            "attributes": {}
+        },
+        {
+            "name": "Softmax_11",
+            "type": "Softmax",
+            "input": [
+                "./data/output/cifar_relu_output_11.bin"
+            ],
+            "output": [
+                "./data/output/final_output_11.bin"
+            ],
+            "attributes": {}
+        }
+    ]
+}
